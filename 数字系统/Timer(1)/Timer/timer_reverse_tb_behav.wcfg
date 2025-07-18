@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="schedule_tb_behav.wdb" id="1">
+         <top_modules>
+            <top_module name="glbl" />
+            <top_module name="schedule_tb" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <zoom_setting>
+      <ZoomStartTime time="0fs"></ZoomStartTime>
+      <ZoomEndTime time="672661819fs"></ZoomEndTime>
+      <Cursor1Time time="220000000fs"></Cursor1Time>
+   </zoom_setting>
+   <column_width_setting>
+      <NameColumnWidth column_width="190"></NameColumnWidth>
+      <ValueColumnWidth column_width="77"></ValueColumnWidth>
+   </column_width_setting>
+   <WVObjectSize size="15" />
+   <wvobject fp_name="/schedule_tb/clk" type="logic">
+      <obj_property name="ElementShortName">clk</obj_property>
+      <obj_property name="ObjectShortName">clk</obj_property>
+   </wvobject>
+   <wvobject fp_name="/schedule_tb/reset" type="logic">
+      <obj_property name="ElementShortName">reset</obj_property>
+      <obj_property name="ObjectShortName">reset</obj_property>
+   </wvobject>
+   <wvobject fp_name="/schedule_tb/sh1" type="array">
+      <obj_property name="ElementShortName">sh1[3:0]</obj_property>
+      <obj_property name="ObjectShortName">sh1[3:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/schedule_tb/sh0" type="array">
+      <obj_property name="ElementShortName">sh0[3:0]</obj_property>
+      <obj_property name="ObjectShortName">sh0[3:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/schedule_tb/sm1" type="array">
+      <obj_property name="ElementShortName">sm1[3:0]</obj_property>
+      <obj_property name="ObjectShortName">sm1[3:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/schedule_tb/sm0" type="array">
+      <obj_property name="ElementShortName">sm0[3:0]</obj_property>
+      <obj_property name="ObjectShortName">sm0[3:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/schedule_tb/ss1" type="array">
+      <obj_property name="ElementShortName">ss1[3:0]</obj_property>
+      <obj_property name="ObjectShortName">ss1[3:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/schedule_tb/ss0" type="array">
+      <obj_property name="ElementShortName">ss0[3:0]</obj_property>
+      <obj_property name="ObjectShortName">ss0[3:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/schedule_tb/th1" type="array">
+      <obj_property name="ElementShortName">th1[3:0]</obj_property>
+      <obj_property name="ObjectShortName">th1[3:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/schedule_tb/th0" type="array">
+      <obj_property name="ElementShortName">th0[3:0]</obj_property>
+      <obj_property name="ObjectShortName">th0[3:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/schedule_tb/tm1" type="array">
+      <obj_property name="ElementShortName">tm1[3:0]</obj_property>
+      <obj_property name="ObjectShortName">tm1[3:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/schedule_tb/tm0" type="array">
+      <obj_property name="ElementShortName">tm0[3:0]</obj_property>
+      <obj_property name="ObjectShortName">tm0[3:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/schedule_tb/set" type="logic">
+      <obj_property name="ElementShortName">set</obj_property>
+      <obj_property name="ObjectShortName">set</obj_property>
+   </wvobject>
+   <wvobject fp_name="/schedule_tb/timeeq" type="logic">
+      <obj_property name="ElementShortName">timeeq</obj_property>
+      <obj_property name="ObjectShortName">timeeq</obj_property>
+   </wvobject>
+   <wvobject fp_name="/schedule_tb/sche" type="array">
+      <obj_property name="ElementShortName">sche[5:0]</obj_property>
+      <obj_property name="ObjectShortName">sche[5:0]</obj_property>
+   </wvobject>
+</wave_config>

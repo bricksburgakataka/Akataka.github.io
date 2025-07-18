@@ -1,0 +1,1180 @@
+Timing Analyzer report for main
+Mon Sep 05 14:15:48 2022
+Quartus Prime Version 19.1.0 Build 670 09/22/2019 SJ Lite Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Timing Analyzer Summary
+  3. Parallel Compilation
+  4. Clocks
+  5. Slow 1200mV 85C Model Fmax Summary
+  6. Timing Closure Recommendations
+  7. Slow 1200mV 85C Model Setup Summary
+  8. Slow 1200mV 85C Model Hold Summary
+  9. Slow 1200mV 85C Model Recovery Summary
+ 10. Slow 1200mV 85C Model Removal Summary
+ 11. Slow 1200mV 85C Model Minimum Pulse Width Summary
+ 12. Slow 1200mV 85C Model Setup: 'sys_clk'
+ 13. Slow 1200mV 85C Model Hold: 'sys_clk'
+ 14. Slow 1200mV 85C Model Metastability Summary
+ 15. Slow 1200mV 0C Model Fmax Summary
+ 16. Slow 1200mV 0C Model Setup Summary
+ 17. Slow 1200mV 0C Model Hold Summary
+ 18. Slow 1200mV 0C Model Recovery Summary
+ 19. Slow 1200mV 0C Model Removal Summary
+ 20. Slow 1200mV 0C Model Minimum Pulse Width Summary
+ 21. Slow 1200mV 0C Model Setup: 'sys_clk'
+ 22. Slow 1200mV 0C Model Hold: 'sys_clk'
+ 23. Slow 1200mV 0C Model Metastability Summary
+ 24. Fast 1200mV 0C Model Setup Summary
+ 25. Fast 1200mV 0C Model Hold Summary
+ 26. Fast 1200mV 0C Model Recovery Summary
+ 27. Fast 1200mV 0C Model Removal Summary
+ 28. Fast 1200mV 0C Model Minimum Pulse Width Summary
+ 29. Fast 1200mV 0C Model Setup: 'sys_clk'
+ 30. Fast 1200mV 0C Model Hold: 'sys_clk'
+ 31. Fast 1200mV 0C Model Metastability Summary
+ 32. Multicorner Timing Analysis Summary
+ 33. Board Trace Model Assignments
+ 34. Input Transition Times
+ 35. Signal Integrity Metrics (Slow 1200mv 0c Model)
+ 36. Signal Integrity Metrics (Slow 1200mv 85c Model)
+ 37. Signal Integrity Metrics (Fast 1200mv 0c Model)
+ 38. Setup Transfers
+ 39. Hold Transfers
+ 40. Report TCCS
+ 41. Report RSKM
+ 42. Unconstrained Paths Summary
+ 43. Clock Status Summary
+ 44. Unconstrained Input Ports
+ 45. Unconstrained Output Ports
+ 46. Unconstrained Input Ports
+ 47. Unconstrained Output Ports
+ 48. Timing Analyzer Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 2019  Intel Corporation. All rights reserved.
+Your use of Intel Corporation's design tools, logic functions 
+and other software and tools, and any partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Intel Program License 
+Subscription Agreement, the Intel Quartus Prime License Agreement,
+the Intel FPGA IP License Agreement, or other applicable license
+agreement, including, without limitation, that your use is for
+the sole purpose of programming logic devices manufactured by
+Intel and sold by Intel or its authorized distributors.  Please
+refer to the applicable agreement for further details, at
+https://fpgasoftware.intel.com/eula.
+
+
+
++-----------------------------------------------------------------------------+
+; Timing Analyzer Summary                                                     ;
++-----------------------+-----------------------------------------------------+
+; Quartus Prime Version ; Version 19.1.0 Build 670 09/22/2019 SJ Lite Edition ;
+; Timing Analyzer       ; Legacy Timing Analyzer                              ;
+; Revision Name         ; main                                                ;
+; Device Family         ; Cyclone IV E                                        ;
+; Device Name           ; EP4CE10F17C8                                        ;
+; Timing Models         ; Final                                               ;
+; Delay Model           ; Combined                                            ;
+; Rise/Fall Delays      ; Enabled                                             ;
++-----------------------+-----------------------------------------------------+
+
+
++------------------------------------------+
+; Parallel Compilation                     ;
++----------------------------+-------------+
+; Processors                 ; Number      ;
++----------------------------+-------------+
+; Number detected on machine ; 12          ;
+; Maximum allowed            ; 6           ;
+;                            ;             ;
+; Average used               ; 1.03        ;
+; Maximum used               ; 6           ;
+;                            ;             ;
+; Usage by Processor         ; % Time Used ;
+;     Processor 1            ; 100.0%      ;
+;     Processor 2            ;   0.7%      ;
+;     Processors 3-6         ;   0.6%      ;
++----------------------------+-------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Clocks                                                                                                                                                                              ;
++------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+-------------+
+; Clock Name ; Type ; Period ; Frequency  ; Rise  ; Fall  ; Duty Cycle ; Divide by ; Multiply by ; Phase ; Offset ; Edge List ; Edge Shift ; Inverted ; Master ; Source ; Targets     ;
++------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+-------------+
+; sys_clk    ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { sys_clk } ;
++------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+-------------+
+
+
++--------------------------------------------------+
+; Slow 1200mV 85C Model Fmax Summary               ;
++------------+-----------------+------------+------+
+; Fmax       ; Restricted Fmax ; Clock Name ; Note ;
++------------+-----------------+------------+------+
+; 159.49 MHz ; 159.49 MHz      ; sys_clk    ;      ;
++------------+-----------------+------------+------+
+This panel reports FMAX for every clock in the design, regardless of the user-specified clock periods.  FMAX is only computed for paths where the source and destination registers or ports are driven by the same clock.  Paths of different clocks, including generated clocks, are ignored.  For paths between a clock and its inversion, FMAX is computed as if the rising and falling edges are scaled along with FMAX, such that the duty cycle (in terms of a percentage) is maintained. Altera recommends that you always use clock constraints and other slack reports for sign-off analysis.
+
+
+----------------------------------
+; Timing Closure Recommendations ;
+----------------------------------
+HTML report is unavailable in plain text report export.
+
+
++-------------------------------------+
+; Slow 1200mV 85C Model Setup Summary ;
++---------+--------+------------------+
+; Clock   ; Slack  ; End Point TNS    ;
++---------+--------+------------------+
+; sys_clk ; -5.270 ; -300.396         ;
++---------+--------+------------------+
+
+
++------------------------------------+
+; Slow 1200mV 85C Model Hold Summary ;
++---------+-------+------------------+
+; Clock   ; Slack ; End Point TNS    ;
++---------+-------+------------------+
+; sys_clk ; 0.433 ; 0.000            ;
++---------+-------+------------------+
+
+
+------------------------------------------
+; Slow 1200mV 85C Model Recovery Summary ;
+------------------------------------------
+No paths to report.
+
+
+-----------------------------------------
+; Slow 1200mV 85C Model Removal Summary ;
+-----------------------------------------
+No paths to report.
+
+
++---------------------------------------------------+
+; Slow 1200mV 85C Model Minimum Pulse Width Summary ;
++---------+--------+--------------------------------+
+; Clock   ; Slack  ; End Point TNS                  ;
++---------+--------+--------------------------------+
+; sys_clk ; -3.000 ; -107.090                       ;
++---------+--------+--------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Slow 1200mV 85C Model Setup: 'sys_clk'                                                                                                                                                                               ;
++--------+-------------------------------------------------------------------+-------------------------------------------------------------------+--------------+-------------+--------------+------------+------------+
+; Slack  ; From Node                                                         ; To Node                                                           ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++--------+-------------------------------------------------------------------+-------------------------------------------------------------------+--------------+-------------+--------------+------------+------------+
+; -5.270 ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICCnt[17]       ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICACKStopCnt[1] ; sys_clk      ; sys_clk     ; 1.000        ; -0.081     ; 6.190      ;
+; -5.270 ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICCnt[17]       ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICACKStopCnt[0] ; sys_clk      ; sys_clk     ; 1.000        ; -0.081     ; 6.190      ;
+; -5.269 ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICCnt[10]       ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICACKStopCnt[1] ; sys_clk      ; sys_clk     ; 1.000        ; -0.081     ; 6.189      ;
+; -5.269 ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICCnt[10]       ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICACKStopCnt[0] ; sys_clk      ; sys_clk     ; 1.000        ; -0.081     ; 6.189      ;
+; -5.265 ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICCnt[16]       ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICACKStopCnt[1] ; sys_clk      ; sys_clk     ; 1.000        ; -0.081     ; 6.185      ;
+; -5.265 ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICCnt[16]       ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICACKStopCnt[0] ; sys_clk      ; sys_clk     ; 1.000        ; -0.081     ; 6.185      ;
+; -5.260 ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICCnt[13]       ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICACKStopCnt[1] ; sys_clk      ; sys_clk     ; 1.000        ; -0.081     ; 6.180      ;
+; -5.260 ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICCnt[13]       ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICACKStopCnt[0] ; sys_clk      ; sys_clk     ; 1.000        ; -0.081     ; 6.180      ;
+; -5.258 ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICSendBytes[2]  ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICACKStopCnt[1] ; sys_clk      ; sys_clk     ; 1.000        ; -0.088     ; 6.171      ;
+; -5.258 ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICSendBytes[2]  ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICACKStopCnt[0] ; sys_clk      ; sys_clk     ; 1.000        ; -0.088     ; 6.171      ;
+; -5.167 ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICCnt[20]       ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICACKStopCnt[1] ; sys_clk      ; sys_clk     ; 1.000        ; -0.081     ; 6.087      ;
+; -5.167 ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICCnt[20]       ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICACKStopCnt[0] ; sys_clk      ; sys_clk     ; 1.000        ; -0.081     ; 6.087      ;
+; -5.162 ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICCnt[17]       ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICCnt[13]       ; sys_clk      ; sys_clk     ; 1.000        ; -0.080     ; 6.083      ;
+; -5.162 ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICCnt[17]       ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICCnt[15]       ; sys_clk      ; sys_clk     ; 1.000        ; -0.080     ; 6.083      ;
+; -5.162 ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICCnt[17]       ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICCnt[19]       ; sys_clk      ; sys_clk     ; 1.000        ; -0.080     ; 6.083      ;
+; -5.161 ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICCnt[17]       ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICCnt[12]       ; sys_clk      ; sys_clk     ; 1.000        ; -0.080     ; 6.082      ;
+; -5.161 ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICCnt[10]       ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICCnt[13]       ; sys_clk      ; sys_clk     ; 1.000        ; -0.080     ; 6.082      ;
+; -5.161 ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICCnt[10]       ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICCnt[15]       ; sys_clk      ; sys_clk     ; 1.000        ; -0.080     ; 6.082      ;
+; -5.161 ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICCnt[10]       ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICCnt[19]       ; sys_clk      ; sys_clk     ; 1.000        ; -0.080     ; 6.082      ;
+; -5.160 ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICCnt[10]       ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICCnt[12]       ; sys_clk      ; sys_clk     ; 1.000        ; -0.080     ; 6.081      ;
+; -5.159 ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICCnt[17]       ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICCnt[14]       ; sys_clk      ; sys_clk     ; 1.000        ; -0.080     ; 6.080      ;
+; -5.158 ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICCnt[19]       ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICACKStopCnt[1] ; sys_clk      ; sys_clk     ; 1.000        ; -0.081     ; 6.078      ;
+; -5.158 ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICCnt[19]       ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICACKStopCnt[0] ; sys_clk      ; sys_clk     ; 1.000        ; -0.081     ; 6.078      ;
+; -5.158 ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICCnt[10]       ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICCnt[14]       ; sys_clk      ; sys_clk     ; 1.000        ; -0.080     ; 6.079      ;
+; -5.157 ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICCnt[16]       ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICCnt[13]       ; sys_clk      ; sys_clk     ; 1.000        ; -0.080     ; 6.078      ;
+; -5.157 ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICCnt[16]       ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICCnt[15]       ; sys_clk      ; sys_clk     ; 1.000        ; -0.080     ; 6.078      ;
+; -5.157 ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICCnt[16]       ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICCnt[19]       ; sys_clk      ; sys_clk     ; 1.000        ; -0.080     ; 6.078      ;
+; -5.156 ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICCnt[16]       ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICCnt[12]       ; sys_clk      ; sys_clk     ; 1.000        ; -0.080     ; 6.077      ;
+; -5.154 ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICCnt[16]       ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICCnt[14]       ; sys_clk      ; sys_clk     ; 1.000        ; -0.080     ; 6.075      ;
+; -5.152 ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICCnt[13]       ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICCnt[13]       ; sys_clk      ; sys_clk     ; 1.000        ; -0.080     ; 6.073      ;
+; -5.152 ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICCnt[13]       ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICCnt[15]       ; sys_clk      ; sys_clk     ; 1.000        ; -0.080     ; 6.073      ;
+; -5.152 ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICCnt[13]       ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICCnt[19]       ; sys_clk      ; sys_clk     ; 1.000        ; -0.080     ; 6.073      ;
+; -5.151 ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICCnt[13]       ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICCnt[12]       ; sys_clk      ; sys_clk     ; 1.000        ; -0.080     ; 6.072      ;
+; -5.149 ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICCnt[13]       ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICCnt[14]       ; sys_clk      ; sys_clk     ; 1.000        ; -0.080     ; 6.070      ;
+; -5.131 ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|iicCLK           ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICACKStopCnt[1] ; sys_clk      ; sys_clk     ; 1.000        ; -0.080     ; 6.052      ;
+; -5.131 ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|iicCLK           ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICACKStopCnt[0] ; sys_clk      ; sys_clk     ; 1.000        ; -0.080     ; 6.052      ;
+; -5.116 ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICSendBytes[2]  ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICCnt[13]       ; sys_clk      ; sys_clk     ; 1.000        ; -0.087     ; 6.030      ;
+; -5.116 ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICSendBytes[2]  ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICCnt[15]       ; sys_clk      ; sys_clk     ; 1.000        ; -0.087     ; 6.030      ;
+; -5.116 ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICSendBytes[2]  ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICCnt[19]       ; sys_clk      ; sys_clk     ; 1.000        ; -0.087     ; 6.030      ;
+; -5.115 ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICSendBytes[2]  ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICCnt[12]       ; sys_clk      ; sys_clk     ; 1.000        ; -0.087     ; 6.029      ;
+; -5.113 ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICSendBytes[2]  ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICCnt[14]       ; sys_clk      ; sys_clk     ; 1.000        ; -0.087     ; 6.027      ;
+; -5.100 ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|iicCLK           ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICCnt[13]       ; sys_clk      ; sys_clk     ; 1.000        ; -0.079     ; 6.022      ;
+; -5.100 ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|iicCLK           ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICCnt[15]       ; sys_clk      ; sys_clk     ; 1.000        ; -0.079     ; 6.022      ;
+; -5.100 ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|iicCLK           ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICCnt[19]       ; sys_clk      ; sys_clk     ; 1.000        ; -0.079     ; 6.022      ;
+; -5.099 ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|iicCLK           ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICCnt[12]       ; sys_clk      ; sys_clk     ; 1.000        ; -0.079     ; 6.021      ;
+; -5.097 ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|iicCLK           ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICCnt[14]       ; sys_clk      ; sys_clk     ; 1.000        ; -0.079     ; 6.019      ;
+; -5.077 ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICACKStopCnt[1] ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICACKStopCnt[1] ; sys_clk      ; sys_clk     ; 1.000        ; -0.080     ; 5.998      ;
+; -5.077 ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICACKStopCnt[1] ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICACKStopCnt[0] ; sys_clk      ; sys_clk     ; 1.000        ; -0.080     ; 5.998      ;
+; -5.064 ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICCnt[15]       ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICACKStopCnt[1] ; sys_clk      ; sys_clk     ; 1.000        ; -0.081     ; 5.984      ;
+; -5.064 ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICCnt[15]       ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICACKStopCnt[0] ; sys_clk      ; sys_clk     ; 1.000        ; -0.081     ; 5.984      ;
+; -5.059 ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICCnt[20]       ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICCnt[13]       ; sys_clk      ; sys_clk     ; 1.000        ; -0.080     ; 5.980      ;
+; -5.059 ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICCnt[20]       ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICCnt[15]       ; sys_clk      ; sys_clk     ; 1.000        ; -0.080     ; 5.980      ;
+; -5.059 ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICCnt[20]       ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICCnt[19]       ; sys_clk      ; sys_clk     ; 1.000        ; -0.080     ; 5.980      ;
+; -5.058 ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICCnt[11]       ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICACKStopCnt[1] ; sys_clk      ; sys_clk     ; 1.000        ; -0.081     ; 5.978      ;
+; -5.058 ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICCnt[11]       ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICACKStopCnt[0] ; sys_clk      ; sys_clk     ; 1.000        ; -0.081     ; 5.978      ;
+; -5.058 ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICCnt[20]       ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICCnt[12]       ; sys_clk      ; sys_clk     ; 1.000        ; -0.080     ; 5.979      ;
+; -5.056 ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICCnt[20]       ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICCnt[14]       ; sys_clk      ; sys_clk     ; 1.000        ; -0.080     ; 5.977      ;
+; -5.053 ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICBitCnt[1]     ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICACKStopCnt[1] ; sys_clk      ; sys_clk     ; 1.000        ; -0.087     ; 5.967      ;
+; -5.053 ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICBitCnt[1]     ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICACKStopCnt[0] ; sys_clk      ; sys_clk     ; 1.000        ; -0.087     ; 5.967      ;
+; -5.053 ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICACKStopCnt[0] ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICACKStopCnt[1] ; sys_clk      ; sys_clk     ; 1.000        ; -0.080     ; 5.974      ;
+; -5.053 ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICACKStopCnt[0] ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICACKStopCnt[0] ; sys_clk      ; sys_clk     ; 1.000        ; -0.080     ; 5.974      ;
+; -5.050 ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICCnt[19]       ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICCnt[13]       ; sys_clk      ; sys_clk     ; 1.000        ; -0.080     ; 5.971      ;
+; -5.050 ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICCnt[19]       ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICCnt[15]       ; sys_clk      ; sys_clk     ; 1.000        ; -0.080     ; 5.971      ;
+; -5.050 ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICCnt[19]       ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICCnt[19]       ; sys_clk      ; sys_clk     ; 1.000        ; -0.080     ; 5.971      ;
+; -5.049 ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICCnt[19]       ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICCnt[12]       ; sys_clk      ; sys_clk     ; 1.000        ; -0.080     ; 5.970      ;
+; -5.047 ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICCnt[19]       ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICCnt[14]       ; sys_clk      ; sys_clk     ; 1.000        ; -0.080     ; 5.968      ;
+; -5.022 ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICBitCnt[1]     ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICCnt[13]       ; sys_clk      ; sys_clk     ; 1.000        ; -0.086     ; 5.937      ;
+; -5.022 ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICBitCnt[1]     ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICCnt[15]       ; sys_clk      ; sys_clk     ; 1.000        ; -0.086     ; 5.937      ;
+; -5.022 ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICBitCnt[1]     ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICCnt[19]       ; sys_clk      ; sys_clk     ; 1.000        ; -0.086     ; 5.937      ;
+; -5.021 ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICBitCnt[1]     ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICCnt[12]       ; sys_clk      ; sys_clk     ; 1.000        ; -0.086     ; 5.936      ;
+; -5.019 ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICBitCnt[1]     ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICCnt[14]       ; sys_clk      ; sys_clk     ; 1.000        ; -0.086     ; 5.934      ;
+; -5.004 ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICCnt[9]        ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICACKStopCnt[1] ; sys_clk      ; sys_clk     ; 1.000        ; -0.081     ; 5.924      ;
+; -5.004 ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICCnt[9]        ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICACKStopCnt[0] ; sys_clk      ; sys_clk     ; 1.000        ; -0.081     ; 5.924      ;
+; -5.002 ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICSendBytes[1]  ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICACKStopCnt[1] ; sys_clk      ; sys_clk     ; 1.000        ; -0.088     ; 5.915      ;
+; -5.002 ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICSendBytes[1]  ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICACKStopCnt[0] ; sys_clk      ; sys_clk     ; 1.000        ; -0.088     ; 5.915      ;
+; -5.001 ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICCnt[17]       ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICCnt[10]       ; sys_clk      ; sys_clk     ; 1.000        ; -0.080     ; 5.922      ;
+; -5.001 ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICCnt[17]       ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICCnt[16]       ; sys_clk      ; sys_clk     ; 1.000        ; -0.080     ; 5.922      ;
+; -5.001 ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICCnt[17]       ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICCnt[20]       ; sys_clk      ; sys_clk     ; 1.000        ; -0.080     ; 5.922      ;
+; -5.000 ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICCnt[17]       ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICCnt[21]       ; sys_clk      ; sys_clk     ; 1.000        ; -0.080     ; 5.921      ;
+; -5.000 ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICCnt[17]       ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICCnt[18]       ; sys_clk      ; sys_clk     ; 1.000        ; -0.080     ; 5.921      ;
+; -5.000 ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICCnt[10]       ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICCnt[10]       ; sys_clk      ; sys_clk     ; 1.000        ; -0.080     ; 5.921      ;
+; -5.000 ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICCnt[10]       ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICCnt[16]       ; sys_clk      ; sys_clk     ; 1.000        ; -0.080     ; 5.921      ;
+; -5.000 ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICCnt[10]       ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICCnt[20]       ; sys_clk      ; sys_clk     ; 1.000        ; -0.080     ; 5.921      ;
+; -4.999 ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICCnt[17]       ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICCnt[11]       ; sys_clk      ; sys_clk     ; 1.000        ; -0.080     ; 5.920      ;
+; -4.999 ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICCnt[17]       ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICCnt[17]       ; sys_clk      ; sys_clk     ; 1.000        ; -0.080     ; 5.920      ;
+; -4.999 ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICCnt[10]       ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICCnt[21]       ; sys_clk      ; sys_clk     ; 1.000        ; -0.080     ; 5.920      ;
+; -4.999 ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICCnt[10]       ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICCnt[18]       ; sys_clk      ; sys_clk     ; 1.000        ; -0.080     ; 5.920      ;
+; -4.998 ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICCnt[10]       ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICCnt[11]       ; sys_clk      ; sys_clk     ; 1.000        ; -0.080     ; 5.919      ;
+; -4.998 ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICCnt[10]       ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICCnt[17]       ; sys_clk      ; sys_clk     ; 1.000        ; -0.080     ; 5.919      ;
+; -4.996 ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICCnt[16]       ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICCnt[10]       ; sys_clk      ; sys_clk     ; 1.000        ; -0.080     ; 5.917      ;
+; -4.996 ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICCnt[16]       ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICCnt[16]       ; sys_clk      ; sys_clk     ; 1.000        ; -0.080     ; 5.917      ;
+; -4.996 ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICCnt[16]       ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICCnt[20]       ; sys_clk      ; sys_clk     ; 1.000        ; -0.080     ; 5.917      ;
+; -4.995 ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICCnt[16]       ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICCnt[21]       ; sys_clk      ; sys_clk     ; 1.000        ; -0.080     ; 5.916      ;
+; -4.995 ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICCnt[16]       ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICCnt[18]       ; sys_clk      ; sys_clk     ; 1.000        ; -0.080     ; 5.916      ;
+; -4.994 ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICCnt[16]       ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICCnt[11]       ; sys_clk      ; sys_clk     ; 1.000        ; -0.080     ; 5.915      ;
+; -4.994 ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICCnt[16]       ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICCnt[17]       ; sys_clk      ; sys_clk     ; 1.000        ; -0.080     ; 5.915      ;
+; -4.991 ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICCnt[13]       ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICCnt[10]       ; sys_clk      ; sys_clk     ; 1.000        ; -0.080     ; 5.912      ;
+; -4.991 ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICCnt[13]       ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICCnt[16]       ; sys_clk      ; sys_clk     ; 1.000        ; -0.080     ; 5.912      ;
+; -4.991 ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICCnt[13]       ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICCnt[20]       ; sys_clk      ; sys_clk     ; 1.000        ; -0.080     ; 5.912      ;
+; -4.990 ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICCnt[13]       ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICCnt[21]       ; sys_clk      ; sys_clk     ; 1.000        ; -0.080     ; 5.911      ;
++--------+-------------------------------------------------------------------+-------------------------------------------------------------------+--------------+-------------+--------------+------------+------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Slow 1200mV 85C Model Hold: 'sys_clk'                                                                                                                                                                                     ;
++-------+----------------------------------------------------------------------+----------------------------------------------------------------------+--------------+-------------+--------------+------------+------------+
+; Slack ; From Node                                                            ; To Node                                                              ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++-------+----------------------------------------------------------------------+----------------------------------------------------------------------+--------------+-------------+--------------+------------+------------+
+; 0.433 ; OLED_Top:OLED_TopHP|OLED_ShowFont:OLED_ShowFont_HP|showfont_index[4] ; OLED_Top:OLED_TopHP|OLED_ShowFont:OLED_ShowFont_HP|showfont_index[4] ; sys_clk      ; sys_clk     ; 0.000        ; 0.101      ; 0.746      ;
+; 0.433 ; OLED_Top:OLED_TopHP|state.OLED_ShowFont                              ; OLED_Top:OLED_TopHP|state.OLED_ShowFont                              ; sys_clk      ; sys_clk     ; 0.000        ; 0.101      ; 0.746      ;
+; 0.434 ; OLED_Top:OLED_TopHP|OLED_ShowFont:OLED_ShowFont_HP|showfont_index[0] ; OLED_Top:OLED_TopHP|OLED_ShowFont:OLED_ShowFont_HP|showfont_index[0] ; sys_clk      ; sys_clk     ; 0.000        ; 0.100      ; 0.746      ;
+; 0.434 ; OLED_Top:OLED_TopHP|OLED_ShowFont:OLED_ShowFont_HP|showfont_index[3] ; OLED_Top:OLED_TopHP|OLED_ShowFont:OLED_ShowFont_HP|showfont_index[3] ; sys_clk      ; sys_clk     ; 0.000        ; 0.100      ; 0.746      ;
+; 0.434 ; OLED_Top:OLED_TopHP|OLED_ShowFont:OLED_ShowFont_HP|showfont_index[5] ; OLED_Top:OLED_TopHP|OLED_ShowFont:OLED_ShowFont_HP|showfont_index[5] ; sys_clk      ; sys_clk     ; 0.000        ; 0.100      ; 0.746      ;
+; 0.434 ; OLED_Top:OLED_TopHP|OLED_Init:OLED_InitHP|Init_index[1]              ; OLED_Top:OLED_TopHP|OLED_Init:OLED_InitHP|Init_index[1]              ; sys_clk      ; sys_clk     ; 0.000        ; 0.100      ; 0.746      ;
+; 0.434 ; OLED_Top:OLED_TopHP|OLED_Init:OLED_InitHP|Init_index[0]              ; OLED_Top:OLED_TopHP|OLED_Init:OLED_InitHP|Init_index[0]              ; sys_clk      ; sys_clk     ; 0.000        ; 0.100      ; 0.746      ;
+; 0.434 ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|state.IIC_START     ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|state.IIC_START     ; sys_clk      ; sys_clk     ; 0.000        ; 0.100      ; 0.746      ;
+; 0.435 ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICWriteReqReg      ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICWriteReqReg      ; sys_clk      ; sys_clk     ; 0.000        ; 0.099      ; 0.746      ;
+; 0.453 ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|state.IIC_IDLE      ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|state.IIC_IDLE      ; sys_clk      ; sys_clk     ; 0.000        ; 0.081      ; 0.746      ;
+; 0.453 ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|state.IIC_RDDATA    ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|state.IIC_RDDATA    ; sys_clk      ; sys_clk     ; 0.000        ; 0.081      ; 0.746      ;
+; 0.453 ; OLED_Top:OLED_TopHP|state.OLED_IDLE                                  ; OLED_Top:OLED_TopHP|state.OLED_IDLE                                  ; sys_clk      ; sys_clk     ; 0.000        ; 0.081      ; 0.746      ;
+; 0.453 ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICSendBytes[1]     ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICSendBytes[1]     ; sys_clk      ; sys_clk     ; 0.000        ; 0.081      ; 0.746      ;
+; 0.453 ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICSendBytes[2]     ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICSendBytes[2]     ; sys_clk      ; sys_clk     ; 0.000        ; 0.081      ; 0.746      ;
+; 0.454 ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICACKStopCnt[1]    ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICACKStopCnt[1]    ; sys_clk      ; sys_clk     ; 0.000        ; 0.080      ; 0.746      ;
+; 0.454 ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICACKStopCnt[0]    ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICACKStopCnt[0]    ; sys_clk      ; sys_clk     ; 0.000        ; 0.080      ; 0.746      ;
+; 0.454 ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|state.IIC_STOP      ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|state.IIC_STOP      ; sys_clk      ; sys_clk     ; 0.000        ; 0.080      ; 0.746      ;
+; 0.454 ; OLED_Top:OLED_TopHP|OLED_ShowFont:OLED_ShowFont_HP|showfont_index[1] ; OLED_Top:OLED_TopHP|OLED_ShowFont:OLED_ShowFont_HP|showfont_index[1] ; sys_clk      ; sys_clk     ; 0.000        ; 0.080      ; 0.746      ;
+; 0.454 ; OLED_Top:OLED_TopHP|OLED_ShowFont:OLED_ShowFont_HP|showfont_index[2] ; OLED_Top:OLED_TopHP|OLED_ShowFont:OLED_ShowFont_HP|showfont_index[2] ; sys_clk      ; sys_clk     ; 0.000        ; 0.080      ; 0.746      ;
+; 0.454 ; OLED_Top:OLED_TopHP|state.OLED_INIT                                  ; OLED_Top:OLED_TopHP|state.OLED_INIT                                  ; sys_clk      ; sys_clk     ; 0.000        ; 0.080      ; 0.746      ;
+; 0.454 ; OLED_Top:OLED_TopHP|OLED_Init:OLED_InitHP|Init_index[3]              ; OLED_Top:OLED_TopHP|OLED_Init:OLED_InitHP|Init_index[3]              ; sys_clk      ; sys_clk     ; 0.000        ; 0.080      ; 0.746      ;
+; 0.454 ; OLED_Top:OLED_TopHP|OLED_Init:OLED_InitHP|Init_index[2]              ; OLED_Top:OLED_TopHP|OLED_Init:OLED_InitHP|Init_index[2]              ; sys_clk      ; sys_clk     ; 0.000        ; 0.080      ; 0.746      ;
+; 0.454 ; OLED_Top:OLED_TopHP|OLED_Init:OLED_InitHP|Init_index[4]              ; OLED_Top:OLED_TopHP|OLED_Init:OLED_InitHP|Init_index[4]              ; sys_clk      ; sys_clk     ; 0.000        ; 0.080      ; 0.746      ;
+; 0.454 ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|state.IIC_WRDATA    ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|state.IIC_WRDATA    ; sys_clk      ; sys_clk     ; 0.000        ; 0.080      ; 0.746      ;
+; 0.465 ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICSendBytes[0]     ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICSendBytes[0]     ; sys_clk      ; sys_clk     ; 0.000        ; 0.081      ; 0.758      ;
+; 0.574 ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|state.IIC_IDLE      ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICSlaveReg[6]      ; sys_clk      ; sys_clk     ; 0.000        ; 0.081      ; 0.867      ;
+; 0.590 ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|state.IIC_IDLE      ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICSlaveReg[2]      ; sys_clk      ; sys_clk     ; 0.000        ; 0.081      ; 0.883      ;
+; 0.591 ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|state.IIC_IDLE      ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICSlaveReg[15]     ; sys_clk      ; sys_clk     ; 0.000        ; 0.081      ; 0.884      ;
+; 0.778 ; OLED_Top:OLED_TopHP|state.OLED_INIT                                  ; OLED_Top:OLED_TopHP|OLED_Init:OLED_InitHP|Init_index[1]              ; sys_clk      ; sys_clk     ; 0.000        ; 0.575      ; 1.565      ;
+; 0.780 ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICBitCnt[0]        ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICBitCnt[0]        ; sys_clk      ; sys_clk     ; 0.000        ; 0.081      ; 1.073      ;
+; 0.780 ; OLED_Top:OLED_TopHP|state.OLED_INIT                                  ; OLED_Top:OLED_TopHP|OLED_Init:OLED_InitHP|Init_index[0]              ; sys_clk      ; sys_clk     ; 0.000        ; 0.575      ; 1.567      ;
+; 0.801 ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICACKStopCnt[0]    ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICACKStopCnt[1]    ; sys_clk      ; sys_clk     ; 0.000        ; 0.080      ; 1.093      ;
+; 0.816 ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|iicCLK              ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICACKStopCnt[0]    ; sys_clk      ; sys_clk     ; 0.000        ; 0.080      ; 1.108      ;
+; 0.817 ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|iicCLK              ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICACKStopCnt[1]    ; sys_clk      ; sys_clk     ; 0.000        ; 0.080      ; 1.109      ;
+; 0.829 ; OLED_Top:OLED_TopHP|state.OLED_IDLE                                  ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICWriteReqReg      ; sys_clk      ; sys_clk     ; 0.000        ; 0.533      ; 1.574      ;
+; 0.879 ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|state.IIC_IDLE      ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICSlaveReg[11]     ; sys_clk      ; sys_clk     ; 0.000        ; 0.081      ; 1.172      ;
+; 0.933 ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|state.IIC_IDLE      ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICSlaveReg[3]      ; sys_clk      ; sys_clk     ; 0.000        ; 0.081      ; 1.226      ;
+; 0.973 ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICBitCnt[1]        ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICBitCnt[1]        ; sys_clk      ; sys_clk     ; 0.000        ; 0.081      ; 1.266      ;
+; 0.975 ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICBitCnt[2]        ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICBitCnt[2]        ; sys_clk      ; sys_clk     ; 0.000        ; 0.081      ; 1.268      ;
+; 0.996 ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICSendBytes[1]     ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICSendBytes[2]     ; sys_clk      ; sys_clk     ; 0.000        ; 0.081      ; 1.289      ;
+; 1.027 ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICSendBytes[0]     ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICSendBytes[1]     ; sys_clk      ; sys_clk     ; 0.000        ; 0.081      ; 1.320      ;
+; 1.050 ; OLED_Top:OLED_TopHP|OLED_Init:OLED_InitHP|Init_index[1]              ; OLED_Top:OLED_TopHP|state.OLED_INIT                                  ; sys_clk      ; sys_clk     ; 0.000        ; -0.395     ; 0.867      ;
+; 1.058 ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICBitCnt[3]        ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICBitCnt[3]        ; sys_clk      ; sys_clk     ; 0.000        ; 0.081      ; 1.351      ;
+; 1.067 ; OLED_Top:OLED_TopHP|OLED_Init:OLED_InitHP|Init_index[2]              ; OLED_Top:OLED_TopHP|state.OLED_INIT                                  ; sys_clk      ; sys_clk     ; 0.000        ; 0.080      ; 1.359      ;
+; 1.071 ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICSlaveReg[14]     ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICSlaveReg[14]     ; sys_clk      ; sys_clk     ; 0.000        ; 0.081      ; 1.364      ;
+; 1.127 ; OLED_Top:OLED_TopHP|state.OLED_IDLE                                  ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICSlaveReg[11]     ; sys_clk      ; sys_clk     ; 0.000        ; 0.082      ; 1.421      ;
+; 1.129 ; OLED_Top:OLED_TopHP|state.OLED_IDLE                                  ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICSlaveReg[3]      ; sys_clk      ; sys_clk     ; 0.000        ; 0.082      ; 1.423      ;
+; 1.143 ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICBitCnt[0]        ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICBitCnt[1]        ; sys_clk      ; sys_clk     ; 0.000        ; 0.081      ; 1.436      ;
+; 1.151 ; OLED_Top:OLED_TopHP|state.OLED_IDLE                                  ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICSlaveReg[5]      ; sys_clk      ; sys_clk     ; 0.000        ; 0.080      ; 1.443      ;
+; 1.152 ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICBitCnt[0]        ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICBitCnt[2]        ; sys_clk      ; sys_clk     ; 0.000        ; 0.081      ; 1.445      ;
+; 1.157 ; OLED_Top:OLED_TopHP|state.OLED_IDLE                                  ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICSlaveReg[4]      ; sys_clk      ; sys_clk     ; 0.000        ; 0.080      ; 1.449      ;
+; 1.168 ; OLED_Top:OLED_TopHP|state.OLED_IDLE                                  ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|state.IIC_START     ; sys_clk      ; sys_clk     ; 0.000        ; 0.569      ; 1.949      ;
+; 1.170 ; OLED_Top:OLED_TopHP|state.OLED_IDLE                                  ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICSlaveReg[0]      ; sys_clk      ; sys_clk     ; 0.000        ; 0.080      ; 1.462      ;
+; 1.179 ; OLED_Top:OLED_TopHP|OLED_Init:OLED_InitHP|Init_index[2]              ; OLED_Top:OLED_TopHP|OLED_Init:OLED_InitHP|Init_index[1]              ; sys_clk      ; sys_clk     ; 0.000        ; 0.575      ; 1.966      ;
+; 1.181 ; OLED_Top:OLED_TopHP|OLED_Init:OLED_InitHP|Init_index[2]              ; OLED_Top:OLED_TopHP|OLED_Init:OLED_InitHP|Init_index[0]              ; sys_clk      ; sys_clk     ; 0.000        ; 0.575      ; 1.968      ;
+; 1.188 ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|state.IIC_IDLE      ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICSlaveReg[14]     ; sys_clk      ; sys_clk     ; 0.000        ; 0.081      ; 1.481      ;
+; 1.201 ; OLED_Top:OLED_TopHP|OLED_ShowFont:OLED_ShowFont_HP|showfont_index[1] ; OLED_Top:OLED_TopHP|state.OLED_ShowFont                              ; sys_clk      ; sys_clk     ; 0.000        ; 0.574      ; 1.987      ;
+; 1.211 ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|state.IIC_IDLE      ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICSlaveReg[10]     ; sys_clk      ; sys_clk     ; 0.000        ; 0.081      ; 1.504      ;
+; 1.211 ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|state.IIC_IDLE      ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICSlaveReg[7]      ; sys_clk      ; sys_clk     ; 0.000        ; 0.081      ; 1.504      ;
+; 1.229 ; OLED_Top:OLED_TopHP|state.OLED_ShowFont                              ; OLED_Top:OLED_TopHP|state.OLED_IDLE                                  ; sys_clk      ; sys_clk     ; 0.000        ; -0.393     ; 1.048      ;
+; 1.253 ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICCnt[6]           ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|state.IIC_START     ; sys_clk      ; sys_clk     ; 0.000        ; 0.575      ; 2.040      ;
+; 1.258 ; OLED_Top:OLED_TopHP|state.OLED_INIT                                  ; OLED_Top:OLED_TopHP|OLED_Init:OLED_InitHP|Init_index[4]              ; sys_clk      ; sys_clk     ; 0.000        ; 0.080      ; 1.550      ;
+; 1.259 ; OLED_Top:OLED_TopHP|state.OLED_ShowFont                              ; OLED_Top:OLED_TopHP|OLED_ShowFont:OLED_ShowFont_HP|showfont_index[4] ; sys_clk      ; sys_clk     ; 0.000        ; 0.101      ; 1.572      ;
+; 1.259 ; OLED_Top:OLED_TopHP|state.OLED_INIT                                  ; OLED_Top:OLED_TopHP|OLED_Init:OLED_InitHP|Init_index[2]              ; sys_clk      ; sys_clk     ; 0.000        ; 0.080      ; 1.551      ;
+; 1.273 ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|iictx               ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|iictx               ; sys_clk      ; sys_clk     ; 0.000        ; 0.099      ; 1.584      ;
+; 1.275 ; OLED_Top:OLED_TopHP|state.OLED_INIT                                  ; OLED_Top:OLED_TopHP|OLED_Init:OLED_InitHP|Init_index[3]              ; sys_clk      ; sys_clk     ; 0.000        ; 0.080      ; 1.567      ;
+; 1.283 ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICBitCnt[0]        ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICBitCnt[3]        ; sys_clk      ; sys_clk     ; 0.000        ; 0.081      ; 1.576      ;
+; 1.290 ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICACKStopCnt[1]    ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|state.IIC_STOP      ; sys_clk      ; sys_clk     ; 0.000        ; 0.080      ; 1.582      ;
+; 1.291 ; OLED_Top:OLED_TopHP|OLED_ShowFont:OLED_ShowFont_HP|showfont_index[1] ; OLED_Top:OLED_TopHP|OLED_ShowFont:OLED_ShowFont_HP|showfont_index[4] ; sys_clk      ; sys_clk     ; 0.000        ; 0.574      ; 2.077      ;
+; 1.298 ; OLED_Top:OLED_TopHP|state.OLED_INIT                                  ; OLED_Top:OLED_TopHP|state.OLED_ShowFont                              ; sys_clk      ; sys_clk     ; 0.000        ; 0.579      ; 2.089      ;
+; 1.320 ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICSendBytes[0]     ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICSendBytes[2]     ; sys_clk      ; sys_clk     ; 0.000        ; 0.081      ; 1.613      ;
+; 1.321 ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICBitCnt[2]        ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICBitCnt[3]        ; sys_clk      ; sys_clk     ; 0.000        ; 0.081      ; 1.614      ;
+; 1.328 ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICBitCnt[1]        ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICBitCnt[2]        ; sys_clk      ; sys_clk     ; 0.000        ; 0.081      ; 1.621      ;
+; 1.348 ; OLED_Top:OLED_TopHP|OLED_ShowFont:OLED_ShowFont_HP|showfont_index[2] ; OLED_Top:OLED_TopHP|OLED_ShowFont:OLED_ShowFont_HP|showfont_index[3] ; sys_clk      ; sys_clk     ; 0.000        ; 0.574      ; 2.134      ;
+; 1.349 ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|iicCLK              ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICBitCnt[0]        ; sys_clk      ; sys_clk     ; 0.000        ; 0.087      ; 1.648      ;
+; 1.367 ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|state.IIC_IDLE      ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|state.IIC_START     ; sys_clk      ; sys_clk     ; 0.000        ; 0.568      ; 2.147      ;
+; 1.374 ; OLED_Top:OLED_TopHP|OLED_Init:OLED_InitHP|Init_index[1]              ; OLED_Top:OLED_TopHP|OLED_Init:OLED_InitHP|Init_index[0]              ; sys_clk      ; sys_clk     ; 0.000        ; 0.100      ; 1.686      ;
+; 1.379 ; OLED_Top:OLED_TopHP|OLED_ShowFont:OLED_ShowFont_HP|showfont_index[1] ; OLED_Top:OLED_TopHP|state.OLED_IDLE                                  ; sys_clk      ; sys_clk     ; 0.000        ; 0.080      ; 1.671      ;
+; 1.380 ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICCnt[3]           ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICCnt[3]           ; sys_clk      ; sys_clk     ; 0.000        ; 0.100      ; 1.692      ;
+; 1.384 ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICCnt[1]           ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|state.IIC_START     ; sys_clk      ; sys_clk     ; 0.000        ; 0.575      ; 2.171      ;
+; 1.397 ; OLED_Top:OLED_TopHP|state.OLED_IDLE                                  ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICSlaveReg[10]     ; sys_clk      ; sys_clk     ; 0.000        ; 0.082      ; 1.691      ;
+; 1.398 ; OLED_Top:OLED_TopHP|state.OLED_IDLE                                  ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICSlaveReg[7]      ; sys_clk      ; sys_clk     ; 0.000        ; 0.082      ; 1.692      ;
+; 1.400 ; OLED_Top:OLED_TopHP|state.OLED_IDLE                                  ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICSlaveReg[14]     ; sys_clk      ; sys_clk     ; 0.000        ; 0.082      ; 1.694      ;
+; 1.415 ; OLED_Top:OLED_TopHP|state.OLED_IDLE                                  ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|state.IIC_IDLE      ; sys_clk      ; sys_clk     ; 0.000        ; 0.082      ; 1.709      ;
+; 1.427 ; OLED_Top:OLED_TopHP|state.OLED_IDLE                                  ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICSlaveReg[9]      ; sys_clk      ; sys_clk     ; 0.000        ; 0.080      ; 1.719      ;
+; 1.428 ; OLED_Top:OLED_TopHP|state.OLED_IDLE                                  ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICSlaveReg[8]      ; sys_clk      ; sys_clk     ; 0.000        ; 0.080      ; 1.720      ;
+; 1.428 ; OLED_Top:OLED_TopHP|state.OLED_IDLE                                  ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICSlaveReg[1]      ; sys_clk      ; sys_clk     ; 0.000        ; 0.080      ; 1.720      ;
+; 1.428 ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICBitCnt[1]        ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICBitCnt[3]        ; sys_clk      ; sys_clk     ; 0.000        ; 0.081      ; 1.721      ;
+; 1.429 ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICCnt[2]           ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICCnt[3]           ; sys_clk      ; sys_clk     ; 0.000        ; 0.575      ; 2.216      ;
+; 1.430 ; OLED_Top:OLED_TopHP|state.OLED_IDLE                                  ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICSlaveReg[12]     ; sys_clk      ; sys_clk     ; 0.000        ; 0.080      ; 1.722      ;
+; 1.431 ; OLED_Top:OLED_TopHP|state.OLED_IDLE                                  ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICSlaveReg[13]     ; sys_clk      ; sys_clk     ; 0.000        ; 0.080      ; 1.723      ;
+; 1.432 ; OLED_Top:OLED_TopHP|OLED_Init:OLED_InitHP|Init_index[2]              ; OLED_Top:OLED_TopHP|state.OLED_ShowFont                              ; sys_clk      ; sys_clk     ; 0.000        ; 0.579      ; 2.223      ;
+; 1.437 ; OLED_Top:OLED_TopHP|state.OLED_IDLE                                  ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICSlaveReg[2]      ; sys_clk      ; sys_clk     ; 0.000        ; 0.082      ; 1.731      ;
+; 1.438 ; OLED_Top:OLED_TopHP|state.OLED_IDLE                                  ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICSlaveReg[15]     ; sys_clk      ; sys_clk     ; 0.000        ; 0.082      ; 1.732      ;
+; 1.451 ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICCnt[2]           ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|state.IIC_START     ; sys_clk      ; sys_clk     ; 0.000        ; 0.575      ; 2.238      ;
+; 1.465 ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|state.IIC_ACK       ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICACKStopCnt[1]    ; sys_clk      ; sys_clk     ; 0.000        ; 0.080      ; 1.757      ;
+; 1.467 ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|state.IIC_ACK       ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICACKStopCnt[0]    ; sys_clk      ; sys_clk     ; 0.000        ; 0.080      ; 1.759      ;
+; 1.475 ; OLED_Top:OLED_TopHP|OLED_Init:OLED_InitHP|Init_index[4]              ; OLED_Top:OLED_TopHP|state.OLED_INIT                                  ; sys_clk      ; sys_clk     ; 0.000        ; 0.080      ; 1.767      ;
+; 1.475 ; OLED_Top:OLED_TopHP|OLED_Init:OLED_InitHP|Init_index[3]              ; OLED_Top:OLED_TopHP|state.OLED_INIT                                  ; sys_clk      ; sys_clk     ; 0.000        ; 0.080      ; 1.767      ;
+; 1.478 ; OLED_Top:OLED_TopHP|state.OLED_IDLE                                  ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICSlaveReg[6]      ; sys_clk      ; sys_clk     ; 0.000        ; 0.082      ; 1.772      ;
++-------+----------------------------------------------------------------------+----------------------------------------------------------------------+--------------+-------------+--------------+------------+------------+
+
+
+-----------------------------------------------
+; Slow 1200mV 85C Model Metastability Summary ;
+-----------------------------------------------
+No synchronizer chains to report.
+
+
++--------------------------------------------------+
+; Slow 1200mV 0C Model Fmax Summary                ;
++------------+-----------------+------------+------+
+; Fmax       ; Restricted Fmax ; Clock Name ; Note ;
++------------+-----------------+------------+------+
+; 170.24 MHz ; 170.24 MHz      ; sys_clk    ;      ;
++------------+-----------------+------------+------+
+This panel reports FMAX for every clock in the design, regardless of the user-specified clock periods.  FMAX is only computed for paths where the source and destination registers or ports are driven by the same clock.  Paths of different clocks, including generated clocks, are ignored.  For paths between a clock and its inversion, FMAX is computed as if the rising and falling edges are scaled along with FMAX, such that the duty cycle (in terms of a percentage) is maintained. Altera recommends that you always use clock constraints and other slack reports for sign-off analysis.
+
+
++------------------------------------+
+; Slow 1200mV 0C Model Setup Summary ;
++---------+--------+-----------------+
+; Clock   ; Slack  ; End Point TNS   ;
++---------+--------+-----------------+
+; sys_clk ; -4.874 ; -276.646        ;
++---------+--------+-----------------+
+
+
++-----------------------------------+
+; Slow 1200mV 0C Model Hold Summary ;
++---------+-------+-----------------+
+; Clock   ; Slack ; End Point TNS   ;
++---------+-------+-----------------+
+; sys_clk ; 0.383 ; 0.000           ;
++---------+-------+-----------------+
+
+
+-----------------------------------------
+; Slow 1200mV 0C Model Recovery Summary ;
+-----------------------------------------
+No paths to report.
+
+
+----------------------------------------
+; Slow 1200mV 0C Model Removal Summary ;
+----------------------------------------
+No paths to report.
+
+
++--------------------------------------------------+
+; Slow 1200mV 0C Model Minimum Pulse Width Summary ;
++---------+--------+-------------------------------+
+; Clock   ; Slack  ; End Point TNS                 ;
++---------+--------+-------------------------------+
+; sys_clk ; -3.000 ; -107.090                      ;
++---------+--------+-------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Slow 1200mV 0C Model Setup: 'sys_clk'                                                                                                                                                                                ;
++--------+-------------------------------------------------------------------+-------------------------------------------------------------------+--------------+-------------+--------------+------------+------------+
+; Slack  ; From Node                                                         ; To Node                                                           ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++--------+-------------------------------------------------------------------+-------------------------------------------------------------------+--------------+-------------+--------------+------------+------------+
+; -4.874 ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICSendBytes[2]  ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICACKStopCnt[1] ; sys_clk      ; sys_clk     ; 1.000        ; -0.078     ; 5.798      ;
+; -4.874 ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICSendBytes[2]  ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICACKStopCnt[0] ; sys_clk      ; sys_clk     ; 1.000        ; -0.078     ; 5.798      ;
+; -4.848 ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICCnt[17]       ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICACKStopCnt[1] ; sys_clk      ; sys_clk     ; 1.000        ; -0.073     ; 5.777      ;
+; -4.848 ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICCnt[17]       ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICACKStopCnt[0] ; sys_clk      ; sys_clk     ; 1.000        ; -0.073     ; 5.777      ;
+; -4.846 ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICCnt[10]       ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICACKStopCnt[1] ; sys_clk      ; sys_clk     ; 1.000        ; -0.073     ; 5.775      ;
+; -4.846 ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICCnt[16]       ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICACKStopCnt[1] ; sys_clk      ; sys_clk     ; 1.000        ; -0.073     ; 5.775      ;
+; -4.846 ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICCnt[10]       ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICACKStopCnt[0] ; sys_clk      ; sys_clk     ; 1.000        ; -0.073     ; 5.775      ;
+; -4.846 ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICCnt[16]       ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICACKStopCnt[0] ; sys_clk      ; sys_clk     ; 1.000        ; -0.073     ; 5.775      ;
+; -4.840 ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICCnt[13]       ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICACKStopCnt[1] ; sys_clk      ; sys_clk     ; 1.000        ; -0.073     ; 5.769      ;
+; -4.840 ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICCnt[13]       ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICACKStopCnt[0] ; sys_clk      ; sys_clk     ; 1.000        ; -0.073     ; 5.769      ;
+; -4.815 ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|iicCLK           ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICACKStopCnt[1] ; sys_clk      ; sys_clk     ; 1.000        ; -0.072     ; 5.745      ;
+; -4.815 ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|iicCLK           ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICACKStopCnt[0] ; sys_clk      ; sys_clk     ; 1.000        ; -0.072     ; 5.745      ;
+; -4.775 ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICACKStopCnt[1] ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICACKStopCnt[1] ; sys_clk      ; sys_clk     ; 1.000        ; -0.072     ; 5.705      ;
+; -4.775 ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICACKStopCnt[1] ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICACKStopCnt[0] ; sys_clk      ; sys_clk     ; 1.000        ; -0.072     ; 5.705      ;
+; -4.753 ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|iicCLK           ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICCnt[13]       ; sys_clk      ; sys_clk     ; 1.000        ; -0.071     ; 5.684      ;
+; -4.753 ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|iicCLK           ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICCnt[15]       ; sys_clk      ; sys_clk     ; 1.000        ; -0.071     ; 5.684      ;
+; -4.753 ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|iicCLK           ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICCnt[19]       ; sys_clk      ; sys_clk     ; 1.000        ; -0.071     ; 5.684      ;
+; -4.753 ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICCnt[20]       ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICACKStopCnt[1] ; sys_clk      ; sys_clk     ; 1.000        ; -0.073     ; 5.682      ;
+; -4.753 ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICCnt[20]       ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICACKStopCnt[0] ; sys_clk      ; sys_clk     ; 1.000        ; -0.073     ; 5.682      ;
+; -4.752 ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|iicCLK           ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICCnt[12]       ; sys_clk      ; sys_clk     ; 1.000        ; -0.071     ; 5.683      ;
+; -4.752 ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|iicCLK           ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICCnt[14]       ; sys_clk      ; sys_clk     ; 1.000        ; -0.071     ; 5.683      ;
+; -4.747 ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICCnt[19]       ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICACKStopCnt[1] ; sys_clk      ; sys_clk     ; 1.000        ; -0.073     ; 5.676      ;
+; -4.747 ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICCnt[19]       ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICACKStopCnt[0] ; sys_clk      ; sys_clk     ; 1.000        ; -0.073     ; 5.676      ;
+; -4.743 ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICCnt[17]       ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICCnt[13]       ; sys_clk      ; sys_clk     ; 1.000        ; -0.072     ; 5.673      ;
+; -4.743 ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICCnt[17]       ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICCnt[15]       ; sys_clk      ; sys_clk     ; 1.000        ; -0.072     ; 5.673      ;
+; -4.743 ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICCnt[17]       ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICCnt[19]       ; sys_clk      ; sys_clk     ; 1.000        ; -0.072     ; 5.673      ;
+; -4.742 ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICCnt[17]       ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICCnt[12]       ; sys_clk      ; sys_clk     ; 1.000        ; -0.072     ; 5.672      ;
+; -4.742 ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICCnt[17]       ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICCnt[14]       ; sys_clk      ; sys_clk     ; 1.000        ; -0.072     ; 5.672      ;
+; -4.741 ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICCnt[10]       ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICCnt[13]       ; sys_clk      ; sys_clk     ; 1.000        ; -0.072     ; 5.671      ;
+; -4.741 ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICCnt[16]       ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICCnt[13]       ; sys_clk      ; sys_clk     ; 1.000        ; -0.072     ; 5.671      ;
+; -4.741 ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICCnt[10]       ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICCnt[15]       ; sys_clk      ; sys_clk     ; 1.000        ; -0.072     ; 5.671      ;
+; -4.741 ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICCnt[16]       ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICCnt[15]       ; sys_clk      ; sys_clk     ; 1.000        ; -0.072     ; 5.671      ;
+; -4.741 ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICCnt[10]       ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICCnt[19]       ; sys_clk      ; sys_clk     ; 1.000        ; -0.072     ; 5.671      ;
+; -4.741 ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICCnt[16]       ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICCnt[19]       ; sys_clk      ; sys_clk     ; 1.000        ; -0.072     ; 5.671      ;
+; -4.740 ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICCnt[10]       ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICCnt[12]       ; sys_clk      ; sys_clk     ; 1.000        ; -0.072     ; 5.670      ;
+; -4.740 ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICCnt[16]       ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICCnt[12]       ; sys_clk      ; sys_clk     ; 1.000        ; -0.072     ; 5.670      ;
+; -4.740 ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICCnt[10]       ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICCnt[14]       ; sys_clk      ; sys_clk     ; 1.000        ; -0.072     ; 5.670      ;
+; -4.740 ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICCnt[16]       ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICCnt[14]       ; sys_clk      ; sys_clk     ; 1.000        ; -0.072     ; 5.670      ;
+; -4.735 ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICCnt[13]       ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICCnt[13]       ; sys_clk      ; sys_clk     ; 1.000        ; -0.072     ; 5.665      ;
+; -4.735 ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICCnt[13]       ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICCnt[15]       ; sys_clk      ; sys_clk     ; 1.000        ; -0.072     ; 5.665      ;
+; -4.735 ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICCnt[13]       ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICCnt[19]       ; sys_clk      ; sys_clk     ; 1.000        ; -0.072     ; 5.665      ;
+; -4.734 ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICCnt[13]       ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICCnt[12]       ; sys_clk      ; sys_clk     ; 1.000        ; -0.072     ; 5.664      ;
+; -4.734 ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICCnt[13]       ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICCnt[14]       ; sys_clk      ; sys_clk     ; 1.000        ; -0.072     ; 5.664      ;
+; -4.680 ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICSendBytes[2]  ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICCnt[13]       ; sys_clk      ; sys_clk     ; 1.000        ; -0.077     ; 5.605      ;
+; -4.680 ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICSendBytes[2]  ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICCnt[15]       ; sys_clk      ; sys_clk     ; 1.000        ; -0.077     ; 5.605      ;
+; -4.680 ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICSendBytes[2]  ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICCnt[19]       ; sys_clk      ; sys_clk     ; 1.000        ; -0.077     ; 5.605      ;
+; -4.679 ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICSendBytes[2]  ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICCnt[12]       ; sys_clk      ; sys_clk     ; 1.000        ; -0.077     ; 5.604      ;
+; -4.679 ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICSendBytes[2]  ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICCnt[14]       ; sys_clk      ; sys_clk     ; 1.000        ; -0.077     ; 5.604      ;
+; -4.676 ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICCnt[15]       ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICACKStopCnt[1] ; sys_clk      ; sys_clk     ; 1.000        ; -0.073     ; 5.605      ;
+; -4.676 ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICCnt[15]       ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICACKStopCnt[0] ; sys_clk      ; sys_clk     ; 1.000        ; -0.073     ; 5.605      ;
+; -4.672 ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICACKStopCnt[0] ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICACKStopCnt[1] ; sys_clk      ; sys_clk     ; 1.000        ; -0.072     ; 5.602      ;
+; -4.672 ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICACKStopCnt[0] ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICACKStopCnt[0] ; sys_clk      ; sys_clk     ; 1.000        ; -0.072     ; 5.602      ;
+; -4.670 ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICCnt[11]       ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICACKStopCnt[1] ; sys_clk      ; sys_clk     ; 1.000        ; -0.073     ; 5.599      ;
+; -4.670 ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICCnt[11]       ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICACKStopCnt[0] ; sys_clk      ; sys_clk     ; 1.000        ; -0.073     ; 5.599      ;
+; -4.670 ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICBitCnt[1]     ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICACKStopCnt[1] ; sys_clk      ; sys_clk     ; 1.000        ; -0.076     ; 5.596      ;
+; -4.670 ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICBitCnt[1]     ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICACKStopCnt[0] ; sys_clk      ; sys_clk     ; 1.000        ; -0.076     ; 5.596      ;
+; -4.667 ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICSendBytes[1]  ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICACKStopCnt[1] ; sys_clk      ; sys_clk     ; 1.000        ; -0.078     ; 5.591      ;
+; -4.667 ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICSendBytes[1]  ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICACKStopCnt[0] ; sys_clk      ; sys_clk     ; 1.000        ; -0.078     ; 5.591      ;
+; -4.648 ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICCnt[20]       ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICCnt[13]       ; sys_clk      ; sys_clk     ; 1.000        ; -0.072     ; 5.578      ;
+; -4.648 ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICCnt[20]       ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICCnt[15]       ; sys_clk      ; sys_clk     ; 1.000        ; -0.072     ; 5.578      ;
+; -4.648 ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICCnt[20]       ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICCnt[19]       ; sys_clk      ; sys_clk     ; 1.000        ; -0.072     ; 5.578      ;
+; -4.647 ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICCnt[20]       ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICCnt[12]       ; sys_clk      ; sys_clk     ; 1.000        ; -0.072     ; 5.577      ;
+; -4.647 ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICCnt[20]       ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICCnt[14]       ; sys_clk      ; sys_clk     ; 1.000        ; -0.072     ; 5.577      ;
+; -4.644 ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICCnt[9]        ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICACKStopCnt[1] ; sys_clk      ; sys_clk     ; 1.000        ; -0.073     ; 5.573      ;
+; -4.644 ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICCnt[9]        ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICACKStopCnt[0] ; sys_clk      ; sys_clk     ; 1.000        ; -0.073     ; 5.573      ;
+; -4.642 ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICCnt[19]       ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICCnt[13]       ; sys_clk      ; sys_clk     ; 1.000        ; -0.072     ; 5.572      ;
+; -4.642 ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICCnt[19]       ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICCnt[15]       ; sys_clk      ; sys_clk     ; 1.000        ; -0.072     ; 5.572      ;
+; -4.642 ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICCnt[19]       ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICCnt[19]       ; sys_clk      ; sys_clk     ; 1.000        ; -0.072     ; 5.572      ;
+; -4.641 ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICACKStopCnt[1] ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICCnt[13]       ; sys_clk      ; sys_clk     ; 1.000        ; -0.071     ; 5.572      ;
+; -4.641 ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICACKStopCnt[1] ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICCnt[15]       ; sys_clk      ; sys_clk     ; 1.000        ; -0.071     ; 5.572      ;
+; -4.641 ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICACKStopCnt[1] ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICCnt[19]       ; sys_clk      ; sys_clk     ; 1.000        ; -0.071     ; 5.572      ;
+; -4.641 ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICCnt[19]       ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICCnt[12]       ; sys_clk      ; sys_clk     ; 1.000        ; -0.072     ; 5.571      ;
+; -4.641 ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICCnt[19]       ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICCnt[14]       ; sys_clk      ; sys_clk     ; 1.000        ; -0.072     ; 5.571      ;
+; -4.640 ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICACKStopCnt[1] ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICCnt[12]       ; sys_clk      ; sys_clk     ; 1.000        ; -0.071     ; 5.571      ;
+; -4.640 ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICACKStopCnt[1] ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICCnt[14]       ; sys_clk      ; sys_clk     ; 1.000        ; -0.071     ; 5.571      ;
+; -4.608 ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICBitCnt[1]     ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICCnt[13]       ; sys_clk      ; sys_clk     ; 1.000        ; -0.075     ; 5.535      ;
+; -4.608 ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICBitCnt[1]     ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICCnt[15]       ; sys_clk      ; sys_clk     ; 1.000        ; -0.075     ; 5.535      ;
+; -4.608 ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICBitCnt[1]     ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICCnt[19]       ; sys_clk      ; sys_clk     ; 1.000        ; -0.075     ; 5.535      ;
+; -4.607 ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICBitCnt[1]     ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICCnt[12]       ; sys_clk      ; sys_clk     ; 1.000        ; -0.075     ; 5.534      ;
+; -4.607 ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICBitCnt[1]     ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICCnt[14]       ; sys_clk      ; sys_clk     ; 1.000        ; -0.075     ; 5.534      ;
+; -4.602 ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|iicCLK           ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICCnt[10]       ; sys_clk      ; sys_clk     ; 1.000        ; -0.071     ; 5.533      ;
+; -4.601 ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|iicCLK           ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICCnt[21]       ; sys_clk      ; sys_clk     ; 1.000        ; -0.071     ; 5.532      ;
+; -4.601 ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|iicCLK           ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICCnt[16]       ; sys_clk      ; sys_clk     ; 1.000        ; -0.071     ; 5.532      ;
+; -4.601 ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|iicCLK           ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICCnt[20]       ; sys_clk      ; sys_clk     ; 1.000        ; -0.071     ; 5.532      ;
+; -4.600 ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|iicCLK           ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICCnt[17]       ; sys_clk      ; sys_clk     ; 1.000        ; -0.071     ; 5.531      ;
+; -4.600 ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|iicCLK           ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICCnt[18]       ; sys_clk      ; sys_clk     ; 1.000        ; -0.071     ; 5.531      ;
+; -4.599 ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|iicCLK           ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICCnt[11]       ; sys_clk      ; sys_clk     ; 1.000        ; -0.071     ; 5.530      ;
+; -4.592 ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICCnt[17]       ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICCnt[10]       ; sys_clk      ; sys_clk     ; 1.000        ; -0.072     ; 5.522      ;
+; -4.591 ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICCnt[17]       ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICCnt[21]       ; sys_clk      ; sys_clk     ; 1.000        ; -0.072     ; 5.521      ;
+; -4.591 ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICCnt[17]       ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICCnt[16]       ; sys_clk      ; sys_clk     ; 1.000        ; -0.072     ; 5.521      ;
+; -4.591 ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICCnt[17]       ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICCnt[20]       ; sys_clk      ; sys_clk     ; 1.000        ; -0.072     ; 5.521      ;
+; -4.590 ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICCnt[17]       ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICCnt[17]       ; sys_clk      ; sys_clk     ; 1.000        ; -0.072     ; 5.520      ;
+; -4.590 ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICCnt[17]       ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICCnt[18]       ; sys_clk      ; sys_clk     ; 1.000        ; -0.072     ; 5.520      ;
+; -4.590 ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICCnt[10]       ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICCnt[10]       ; sys_clk      ; sys_clk     ; 1.000        ; -0.072     ; 5.520      ;
+; -4.590 ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICCnt[16]       ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICCnt[10]       ; sys_clk      ; sys_clk     ; 1.000        ; -0.072     ; 5.520      ;
+; -4.589 ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICCnt[17]       ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICCnt[11]       ; sys_clk      ; sys_clk     ; 1.000        ; -0.072     ; 5.519      ;
+; -4.589 ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICCnt[10]       ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICCnt[21]       ; sys_clk      ; sys_clk     ; 1.000        ; -0.072     ; 5.519      ;
+; -4.589 ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICCnt[16]       ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICCnt[21]       ; sys_clk      ; sys_clk     ; 1.000        ; -0.072     ; 5.519      ;
+; -4.589 ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICCnt[10]       ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICCnt[16]       ; sys_clk      ; sys_clk     ; 1.000        ; -0.072     ; 5.519      ;
+; -4.589 ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICCnt[16]       ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICCnt[16]       ; sys_clk      ; sys_clk     ; 1.000        ; -0.072     ; 5.519      ;
++--------+-------------------------------------------------------------------+-------------------------------------------------------------------+--------------+-------------+--------------+------------+------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Slow 1200mV 0C Model Hold: 'sys_clk'                                                                                                                                                                                      ;
++-------+----------------------------------------------------------------------+----------------------------------------------------------------------+--------------+-------------+--------------+------------+------------+
+; Slack ; From Node                                                            ; To Node                                                              ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++-------+----------------------------------------------------------------------+----------------------------------------------------------------------+--------------+-------------+--------------+------------+------------+
+; 0.383 ; OLED_Top:OLED_TopHP|OLED_ShowFont:OLED_ShowFont_HP|showfont_index[0] ; OLED_Top:OLED_TopHP|OLED_ShowFont:OLED_ShowFont_HP|showfont_index[0] ; sys_clk      ; sys_clk     ; 0.000        ; 0.091      ; 0.669      ;
+; 0.383 ; OLED_Top:OLED_TopHP|OLED_ShowFont:OLED_ShowFont_HP|showfont_index[4] ; OLED_Top:OLED_TopHP|OLED_ShowFont:OLED_ShowFont_HP|showfont_index[4] ; sys_clk      ; sys_clk     ; 0.000        ; 0.091      ; 0.669      ;
+; 0.383 ; OLED_Top:OLED_TopHP|OLED_ShowFont:OLED_ShowFont_HP|showfont_index[3] ; OLED_Top:OLED_TopHP|OLED_ShowFont:OLED_ShowFont_HP|showfont_index[3] ; sys_clk      ; sys_clk     ; 0.000        ; 0.091      ; 0.669      ;
+; 0.383 ; OLED_Top:OLED_TopHP|OLED_ShowFont:OLED_ShowFont_HP|showfont_index[5] ; OLED_Top:OLED_TopHP|OLED_ShowFont:OLED_ShowFont_HP|showfont_index[5] ; sys_clk      ; sys_clk     ; 0.000        ; 0.091      ; 0.669      ;
+; 0.383 ; OLED_Top:OLED_TopHP|state.OLED_ShowFont                              ; OLED_Top:OLED_TopHP|state.OLED_ShowFont                              ; sys_clk      ; sys_clk     ; 0.000        ; 0.091      ; 0.669      ;
+; 0.384 ; OLED_Top:OLED_TopHP|OLED_Init:OLED_InitHP|Init_index[1]              ; OLED_Top:OLED_TopHP|OLED_Init:OLED_InitHP|Init_index[1]              ; sys_clk      ; sys_clk     ; 0.000        ; 0.090      ; 0.669      ;
+; 0.384 ; OLED_Top:OLED_TopHP|OLED_Init:OLED_InitHP|Init_index[0]              ; OLED_Top:OLED_TopHP|OLED_Init:OLED_InitHP|Init_index[0]              ; sys_clk      ; sys_clk     ; 0.000        ; 0.090      ; 0.669      ;
+; 0.384 ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|state.IIC_START     ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|state.IIC_START     ; sys_clk      ; sys_clk     ; 0.000        ; 0.090      ; 0.669      ;
+; 0.385 ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICWriteReqReg      ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICWriteReqReg      ; sys_clk      ; sys_clk     ; 0.000        ; 0.089      ; 0.669      ;
+; 0.401 ; OLED_Top:OLED_TopHP|state.OLED_INIT                                  ; OLED_Top:OLED_TopHP|state.OLED_INIT                                  ; sys_clk      ; sys_clk     ; 0.000        ; 0.073      ; 0.669      ;
+; 0.401 ; OLED_Top:OLED_TopHP|OLED_Init:OLED_InitHP|Init_index[3]              ; OLED_Top:OLED_TopHP|OLED_Init:OLED_InitHP|Init_index[3]              ; sys_clk      ; sys_clk     ; 0.000        ; 0.073      ; 0.669      ;
+; 0.401 ; OLED_Top:OLED_TopHP|OLED_Init:OLED_InitHP|Init_index[2]              ; OLED_Top:OLED_TopHP|OLED_Init:OLED_InitHP|Init_index[2]              ; sys_clk      ; sys_clk     ; 0.000        ; 0.073      ; 0.669      ;
+; 0.401 ; OLED_Top:OLED_TopHP|OLED_Init:OLED_InitHP|Init_index[4]              ; OLED_Top:OLED_TopHP|OLED_Init:OLED_InitHP|Init_index[4]              ; sys_clk      ; sys_clk     ; 0.000        ; 0.073      ; 0.669      ;
+; 0.402 ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICACKStopCnt[1]    ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICACKStopCnt[1]    ; sys_clk      ; sys_clk     ; 0.000        ; 0.072      ; 0.669      ;
+; 0.402 ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICACKStopCnt[0]    ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICACKStopCnt[0]    ; sys_clk      ; sys_clk     ; 0.000        ; 0.072      ; 0.669      ;
+; 0.402 ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|state.IIC_IDLE      ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|state.IIC_IDLE      ; sys_clk      ; sys_clk     ; 0.000        ; 0.072      ; 0.669      ;
+; 0.402 ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|state.IIC_STOP      ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|state.IIC_STOP      ; sys_clk      ; sys_clk     ; 0.000        ; 0.072      ; 0.669      ;
+; 0.402 ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|state.IIC_RDDATA    ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|state.IIC_RDDATA    ; sys_clk      ; sys_clk     ; 0.000        ; 0.072      ; 0.669      ;
+; 0.402 ; OLED_Top:OLED_TopHP|state.OLED_IDLE                                  ; OLED_Top:OLED_TopHP|state.OLED_IDLE                                  ; sys_clk      ; sys_clk     ; 0.000        ; 0.072      ; 0.669      ;
+; 0.402 ; OLED_Top:OLED_TopHP|OLED_ShowFont:OLED_ShowFont_HP|showfont_index[1] ; OLED_Top:OLED_TopHP|OLED_ShowFont:OLED_ShowFont_HP|showfont_index[1] ; sys_clk      ; sys_clk     ; 0.000        ; 0.072      ; 0.669      ;
+; 0.402 ; OLED_Top:OLED_TopHP|OLED_ShowFont:OLED_ShowFont_HP|showfont_index[2] ; OLED_Top:OLED_TopHP|OLED_ShowFont:OLED_ShowFont_HP|showfont_index[2] ; sys_clk      ; sys_clk     ; 0.000        ; 0.072      ; 0.669      ;
+; 0.402 ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|state.IIC_WRDATA    ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|state.IIC_WRDATA    ; sys_clk      ; sys_clk     ; 0.000        ; 0.072      ; 0.669      ;
+; 0.402 ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICSendBytes[1]     ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICSendBytes[1]     ; sys_clk      ; sys_clk     ; 0.000        ; 0.072      ; 0.669      ;
+; 0.402 ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICSendBytes[2]     ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICSendBytes[2]     ; sys_clk      ; sys_clk     ; 0.000        ; 0.072      ; 0.669      ;
+; 0.417 ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICSendBytes[0]     ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICSendBytes[0]     ; sys_clk      ; sys_clk     ; 0.000        ; 0.072      ; 0.684      ;
+; 0.531 ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|state.IIC_IDLE      ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICSlaveReg[6]      ; sys_clk      ; sys_clk     ; 0.000        ; 0.072      ; 0.798      ;
+; 0.553 ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|state.IIC_IDLE      ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICSlaveReg[15]     ; sys_clk      ; sys_clk     ; 0.000        ; 0.072      ; 0.820      ;
+; 0.553 ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|state.IIC_IDLE      ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICSlaveReg[2]      ; sys_clk      ; sys_clk     ; 0.000        ; 0.072      ; 0.820      ;
+; 0.720 ; OLED_Top:OLED_TopHP|state.OLED_IDLE                                  ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICWriteReqReg      ; sys_clk      ; sys_clk     ; 0.000        ; 0.494      ; 1.409      ;
+; 0.725 ; OLED_Top:OLED_TopHP|state.OLED_INIT                                  ; OLED_Top:OLED_TopHP|OLED_Init:OLED_InitHP|Init_index[1]              ; sys_clk      ; sys_clk     ; 0.000        ; 0.537      ; 1.457      ;
+; 0.726 ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICBitCnt[0]        ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICBitCnt[0]        ; sys_clk      ; sys_clk     ; 0.000        ; 0.072      ; 0.993      ;
+; 0.726 ; OLED_Top:OLED_TopHP|state.OLED_INIT                                  ; OLED_Top:OLED_TopHP|OLED_Init:OLED_InitHP|Init_index[0]              ; sys_clk      ; sys_clk     ; 0.000        ; 0.537      ; 1.458      ;
+; 0.750 ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICACKStopCnt[0]    ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICACKStopCnt[1]    ; sys_clk      ; sys_clk     ; 0.000        ; 0.072      ; 1.017      ;
+; 0.761 ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|iicCLK              ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICACKStopCnt[0]    ; sys_clk      ; sys_clk     ; 0.000        ; 0.072      ; 1.028      ;
+; 0.762 ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|iicCLK              ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICACKStopCnt[1]    ; sys_clk      ; sys_clk     ; 0.000        ; 0.072      ; 1.029      ;
+; 0.817 ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|state.IIC_IDLE      ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICSlaveReg[11]     ; sys_clk      ; sys_clk     ; 0.000        ; 0.072      ; 1.084      ;
+; 0.870 ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|state.IIC_IDLE      ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICSlaveReg[3]      ; sys_clk      ; sys_clk     ; 0.000        ; 0.072      ; 1.137      ;
+; 0.880 ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICBitCnt[2]        ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICBitCnt[2]        ; sys_clk      ; sys_clk     ; 0.000        ; 0.072      ; 1.147      ;
+; 0.905 ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICBitCnt[1]        ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICBitCnt[1]        ; sys_clk      ; sys_clk     ; 0.000        ; 0.072      ; 1.172      ;
+; 0.906 ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICSendBytes[0]     ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICSendBytes[1]     ; sys_clk      ; sys_clk     ; 0.000        ; 0.072      ; 1.173      ;
+; 0.935 ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICBitCnt[3]        ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICBitCnt[3]        ; sys_clk      ; sys_clk     ; 0.000        ; 0.072      ; 1.202      ;
+; 0.936 ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICSendBytes[1]     ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICSendBytes[2]     ; sys_clk      ; sys_clk     ; 0.000        ; 0.072      ; 1.203      ;
+; 0.980 ; OLED_Top:OLED_TopHP|OLED_Init:OLED_InitHP|Init_index[1]              ; OLED_Top:OLED_TopHP|state.OLED_INIT                                  ; sys_clk      ; sys_clk     ; 0.000        ; -0.374     ; 0.801      ;
+; 1.000 ; OLED_Top:OLED_TopHP|state.OLED_IDLE                                  ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICSlaveReg[11]     ; sys_clk      ; sys_clk     ; 0.000        ; 0.072      ; 1.267      ;
+; 1.001 ; OLED_Top:OLED_TopHP|OLED_Init:OLED_InitHP|Init_index[2]              ; OLED_Top:OLED_TopHP|state.OLED_INIT                                  ; sys_clk      ; sys_clk     ; 0.000        ; 0.073      ; 1.269      ;
+; 1.005 ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICSlaveReg[14]     ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICSlaveReg[14]     ; sys_clk      ; sys_clk     ; 0.000        ; 0.072      ; 1.272      ;
+; 1.017 ; OLED_Top:OLED_TopHP|state.OLED_IDLE                                  ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|state.IIC_START     ; sys_clk      ; sys_clk     ; 0.000        ; 0.532      ; 1.744      ;
+; 1.030 ; OLED_Top:OLED_TopHP|state.OLED_IDLE                                  ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICSlaveReg[3]      ; sys_clk      ; sys_clk     ; 0.000        ; 0.072      ; 1.297      ;
+; 1.041 ; OLED_Top:OLED_TopHP|state.OLED_IDLE                                  ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICSlaveReg[0]      ; sys_clk      ; sys_clk     ; 0.000        ; 0.071      ; 1.307      ;
+; 1.048 ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICBitCnt[0]        ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICBitCnt[1]        ; sys_clk      ; sys_clk     ; 0.000        ; 0.072      ; 1.315      ;
+; 1.061 ; OLED_Top:OLED_TopHP|state.OLED_IDLE                                  ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICSlaveReg[5]      ; sys_clk      ; sys_clk     ; 0.000        ; 0.071      ; 1.327      ;
+; 1.062 ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|state.IIC_IDLE      ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICSlaveReg[14]     ; sys_clk      ; sys_clk     ; 0.000        ; 0.072      ; 1.329      ;
+; 1.063 ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICBitCnt[0]        ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICBitCnt[2]        ; sys_clk      ; sys_clk     ; 0.000        ; 0.072      ; 1.330      ;
+; 1.069 ; OLED_Top:OLED_TopHP|state.OLED_IDLE                                  ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICSlaveReg[4]      ; sys_clk      ; sys_clk     ; 0.000        ; 0.071      ; 1.335      ;
+; 1.078 ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|state.IIC_IDLE      ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICSlaveReg[10]     ; sys_clk      ; sys_clk     ; 0.000        ; 0.072      ; 1.345      ;
+; 1.079 ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|state.IIC_IDLE      ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICSlaveReg[7]      ; sys_clk      ; sys_clk     ; 0.000        ; 0.072      ; 1.346      ;
+; 1.081 ; OLED_Top:OLED_TopHP|OLED_ShowFont:OLED_ShowFont_HP|showfont_index[1] ; OLED_Top:OLED_TopHP|state.OLED_ShowFont                              ; sys_clk      ; sys_clk     ; 0.000        ; 0.537      ; 1.813      ;
+; 1.084 ; OLED_Top:OLED_TopHP|OLED_Init:OLED_InitHP|Init_index[2]              ; OLED_Top:OLED_TopHP|OLED_Init:OLED_InitHP|Init_index[1]              ; sys_clk      ; sys_clk     ; 0.000        ; 0.537      ; 1.816      ;
+; 1.085 ; OLED_Top:OLED_TopHP|OLED_Init:OLED_InitHP|Init_index[2]              ; OLED_Top:OLED_TopHP|OLED_Init:OLED_InitHP|Init_index[0]              ; sys_clk      ; sys_clk     ; 0.000        ; 0.537      ; 1.817      ;
+; 1.142 ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICCnt[6]           ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|state.IIC_START     ; sys_clk      ; sys_clk     ; 0.000        ; 0.536      ; 1.873      ;
+; 1.151 ; OLED_Top:OLED_TopHP|state.OLED_ShowFont                              ; OLED_Top:OLED_TopHP|state.OLED_IDLE                                  ; sys_clk      ; sys_clk     ; 0.000        ; -0.374     ; 0.972      ;
+; 1.161 ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|iictx               ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|iictx               ; sys_clk      ; sys_clk     ; 0.000        ; 0.089      ; 1.445      ;
+; 1.162 ; OLED_Top:OLED_TopHP|state.OLED_INIT                                  ; OLED_Top:OLED_TopHP|state.OLED_ShowFont                              ; sys_clk      ; sys_clk     ; 0.000        ; 0.540      ; 1.897      ;
+; 1.165 ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICSendBytes[0]     ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICSendBytes[2]     ; sys_clk      ; sys_clk     ; 0.000        ; 0.072      ; 1.432      ;
+; 1.165 ; OLED_Top:OLED_TopHP|state.OLED_ShowFont                              ; OLED_Top:OLED_TopHP|OLED_ShowFont:OLED_ShowFont_HP|showfont_index[4] ; sys_clk      ; sys_clk     ; 0.000        ; 0.091      ; 1.451      ;
+; 1.170 ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICBitCnt[0]        ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICBitCnt[3]        ; sys_clk      ; sys_clk     ; 0.000        ; 0.072      ; 1.437      ;
+; 1.172 ; OLED_Top:OLED_TopHP|state.OLED_INIT                                  ; OLED_Top:OLED_TopHP|OLED_Init:OLED_InitHP|Init_index[2]              ; sys_clk      ; sys_clk     ; 0.000        ; 0.073      ; 1.440      ;
+; 1.172 ; OLED_Top:OLED_TopHP|state.OLED_INIT                                  ; OLED_Top:OLED_TopHP|OLED_Init:OLED_InitHP|Init_index[4]              ; sys_clk      ; sys_clk     ; 0.000        ; 0.073      ; 1.440      ;
+; 1.173 ; OLED_Top:OLED_TopHP|OLED_ShowFont:OLED_ShowFont_HP|showfont_index[1] ; OLED_Top:OLED_TopHP|OLED_ShowFont:OLED_ShowFont_HP|showfont_index[4] ; sys_clk      ; sys_clk     ; 0.000        ; 0.537      ; 1.905      ;
+; 1.175 ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICACKStopCnt[1]    ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|state.IIC_STOP      ; sys_clk      ; sys_clk     ; 0.000        ; 0.072      ; 1.442      ;
+; 1.184 ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICBitCnt[2]        ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICBitCnt[3]        ; sys_clk      ; sys_clk     ; 0.000        ; 0.072      ; 1.451      ;
+; 1.190 ; OLED_Top:OLED_TopHP|state.OLED_INIT                                  ; OLED_Top:OLED_TopHP|OLED_Init:OLED_InitHP|Init_index[3]              ; sys_clk      ; sys_clk     ; 0.000        ; 0.073      ; 1.458      ;
+; 1.195 ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|state.IIC_IDLE      ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|state.IIC_START     ; sys_clk      ; sys_clk     ; 0.000        ; 0.532      ; 1.922      ;
+; 1.214 ; OLED_Top:OLED_TopHP|OLED_ShowFont:OLED_ShowFont_HP|showfont_index[2] ; OLED_Top:OLED_TopHP|OLED_ShowFont:OLED_ShowFont_HP|showfont_index[3] ; sys_clk      ; sys_clk     ; 0.000        ; 0.537      ; 1.946      ;
+; 1.231 ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|iicCLK              ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICBitCnt[0]        ; sys_clk      ; sys_clk     ; 0.000        ; 0.076      ; 1.502      ;
+; 1.240 ; OLED_Top:OLED_TopHP|state.OLED_IDLE                                  ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICSlaveReg[10]     ; sys_clk      ; sys_clk     ; 0.000        ; 0.072      ; 1.507      ;
+; 1.241 ; OLED_Top:OLED_TopHP|state.OLED_IDLE                                  ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICSlaveReg[7]      ; sys_clk      ; sys_clk     ; 0.000        ; 0.072      ; 1.508      ;
+; 1.242 ; OLED_Top:OLED_TopHP|state.OLED_IDLE                                  ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICSlaveReg[14]     ; sys_clk      ; sys_clk     ; 0.000        ; 0.072      ; 1.509      ;
+; 1.246 ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICBitCnt[1]        ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICBitCnt[2]        ; sys_clk      ; sys_clk     ; 0.000        ; 0.072      ; 1.513      ;
+; 1.249 ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICCnt[1]           ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|state.IIC_START     ; sys_clk      ; sys_clk     ; 0.000        ; 0.536      ; 1.980      ;
+; 1.250 ; OLED_Top:OLED_TopHP|OLED_ShowFont:OLED_ShowFont_HP|showfont_index[1] ; OLED_Top:OLED_TopHP|state.OLED_IDLE                                  ; sys_clk      ; sys_clk     ; 0.000        ; 0.072      ; 1.517      ;
+; 1.257 ; OLED_Top:OLED_TopHP|state.OLED_IDLE                                  ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|state.IIC_IDLE      ; sys_clk      ; sys_clk     ; 0.000        ; 0.072      ; 1.524      ;
+; 1.260 ; OLED_Top:OLED_TopHP|OLED_Init:OLED_InitHP|Init_index[2]              ; OLED_Top:OLED_TopHP|state.OLED_ShowFont                              ; sys_clk      ; sys_clk     ; 0.000        ; 0.540      ; 1.995      ;
+; 1.262 ; OLED_Top:OLED_TopHP|OLED_Init:OLED_InitHP|Init_index[1]              ; OLED_Top:OLED_TopHP|OLED_Init:OLED_InitHP|Init_index[0]              ; sys_clk      ; sys_clk     ; 0.000        ; 0.090      ; 1.547      ;
+; 1.268 ; OLED_Top:OLED_TopHP|state.OLED_IDLE                                  ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICSlaveReg[9]      ; sys_clk      ; sys_clk     ; 0.000        ; 0.071      ; 1.534      ;
+; 1.269 ; OLED_Top:OLED_TopHP|state.OLED_IDLE                                  ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICSlaveReg[1]      ; sys_clk      ; sys_clk     ; 0.000        ; 0.071      ; 1.535      ;
+; 1.270 ; OLED_Top:OLED_TopHP|state.OLED_IDLE                                  ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICSlaveReg[8]      ; sys_clk      ; sys_clk     ; 0.000        ; 0.071      ; 1.536      ;
+; 1.271 ; OLED_Top:OLED_TopHP|state.OLED_IDLE                                  ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICSlaveReg[12]     ; sys_clk      ; sys_clk     ; 0.000        ; 0.071      ; 1.537      ;
+; 1.272 ; OLED_Top:OLED_TopHP|state.OLED_IDLE                                  ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICSlaveReg[13]     ; sys_clk      ; sys_clk     ; 0.000        ; 0.071      ; 1.538      ;
+; 1.274 ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICCnt[2]           ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICCnt[3]           ; sys_clk      ; sys_clk     ; 0.000        ; 0.539      ; 2.008      ;
+; 1.279 ; OLED_Top:OLED_TopHP|state.OLED_IDLE                                  ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICSlaveReg[2]      ; sys_clk      ; sys_clk     ; 0.000        ; 0.072      ; 1.546      ;
+; 1.280 ; OLED_Top:OLED_TopHP|state.OLED_IDLE                                  ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICSlaveReg[15]     ; sys_clk      ; sys_clk     ; 0.000        ; 0.072      ; 1.547      ;
+; 1.280 ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICBitCnt[1]        ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICBitCnt[3]        ; sys_clk      ; sys_clk     ; 0.000        ; 0.072      ; 1.547      ;
+; 1.285 ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICCnt[3]           ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICCnt[3]           ; sys_clk      ; sys_clk     ; 0.000        ; 0.091      ; 1.571      ;
+; 1.298 ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICCnt[2]           ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|state.IIC_START     ; sys_clk      ; sys_clk     ; 0.000        ; 0.536      ; 2.029      ;
+; 1.312 ; OLED_Top:OLED_TopHP|state.OLED_IDLE                                  ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICSlaveReg[6]      ; sys_clk      ; sys_clk     ; 0.000        ; 0.072      ; 1.579      ;
+; 1.325 ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|state.IIC_ACK       ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICACKStopCnt[1]    ; sys_clk      ; sys_clk     ; 0.000        ; 0.072      ; 1.592      ;
+; 1.327 ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|state.IIC_ACK       ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICACKStopCnt[0]    ; sys_clk      ; sys_clk     ; 0.000        ; 0.072      ; 1.594      ;
+; 1.337 ; OLED_Top:OLED_TopHP|OLED_ShowFont:OLED_ShowFont_HP|showfont_index[2] ; OLED_Top:OLED_TopHP|OLED_ShowFont:OLED_ShowFont_HP|showfont_index[5] ; sys_clk      ; sys_clk     ; 0.000        ; 0.537      ; 2.069      ;
+; 1.338 ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICSlaveReg[0]      ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICSlaveReg[8]      ; sys_clk      ; sys_clk     ; 0.000        ; 0.072      ; 1.605      ;
++-------+----------------------------------------------------------------------+----------------------------------------------------------------------+--------------+-------------+--------------+------------+------------+
+
+
+----------------------------------------------
+; Slow 1200mV 0C Model Metastability Summary ;
+----------------------------------------------
+No synchronizer chains to report.
+
+
++------------------------------------+
+; Fast 1200mV 0C Model Setup Summary ;
++---------+--------+-----------------+
+; Clock   ; Slack  ; End Point TNS   ;
++---------+--------+-----------------+
+; sys_clk ; -1.656 ; -88.112         ;
++---------+--------+-----------------+
+
+
++-----------------------------------+
+; Fast 1200mV 0C Model Hold Summary ;
++---------+-------+-----------------+
+; Clock   ; Slack ; End Point TNS   ;
++---------+-------+-----------------+
+; sys_clk ; 0.178 ; 0.000           ;
++---------+-------+-----------------+
+
+
+-----------------------------------------
+; Fast 1200mV 0C Model Recovery Summary ;
+-----------------------------------------
+No paths to report.
+
+
+----------------------------------------
+; Fast 1200mV 0C Model Removal Summary ;
+----------------------------------------
+No paths to report.
+
+
++--------------------------------------------------+
+; Fast 1200mV 0C Model Minimum Pulse Width Summary ;
++---------+--------+-------------------------------+
+; Clock   ; Slack  ; End Point TNS                 ;
++---------+--------+-------------------------------+
+; sys_clk ; -3.000 ; -77.778                       ;
++---------+--------+-------------------------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Fast 1200mV 0C Model Setup: 'sys_clk'                                                                                                                                                                                   ;
++--------+-------------------------------------------------------------------+----------------------------------------------------------------------+--------------+-------------+--------------+------------+------------+
+; Slack  ; From Node                                                         ; To Node                                                              ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++--------+-------------------------------------------------------------------+----------------------------------------------------------------------+--------------+-------------+--------------+------------+------------+
+; -1.656 ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|iicCLK           ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICACKStopCnt[1]    ; sys_clk      ; sys_clk     ; 1.000        ; -0.036     ; 2.607      ;
+; -1.656 ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|iicCLK           ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICACKStopCnt[0]    ; sys_clk      ; sys_clk     ; 1.000        ; -0.036     ; 2.607      ;
+; -1.642 ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICACKStopCnt[1] ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICACKStopCnt[1]    ; sys_clk      ; sys_clk     ; 1.000        ; -0.036     ; 2.593      ;
+; -1.642 ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICACKStopCnt[1] ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICACKStopCnt[0]    ; sys_clk      ; sys_clk     ; 1.000        ; -0.036     ; 2.593      ;
+; -1.641 ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICSendBytes[2]  ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICACKStopCnt[1]    ; sys_clk      ; sys_clk     ; 1.000        ; -0.041     ; 2.587      ;
+; -1.641 ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICSendBytes[2]  ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICACKStopCnt[0]    ; sys_clk      ; sys_clk     ; 1.000        ; -0.041     ; 2.587      ;
+; -1.629 ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICACKStopCnt[1] ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICCnt[13]          ; sys_clk      ; sys_clk     ; 1.000        ; -0.035     ; 2.581      ;
+; -1.629 ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICACKStopCnt[1] ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICCnt[15]          ; sys_clk      ; sys_clk     ; 1.000        ; -0.035     ; 2.581      ;
+; -1.629 ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICACKStopCnt[1] ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICCnt[19]          ; sys_clk      ; sys_clk     ; 1.000        ; -0.035     ; 2.581      ;
+; -1.628 ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICACKStopCnt[1] ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICCnt[12]          ; sys_clk      ; sys_clk     ; 1.000        ; -0.035     ; 2.580      ;
+; -1.628 ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICACKStopCnt[1] ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICCnt[14]          ; sys_clk      ; sys_clk     ; 1.000        ; -0.035     ; 2.580      ;
+; -1.626 ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|iicCLK           ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICCnt[13]          ; sys_clk      ; sys_clk     ; 1.000        ; -0.035     ; 2.578      ;
+; -1.626 ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|iicCLK           ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICCnt[15]          ; sys_clk      ; sys_clk     ; 1.000        ; -0.035     ; 2.578      ;
+; -1.626 ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|iicCLK           ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICCnt[19]          ; sys_clk      ; sys_clk     ; 1.000        ; -0.035     ; 2.578      ;
+; -1.625 ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICCnt[16]       ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICACKStopCnt[1]    ; sys_clk      ; sys_clk     ; 1.000        ; -0.037     ; 2.575      ;
+; -1.625 ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICCnt[16]       ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICACKStopCnt[0]    ; sys_clk      ; sys_clk     ; 1.000        ; -0.037     ; 2.575      ;
+; -1.625 ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|iicCLK           ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICCnt[12]          ; sys_clk      ; sys_clk     ; 1.000        ; -0.035     ; 2.577      ;
+; -1.625 ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|iicCLK           ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICCnt[14]          ; sys_clk      ; sys_clk     ; 1.000        ; -0.035     ; 2.577      ;
+; -1.624 ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICCnt[10]       ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICACKStopCnt[1]    ; sys_clk      ; sys_clk     ; 1.000        ; -0.037     ; 2.574      ;
+; -1.624 ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICCnt[10]       ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICACKStopCnt[0]    ; sys_clk      ; sys_clk     ; 1.000        ; -0.037     ; 2.574      ;
+; -1.623 ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICCnt[13]       ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICACKStopCnt[1]    ; sys_clk      ; sys_clk     ; 1.000        ; -0.037     ; 2.573      ;
+; -1.623 ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICCnt[13]       ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICACKStopCnt[0]    ; sys_clk      ; sys_clk     ; 1.000        ; -0.037     ; 2.573      ;
+; -1.622 ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICCnt[17]       ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICACKStopCnt[1]    ; sys_clk      ; sys_clk     ; 1.000        ; -0.037     ; 2.572      ;
+; -1.622 ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICCnt[17]       ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICACKStopCnt[0]    ; sys_clk      ; sys_clk     ; 1.000        ; -0.037     ; 2.572      ;
+; -1.602 ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICCnt[16]       ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICCnt[13]          ; sys_clk      ; sys_clk     ; 1.000        ; -0.036     ; 2.553      ;
+; -1.602 ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICCnt[16]       ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICCnt[15]          ; sys_clk      ; sys_clk     ; 1.000        ; -0.036     ; 2.553      ;
+; -1.602 ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICCnt[16]       ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICCnt[19]          ; sys_clk      ; sys_clk     ; 1.000        ; -0.036     ; 2.553      ;
+; -1.601 ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICSendBytes[1]  ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICACKStopCnt[1]    ; sys_clk      ; sys_clk     ; 1.000        ; -0.041     ; 2.547      ;
+; -1.601 ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICSendBytes[1]  ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICACKStopCnt[0]    ; sys_clk      ; sys_clk     ; 1.000        ; -0.041     ; 2.547      ;
+; -1.601 ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICCnt[16]       ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICCnt[12]          ; sys_clk      ; sys_clk     ; 1.000        ; -0.036     ; 2.552      ;
+; -1.601 ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICCnt[16]       ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICCnt[14]          ; sys_clk      ; sys_clk     ; 1.000        ; -0.036     ; 2.552      ;
+; -1.601 ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICCnt[10]       ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICCnt[13]          ; sys_clk      ; sys_clk     ; 1.000        ; -0.036     ; 2.552      ;
+; -1.601 ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICCnt[10]       ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICCnt[15]          ; sys_clk      ; sys_clk     ; 1.000        ; -0.036     ; 2.552      ;
+; -1.601 ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICCnt[10]       ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICCnt[19]          ; sys_clk      ; sys_clk     ; 1.000        ; -0.036     ; 2.552      ;
+; -1.600 ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICCnt[10]       ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICCnt[12]          ; sys_clk      ; sys_clk     ; 1.000        ; -0.036     ; 2.551      ;
+; -1.600 ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICCnt[10]       ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICCnt[14]          ; sys_clk      ; sys_clk     ; 1.000        ; -0.036     ; 2.551      ;
+; -1.600 ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICCnt[13]       ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICCnt[13]          ; sys_clk      ; sys_clk     ; 1.000        ; -0.036     ; 2.551      ;
+; -1.600 ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICCnt[13]       ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICCnt[15]          ; sys_clk      ; sys_clk     ; 1.000        ; -0.036     ; 2.551      ;
+; -1.600 ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICCnt[13]       ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICCnt[19]          ; sys_clk      ; sys_clk     ; 1.000        ; -0.036     ; 2.551      ;
+; -1.599 ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICCnt[17]       ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICCnt[13]          ; sys_clk      ; sys_clk     ; 1.000        ; -0.036     ; 2.550      ;
+; -1.599 ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICCnt[17]       ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICCnt[15]          ; sys_clk      ; sys_clk     ; 1.000        ; -0.036     ; 2.550      ;
+; -1.599 ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICCnt[17]       ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICCnt[19]          ; sys_clk      ; sys_clk     ; 1.000        ; -0.036     ; 2.550      ;
+; -1.599 ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICCnt[13]       ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICCnt[12]          ; sys_clk      ; sys_clk     ; 1.000        ; -0.036     ; 2.550      ;
+; -1.599 ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICCnt[13]       ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICCnt[14]          ; sys_clk      ; sys_clk     ; 1.000        ; -0.036     ; 2.550      ;
+; -1.598 ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICCnt[17]       ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICCnt[12]          ; sys_clk      ; sys_clk     ; 1.000        ; -0.036     ; 2.549      ;
+; -1.598 ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICCnt[17]       ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICCnt[14]          ; sys_clk      ; sys_clk     ; 1.000        ; -0.036     ; 2.549      ;
+; -1.585 ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICSendBytes[2]  ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICCnt[13]          ; sys_clk      ; sys_clk     ; 1.000        ; -0.040     ; 2.532      ;
+; -1.585 ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICSendBytes[2]  ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICCnt[15]          ; sys_clk      ; sys_clk     ; 1.000        ; -0.040     ; 2.532      ;
+; -1.585 ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICSendBytes[2]  ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICCnt[19]          ; sys_clk      ; sys_clk     ; 1.000        ; -0.040     ; 2.532      ;
+; -1.584 ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICSendBytes[2]  ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICCnt[12]          ; sys_clk      ; sys_clk     ; 1.000        ; -0.040     ; 2.531      ;
+; -1.584 ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICSendBytes[2]  ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICCnt[14]          ; sys_clk      ; sys_clk     ; 1.000        ; -0.040     ; 2.531      ;
+; -1.561 ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICCnt[20]       ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICACKStopCnt[1]    ; sys_clk      ; sys_clk     ; 1.000        ; -0.037     ; 2.511      ;
+; -1.561 ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICCnt[20]       ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICACKStopCnt[0]    ; sys_clk      ; sys_clk     ; 1.000        ; -0.037     ; 2.511      ;
+; -1.561 ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICCnt[19]       ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICACKStopCnt[1]    ; sys_clk      ; sys_clk     ; 1.000        ; -0.037     ; 2.511      ;
+; -1.561 ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICCnt[19]       ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICACKStopCnt[0]    ; sys_clk      ; sys_clk     ; 1.000        ; -0.037     ; 2.511      ;
+; -1.554 ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICCnt[16]       ; OLED_Top:OLED_TopHP|OLED_ShowFont:OLED_ShowFont_HP|showfont_index[1] ; sys_clk      ; sys_clk     ; 1.000        ; -0.033     ; 2.508      ;
+; -1.554 ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICCnt[16]       ; OLED_Top:OLED_TopHP|OLED_ShowFont:OLED_ShowFont_HP|showfont_index[2] ; sys_clk      ; sys_clk     ; 1.000        ; -0.033     ; 2.508      ;
+; -1.554 ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICACKStopCnt[0] ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICACKStopCnt[1]    ; sys_clk      ; sys_clk     ; 1.000        ; -0.036     ; 2.505      ;
+; -1.554 ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICACKStopCnt[0] ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICACKStopCnt[0]    ; sys_clk      ; sys_clk     ; 1.000        ; -0.036     ; 2.505      ;
+; -1.553 ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICBitCnt[1]     ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICACKStopCnt[1]    ; sys_clk      ; sys_clk     ; 1.000        ; -0.040     ; 2.500      ;
+; -1.553 ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICBitCnt[1]     ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICACKStopCnt[0]    ; sys_clk      ; sys_clk     ; 1.000        ; -0.040     ; 2.500      ;
+; -1.553 ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICCnt[10]       ; OLED_Top:OLED_TopHP|OLED_ShowFont:OLED_ShowFont_HP|showfont_index[1] ; sys_clk      ; sys_clk     ; 1.000        ; -0.033     ; 2.507      ;
+; -1.553 ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICCnt[10]       ; OLED_Top:OLED_TopHP|OLED_ShowFont:OLED_ShowFont_HP|showfont_index[2] ; sys_clk      ; sys_clk     ; 1.000        ; -0.033     ; 2.507      ;
+; -1.552 ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICCnt[13]       ; OLED_Top:OLED_TopHP|OLED_ShowFont:OLED_ShowFont_HP|showfont_index[1] ; sys_clk      ; sys_clk     ; 1.000        ; -0.033     ; 2.506      ;
+; -1.552 ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICCnt[13]       ; OLED_Top:OLED_TopHP|OLED_ShowFont:OLED_ShowFont_HP|showfont_index[2] ; sys_clk      ; sys_clk     ; 1.000        ; -0.033     ; 2.506      ;
+; -1.551 ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICCnt[17]       ; OLED_Top:OLED_TopHP|OLED_ShowFont:OLED_ShowFont_HP|showfont_index[1] ; sys_clk      ; sys_clk     ; 1.000        ; -0.033     ; 2.505      ;
+; -1.551 ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICCnt[17]       ; OLED_Top:OLED_TopHP|OLED_ShowFont:OLED_ShowFont_HP|showfont_index[2] ; sys_clk      ; sys_clk     ; 1.000        ; -0.033     ; 2.505      ;
+; -1.545 ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICSendBytes[1]  ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICCnt[13]          ; sys_clk      ; sys_clk     ; 1.000        ; -0.040     ; 2.492      ;
+; -1.545 ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICSendBytes[1]  ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICCnt[15]          ; sys_clk      ; sys_clk     ; 1.000        ; -0.040     ; 2.492      ;
+; -1.545 ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICSendBytes[1]  ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICCnt[19]          ; sys_clk      ; sys_clk     ; 1.000        ; -0.040     ; 2.492      ;
+; -1.544 ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICSendBytes[1]  ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICCnt[12]          ; sys_clk      ; sys_clk     ; 1.000        ; -0.040     ; 2.491      ;
+; -1.544 ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICSendBytes[1]  ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICCnt[14]          ; sys_clk      ; sys_clk     ; 1.000        ; -0.040     ; 2.491      ;
+; -1.543 ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICCnt[20]       ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICCnt[13]          ; sys_clk      ; sys_clk     ; 1.000        ; -0.036     ; 2.494      ;
+; -1.543 ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICCnt[20]       ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICCnt[15]          ; sys_clk      ; sys_clk     ; 1.000        ; -0.036     ; 2.494      ;
+; -1.543 ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICCnt[20]       ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICCnt[19]          ; sys_clk      ; sys_clk     ; 1.000        ; -0.036     ; 2.494      ;
+; -1.542 ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICCnt[20]       ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICCnt[12]          ; sys_clk      ; sys_clk     ; 1.000        ; -0.036     ; 2.493      ;
+; -1.542 ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICCnt[20]       ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICCnt[14]          ; sys_clk      ; sys_clk     ; 1.000        ; -0.036     ; 2.493      ;
+; -1.541 ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICACKStopCnt[1] ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICCnt[10]          ; sys_clk      ; sys_clk     ; 1.000        ; -0.035     ; 2.493      ;
+; -1.541 ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICACKStopCnt[0] ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICCnt[13]          ; sys_clk      ; sys_clk     ; 1.000        ; -0.035     ; 2.493      ;
+; -1.541 ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICACKStopCnt[0] ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICCnt[15]          ; sys_clk      ; sys_clk     ; 1.000        ; -0.035     ; 2.493      ;
+; -1.541 ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICACKStopCnt[0] ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICCnt[19]          ; sys_clk      ; sys_clk     ; 1.000        ; -0.035     ; 2.493      ;
+; -1.540 ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICACKStopCnt[1] ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICCnt[16]          ; sys_clk      ; sys_clk     ; 1.000        ; -0.035     ; 2.492      ;
+; -1.540 ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICACKStopCnt[1] ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICCnt[20]          ; sys_clk      ; sys_clk     ; 1.000        ; -0.035     ; 2.492      ;
+; -1.540 ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICACKStopCnt[0] ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICCnt[12]          ; sys_clk      ; sys_clk     ; 1.000        ; -0.035     ; 2.492      ;
+; -1.540 ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICACKStopCnt[0] ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICCnt[14]          ; sys_clk      ; sys_clk     ; 1.000        ; -0.035     ; 2.492      ;
+; -1.539 ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICACKStopCnt[1] ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICCnt[21]          ; sys_clk      ; sys_clk     ; 1.000        ; -0.035     ; 2.491      ;
+; -1.539 ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICACKStopCnt[1] ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICCnt[18]          ; sys_clk      ; sys_clk     ; 1.000        ; -0.035     ; 2.491      ;
+; -1.538 ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICACKStopCnt[1] ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICCnt[11]          ; sys_clk      ; sys_clk     ; 1.000        ; -0.035     ; 2.490      ;
+; -1.538 ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICACKStopCnt[1] ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICCnt[17]          ; sys_clk      ; sys_clk     ; 1.000        ; -0.035     ; 2.490      ;
+; -1.538 ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICCnt[15]       ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICACKStopCnt[1]    ; sys_clk      ; sys_clk     ; 1.000        ; -0.037     ; 2.488      ;
+; -1.538 ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICCnt[15]       ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICACKStopCnt[0]    ; sys_clk      ; sys_clk     ; 1.000        ; -0.037     ; 2.488      ;
+; -1.538 ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICCnt[19]       ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICCnt[13]          ; sys_clk      ; sys_clk     ; 1.000        ; -0.036     ; 2.489      ;
+; -1.538 ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICCnt[19]       ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICCnt[15]          ; sys_clk      ; sys_clk     ; 1.000        ; -0.036     ; 2.489      ;
+; -1.538 ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICCnt[19]       ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICCnt[19]          ; sys_clk      ; sys_clk     ; 1.000        ; -0.036     ; 2.489      ;
+; -1.538 ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|iicCLK           ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICCnt[10]          ; sys_clk      ; sys_clk     ; 1.000        ; -0.035     ; 2.490      ;
+; -1.537 ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICCnt[19]       ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICCnt[12]          ; sys_clk      ; sys_clk     ; 1.000        ; -0.036     ; 2.488      ;
+; -1.537 ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICCnt[19]       ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICCnt[14]          ; sys_clk      ; sys_clk     ; 1.000        ; -0.036     ; 2.488      ;
+; -1.537 ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|iicCLK           ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICCnt[16]          ; sys_clk      ; sys_clk     ; 1.000        ; -0.035     ; 2.489      ;
+; -1.537 ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|iicCLK           ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICCnt[20]          ; sys_clk      ; sys_clk     ; 1.000        ; -0.035     ; 2.489      ;
+; -1.536 ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICCnt[11]       ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICACKStopCnt[1]    ; sys_clk      ; sys_clk     ; 1.000        ; -0.037     ; 2.486      ;
++--------+-------------------------------------------------------------------+----------------------------------------------------------------------+--------------+-------------+--------------+------------+------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Fast 1200mV 0C Model Hold: 'sys_clk'                                                                                                                                                                                      ;
++-------+----------------------------------------------------------------------+----------------------------------------------------------------------+--------------+-------------+--------------+------------+------------+
+; Slack ; From Node                                                            ; To Node                                                              ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++-------+----------------------------------------------------------------------+----------------------------------------------------------------------+--------------+-------------+--------------+------------+------------+
+; 0.178 ; OLED_Top:OLED_TopHP|OLED_ShowFont:OLED_ShowFont_HP|showfont_index[0] ; OLED_Top:OLED_TopHP|OLED_ShowFont:OLED_ShowFont_HP|showfont_index[0] ; sys_clk      ; sys_clk     ; 0.000        ; 0.045      ; 0.307      ;
+; 0.178 ; OLED_Top:OLED_TopHP|OLED_ShowFont:OLED_ShowFont_HP|showfont_index[4] ; OLED_Top:OLED_TopHP|OLED_ShowFont:OLED_ShowFont_HP|showfont_index[4] ; sys_clk      ; sys_clk     ; 0.000        ; 0.045      ; 0.307      ;
+; 0.178 ; OLED_Top:OLED_TopHP|OLED_ShowFont:OLED_ShowFont_HP|showfont_index[3] ; OLED_Top:OLED_TopHP|OLED_ShowFont:OLED_ShowFont_HP|showfont_index[3] ; sys_clk      ; sys_clk     ; 0.000        ; 0.045      ; 0.307      ;
+; 0.178 ; OLED_Top:OLED_TopHP|OLED_ShowFont:OLED_ShowFont_HP|showfont_index[5] ; OLED_Top:OLED_TopHP|OLED_ShowFont:OLED_ShowFont_HP|showfont_index[5] ; sys_clk      ; sys_clk     ; 0.000        ; 0.045      ; 0.307      ;
+; 0.178 ; OLED_Top:OLED_TopHP|state.OLED_ShowFont                              ; OLED_Top:OLED_TopHP|state.OLED_ShowFont                              ; sys_clk      ; sys_clk     ; 0.000        ; 0.045      ; 0.307      ;
+; 0.179 ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICWriteReqReg      ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICWriteReqReg      ; sys_clk      ; sys_clk     ; 0.000        ; 0.044      ; 0.307      ;
+; 0.179 ; OLED_Top:OLED_TopHP|OLED_Init:OLED_InitHP|Init_index[1]              ; OLED_Top:OLED_TopHP|OLED_Init:OLED_InitHP|Init_index[1]              ; sys_clk      ; sys_clk     ; 0.000        ; 0.044      ; 0.307      ;
+; 0.179 ; OLED_Top:OLED_TopHP|OLED_Init:OLED_InitHP|Init_index[0]              ; OLED_Top:OLED_TopHP|OLED_Init:OLED_InitHP|Init_index[0]              ; sys_clk      ; sys_clk     ; 0.000        ; 0.044      ; 0.307      ;
+; 0.179 ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|state.IIC_START     ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|state.IIC_START     ; sys_clk      ; sys_clk     ; 0.000        ; 0.044      ; 0.307      ;
+; 0.186 ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|state.IIC_RDDATA    ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|state.IIC_RDDATA    ; sys_clk      ; sys_clk     ; 0.000        ; 0.037      ; 0.307      ;
+; 0.186 ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICSendBytes[1]     ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICSendBytes[1]     ; sys_clk      ; sys_clk     ; 0.000        ; 0.037      ; 0.307      ;
+; 0.186 ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICSendBytes[2]     ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICSendBytes[2]     ; sys_clk      ; sys_clk     ; 0.000        ; 0.037      ; 0.307      ;
+; 0.187 ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICACKStopCnt[1]    ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICACKStopCnt[1]    ; sys_clk      ; sys_clk     ; 0.000        ; 0.036      ; 0.307      ;
+; 0.187 ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICACKStopCnt[0]    ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICACKStopCnt[0]    ; sys_clk      ; sys_clk     ; 0.000        ; 0.036      ; 0.307      ;
+; 0.187 ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|state.IIC_IDLE      ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|state.IIC_IDLE      ; sys_clk      ; sys_clk     ; 0.000        ; 0.036      ; 0.307      ;
+; 0.187 ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|state.IIC_STOP      ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|state.IIC_STOP      ; sys_clk      ; sys_clk     ; 0.000        ; 0.036      ; 0.307      ;
+; 0.187 ; OLED_Top:OLED_TopHP|state.OLED_IDLE                                  ; OLED_Top:OLED_TopHP|state.OLED_IDLE                                  ; sys_clk      ; sys_clk     ; 0.000        ; 0.036      ; 0.307      ;
+; 0.187 ; OLED_Top:OLED_TopHP|OLED_ShowFont:OLED_ShowFont_HP|showfont_index[1] ; OLED_Top:OLED_TopHP|OLED_ShowFont:OLED_ShowFont_HP|showfont_index[1] ; sys_clk      ; sys_clk     ; 0.000        ; 0.036      ; 0.307      ;
+; 0.187 ; OLED_Top:OLED_TopHP|OLED_ShowFont:OLED_ShowFont_HP|showfont_index[2] ; OLED_Top:OLED_TopHP|OLED_ShowFont:OLED_ShowFont_HP|showfont_index[2] ; sys_clk      ; sys_clk     ; 0.000        ; 0.036      ; 0.307      ;
+; 0.187 ; OLED_Top:OLED_TopHP|state.OLED_INIT                                  ; OLED_Top:OLED_TopHP|state.OLED_INIT                                  ; sys_clk      ; sys_clk     ; 0.000        ; 0.036      ; 0.307      ;
+; 0.187 ; OLED_Top:OLED_TopHP|OLED_Init:OLED_InitHP|Init_index[3]              ; OLED_Top:OLED_TopHP|OLED_Init:OLED_InitHP|Init_index[3]              ; sys_clk      ; sys_clk     ; 0.000        ; 0.036      ; 0.307      ;
+; 0.187 ; OLED_Top:OLED_TopHP|OLED_Init:OLED_InitHP|Init_index[2]              ; OLED_Top:OLED_TopHP|OLED_Init:OLED_InitHP|Init_index[2]              ; sys_clk      ; sys_clk     ; 0.000        ; 0.036      ; 0.307      ;
+; 0.187 ; OLED_Top:OLED_TopHP|OLED_Init:OLED_InitHP|Init_index[4]              ; OLED_Top:OLED_TopHP|OLED_Init:OLED_InitHP|Init_index[4]              ; sys_clk      ; sys_clk     ; 0.000        ; 0.036      ; 0.307      ;
+; 0.187 ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|state.IIC_WRDATA    ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|state.IIC_WRDATA    ; sys_clk      ; sys_clk     ; 0.000        ; 0.036      ; 0.307      ;
+; 0.193 ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICSendBytes[0]     ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICSendBytes[0]     ; sys_clk      ; sys_clk     ; 0.000        ; 0.037      ; 0.314      ;
+; 0.237 ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|state.IIC_IDLE      ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICSlaveReg[15]     ; sys_clk      ; sys_clk     ; 0.000        ; 0.036      ; 0.357      ;
+; 0.237 ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|state.IIC_IDLE      ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICSlaveReg[2]      ; sys_clk      ; sys_clk     ; 0.000        ; 0.036      ; 0.357      ;
+; 0.242 ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|state.IIC_IDLE      ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICSlaveReg[6]      ; sys_clk      ; sys_clk     ; 0.000        ; 0.036      ; 0.362      ;
+; 0.312 ; OLED_Top:OLED_TopHP|state.OLED_INIT                                  ; OLED_Top:OLED_TopHP|OLED_Init:OLED_InitHP|Init_index[1]              ; sys_clk      ; sys_clk     ; 0.000        ; 0.236      ; 0.632      ;
+; 0.312 ; OLED_Top:OLED_TopHP|state.OLED_INIT                                  ; OLED_Top:OLED_TopHP|OLED_Init:OLED_InitHP|Init_index[0]              ; sys_clk      ; sys_clk     ; 0.000        ; 0.236      ; 0.632      ;
+; 0.314 ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICBitCnt[0]        ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICBitCnt[0]        ; sys_clk      ; sys_clk     ; 0.000        ; 0.037      ; 0.435      ;
+; 0.323 ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICACKStopCnt[0]    ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICACKStopCnt[1]    ; sys_clk      ; sys_clk     ; 0.000        ; 0.036      ; 0.443      ;
+; 0.330 ; OLED_Top:OLED_TopHP|state.OLED_IDLE                                  ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICWriteReqReg      ; sys_clk      ; sys_clk     ; 0.000        ; 0.221      ; 0.635      ;
+; 0.334 ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|iicCLK              ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICACKStopCnt[0]    ; sys_clk      ; sys_clk     ; 0.000        ; 0.036      ; 0.454      ;
+; 0.335 ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|iicCLK              ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICACKStopCnt[1]    ; sys_clk      ; sys_clk     ; 0.000        ; 0.036      ; 0.455      ;
+; 0.362 ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|state.IIC_IDLE      ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICSlaveReg[11]     ; sys_clk      ; sys_clk     ; 0.000        ; 0.036      ; 0.482      ;
+; 0.378 ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICBitCnt[2]        ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICBitCnt[2]        ; sys_clk      ; sys_clk     ; 0.000        ; 0.037      ; 0.499      ;
+; 0.380 ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICBitCnt[1]        ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICBitCnt[1]        ; sys_clk      ; sys_clk     ; 0.000        ; 0.037      ; 0.501      ;
+; 0.382 ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|state.IIC_IDLE      ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICSlaveReg[3]      ; sys_clk      ; sys_clk     ; 0.000        ; 0.036      ; 0.502      ;
+; 0.388 ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICSendBytes[1]     ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICSendBytes[2]     ; sys_clk      ; sys_clk     ; 0.000        ; 0.037      ; 0.509      ;
+; 0.400 ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICSendBytes[0]     ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICSendBytes[1]     ; sys_clk      ; sys_clk     ; 0.000        ; 0.037      ; 0.521      ;
+; 0.410 ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICBitCnt[3]        ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICBitCnt[3]        ; sys_clk      ; sys_clk     ; 0.000        ; 0.037      ; 0.531      ;
+; 0.418 ; OLED_Top:OLED_TopHP|OLED_Init:OLED_InitHP|Init_index[2]              ; OLED_Top:OLED_TopHP|state.OLED_INIT                                  ; sys_clk      ; sys_clk     ; 0.000        ; 0.036      ; 0.538      ;
+; 0.420 ; OLED_Top:OLED_TopHP|OLED_Init:OLED_InitHP|Init_index[1]              ; OLED_Top:OLED_TopHP|state.OLED_INIT                                  ; sys_clk      ; sys_clk     ; 0.000        ; -0.156     ; 0.348      ;
+; 0.421 ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICSlaveReg[14]     ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICSlaveReg[14]     ; sys_clk      ; sys_clk     ; 0.000        ; 0.036      ; 0.541      ;
+; 0.444 ; OLED_Top:OLED_TopHP|state.OLED_IDLE                                  ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICSlaveReg[11]     ; sys_clk      ; sys_clk     ; 0.000        ; 0.036      ; 0.564      ;
+; 0.451 ; OLED_Top:OLED_TopHP|state.OLED_IDLE                                  ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICSlaveReg[3]      ; sys_clk      ; sys_clk     ; 0.000        ; 0.036      ; 0.571      ;
+; 0.464 ; OLED_Top:OLED_TopHP|OLED_ShowFont:OLED_ShowFont_HP|showfont_index[1] ; OLED_Top:OLED_TopHP|state.OLED_ShowFont                              ; sys_clk      ; sys_clk     ; 0.000        ; 0.236      ; 0.784      ;
+; 0.468 ; OLED_Top:OLED_TopHP|state.OLED_IDLE                                  ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICSlaveReg[5]      ; sys_clk      ; sys_clk     ; 0.000        ; 0.035      ; 0.587      ;
+; 0.471 ; OLED_Top:OLED_TopHP|state.OLED_IDLE                                  ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICSlaveReg[0]      ; sys_clk      ; sys_clk     ; 0.000        ; 0.035      ; 0.590      ;
+; 0.472 ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|state.IIC_IDLE      ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICSlaveReg[14]     ; sys_clk      ; sys_clk     ; 0.000        ; 0.036      ; 0.592      ;
+; 0.473 ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|state.IIC_IDLE      ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICSlaveReg[10]     ; sys_clk      ; sys_clk     ; 0.000        ; 0.036      ; 0.593      ;
+; 0.473 ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|state.IIC_IDLE      ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICSlaveReg[7]      ; sys_clk      ; sys_clk     ; 0.000        ; 0.036      ; 0.593      ;
+; 0.473 ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICBitCnt[0]        ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICBitCnt[1]        ; sys_clk      ; sys_clk     ; 0.000        ; 0.037      ; 0.594      ;
+; 0.476 ; OLED_Top:OLED_TopHP|state.OLED_IDLE                                  ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICSlaveReg[4]      ; sys_clk      ; sys_clk     ; 0.000        ; 0.035      ; 0.595      ;
+; 0.476 ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICBitCnt[0]        ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICBitCnt[2]        ; sys_clk      ; sys_clk     ; 0.000        ; 0.037      ; 0.597      ;
+; 0.478 ; OLED_Top:OLED_TopHP|state.OLED_IDLE                                  ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|state.IIC_START     ; sys_clk      ; sys_clk     ; 0.000        ; 0.232      ; 0.794      ;
+; 0.480 ; OLED_Top:OLED_TopHP|OLED_Init:OLED_InitHP|Init_index[2]              ; OLED_Top:OLED_TopHP|OLED_Init:OLED_InitHP|Init_index[1]              ; sys_clk      ; sys_clk     ; 0.000        ; 0.236      ; 0.800      ;
+; 0.480 ; OLED_Top:OLED_TopHP|OLED_Init:OLED_InitHP|Init_index[2]              ; OLED_Top:OLED_TopHP|OLED_Init:OLED_InitHP|Init_index[0]              ; sys_clk      ; sys_clk     ; 0.000        ; 0.236      ; 0.800      ;
+; 0.482 ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICCnt[6]           ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|state.IIC_START     ; sys_clk      ; sys_clk     ; 0.000        ; 0.236      ; 0.802      ;
+; 0.496 ; OLED_Top:OLED_TopHP|state.OLED_ShowFont                              ; OLED_Top:OLED_TopHP|state.OLED_IDLE                                  ; sys_clk      ; sys_clk     ; 0.000        ; -0.155     ; 0.425      ;
+; 0.498 ; OLED_Top:OLED_TopHP|OLED_ShowFont:OLED_ShowFont_HP|showfont_index[1] ; OLED_Top:OLED_TopHP|OLED_ShowFont:OLED_ShowFont_HP|showfont_index[4] ; sys_clk      ; sys_clk     ; 0.000        ; 0.236      ; 0.818      ;
+; 0.505 ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICSendBytes[0]     ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICSendBytes[2]     ; sys_clk      ; sys_clk     ; 0.000        ; 0.037      ; 0.626      ;
+; 0.513 ; OLED_Top:OLED_TopHP|state.OLED_INIT                                  ; OLED_Top:OLED_TopHP|OLED_Init:OLED_InitHP|Init_index[3]              ; sys_clk      ; sys_clk     ; 0.000        ; 0.036      ; 0.633      ;
+; 0.520 ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICACKStopCnt[1]    ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|state.IIC_STOP      ; sys_clk      ; sys_clk     ; 0.000        ; 0.036      ; 0.640      ;
+; 0.520 ; OLED_Top:OLED_TopHP|state.OLED_INIT                                  ; OLED_Top:OLED_TopHP|OLED_Init:OLED_InitHP|Init_index[2]              ; sys_clk      ; sys_clk     ; 0.000        ; 0.036      ; 0.640      ;
+; 0.520 ; OLED_Top:OLED_TopHP|state.OLED_INIT                                  ; OLED_Top:OLED_TopHP|OLED_Init:OLED_InitHP|Init_index[4]              ; sys_clk      ; sys_clk     ; 0.000        ; 0.036      ; 0.640      ;
+; 0.521 ; OLED_Top:OLED_TopHP|state.OLED_ShowFont                              ; OLED_Top:OLED_TopHP|OLED_ShowFont:OLED_ShowFont_HP|showfont_index[4] ; sys_clk      ; sys_clk     ; 0.000        ; 0.045      ; 0.650      ;
+; 0.528 ; OLED_Top:OLED_TopHP|state.OLED_INIT                                  ; OLED_Top:OLED_TopHP|state.OLED_ShowFont                              ; sys_clk      ; sys_clk     ; 0.000        ; 0.238      ; 0.850      ;
+; 0.529 ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICBitCnt[1]        ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICBitCnt[2]        ; sys_clk      ; sys_clk     ; 0.000        ; 0.037      ; 0.650      ;
+; 0.530 ; OLED_Top:OLED_TopHP|OLED_ShowFont:OLED_ShowFont_HP|showfont_index[1] ; OLED_Top:OLED_TopHP|state.OLED_IDLE                                  ; sys_clk      ; sys_clk     ; 0.000        ; 0.036      ; 0.650      ;
+; 0.534 ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|iictx               ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|iictx               ; sys_clk      ; sys_clk     ; 0.000        ; 0.044      ; 0.662      ;
+; 0.536 ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICBitCnt[2]        ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICBitCnt[3]        ; sys_clk      ; sys_clk     ; 0.000        ; 0.037      ; 0.657      ;
+; 0.539 ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICBitCnt[0]        ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICBitCnt[3]        ; sys_clk      ; sys_clk     ; 0.000        ; 0.037      ; 0.660      ;
+; 0.543 ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|iicCLK              ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICBitCnt[0]        ; sys_clk      ; sys_clk     ; 0.000        ; 0.040      ; 0.667      ;
+; 0.551 ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICCnt[3]           ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICCnt[3]           ; sys_clk      ; sys_clk     ; 0.000        ; 0.044      ; 0.679      ;
+; 0.554 ; OLED_Top:OLED_TopHP|state.OLED_IDLE                                  ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICSlaveReg[10]     ; sys_clk      ; sys_clk     ; 0.000        ; 0.036      ; 0.674      ;
+; 0.555 ; OLED_Top:OLED_TopHP|state.OLED_IDLE                                  ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICSlaveReg[7]      ; sys_clk      ; sys_clk     ; 0.000        ; 0.036      ; 0.675      ;
+; 0.562 ; OLED_Top:OLED_TopHP|state.OLED_IDLE                                  ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICSlaveReg[14]     ; sys_clk      ; sys_clk     ; 0.000        ; 0.036      ; 0.682      ;
+; 0.564 ; OLED_Top:OLED_TopHP|OLED_ShowFont:OLED_ShowFont_HP|showfont_index[2] ; OLED_Top:OLED_TopHP|OLED_ShowFont:OLED_ShowFont_HP|showfont_index[3] ; sys_clk      ; sys_clk     ; 0.000        ; 0.236      ; 0.884      ;
+; 0.567 ; OLED_Top:OLED_TopHP|state.OLED_IDLE                                  ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|state.IIC_IDLE      ; sys_clk      ; sys_clk     ; 0.000        ; 0.036      ; 0.687      ;
+; 0.569 ; OLED_Top:OLED_TopHP|OLED_Init:OLED_InitHP|Init_index[1]              ; OLED_Top:OLED_TopHP|OLED_Init:OLED_InitHP|Init_index[0]              ; sys_clk      ; sys_clk     ; 0.000        ; 0.044      ; 0.697      ;
+; 0.575 ; OLED_Top:OLED_TopHP|state.OLED_IDLE                                  ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICSlaveReg[2]      ; sys_clk      ; sys_clk     ; 0.000        ; 0.036      ; 0.695      ;
+; 0.576 ; OLED_Top:OLED_TopHP|state.OLED_IDLE                                  ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICSlaveReg[15]     ; sys_clk      ; sys_clk     ; 0.000        ; 0.036      ; 0.696      ;
+; 0.578 ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|state.IIC_ACK       ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICACKStopCnt[1]    ; sys_clk      ; sys_clk     ; 0.000        ; 0.036      ; 0.698      ;
+; 0.579 ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|state.IIC_ACK       ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICACKStopCnt[0]    ; sys_clk      ; sys_clk     ; 0.000        ; 0.036      ; 0.699      ;
+; 0.580 ; OLED_Top:OLED_TopHP|state.OLED_IDLE                                  ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICSlaveReg[9]      ; sys_clk      ; sys_clk     ; 0.000        ; 0.035      ; 0.699      ;
+; 0.580 ; OLED_Top:OLED_TopHP|OLED_Init:OLED_InitHP|Init_index[2]              ; OLED_Top:OLED_TopHP|state.OLED_ShowFont                              ; sys_clk      ; sys_clk     ; 0.000        ; 0.238      ; 0.902      ;
+; 0.581 ; OLED_Top:OLED_TopHP|state.OLED_IDLE                                  ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICSlaveReg[1]      ; sys_clk      ; sys_clk     ; 0.000        ; 0.035      ; 0.700      ;
+; 0.582 ; OLED_Top:OLED_TopHP|state.OLED_IDLE                                  ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICSlaveReg[8]      ; sys_clk      ; sys_clk     ; 0.000        ; 0.035      ; 0.701      ;
+; 0.582 ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|state.IIC_IDLE      ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|state.IIC_START     ; sys_clk      ; sys_clk     ; 0.000        ; 0.232      ; 0.898      ;
+; 0.582 ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICCnt[2]           ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICCnt[3]           ; sys_clk      ; sys_clk     ; 0.000        ; 0.236      ; 0.902      ;
+; 0.583 ; OLED_Top:OLED_TopHP|state.OLED_IDLE                                  ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICSlaveReg[12]     ; sys_clk      ; sys_clk     ; 0.000        ; 0.035      ; 0.702      ;
+; 0.584 ; OLED_Top:OLED_TopHP|state.OLED_IDLE                                  ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICSlaveReg[13]     ; sys_clk      ; sys_clk     ; 0.000        ; 0.035      ; 0.703      ;
+; 0.585 ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICCnt[1]           ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|state.IIC_START     ; sys_clk      ; sys_clk     ; 0.000        ; 0.236      ; 0.905      ;
+; 0.590 ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICCnt[8]           ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICCnt[8]           ; sys_clk      ; sys_clk     ; 0.000        ; 0.037      ; 0.711      ;
+; 0.590 ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICSlaveReg[0]      ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICSlaveReg[8]      ; sys_clk      ; sys_clk     ; 0.000        ; 0.036      ; 0.710      ;
+; 0.591 ; OLED_Top:OLED_TopHP|OLED_ShowFont:OLED_ShowFont_HP|showfont_index[1] ; OLED_Top:OLED_TopHP|OLED_ShowFont:OLED_ShowFont_HP|showfont_index[0] ; sys_clk      ; sys_clk     ; 0.000        ; 0.236      ; 0.911      ;
+; 0.592 ; OLED_Top:OLED_TopHP|OLED_ShowFont:OLED_ShowFont_HP|showfont_index[1] ; OLED_Top:OLED_TopHP|OLED_ShowFont:OLED_ShowFont_HP|showfont_index[3] ; sys_clk      ; sys_clk     ; 0.000        ; 0.236      ; 0.912      ;
+; 0.592 ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICBitCnt[1]        ; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICBitCnt[3]        ; sys_clk      ; sys_clk     ; 0.000        ; 0.037      ; 0.713      ;
++-------+----------------------------------------------------------------------+----------------------------------------------------------------------+--------------+-------------+--------------+------------+------------+
+
+
+----------------------------------------------
+; Fast 1200mV 0C Model Metastability Summary ;
+----------------------------------------------
+No synchronizer chains to report.
+
+
++--------------------------------------------------------------------------------+
+; Multicorner Timing Analysis Summary                                            ;
++------------------+----------+-------+----------+---------+---------------------+
+; Clock            ; Setup    ; Hold  ; Recovery ; Removal ; Minimum Pulse Width ;
++------------------+----------+-------+----------+---------+---------------------+
+; Worst-case Slack ; -5.270   ; 0.178 ; N/A      ; N/A     ; -3.000              ;
+;  sys_clk         ; -5.270   ; 0.178 ; N/A      ; N/A     ; -3.000              ;
+; Design-wide TNS  ; -300.396 ; 0.0   ; 0.0      ; 0.0     ; -107.09             ;
+;  sys_clk         ; -300.396 ; 0.000 ; N/A      ; N/A     ; -107.090            ;
++------------------+----------+-------+----------+---------+---------------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Board Trace Model Assignments                                                                                                                                                                                                                                                                                                                                                                                    ;
++---------------+--------------+-------------------+-------------------------+-------------------------+---------------+---------------------+----------------+------------------+--------+------------------+------------------------+------------------------+--------------+---------------+-----------------+-------+---------------------+--------------------+---------------+-----------------+-------------+
+; Pin           ; I/O Standard ; Near Tline Length ; Near Tline L per Length ; Near Tline C per Length ; Near Series R ; Near Differential R ; Near Pull-up R ; Near Pull-down R ; Near C ; Far Tline Length ; Far Tline L per Length ; Far Tline C per Length ; Far Series R ; Far Pull-up R ; Far Pull-down R ; Far C ; Termination Voltage ; Far Differential R ; EBD File Name ; EBD Signal Name ; EBD Far-end ;
++---------------+--------------+-------------------+-------------------------+-------------------------+---------------+---------------------+----------------+------------------+--------+------------------+------------------------+------------------------+--------------+---------------+-----------------+-------+---------------------+--------------------+---------------+-----------------+-------------+
+; OLED_SCL      ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
+; OLED_SDA      ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
+; ~ALTERA_DCLK~ ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
+; ~ALTERA_nCEO~ ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
++---------------+--------------+-------------------+-------------------------+-------------------------+---------------+---------------------+----------------+------------------+--------+------------------+------------------------+------------------------+--------------+---------------+-----------------+-------+---------------------+--------------------+---------------+-----------------+-------------+
+
+
++----------------------------------------------------------------------------+
+; Input Transition Times                                                     ;
++-------------------------+--------------+-----------------+-----------------+
+; Pin                     ; I/O Standard ; 10-90 Rise Time ; 90-10 Fall Time ;
++-------------------------+--------------+-----------------+-----------------+
+; OLED_SDA                ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; sys_clk                 ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; rst_n                   ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; ~ALTERA_ASDO_DATA1~     ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; ~ALTERA_FLASH_nCE_nCSO~ ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; ~ALTERA_DATA0~          ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
++-------------------------+--------------+-----------------+-----------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Signal Integrity Metrics (Slow 1200mv 0c Model)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            ;
++---------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
+; Pin           ; I/O Standard ; Board Delay on Rise ; Board Delay on Fall ; Steady State Voh at FPGA Pin ; Steady State Vol at FPGA Pin ; Voh Max at FPGA Pin ; Vol Min at FPGA Pin ; Ringback Voltage on Rise at FPGA Pin ; Ringback Voltage on Fall at FPGA Pin ; 10-90 Rise Time at FPGA Pin ; 90-10 Fall Time at FPGA Pin ; Monotonic Rise at FPGA Pin ; Monotonic Fall at FPGA Pin ; Steady State Voh at Far-end ; Steady State Vol at Far-end ; Voh Max at Far-end ; Vol Min at Far-end ; Ringback Voltage on Rise at Far-end ; Ringback Voltage on Fall at Far-end ; 10-90 Rise Time at Far-end ; 90-10 Fall Time at Far-end ; Monotonic Rise at Far-end ; Monotonic Fall at Far-end ;
++---------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
+; OLED_SCL      ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 2.07e-09 V                   ; 2.36 V              ; -0.00737 V          ; 0.209 V                              ; 0.012 V                              ; 5.22e-10 s                  ; 5.33e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 2.07e-09 V                  ; 2.36 V             ; -0.00737 V         ; 0.209 V                             ; 0.012 V                             ; 5.22e-10 s                 ; 5.33e-10 s                 ; Yes                       ; Yes                       ;
+; OLED_SDA      ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 2.07e-09 V                   ; 2.36 V              ; -0.00737 V          ; 0.209 V                              ; 0.012 V                              ; 5.22e-10 s                  ; 5.33e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 2.07e-09 V                  ; 2.36 V             ; -0.00737 V         ; 0.209 V                             ; 0.012 V                             ; 5.22e-10 s                 ; 5.33e-10 s                 ; Yes                       ; Yes                       ;
+; ~ALTERA_DCLK~ ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 1.74e-09 V                   ; 2.37 V              ; -0.0346 V           ; 0.198 V                              ; 0.094 V                              ; 3.14e-10 s                  ; 2.92e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 1.74e-09 V                  ; 2.37 V             ; -0.0346 V          ; 0.198 V                             ; 0.094 V                             ; 3.14e-10 s                 ; 2.92e-10 s                 ; Yes                       ; Yes                       ;
+; ~ALTERA_nCEO~ ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 2.57e-09 V                   ; 2.37 V              ; -0.00683 V          ; 0.171 V                              ; 0.018 V                              ; 4.97e-10 s                  ; 6.66e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 2.57e-09 V                  ; 2.37 V             ; -0.00683 V         ; 0.171 V                             ; 0.018 V                             ; 4.97e-10 s                 ; 6.66e-10 s                 ; Yes                       ; Yes                       ;
++---------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Signal Integrity Metrics (Slow 1200mv 85c Model)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           ;
++---------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
+; Pin           ; I/O Standard ; Board Delay on Rise ; Board Delay on Fall ; Steady State Voh at FPGA Pin ; Steady State Vol at FPGA Pin ; Voh Max at FPGA Pin ; Vol Min at FPGA Pin ; Ringback Voltage on Rise at FPGA Pin ; Ringback Voltage on Fall at FPGA Pin ; 10-90 Rise Time at FPGA Pin ; 90-10 Fall Time at FPGA Pin ; Monotonic Rise at FPGA Pin ; Monotonic Fall at FPGA Pin ; Steady State Voh at Far-end ; Steady State Vol at Far-end ; Voh Max at Far-end ; Vol Min at Far-end ; Ringback Voltage on Rise at Far-end ; Ringback Voltage on Fall at Far-end ; 10-90 Rise Time at Far-end ; 90-10 Fall Time at Far-end ; Monotonic Rise at Far-end ; Monotonic Fall at Far-end ;
++---------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
+; OLED_SCL      ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 1.93e-07 V                   ; 2.34 V              ; -0.00869 V          ; 0.14 V                               ; 0.046 V                              ; 6.89e-10 s                  ; 6.56e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 1.93e-07 V                  ; 2.34 V             ; -0.00869 V         ; 0.14 V                              ; 0.046 V                             ; 6.89e-10 s                 ; 6.56e-10 s                 ; Yes                       ; Yes                       ;
+; OLED_SDA      ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 1.93e-07 V                   ; 2.34 V              ; -0.00869 V          ; 0.14 V                               ; 0.046 V                              ; 6.89e-10 s                  ; 6.56e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 1.93e-07 V                  ; 2.34 V             ; -0.00869 V         ; 0.14 V                              ; 0.046 V                             ; 6.89e-10 s                 ; 6.56e-10 s                 ; Yes                       ; Yes                       ;
+; ~ALTERA_DCLK~ ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 1.55e-07 V                   ; 2.35 V              ; -0.00221 V          ; 0.097 V                              ; 0.005 V                              ; 4.49e-10 s                  ; 3.85e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 1.55e-07 V                  ; 2.35 V             ; -0.00221 V         ; 0.097 V                             ; 0.005 V                             ; 4.49e-10 s                 ; 3.85e-10 s                 ; Yes                       ; Yes                       ;
+; ~ALTERA_nCEO~ ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 2.54e-07 V                   ; 2.34 V              ; -0.00774 V          ; 0.109 V                              ; 0.026 V                              ; 6.58e-10 s                  ; 8.24e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 2.54e-07 V                  ; 2.34 V             ; -0.00774 V         ; 0.109 V                             ; 0.026 V                             ; 6.58e-10 s                 ; 8.24e-10 s                 ; Yes                       ; Yes                       ;
++---------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Signal Integrity Metrics (Fast 1200mv 0c Model)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            ;
++---------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
+; Pin           ; I/O Standard ; Board Delay on Rise ; Board Delay on Fall ; Steady State Voh at FPGA Pin ; Steady State Vol at FPGA Pin ; Voh Max at FPGA Pin ; Vol Min at FPGA Pin ; Ringback Voltage on Rise at FPGA Pin ; Ringback Voltage on Fall at FPGA Pin ; 10-90 Rise Time at FPGA Pin ; 90-10 Fall Time at FPGA Pin ; Monotonic Rise at FPGA Pin ; Monotonic Fall at FPGA Pin ; Steady State Voh at Far-end ; Steady State Vol at Far-end ; Voh Max at Far-end ; Vol Min at Far-end ; Ringback Voltage on Rise at Far-end ; Ringback Voltage on Fall at Far-end ; 10-90 Rise Time at Far-end ; 90-10 Fall Time at Far-end ; Monotonic Rise at Far-end ; Monotonic Fall at Far-end ;
++---------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
+; OLED_SCL      ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 2.74e-08 V                   ; 2.71 V              ; -0.0317 V           ; 0.148 V                              ; 0.064 V                              ; 4.51e-10 s                  ; 4.15e-10 s                  ; No                         ; Yes                        ; 2.62 V                      ; 2.74e-08 V                  ; 2.71 V             ; -0.0317 V          ; 0.148 V                             ; 0.064 V                             ; 4.51e-10 s                 ; 4.15e-10 s                 ; No                        ; Yes                       ;
+; OLED_SDA      ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 2.74e-08 V                   ; 2.71 V              ; -0.0317 V           ; 0.148 V                              ; 0.064 V                              ; 4.51e-10 s                  ; 4.15e-10 s                  ; No                         ; Yes                        ; 2.62 V                      ; 2.74e-08 V                  ; 2.71 V             ; -0.0317 V          ; 0.148 V                             ; 0.064 V                             ; 4.51e-10 s                 ; 4.15e-10 s                 ; No                        ; Yes                       ;
+; ~ALTERA_DCLK~ ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 2.22e-08 V                   ; 2.74 V              ; -0.06 V             ; 0.158 V                              ; 0.08 V                               ; 2.68e-10 s                  ; 2.19e-10 s                  ; Yes                        ; Yes                        ; 2.62 V                      ; 2.22e-08 V                  ; 2.74 V             ; -0.06 V            ; 0.158 V                             ; 0.08 V                              ; 2.68e-10 s                 ; 2.19e-10 s                 ; Yes                       ; Yes                       ;
+; ~ALTERA_nCEO~ ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 3.54e-08 V                   ; 2.7 V               ; -0.00943 V          ; 0.276 V                              ; 0.035 V                              ; 3.19e-10 s                  ; 4.99e-10 s                  ; No                         ; Yes                        ; 2.62 V                      ; 3.54e-08 V                  ; 2.7 V              ; -0.00943 V         ; 0.276 V                             ; 0.035 V                             ; 3.19e-10 s                 ; 4.99e-10 s                 ; No                        ; Yes                       ;
++---------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
+
+
++-------------------------------------------------------------------+
+; Setup Transfers                                                   ;
++------------+----------+----------+----------+----------+----------+
+; From Clock ; To Clock ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
++------------+----------+----------+----------+----------+----------+
+; sys_clk    ; sys_clk  ; 9262     ; 0        ; 0        ; 0        ;
++------------+----------+----------+----------+----------+----------+
+Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
+
+
++-------------------------------------------------------------------+
+; Hold Transfers                                                    ;
++------------+----------+----------+----------+----------+----------+
+; From Clock ; To Clock ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
++------------+----------+----------+----------+----------+----------+
+; sys_clk    ; sys_clk  ; 9262     ; 0        ; 0        ; 0        ;
++------------+----------+----------+----------+----------+----------+
+Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
+
+
+---------------
+; Report TCCS ;
+---------------
+No dedicated SERDES Transmitter circuitry present in device or used in design
+
+
+---------------
+; Report RSKM ;
+---------------
+No non-DPA dedicated SERDES Receiver circuitry present in device or used in design
+
+
++------------------------------------------------+
+; Unconstrained Paths Summary                    ;
++---------------------------------+-------+------+
+; Property                        ; Setup ; Hold ;
++---------------------------------+-------+------+
+; Illegal Clocks                  ; 0     ; 0    ;
+; Unconstrained Clocks            ; 0     ; 0    ;
+; Unconstrained Input Ports       ; 1     ; 1    ;
+; Unconstrained Input Port Paths  ; 70    ; 70   ;
+; Unconstrained Output Ports      ; 2     ; 2    ;
+; Unconstrained Output Port Paths ; 4     ; 4    ;
++---------------------------------+-------+------+
+
+
++----------------------------------------+
+; Clock Status Summary                   ;
++---------+---------+------+-------------+
+; Target  ; Clock   ; Type ; Status      ;
++---------+---------+------+-------------+
+; sys_clk ; sys_clk ; Base ; Constrained ;
++---------+---------+------+-------------+
+
+
++---------------------------------------------------------------------------------------------------+
+; Unconstrained Input Ports                                                                         ;
++------------+--------------------------------------------------------------------------------------+
+; Input Port ; Comment                                                                              ;
++------------+--------------------------------------------------------------------------------------+
+; rst_n      ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
++------------+--------------------------------------------------------------------------------------+
+
+
++-----------------------------------------------------------------------------------------------------+
+; Unconstrained Output Ports                                                                          ;
++-------------+---------------------------------------------------------------------------------------+
+; Output Port ; Comment                                                                               ;
++-------------+---------------------------------------------------------------------------------------+
+; OLED_SCL    ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; OLED_SDA    ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
++-------------+---------------------------------------------------------------------------------------+
+
+
++---------------------------------------------------------------------------------------------------+
+; Unconstrained Input Ports                                                                         ;
++------------+--------------------------------------------------------------------------------------+
+; Input Port ; Comment                                                                              ;
++------------+--------------------------------------------------------------------------------------+
+; rst_n      ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
++------------+--------------------------------------------------------------------------------------+
+
+
++-----------------------------------------------------------------------------------------------------+
+; Unconstrained Output Ports                                                                          ;
++-------------+---------------------------------------------------------------------------------------+
+; Output Port ; Comment                                                                               ;
++-------------+---------------------------------------------------------------------------------------+
+; OLED_SCL    ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; OLED_SDA    ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
++-------------+---------------------------------------------------------------------------------------+
+
+
++--------------------------+
+; Timing Analyzer Messages ;
++--------------------------+
+Info: *******************************************************************
+Info: Running Quartus Prime Timing Analyzer
+    Info: Version 19.1.0 Build 670 09/22/2019 SJ Lite Edition
+    Info: Processing started: Mon Sep 05 14:15:47 2022
+Info: Command: quartus_sta main -c main
+Info: qsta_default_script.tcl version: #1
+Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
+Info (20032): Parallel compilation is enabled and will use up to 6 processors
+Info (21077): Low junction temperature is 0 degrees C
+Info (21077): High junction temperature is 85 degrees C
+Critical Warning (332012): Synopsys Design Constraints File file not found: 'main.sdc'. A Synopsys Design Constraints File is required by the Timing Analyzer to get proper timing constraints. Without it, the Compiler will not properly optimize the design.
+Info (332142): No user constrained base clocks found in the design. Calling "derive_clocks -period 1.0"
+Info (332105): Deriving Clocks
+    Info (332105): create_clock -period 1.000 -name sys_clk sys_clk
+Info (332143): No user constrained clock uncertainty found in the design. Calling "derive_clock_uncertainty"
+Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in the Timing Analyzer to see clock uncertainties.
+Info: Found TIMING_ANALYZER_REPORT_SCRIPT_INCLUDE_DEFAULT_ANALYSIS = ON
+Info: Analyzing Slow 1200mV 85C Model
+Critical Warning (332148): Timing requirements not met
+    Info (11105): For recommendations on closing timing, run Report Timing Closure Recommendations in the Timing Analyzer.
+Info (332146): Worst-case setup slack is -5.270
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):    -5.270            -300.396 sys_clk 
+Info (332146): Worst-case hold slack is 0.433
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):     0.433               0.000 sys_clk 
+Info (332140): No Recovery paths to report
+Info (332140): No Removal paths to report
+Info (332146): Worst-case minimum pulse width slack is -3.000
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):    -3.000            -107.090 sys_clk 
+Info: Analyzing Slow 1200mV 0C Model
+Info (334003): Started post-fitting delay annotation
+Info (334004): Delay annotation completed successfully
+Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in the Timing Analyzer to see clock uncertainties.
+Critical Warning (332148): Timing requirements not met
+    Info (11105): For recommendations on closing timing, run Report Timing Closure Recommendations in the Timing Analyzer.
+Info (332146): Worst-case setup slack is -4.874
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):    -4.874            -276.646 sys_clk 
+Info (332146): Worst-case hold slack is 0.383
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):     0.383               0.000 sys_clk 
+Info (332140): No Recovery paths to report
+Info (332140): No Removal paths to report
+Info (332146): Worst-case minimum pulse width slack is -3.000
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):    -3.000            -107.090 sys_clk 
+Info: Analyzing Fast 1200mV 0C Model
+Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in the Timing Analyzer to see clock uncertainties.
+Critical Warning (332148): Timing requirements not met
+    Info (11105): For recommendations on closing timing, run Report Timing Closure Recommendations in the Timing Analyzer.
+Info (332146): Worst-case setup slack is -1.656
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):    -1.656             -88.112 sys_clk 
+Info (332146): Worst-case hold slack is 0.178
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):     0.178               0.000 sys_clk 
+Info (332140): No Recovery paths to report
+Info (332140): No Removal paths to report
+Info (332146): Worst-case minimum pulse width slack is -3.000
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):    -3.000             -77.778 sys_clk 
+Info (332102): Design is not fully constrained for setup requirements
+Info (332102): Design is not fully constrained for hold requirements
+Info: Quartus Prime Timing Analyzer was successful. 0 errors, 5 warnings
+    Info: Peak virtual memory: 4781 megabytes
+    Info: Processing ended: Mon Sep 05 14:15:48 2022
+    Info: Elapsed time: 00:00:01
+    Info: Total CPU time (on all processors): 00:00:01
+
+

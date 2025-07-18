@@ -1,0 +1,586 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+
+<html>
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<meta content="readme" name="ContentType"/>
+<meta content="405019,405020,405021,405022" name="ProductCategories"/>
+<title>Circuit Design Suite 14.3 Readme</title>
+<style type="text/css">
+		<!--
+		/***************************************************/
+		/* MINIMAL STYLES */
+		/* The following section defines styles that every HTML Help project should need. */
+
+		/* Specifies white background color for page and font style for text. */
+		body {
+			background-color: #FFFFFF;
+			font-family: Verdana, sans-serif;
+			font-size: 8pt;
+			color: #000000;
+		}
+
+		/* Use P for normal paragraphs. */
+		p {
+			margin-top: 6.00pt;
+			margin-bottom: 6.00pt;
+		}
+
+		br {
+			font-size: 4.00pt;
+		}
+
+		/* Use H1 for all topic headings. */
+		h1 {
+			margin-top: 3.00pt;
+			margin-bottom: 3.00pt;
+			font-size: 150%;
+			font-weight: bold;
+		}
+
+		/* Use H2 for second-level headings. */
+		h2 {
+			margin-top: 9.00pt;
+			margin-bottom: 3.00pt;
+			font-size: 125%;
+			font-weight: bold;
+		}
+
+		/* Use H3 for third-level headings. */
+		h3 {
+			margin-top: 6.00pt;
+			margin-bottom: 3.00pt;
+			font-size: 100%;
+			font-weight: bold;
+		}
+
+		/* Use H4 for fourth-level headings. */
+		h4 {
+			margin-top: 6.00pt;
+			margin-bottom: 3.00pt;
+			font-size: 100%;
+			font-weight: bold;
+		}
+
+		/* H5 and H6 have the same definition as H4 because you should not need this level of heading in one topic. If you need to use H5 or H6, consider breaking up your topic into more than one topic. */
+		h5 {
+			margin-top: 6.00pt;
+			margin-bottom: 3.00pt;
+			font-size: 100%;
+			font-weight: bold;
+		}
+
+		h6 {
+			margin-top: 6.00pt;
+			margin-bottom: 3.00pt;
+			font-size: 100%;
+			font-weight: bold;
+		}
+
+		/* Deprecated. Use P for normal paragraphs. */
+		p.Body {}
+
+		/* Use the Anchor style class for graphic references on a line by themselves. */
+		p.Anchor {
+			font-size: 125%;
+		}
+
+		/* Use the Indent style classes to indent a paragraph. If you need to indent text below a list item, use <br><br> to start the new paragraph within the same set of <li></li> tags. If you need to indent a list within another list, nest the indented list within the first list's set of <ol></ol> or <ul></ul> tags. */
+		p.Indent1 {
+			margin-left: 12.00pt;
+			margin-bottom: 3.00pt;
+		}
+
+		p.Indent2 {
+			margin-left: 24.00pt;
+			margin-bottom: 3.00pt;
+		}
+
+		p.Indent3 {
+			margin-left: 36.00pt;
+			margin-bottom: 3.00pt;
+		}
+
+		p.Indent4 {
+			margin-left: 48.00pt;
+			margin-bottom: 3.00pt;
+		}
+
+		p.Indent5 {
+			margin-left: 60.00pt;
+			margin-bottom: 3.00pt;
+		}
+
+		/* Use the LI style for all list items. */
+		li {
+			margin-top: 3.00pt;
+			margin-bottom: 3.00pt;
+		}
+
+		/* Use the OL style for numbered lists. You do not have to type the number for each list item in a numbered list. */
+		ol {
+			margin-left: 22.00pt;
+			margin-top: 3.00pt;
+			margin-bottom: 3.00pt;
+			text-indent: 0pt;
+			list-style-type: decimal;
+		}
+
+		/* Use the OL style for numbered lists. Nested lists will use the bullet types according to the nesting scheme below */
+		ol ol {
+			list-style-type: lower-alpha
+		}
+
+		ol ol ol {
+			list-style-type: decimal
+		}
+
+		ol ol ol ol {
+			list-style-type: lower-alpha
+		}
+
+		ol ol ol ol ol {
+			list-style-type: decimal
+		}
+
+		ol ol ol ol ol ol {
+			list-style-type: lower-alpha
+		}
+
+		ol ol ol ol ol ol ol {
+			list-style-type: decimal
+		}
+
+		ol ol ol ol ol ol ol ol {
+			list-style-type: lower-alpha
+		}
+
+
+		/* Use the EquationNum style class for numbered lists of equations. You do not have to type the number for each list item in a numbered list. */
+		ol.EquationNum {
+			margin-left: 36.00pt;
+			text-indent: 0pt;
+			list-style-type: decimal;
+		}
+
+		/* Use the List-abc style class for lettered lists. You do not have to type the letter for each list item in a lettered list. */
+		ol.List-abc {
+			margin-left: 22.00pt;
+			text-indent: 0pt;
+			list-style-type: lower-alpha;
+		}
+
+		/* Use the UL style for bulleted lists. You do not have to type the bullet for each list item in a bulleted list. */
+		ul {
+			margin-left: 22.00pt;
+			text-indent: 0pt;
+			margin-top: 3.00pt;
+			margin-bottom: 3.00pt;
+			list-style-type: disc;
+		}
+
+		/* Use the UL style for bulleted lists. Nested lists will use the bullet types according to the nesting scheme below. */
+		ul ul {
+			list-style-image: none;
+			list-style-type: circle
+		}
+
+		ul ul ul {
+			list-style-image: none;
+			list-style-type: disc
+		}
+
+		ul ul ul ul {
+			list-style-image: none;
+			list-style-type: circle
+		}
+
+		ul ul ul ul ul {
+			list-style-image: none;
+			list-style-type: disc
+		}
+
+		ul ul ul ul ul ul {
+			list-style-image: none;
+			list-style-type: circle
+		}
+
+		ul ul ul ul ul ul ul {
+			list-style-image: none;
+			list-style-type: disc
+		}
+
+		ul ul ul ul ul ul ul ul ul {
+			list-style-image: none;
+			list-style-type: circle
+		}
+
+		/* Use the List-Box style class for bulleted lists with boxes instead of bullets. You do not have to type the box for each list item in a box list. */
+		ul.List-Box {
+			list-style-image: none;
+			list-style-type: square
+		}
+
+		table {
+			font-size: 8pt;
+		}
+
+		/* Use the Borderless style class for tables that do not need borders, such as for 2-column or 3-column lists with no headings. */
+		table.Borderless {
+			border: none;
+		}
+
+		/* Use the Bordered style class for tables that need borders. */
+		table.Bordered {
+			border-width: 1pt;
+			border-style: solid;
+			border-color: #000000;
+			border-collapse: collapse;
+		}
+
+		/* Use the TD style for table cells in Borderless or Borderless-Wide tables. */
+		td {
+			vertical-align: top;
+			padding: 3px;
+		}
+
+		/* Use the Bordered style class for table headings and cells in Bordered or Bordered-Wide tables. */
+		.Bordered {
+			border-width: 1pt;
+			border-style: solid;
+			border-color: #000000;
+		}
+
+		/* Use the Icon style class for table cells that contain note, caution, warning, or tip icons, or LabVIEW datatype terminals. */
+		td.Icon {
+			width: 40px;
+		}
+
+		/* Use the TH style for table heading cells in Borderless or Borderless-Wide tables. */
+		th {
+			font-weight: bold;
+			padding: 3px;
+		}
+
+		/* Use the Left-Align style class for table headings and cells that you want to left align instead of center align. */
+		.Left-Align {
+			text-align: left;
+		}
+
+		/***************************************************/
+		/* CHARACTER FORMATS */
+		/* The following section defines character formats that every HTML Help project should need. */
+
+		/* CHARACTER FORMATS Updated to conform with the CSE HTML Validator Pro */
+		/* The following section defines character formats that every HTML Help project should need. */
+
+		/* Use the Dark-Red format for warnings or cautions. */
+		.Dark-Red {
+			color: #800000
+		}
+
+		/* Use the Monospace format for code or syntax examples. */
+		.Monospace {
+			font-family: "Courier New", monospace;
+			font-size: 100%;
+		}
+
+		/* Use the Monospace-Bold format for messages and responses that the computer automatically prints to the screen. */
+		.Monospace-Bold {
+			font-family: "Courier New", monospace;
+			font-weight: bold;
+			font-size: 100%;
+		}
+
+		/* Use the Monospace-Italic format to denote text that is a placeholder for a word or value that the user must supply. */
+		.Monospace-Italic {
+			font-family: "Courier New", monospace;
+			font-style: italic;
+			font-size: 100%;
+		}
+
+		/* small class */
+		.smallFont {
+			font-size: 87.5%;
+		}
+
+		/* Bold class */
+		.Bold {
+			font-weight: bold;
+		}
+
+		/* Italic class */
+		.Italic {
+			font-style: italic;
+		}
+
+		/* Use the Platform format to denote a specific platform. */
+		.Platform {
+			color: #0000FF;
+			font-weight: bold;
+		}
+
+		/* Use the Symbol format for characters not in the Verdana character set. Use this format sparingly. When possible, you should use the correct ASCII code for the symbol or use a graphic to recreate the symbol. */
+		.Symbol {
+			font-family: Symbol;
+		}
+
+
+		/* Use the Green-Underline format for the green definition in the conventions topic */
+		.Green-Underline {
+			color: #007700;
+			text-decoration: underline;
+		}
+
+		/* Use the glossButton format for the glossary buttons used in the glossary topic */
+		.glossButton {
+			font-size: 12px;
+			color: black;
+		}
+
+		/* Use for text sections and hyphenated words that should not break at line wraps */
+		.nobreak {
+			white-space: nowrap
+		}
+
+		/* Use for template instructions. */
+		.instructions {
+			color: red;
+			font-style: italic
+		}
+
+		/*Use for words and text sections that do not need to be localized */
+		.DNL {}
+
+		/* The following styles define the color of links. */
+		a:link {
+			color: #007700
+		}
+
+		a:visited {
+			color: #7F007F
+		}
+
+		a:link:hover {
+			color: #FF0000
+		}
+
+		a:link:active {
+			color: #FF0000
+		}
+
+		/***************************************************/
+		/* Forms */
+
+		form {
+			margin-top: 0pt;
+			margin-bottom: 3pt;
+			color: black;
+		}
+
+		select {
+			font-size: 100%;
+			color: black;
+		}
+
+		/*******************************************************/
+		/* Margins */
+		/* Use these styles for block-level elements inside tables cells or list items where you do not want extra padding at the top or bottom of a cell. */
+		.noTopMargin {
+			margin-top: 0pt;
+		}
+
+		.noBottomMargin {
+			margin-bottom: 0pt;
+		}
+
+		/***************************************************/
+		/* CODE STYLES */
+		/* The following section defines styles that you need to format entire sections of code or syntax examples. If you have just a few words you need to format as a code or syntax example, use the Monospace character format. */
+
+		p.Code {
+			margin-top: 3.00pt;
+			margin-bottom: 0.00pt;
+			font-family: "Courier New", monospace;
+		}
+
+		p.Code1 {
+			margin-left: 12.00pt;
+			margin-top: 3.00pt;
+			margin-bottom: 0.00pt;
+			font-family: "Courier New", monospace;
+		}
+
+		p.Code2 {
+			margin-left: 24.00pt;
+			margin-top: 3.00pt;
+			margin-bottom: 0.00pt;
+			font-family: "Courier New", monospace;
+		}
+
+		p.Code3 {
+			margin-left: 36.00pt;
+			margin-top: 3.00pt;
+			margin-bottom: 0.00pt;
+			font-family: "Courier New", monospace;
+		}
+		-->
+	</style>
+</head>
+<body>
+<h1>Circuit Design Suite 14.3 Readme</h1>
+<p>May 2022</p>
+<p>This file contains installation instructions and compatibility information for Circuit Design Suite 14.3.</p>
+<p>You can find more release information on ni.com.</p>
+<ul>
+<li><a href="https://www.ni.com/en-us/support/documentation/release-notes/product.circuit-design-suite.html" target="_blank">Circuit Design Suite Release Notes</a>: Known issues, bugs fixed since the last release, and other notes about this release</li>
+</ul>
+<hr/>
+<p><a href="#overview">Overview</a></p>
+<p><a href="#requirements">System Requirements</a></p>
+<p><a href="#supportedOSes">Supported Operating Systems</a></p>
+<p><a href="#app">Application Software Support</a></p>
+<p><a href="#installation">Installation Instructions</a></p>
+<p><a href="#updates">Product Security and Critical Updates</a></p>
+<p><a href="#New">New Features</a></p>
+<p><a href="#changed">Behavior Changes</a></p>
+<p><a href="#help">Accessing the Help</a></p>
+<p><a href="#autoinstall">Automating the Installation of NI Products</a></p>
+<p><a href="#win10">Using NI Software with Microsoft Windows 10</a></p>
+<p><a href="#obsolete">Unsupported Windows Operating Systems</a></p>
+
+<p><a href="#legal">Legal Information</a></p>
+<hr/>
+<h2><a name="overview">Overview</a></h2>
+<p></p>
+<h2><a name="requirements">System Requirements</a></h2>
+<p>Circuit Design Suite 14.3 has the following minimum requirements:</p>
+<ul>
+<li>Pentium 4M or equivalent (32-bit)</li>
+<li>Pentium 4 G1 or equivalent (64-bit)</li>
+<li>1 GB RAM</li>
+<li>2 GB of disk space</li>
+<li>1024 x 768 screen resolution</li>
+<li><strong>(Optional)</strong> LabVIEW 2019 or later, to develop custom LabVIEW-based Multisim instruments</li>
+</ul>
+<!--If this software release works with LabVIEW, include LabVIEW-specific text-->
+<p>Refer to the <em>LabVIEW Readme</em> for additional system requirements and supported operating systems for LabVIEW.</p>
+<!-- End LabVIEW-specific text-->
+<h2><a name="supportedOSes">Supported Operating Systems</a></h2>
+<p>Circuit Design Suite 14.3 supports the following operating systems:</p>
+<ul>
+<li>Windows 10</li>
+<li>Windows Server 2012 R2</li>
+</ul>
+<p><strong>Note</strong>  Refer to <a href="#obsolete">Unsupported Windows Operating Systems</a> for more information about support for Microsoft Windows OSes.</p>
+<p><strong>Note</strong>  Circuit Design Suite no longer supports Windows Vista/XP/7/8.x, Windows Server 2003/2008/2012, or any 32-bit Windows operating system. Circuit Design Suite 14.3 will not install or run on an unsupported OS. You cannot deploy or distribute applications that use Circuit Design Suite 14.3 to an unsupported OS. Additionally, after installing Circuit Design Suite 14.3, you cannot use any installers built on this computer with any version of LabVIEW, LabWindows™/CVI™, NI TestStand™, or Measurement Studio on an unsupported OS.</p>
+<p>For more information about the changes to our OS support, visit <a href="https://www.ni.com/r/win32bitsupport" target="_blank">https://www.ni.com/r/win32bitsupport</a>.</p>
+<h2><a name="app">Application Software Support</a></h2>
+<p>Circuit Design Suite 14.3 supports the following application software versions, including service packs. If you are not using NI application software, refer to Microsoft Visual Studio Support.</p>
+<table class="Bordered">
+<tr>
+<th class="Bordered">Application Software</th>
+<th class="Bordered">Versions Supported by Circuit Design Suite 14.3</th>
+</tr>
+<tr>
+<td class="Bordered">LabVIEW</td>
+<td class="Bordered">2019, 2020, 2021</td>
+</tr>
+</table>
+<!--If this software release works with LabVIEW, include LabVIEW-specific text-->
+<p>This product no longer supports LabVIEW NXG. Refer to <a href="https://www.ni.com/r/lvnxgquestion" target="_blank">LabVIEW NXG on ni.com</a> for more information about LabVIEW NXG Life-Cycle Dates and driver version support.</p>
+<!-- End LabVIEW-specific text-->
+<h3>Microsoft Visual Studio Support</h3>
+<p>If you are using the Circuit Design Suite .NET Class Library, .NET Framework 4.0 (minimum) is required. The Circuit Design Suite 14.3 .NET Class Library can be used with Visual C# or Visual Basic .NET in any Visual Studio version that can target .NET Framework 4.0 or .NET Framework 4.5.</p>
+<p>To use the .NET API, you must install the .NET class libraries or the .NET wrapper in addition to the NI device driver. For information about versions of the .NET Framework and the drivers each supports, as well as the download location of the installer files, refer to <a href="https://www.ni.com/r/netapidriversupport" target="_blank">.NET Resources for NI Hardware and Software</a>.</p>
+<h2><a name="installation">Installation Instructions</a></h2>
+<p>Download the Circuit Design Suite installer from <a href="https://www.ni.com/downloads" target="_blank">ni.com/downloads</a>. NI software includes NI Package Manager to handle the installation. Refer to the <a href="https://www.ni.com/r/nipmmanual" target="_blank">NI Package Manager Manual</a> for more information about installing, removing, and upgrading NI software using Package Manager.</p>
+<p><strong>Notes</strong></p>
+<ul>
+<li>If Windows Update is enabled, the installation process might hang if Windows Update interferes with the installation of Microsoft Visual C++ 2015 Run-Time. Visit <a href="https://www.ni.com/r/exjq43" target="_blank">ni.com/r/exjq43</a> for more information and steps to resolve this issue. </li>
+<li>If you purchased this product with an NI Software Suite or NI Product Bundle, use the installation media that shipped with your purchase to install this product.</li>
+<li>Use the serial number that is included with your software to activate Circuit Design Suite. For more information on Circuit Design Suite activation, refer to <a href="https://www.ni.com/documentation/en/ni-license-manager/latest/manual/activating/" target="_blank">Activating a Product</a>.</li>
+</ul>
+
+<h3>Installing Multiple Versions</h3>
+<p class="Body">Circuit Design Suite 14.3 installs side-by-side with Circuit Design Suite 13.x and prior. </p>
+
+<h3>Archiving Circuit Design Suite databases</h3>
+<p class="Body">NI recommends regularly creating back-ups of files created within the Multisim and Ultiboard components of Circuit Design Suite. Additionally, you should back-up internal files that store user-created data, such as Master, Corporate, and User databases. These files can be found from <strong>Options»Global Options»Paths</strong>.</p>
+
+<h3>Circuit Design Suite 14.3 Updates and Notifications</h3>
+<p class="Body">NI posts information about critical updates and security notifications on <code>ni.com</code>. Visit <code>ni.com/info</code> and enter Info Code <a href="http://digital.ni.com/express.nsf/bycode/updates">updates</a> to access this information. </p>
+
+
+<!--If this software release works with LabVIEW, include LabVIEW-specific text-->
+<h3>Updated LabVIEW Compatibility Policy</h3>
+<p>When installing Circuit Design Suite, the "Circuit Design Suite Support for LabVIEW" package will be recommended if you have already installed LabVIEW 2022 or later and installs to the LVAddons directory.
+		This package supports applications using Circuit Design Suite with LabVIEW 2022 or later.</p>
+<p>LVAddons directory location:</p>
+<ul>
+<li>Windows <span class="Monospace">C:\Program Files\NI\LVAddons</span></li>
+<li>Linux <span class="Monospace">/usr/local/natinst/share/lvaddons</span></li>
+<li>macOS <span class="Monospace">/Library/Application Support/National Instruments/LVAddons</span></li>
+</ul>
+<!-- End LabVIEW-specific text-->
+<!--Critical updates-->
+<h2><a name="updates">Product Security and Critical Updates</a></h2>
+<p>Visit <a href="https://www.ni.com/security" target="_blank">ni.com/security</a> to view and subscribe to receive security notifications about NI products. For information about critical updates from NI, refer to <a href="https://www.ni.com/r/critical-updates" target="_blank">Available Critical and Security Updates for NI Software</a>.</p>
+
+
+<h2><a name="New">New Features</a></h2>
+	<ul>
+		<li>For information on new components, refer to <a href="https://www.ni.com/en-us/support/documentation/supplemental/15/new-and-updated-multisim-database-components-and-models.html">New and Updated Multisim Database Components and Models</a>.</li>
+		<li>For information on new Multisim Desktop components, refer to: <a href="https://www.ni.com/en-us/support/documentation/supplemental/06/ni-multisim-components-and-models.html">NI Multisim Components and Models</a>.</li>
+		<li>Updated obsolescence information for components.</li>
+	</ul>
+
+<h2><a name="changed">Behavior Changes</a></h2>
+	<ul>
+		<li>Removed deprecated MCU module.</li>
+	</ul>
+
+<h2><a name="help">Accessing the Help</a></h2>
+<p>For more information on the Circuit Design Suite, refer to <em>Getting Started with NI Circuit Design Suite</em>. Access this guide by clicking <strong>Start»All Programs»National Instruments»Circuit Design Suite 14.3 Documentation»Getting Started</strong>.</p>
+<p>For more information on NI Multisim, refer to the <em>Multisim Help</em>, accessible in the application from <strong>Help»Multisim help</strong>.</p>
+<p>For more information on NI Ultiboard, refer to the <em>Ultiboard Help</em>, accessible in the application from <strong>Help»Ultiboard help</strong>.</p>
+
+<h2><a name="autoinstall">Automating the Installation of NI Products</a></h2>
+<p>You can automate the installation of most NI products using command-line arguments to suppress some or all of the installer user interface and dialog boxes.</p>
+<p>If the NI product you are installing uses Microsoft .NET 4.6.2, the .NET installer may run before any NI software installs and may require a reboot before the installation of NI software begins. To avoid a .NET reboot, install .NET 4.6.2 separately before you install NI software.</p>
+<p>For more information about automating the installation of NI products, refer to <a href="https://www.ni.com/r/autoinstall" target="_blank">Automating an Installer</a> in the NI Package Manager manual.</p>
+<!-- Windows 10 Support Information-->
+<h2><a name="win10">Using NI Software with Microsoft Windows 10</a></h2>
+<p>For more information about NI support for Windows 10, refer to <a href="https://www.ni.com/r/windows10" target="_blank">NI Product Compatibility for Microsoft Windows 10</a>.</p>
+<!-- We are dropping support for various versions of Windows -->
+<h2><a name="obsolete">Unsupported Windows Operating Systems</a></h2>
+<p>Circuit Design Suite no longer supports Windows Vista/XP/7/8.x, Windows Server 2003/2008/2012, or any 32-bit Windows operating system. Versions of this product that ship after May 1, 2021, may not install or execute correctly on these operating systems. For detailed information about NI operating system support, visit <a href="https://www.ni.com/r/win32bitsupport" target="_blank">https://www.ni.com/r/win32bitsupport</a>.</p>
+
+<!--Important Information-->
+<hr/>
+<h2><a name="legal">Legal Information</a></h2>
+<!--Copyright-->
+<p><strong>Copyright</strong></p>
+<p>© 2006–2022 National Instruments Corporation. All rights reserved.</p>
+<p>Under the copyright laws, this publication may not be reproduced or transmitted in any form, electronic or mechanical, including photocopying, recording, storing in an information retrieval system, or translating, in whole or in part, without the prior written consent of National Instruments Corporation.</p>
+<p>NI respects the intellectual property of others, and we ask our users to do the same. NI software is protected by copyright and other intellectual property laws. Where NI software may be used to reproduce software or other materials belonging to others, you may use NI software only to reproduce materials that you may reproduce in accordance with the terms of any applicable license or other legal restriction.</p>
+<p><strong>End-User License Agreements and Third-Party Legal Notices</strong></p>
+<p>You can find end-user license agreements (EULAs) and third-party legal notices in the following locations after installation:</p>
+<ul>
+<li>Notices are located in the <span class="Monospace">&lt;National Instruments&gt;\_Legal Information</span> and <span class="Monospace">&lt;National Instruments&gt;</span> directories.</li>
+<li>EULAs are located in the <span class="Monospace">&lt;National Instruments&gt;\Shared\MDF\Legal\license</span> directory.</li>
+<li>Review <span class="Monospace">&lt;National Instruments&gt;\_Legal Information.txt</span> for information on including legal information in installers built with NI products.</li>
+</ul>
+<p><strong>U.S. Government Restricted Rights</strong></p>
+<p>If you are an agency, department, or other entity of the United States Government ("Government"), the use, duplication, reproduction, release, modification, disclosure or transfer of the technical data included in this manual is governed by the Restricted Rights provisions under Federal Acquisition Regulation 52.227-14 for civilian agencies and Defense Federal Acquisition Regulation Supplement Section 252.227-7014 and 252.227-7015 for military agencies.</p>
+<p><strong>IVI Foundation Copyright Notice</strong></p>
+<p><span class="DNL">Content from the IVI specifications reproduced with permission from the IVI Foundation.</span></p>
+<p><span class="DNL">The IVI Foundation and its member companies make no warranty of any kind with regard to this material, including, but not limited to, the implied warranties of merchantability and fitness for a particular purpose. The IVI Foundation and its member companies shall not be liable for errors contained herein or for incidental or consequential damages in connection with the furnishing, performance, or use of this material.</span></p>
+<!--Trademarks-->
+<p><strong>Trademarks</strong></p>
+<p>Refer to the <em><span class="DNL">NI Trademarks and Logo Guidelines</span></em> at <a href="https://www.ni.com/r/rdtrad" target="_blank"><span class="DNL">ni.com/trademarks</span></a> for information on <span class="DNL">NI</span> trademarks. Other product and company names mentioned herein are trademarks or trade names of their respective companies.</p>
+<!--Patents-->
+<p><strong>Patents</strong></p>
+<p>For patents covering the NI products/technology, refer to the appropriate location: <strong>Help»Patents</strong> in your software, the <span class="Monospace">patents.txt</span> file on your media, or the <em>NI Patent Notice</em> at <a href="https://www.ni.com/r/rdlv17" target="_blank">ni.com/patents</a>.</p>
+</body>
+</html>

@@ -1,0 +1,36 @@
+
+
+
+
+
+
+
+module OLED_Top(
+
+	input			sys_clk,
+	input			rst_n,
+
+	
+	
+	
+		//OLED IIC
+	output		OLED_SCL,
+	inout			OLED_SDA
+);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+endmodule 

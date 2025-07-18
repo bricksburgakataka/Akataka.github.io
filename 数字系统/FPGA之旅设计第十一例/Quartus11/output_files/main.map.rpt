@@ -1,0 +1,552 @@
+Analysis & Synthesis report for main
+Mon Sep 05 14:15:39 2022
+Quartus Prime Version 19.1.0 Build 670 09/22/2019 SJ Lite Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Analysis & Synthesis Summary
+  3. Analysis & Synthesis Settings
+  4. Parallel Compilation
+  5. Analysis & Synthesis Source Files Read
+  6. Analysis & Synthesis Resource Usage Summary
+  7. Analysis & Synthesis Resource Utilization by Entity
+  8. State Machine - |main|OLED_Top:OLED_TopHP|state
+  9. State Machine - |main|OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|state
+ 10. Registers Removed During Synthesis
+ 11. General Register Statistics
+ 12. Inverted Register Statistics
+ 13. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 14. Port Connectivity Checks: "OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED"
+ 15. Port Connectivity Checks: "OLED_Top:OLED_TopHP|OLED_ShowFont:OLED_ShowFont_HP|OLED_FontData:OLED_FontData_HP"
+ 16. Post-Synthesis Netlist Statistics for Top Partition
+ 17. Elapsed Time Per Partition
+ 18. Analysis & Synthesis Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 2019  Intel Corporation. All rights reserved.
+Your use of Intel Corporation's design tools, logic functions 
+and other software and tools, and any partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Intel Program License 
+Subscription Agreement, the Intel Quartus Prime License Agreement,
+the Intel FPGA IP License Agreement, or other applicable license
+agreement, including, without limitation, that your use is for
+the sole purpose of programming logic devices manufactured by
+Intel and sold by Intel or its authorized distributors.  Please
+refer to the applicable agreement for further details, at
+https://fpgasoftware.intel.com/eula.
+
+
+
++----------------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                                     ;
++------------------------------------+---------------------------------------------+
+; Analysis & Synthesis Status        ; Successful - Mon Sep 05 14:15:39 2022       ;
+; Quartus Prime Version              ; 19.1.0 Build 670 09/22/2019 SJ Lite Edition ;
+; Revision Name                      ; main                                        ;
+; Top-level Entity Name              ; main                                        ;
+; Family                             ; Cyclone IV E                                ;
+; Total logic elements               ; 248                                         ;
+;     Total combinational functions  ; 248                                         ;
+;     Dedicated logic registers      ; 70                                          ;
+; Total registers                    ; 70                                          ;
+; Total pins                         ; 4                                           ;
+; Total virtual pins                 ; 0                                           ;
+; Total memory bits                  ; 0                                           ;
+; Embedded Multiplier 9-bit elements ; 0                                           ;
+; Total PLLs                         ; 0                                           ;
++------------------------------------+---------------------------------------------+
+
+
++------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Settings                                                                              ;
++------------------------------------------------------------------+--------------------+--------------------+
+; Option                                                           ; Setting            ; Default Value      ;
++------------------------------------------------------------------+--------------------+--------------------+
+; Device                                                           ; EP4CE10F17C8       ;                    ;
+; Top-level entity name                                            ; main               ; main               ;
+; Family name                                                      ; Cyclone IV E       ; Cyclone V          ;
+; Use smart compilation                                            ; Off                ; Off                ;
+; Enable parallel Assembler and Timing Analyzer during compilation ; On                 ; On                 ;
+; Enable compact report table                                      ; Off                ; Off                ;
+; Restructure Multiplexers                                         ; Auto               ; Auto               ;
+; Create Debugging Nodes for IP Cores                              ; Off                ; Off                ;
+; Preserve fewer node names                                        ; On                 ; On                 ;
+; Intel FPGA IP Evaluation Mode                                    ; Enable             ; Enable             ;
+; Verilog Version                                                  ; Verilog_2001       ; Verilog_2001       ;
+; VHDL Version                                                     ; VHDL_1993          ; VHDL_1993          ;
+; State Machine Processing                                         ; Auto               ; Auto               ;
+; Safe State Machine                                               ; Off                ; Off                ;
+; Extract Verilog State Machines                                   ; On                 ; On                 ;
+; Extract VHDL State Machines                                      ; On                 ; On                 ;
+; Ignore Verilog initial constructs                                ; Off                ; Off                ;
+; Iteration limit for constant Verilog loops                       ; 5000               ; 5000               ;
+; Iteration limit for non-constant Verilog loops                   ; 250                ; 250                ;
+; Add Pass-Through Logic to Inferred RAMs                          ; On                 ; On                 ;
+; Infer RAMs from Raw Logic                                        ; On                 ; On                 ;
+; Parallel Synthesis                                               ; On                 ; On                 ;
+; DSP Block Balancing                                              ; Auto               ; Auto               ;
+; NOT Gate Push-Back                                               ; On                 ; On                 ;
+; Power-Up Don't Care                                              ; On                 ; On                 ;
+; Remove Redundant Logic Cells                                     ; Off                ; Off                ;
+; Remove Duplicate Registers                                       ; On                 ; On                 ;
+; Ignore CARRY Buffers                                             ; Off                ; Off                ;
+; Ignore CASCADE Buffers                                           ; Off                ; Off                ;
+; Ignore GLOBAL Buffers                                            ; Off                ; Off                ;
+; Ignore ROW GLOBAL Buffers                                        ; Off                ; Off                ;
+; Ignore LCELL Buffers                                             ; Off                ; Off                ;
+; Ignore SOFT Buffers                                              ; On                 ; On                 ;
+; Limit AHDL Integers to 32 Bits                                   ; Off                ; Off                ;
+; Optimization Technique                                           ; Balanced           ; Balanced           ;
+; Carry Chain Length                                               ; 70                 ; 70                 ;
+; Auto Carry Chains                                                ; On                 ; On                 ;
+; Auto Open-Drain Pins                                             ; On                 ; On                 ;
+; Perform WYSIWYG Primitive Resynthesis                            ; Off                ; Off                ;
+; Auto ROM Replacement                                             ; On                 ; On                 ;
+; Auto RAM Replacement                                             ; On                 ; On                 ;
+; Auto DSP Block Replacement                                       ; On                 ; On                 ;
+; Auto Shift Register Replacement                                  ; Auto               ; Auto               ;
+; Allow Shift Register Merging across Hierarchies                  ; Auto               ; Auto               ;
+; Auto Clock Enable Replacement                                    ; On                 ; On                 ;
+; Strict RAM Replacement                                           ; Off                ; Off                ;
+; Allow Synchronous Control Signals                                ; On                 ; On                 ;
+; Force Use of Synchronous Clear Signals                           ; Off                ; Off                ;
+; Auto RAM Block Balancing                                         ; On                 ; On                 ;
+; Auto RAM to Logic Cell Conversion                                ; Off                ; Off                ;
+; Auto Resource Sharing                                            ; Off                ; Off                ;
+; Allow Any RAM Size For Recognition                               ; Off                ; Off                ;
+; Allow Any ROM Size For Recognition                               ; Off                ; Off                ;
+; Allow Any Shift Register Size For Recognition                    ; Off                ; Off                ;
+; Use LogicLock Constraints during Resource Balancing              ; On                 ; On                 ;
+; Ignore translate_off and synthesis_off directives                ; Off                ; Off                ;
+; Timing-Driven Synthesis                                          ; On                 ; On                 ;
+; Report Parameter Settings                                        ; On                 ; On                 ;
+; Report Source Assignments                                        ; On                 ; On                 ;
+; Report Connectivity Checks                                       ; On                 ; On                 ;
+; Ignore Maximum Fan-Out Assignments                               ; Off                ; Off                ;
+; Synchronization Register Chain Length                            ; 2                  ; 2                  ;
+; Power Optimization During Synthesis                              ; Normal compilation ; Normal compilation ;
+; HDL message level                                                ; Level2             ; Level2             ;
+; Suppress Register Optimization Related Messages                  ; Off                ; Off                ;
+; Number of Removed Registers Reported in Synthesis Report         ; 5000               ; 5000               ;
+; Number of Swept Nodes Reported in Synthesis Report               ; 5000               ; 5000               ;
+; Number of Inverted Registers Reported in Synthesis Report        ; 100                ; 100                ;
+; Clock MUX Protection                                             ; On                 ; On                 ;
+; Auto Gated Clock Conversion                                      ; Off                ; Off                ;
+; Block Design Naming                                              ; Auto               ; Auto               ;
+; SDC constraint protection                                        ; Off                ; Off                ;
+; Synthesis Effort                                                 ; Auto               ; Auto               ;
+; Shift Register Replacement - Allow Asynchronous Clear Signal     ; On                 ; On                 ;
+; Pre-Mapping Resynthesis Optimization                             ; Off                ; Off                ;
+; Analysis & Synthesis Message Level                               ; Medium             ; Medium             ;
+; Disable Register Merging Across Hierarchies                      ; Auto               ; Auto               ;
+; Resource Aware Inference For Block RAM                           ; On                 ; On                 ;
++------------------------------------------------------------------+--------------------+--------------------+
+
+
++------------------------------------------+
+; Parallel Compilation                     ;
++----------------------------+-------------+
+; Processors                 ; Number      ;
++----------------------------+-------------+
+; Number detected on machine ; 12          ;
+; Maximum allowed            ; 6           ;
+;                            ;             ;
+; Average used               ; 1.00        ;
+; Maximum used               ; 6           ;
+;                            ;             ;
+; Usage by Processor         ; % Time Used ;
+;     Processor 1            ; 100.0%      ;
+;     Processors 2-6         ;   0.0%      ;
++----------------------------+-------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                           ;
++----------------------------------+-----------------+------------------------+----------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type              ; File Name with Absolute Path                             ; Library ;
++----------------------------------+-----------------+------------------------+----------------------------------------------------------+---------+
+; src/oled/OLED_ShowFont.v         ; yes             ; User Verilog HDL File  ; E:/FPGA/SIM/example11/Quartus11/src/oled/OLED_ShowFont.v ;         ;
+; src/oled/OLED_FontData.v         ; yes             ; User Verilog HDL File  ; E:/FPGA/SIM/example11/Quartus11/src/oled/OLED_FontData.v ;         ;
+; src/oled/OLED_SelData.v          ; yes             ; User Verilog HDL File  ; E:/FPGA/SIM/example11/Quartus11/src/oled/OLED_SelData.v  ;         ;
+; src/iic/iic.v                    ; yes             ; User Verilog HDL File  ; E:/FPGA/SIM/example11/Quartus11/src/iic/iic.v            ;         ;
+; src/oled/OLED_Top.v              ; yes             ; User Verilog HDL File  ; E:/FPGA/SIM/example11/Quartus11/src/oled/OLED_Top.v      ;         ;
+; src/oled/OLED_Init.v             ; yes             ; User Verilog HDL File  ; E:/FPGA/SIM/example11/Quartus11/src/oled/OLED_Init.v     ;         ;
+; src/main.v                       ; yes             ; User Verilog HDL File  ; E:/FPGA/SIM/example11/Quartus11/src/main.v               ;         ;
++----------------------------------+-----------------+------------------------+----------------------------------------------------------+---------+
+
+
++-------------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary                 ;
++---------------------------------------------+---------------+
+; Resource                                    ; Usage         ;
++---------------------------------------------+---------------+
+; Estimated Total logic elements              ; 248           ;
+;                                             ;               ;
+; Total combinational functions               ; 248           ;
+; Logic element usage by number of LUT inputs ;               ;
+;     -- 4 input functions                    ; 127           ;
+;     -- 3 input functions                    ; 42            ;
+;     -- <=2 input functions                  ; 79            ;
+;                                             ;               ;
+; Logic elements by mode                      ;               ;
+;     -- normal mode                          ; 200           ;
+;     -- arithmetic mode                      ; 48            ;
+;                                             ;               ;
+; Total registers                             ; 70            ;
+;     -- Dedicated logic registers            ; 70            ;
+;     -- I/O registers                        ; 0             ;
+;                                             ;               ;
+; I/O pins                                    ; 4             ;
+;                                             ;               ;
+; Embedded Multiplier 9-bit elements          ; 0             ;
+;                                             ;               ;
+; Maximum fan-out node                        ; sys_clk~input ;
+; Maximum fan-out                             ; 70            ;
+; Total fan-out                               ; 1033          ;
+; Average fan-out                             ; 3.16          ;
++---------------------------------------------+---------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                                                           ;
++-------------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+-----------------------------------------------------------------------------------------+---------------+--------------+
+; Compilation Hierarchy Node                ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                     ; Entity Name   ; Library Name ;
++-------------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+-----------------------------------------------------------------------------------------+---------------+--------------+
+; |main                                     ; 248 (0)             ; 70 (0)                    ; 0           ; 0            ; 0       ; 0         ; 4    ; 0            ; |main                                                                                   ; main          ; work         ;
+;    |OLED_Top:OLED_TopHP|                  ; 248 (4)             ; 70 (3)                    ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |main|OLED_Top:OLED_TopHP                                                               ; OLED_Top      ; work         ;
+;       |IIC_Driver:IIC_DriverHP_OLED|      ; 167 (167)           ; 56 (56)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |main|OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED                                  ; IIC_Driver    ; work         ;
+;       |OLED_Init:OLED_InitHP|             ; 27 (27)             ; 5 (5)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |main|OLED_Top:OLED_TopHP|OLED_Init:OLED_InitHP                                         ; OLED_Init     ; work         ;
+;       |OLED_SelData:OLED_SelDataHP|       ; 27 (27)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |main|OLED_Top:OLED_TopHP|OLED_SelData:OLED_SelDataHP                                   ; OLED_SelData  ; work         ;
+;       |OLED_ShowFont:OLED_ShowFont_HP|    ; 23 (18)             ; 6 (6)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |main|OLED_Top:OLED_TopHP|OLED_ShowFont:OLED_ShowFont_HP                                ; OLED_ShowFont ; work         ;
+;          |OLED_FontData:OLED_FontData_HP| ; 5 (5)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |main|OLED_Top:OLED_TopHP|OLED_ShowFont:OLED_ShowFont_HP|OLED_FontData:OLED_FontData_HP ; OLED_FontData ; work         ;
++-------------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+-----------------------------------------------------------------------------------------+---------------+--------------+
+Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
+Encoding Type:  One-Hot
++-------------------------------------------------------------------------------+
+; State Machine - |main|OLED_Top:OLED_TopHP|state                               ;
++---------------------+-----------------+-----------------+---------------------+
+; Name                ; state.OLED_INIT ; state.OLED_IDLE ; state.OLED_ShowFont ;
++---------------------+-----------------+-----------------+---------------------+
+; state.OLED_INIT     ; 0               ; 0               ; 0                   ;
+; state.OLED_ShowFont ; 1               ; 0               ; 1                   ;
+; state.OLED_IDLE     ; 1               ; 1               ; 0                   ;
++---------------------+-----------------+-----------------+---------------------+
+
+
+Encoding Type:  One-Hot
++----------------------------------------------------------------------------------------------------------------------------+
+; State Machine - |main|OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|state                                               ;
++------------------+----------------+---------------+------------------+------------------+-----------------+----------------+
+; Name             ; state.IIC_STOP ; state.IIC_ACK ; state.IIC_RDDATA ; state.IIC_WRDATA ; state.IIC_START ; state.IIC_IDLE ;
++------------------+----------------+---------------+------------------+------------------+-----------------+----------------+
+; state.IIC_IDLE   ; 0              ; 0             ; 0                ; 0                ; 0               ; 0              ;
+; state.IIC_START  ; 0              ; 0             ; 0                ; 0                ; 1               ; 1              ;
+; state.IIC_WRDATA ; 0              ; 0             ; 0                ; 1                ; 0               ; 1              ;
+; state.IIC_RDDATA ; 0              ; 0             ; 1                ; 0                ; 0               ; 1              ;
+; state.IIC_ACK    ; 0              ; 1             ; 0                ; 0                ; 0               ; 1              ;
+; state.IIC_STOP   ; 1              ; 0             ; 0                ; 0                ; 0               ; 1              ;
++------------------+----------------+---------------+------------------+------------------+-----------------+----------------+
+
+
++------------------------------------------------------------+
+; Registers Removed During Synthesis                         ;
++---------------------------------------+--------------------+
+; Register name                         ; Reason for Removal ;
++---------------------------------------+--------------------+
+; OLED_Top:OLED_TopHP|state~6           ; Lost fanout        ;
+; OLED_Top:OLED_TopHP|state~7           ; Lost fanout        ;
+; OLED_Top:OLED_TopHP|state~8           ; Lost fanout        ;
+; Total Number of Removed Registers = 3 ;                    ;
++---------------------------------------+--------------------+
+
+
++------------------------------------------------------+
+; General Register Statistics                          ;
++----------------------------------------------+-------+
+; Statistic                                    ; Value ;
++----------------------------------------------+-------+
+; Total registers                              ; 70    ;
+; Number of registers using Synchronous Clear  ; 4     ;
+; Number of registers using Synchronous Load   ; 0     ;
+; Number of registers using Asynchronous Clear ; 70    ;
+; Number of registers using Asynchronous Load  ; 0     ;
+; Number of registers using Clock Enable       ; 24    ;
+; Number of registers using Preset             ; 0     ;
++----------------------------------------------+-------+
+
+
++-------------------------------------------------------------------+
+; Inverted Register Statistics                                      ;
++---------------------------------------------------------+---------+
+; Inverted Register                                       ; Fan out ;
++---------------------------------------------------------+---------+
+; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|iicCLK ; 13      ;
+; OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|iictx  ; 3       ;
+; Total number of inverted registers = 2                  ;         ;
++---------------------------------------------------------+---------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                                                           ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------------------------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                                 ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------------------------------------------------+
+; 3:1                ; 5 bits    ; 10 LEs        ; 5 LEs                ; 5 LEs                  ; Yes        ; |main|OLED_Top:OLED_TopHP|OLED_Init:OLED_InitHP|Init_index[2]              ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |main|OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICSendBytes[0]     ;
+; 3:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |main|OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICBitCnt[2]        ;
+; 3:1                ; 6 bits    ; 12 LEs        ; 6 LEs                ; 6 LEs                  ; Yes        ; |main|OLED_Top:OLED_TopHP|OLED_ShowFont:OLED_ShowFont_HP|showfont_index[3] ;
+; 4:1                ; 15 bits   ; 30 LEs        ; 30 LEs               ; 0 LEs                  ; Yes        ; |main|OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICSlaveReg[0]      ;
+; 4:1                ; 2 bits    ; 4 LEs         ; 2 LEs                ; 2 LEs                  ; Yes        ; |main|OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICACKStopCnt[1]    ;
+; 5:1                ; 22 bits   ; 66 LEs        ; 22 LEs               ; 44 LEs                 ; Yes        ; |main|OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED|IICCnt[20]          ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------------------------------------------------+
+
+
++------------------------------------------------------------------------------+
+; Port Connectivity Checks: "OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED" ;
++-------------+--------+----------+--------------------------------------------+
+; Port        ; Type   ; Severity ; Details                                    ;
++-------------+--------+----------+--------------------------------------------+
+; IICReadReq  ; Input  ; Info     ; Stuck at GND                               ;
+; IICReadDone ; Output ; Info     ; Explicitly unconnected                     ;
+; IICReadData ; Output ; Info     ; Explicitly unconnected                     ;
++-------------+--------+----------+--------------------------------------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "OLED_Top:OLED_TopHP|OLED_ShowFont:OLED_ShowFont_HP|OLED_FontData:OLED_FontData_HP"                                                                                                 ;
++-------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port  ; Type  ; Severity ; Details                                                                                                                                                                            ;
++-------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; index ; Input ; Warning  ; Input port expression (32 bits) is wider than the input port (6 bits) it drives.  The 26 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
++-------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++-----------------------------------------------------+
+; Post-Synthesis Netlist Statistics for Top Partition ;
++-----------------------+-----------------------------+
+; Type                  ; Count                       ;
++-----------------------+-----------------------------+
+; boundary_port         ; 4                           ;
+; cycloneiii_ff         ; 70                          ;
+;     CLR               ; 46                          ;
+;     ENA CLR           ; 20                          ;
+;     ENA CLR SCLR      ; 4                           ;
+; cycloneiii_io_obuf    ; 1                           ;
+; cycloneiii_lcell_comb ; 249                         ;
+;     arith             ; 48                          ;
+;         2 data inputs ; 45                          ;
+;         3 data inputs ; 3                           ;
+;     normal            ; 201                         ;
+;         1 data inputs ; 6                           ;
+;         2 data inputs ; 29                          ;
+;         3 data inputs ; 39                          ;
+;         4 data inputs ; 127                         ;
+;                       ;                             ;
+; Max LUT depth         ; 8.00                        ;
+; Average LUT depth     ; 5.56                        ;
++-----------------------+-----------------------------+
+
+
++-------------------------------+
+; Elapsed Time Per Partition    ;
++----------------+--------------+
+; Partition Name ; Elapsed Time ;
++----------------+--------------+
+; Top            ; 00:00:01     ;
++----------------+--------------+
+
+
++-------------------------------+
+; Analysis & Synthesis Messages ;
++-------------------------------+
+Info: *******************************************************************
+Info: Running Quartus Prime Analysis & Synthesis
+    Info: Version 19.1.0 Build 670 09/22/2019 SJ Lite Edition
+    Info: Processing started: Mon Sep 05 14:15:30 2022
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off main -c main
+Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
+Info (20032): Parallel compilation is enabled and will use up to 6 processors
+Info (12021): Found 1 design units, including 1 entities, in source file src/oled/oled_showfont.v
+    Info (12023): Found entity 1: OLED_ShowFont File: E:/FPGA/SIM/example11/Quartus11/src/oled/OLED_ShowFont.v Line: 8
+Info (12021): Found 1 design units, including 1 entities, in source file src/oled/oled_fontdata.v
+    Info (12023): Found entity 1: OLED_FontData File: E:/FPGA/SIM/example11/Quartus11/src/oled/OLED_FontData.v Line: 6
+Info (12021): Found 1 design units, including 1 entities, in source file src/oled/oled_seldata.v
+    Info (12023): Found entity 1: OLED_SelData File: E:/FPGA/SIM/example11/Quartus11/src/oled/OLED_SelData.v Line: 7
+Info (12021): Found 1 design units, including 1 entities, in source file src/iic/iic.v
+    Info (12023): Found entity 1: IIC_Driver File: E:/FPGA/SIM/example11/Quartus11/src/iic/iic.v Line: 12
+Info (12021): Found 1 design units, including 1 entities, in source file src/oled/oled_top.v
+    Info (12023): Found entity 1: OLED_Top File: E:/FPGA/SIM/example11/Quartus11/src/oled/OLED_Top.v Line: 8
+Info (12021): Found 1 design units, including 1 entities, in source file src/oled/oled_init.v
+    Info (12023): Found entity 1: OLED_Init File: E:/FPGA/SIM/example11/Quartus11/src/oled/OLED_Init.v Line: 7
+Warning (10275): Verilog HDL Module Instantiation warning at main.v(32): ignored dangling comma in List of Port Connections File: E:/FPGA/SIM/example11/Quartus11/src/main.v Line: 32
+Info (12021): Found 1 design units, including 1 entities, in source file src/main.v
+    Info (12023): Found entity 1: main File: E:/FPGA/SIM/example11/Quartus11/src/main.v Line: 6
+Info (12127): Elaborating entity "main" for the top level hierarchy
+Info (12128): Elaborating entity "OLED_Top" for hierarchy "OLED_Top:OLED_TopHP" File: E:/FPGA/SIM/example11/Quartus11/src/main.v Line: 32
+Info (12128): Elaborating entity "OLED_Init" for hierarchy "OLED_Top:OLED_TopHP|OLED_Init:OLED_InitHP" File: E:/FPGA/SIM/example11/Quartus11/src/oled/OLED_Top.v Line: 92
+Info (12128): Elaborating entity "OLED_ShowFont" for hierarchy "OLED_Top:OLED_TopHP|OLED_ShowFont:OLED_ShowFont_HP" File: E:/FPGA/SIM/example11/Quartus11/src/oled/OLED_Top.v Line: 105
+Info (12128): Elaborating entity "OLED_FontData" for hierarchy "OLED_Top:OLED_TopHP|OLED_ShowFont:OLED_ShowFont_HP|OLED_FontData:OLED_FontData_HP" File: E:/FPGA/SIM/example11/Quartus11/src/oled/OLED_ShowFont.v Line: 57
+Warning (10030): Net "data1[16]" at OLED_FontData.v(17) has no driver or initial value, using a default initial value '0' File: E:/FPGA/SIM/example11/Quartus11/src/oled/OLED_FontData.v Line: 17
+Info (10041): Inferred latch for "data1[0][0]" at OLED_FontData.v(25) File: E:/FPGA/SIM/example11/Quartus11/src/oled/OLED_FontData.v Line: 25
+Info (10041): Inferred latch for "data1[0][1]" at OLED_FontData.v(25) File: E:/FPGA/SIM/example11/Quartus11/src/oled/OLED_FontData.v Line: 25
+Info (10041): Inferred latch for "data1[0][2]" at OLED_FontData.v(25) File: E:/FPGA/SIM/example11/Quartus11/src/oled/OLED_FontData.v Line: 25
+Info (10041): Inferred latch for "data1[0][3]" at OLED_FontData.v(25) File: E:/FPGA/SIM/example11/Quartus11/src/oled/OLED_FontData.v Line: 25
+Info (10041): Inferred latch for "data1[0][4]" at OLED_FontData.v(25) File: E:/FPGA/SIM/example11/Quartus11/src/oled/OLED_FontData.v Line: 25
+Info (10041): Inferred latch for "data1[0][5]" at OLED_FontData.v(25) File: E:/FPGA/SIM/example11/Quartus11/src/oled/OLED_FontData.v Line: 25
+Info (10041): Inferred latch for "data1[0][6]" at OLED_FontData.v(25) File: E:/FPGA/SIM/example11/Quartus11/src/oled/OLED_FontData.v Line: 25
+Info (10041): Inferred latch for "data1[0][7]" at OLED_FontData.v(25) File: E:/FPGA/SIM/example11/Quartus11/src/oled/OLED_FontData.v Line: 25
+Info (10041): Inferred latch for "data1[1][0]" at OLED_FontData.v(25) File: E:/FPGA/SIM/example11/Quartus11/src/oled/OLED_FontData.v Line: 25
+Info (10041): Inferred latch for "data1[1][1]" at OLED_FontData.v(25) File: E:/FPGA/SIM/example11/Quartus11/src/oled/OLED_FontData.v Line: 25
+Info (10041): Inferred latch for "data1[1][2]" at OLED_FontData.v(25) File: E:/FPGA/SIM/example11/Quartus11/src/oled/OLED_FontData.v Line: 25
+Info (10041): Inferred latch for "data1[1][3]" at OLED_FontData.v(25) File: E:/FPGA/SIM/example11/Quartus11/src/oled/OLED_FontData.v Line: 25
+Info (10041): Inferred latch for "data1[1][4]" at OLED_FontData.v(25) File: E:/FPGA/SIM/example11/Quartus11/src/oled/OLED_FontData.v Line: 25
+Info (10041): Inferred latch for "data1[1][5]" at OLED_FontData.v(25) File: E:/FPGA/SIM/example11/Quartus11/src/oled/OLED_FontData.v Line: 25
+Info (10041): Inferred latch for "data1[1][6]" at OLED_FontData.v(25) File: E:/FPGA/SIM/example11/Quartus11/src/oled/OLED_FontData.v Line: 25
+Info (10041): Inferred latch for "data1[1][7]" at OLED_FontData.v(25) File: E:/FPGA/SIM/example11/Quartus11/src/oled/OLED_FontData.v Line: 25
+Info (10041): Inferred latch for "data1[2][0]" at OLED_FontData.v(25) File: E:/FPGA/SIM/example11/Quartus11/src/oled/OLED_FontData.v Line: 25
+Info (10041): Inferred latch for "data1[2][1]" at OLED_FontData.v(25) File: E:/FPGA/SIM/example11/Quartus11/src/oled/OLED_FontData.v Line: 25
+Info (10041): Inferred latch for "data1[2][2]" at OLED_FontData.v(25) File: E:/FPGA/SIM/example11/Quartus11/src/oled/OLED_FontData.v Line: 25
+Info (10041): Inferred latch for "data1[2][3]" at OLED_FontData.v(25) File: E:/FPGA/SIM/example11/Quartus11/src/oled/OLED_FontData.v Line: 25
+Info (10041): Inferred latch for "data1[2][4]" at OLED_FontData.v(25) File: E:/FPGA/SIM/example11/Quartus11/src/oled/OLED_FontData.v Line: 25
+Info (10041): Inferred latch for "data1[2][5]" at OLED_FontData.v(25) File: E:/FPGA/SIM/example11/Quartus11/src/oled/OLED_FontData.v Line: 25
+Info (10041): Inferred latch for "data1[2][6]" at OLED_FontData.v(25) File: E:/FPGA/SIM/example11/Quartus11/src/oled/OLED_FontData.v Line: 25
+Info (10041): Inferred latch for "data1[2][7]" at OLED_FontData.v(25) File: E:/FPGA/SIM/example11/Quartus11/src/oled/OLED_FontData.v Line: 25
+Info (10041): Inferred latch for "data1[3][0]" at OLED_FontData.v(25) File: E:/FPGA/SIM/example11/Quartus11/src/oled/OLED_FontData.v Line: 25
+Info (10041): Inferred latch for "data1[3][1]" at OLED_FontData.v(25) File: E:/FPGA/SIM/example11/Quartus11/src/oled/OLED_FontData.v Line: 25
+Info (10041): Inferred latch for "data1[3][2]" at OLED_FontData.v(25) File: E:/FPGA/SIM/example11/Quartus11/src/oled/OLED_FontData.v Line: 25
+Info (10041): Inferred latch for "data1[3][3]" at OLED_FontData.v(25) File: E:/FPGA/SIM/example11/Quartus11/src/oled/OLED_FontData.v Line: 25
+Info (10041): Inferred latch for "data1[3][4]" at OLED_FontData.v(25) File: E:/FPGA/SIM/example11/Quartus11/src/oled/OLED_FontData.v Line: 25
+Info (10041): Inferred latch for "data1[3][5]" at OLED_FontData.v(25) File: E:/FPGA/SIM/example11/Quartus11/src/oled/OLED_FontData.v Line: 25
+Info (10041): Inferred latch for "data1[3][6]" at OLED_FontData.v(25) File: E:/FPGA/SIM/example11/Quartus11/src/oled/OLED_FontData.v Line: 25
+Info (10041): Inferred latch for "data1[3][7]" at OLED_FontData.v(25) File: E:/FPGA/SIM/example11/Quartus11/src/oled/OLED_FontData.v Line: 25
+Info (10041): Inferred latch for "data1[4][0]" at OLED_FontData.v(25) File: E:/FPGA/SIM/example11/Quartus11/src/oled/OLED_FontData.v Line: 25
+Info (10041): Inferred latch for "data1[4][1]" at OLED_FontData.v(25) File: E:/FPGA/SIM/example11/Quartus11/src/oled/OLED_FontData.v Line: 25
+Info (10041): Inferred latch for "data1[4][2]" at OLED_FontData.v(25) File: E:/FPGA/SIM/example11/Quartus11/src/oled/OLED_FontData.v Line: 25
+Info (10041): Inferred latch for "data1[4][3]" at OLED_FontData.v(25) File: E:/FPGA/SIM/example11/Quartus11/src/oled/OLED_FontData.v Line: 25
+Info (10041): Inferred latch for "data1[4][4]" at OLED_FontData.v(25) File: E:/FPGA/SIM/example11/Quartus11/src/oled/OLED_FontData.v Line: 25
+Info (10041): Inferred latch for "data1[4][5]" at OLED_FontData.v(25) File: E:/FPGA/SIM/example11/Quartus11/src/oled/OLED_FontData.v Line: 25
+Info (10041): Inferred latch for "data1[4][6]" at OLED_FontData.v(25) File: E:/FPGA/SIM/example11/Quartus11/src/oled/OLED_FontData.v Line: 25
+Info (10041): Inferred latch for "data1[4][7]" at OLED_FontData.v(25) File: E:/FPGA/SIM/example11/Quartus11/src/oled/OLED_FontData.v Line: 25
+Info (10041): Inferred latch for "data1[5][0]" at OLED_FontData.v(25) File: E:/FPGA/SIM/example11/Quartus11/src/oled/OLED_FontData.v Line: 25
+Info (10041): Inferred latch for "data1[5][1]" at OLED_FontData.v(25) File: E:/FPGA/SIM/example11/Quartus11/src/oled/OLED_FontData.v Line: 25
+Info (10041): Inferred latch for "data1[5][2]" at OLED_FontData.v(25) File: E:/FPGA/SIM/example11/Quartus11/src/oled/OLED_FontData.v Line: 25
+Info (10041): Inferred latch for "data1[5][3]" at OLED_FontData.v(25) File: E:/FPGA/SIM/example11/Quartus11/src/oled/OLED_FontData.v Line: 25
+Info (10041): Inferred latch for "data1[5][4]" at OLED_FontData.v(25) File: E:/FPGA/SIM/example11/Quartus11/src/oled/OLED_FontData.v Line: 25
+Info (10041): Inferred latch for "data1[5][5]" at OLED_FontData.v(25) File: E:/FPGA/SIM/example11/Quartus11/src/oled/OLED_FontData.v Line: 25
+Info (10041): Inferred latch for "data1[5][6]" at OLED_FontData.v(25) File: E:/FPGA/SIM/example11/Quartus11/src/oled/OLED_FontData.v Line: 25
+Info (10041): Inferred latch for "data1[5][7]" at OLED_FontData.v(25) File: E:/FPGA/SIM/example11/Quartus11/src/oled/OLED_FontData.v Line: 25
+Info (10041): Inferred latch for "data1[6][0]" at OLED_FontData.v(25) File: E:/FPGA/SIM/example11/Quartus11/src/oled/OLED_FontData.v Line: 25
+Info (10041): Inferred latch for "data1[6][1]" at OLED_FontData.v(25) File: E:/FPGA/SIM/example11/Quartus11/src/oled/OLED_FontData.v Line: 25
+Info (10041): Inferred latch for "data1[6][2]" at OLED_FontData.v(25) File: E:/FPGA/SIM/example11/Quartus11/src/oled/OLED_FontData.v Line: 25
+Info (10041): Inferred latch for "data1[6][3]" at OLED_FontData.v(25) File: E:/FPGA/SIM/example11/Quartus11/src/oled/OLED_FontData.v Line: 25
+Info (10041): Inferred latch for "data1[6][4]" at OLED_FontData.v(25) File: E:/FPGA/SIM/example11/Quartus11/src/oled/OLED_FontData.v Line: 25
+Info (10041): Inferred latch for "data1[6][5]" at OLED_FontData.v(25) File: E:/FPGA/SIM/example11/Quartus11/src/oled/OLED_FontData.v Line: 25
+Info (10041): Inferred latch for "data1[6][6]" at OLED_FontData.v(25) File: E:/FPGA/SIM/example11/Quartus11/src/oled/OLED_FontData.v Line: 25
+Info (10041): Inferred latch for "data1[6][7]" at OLED_FontData.v(25) File: E:/FPGA/SIM/example11/Quartus11/src/oled/OLED_FontData.v Line: 25
+Info (10041): Inferred latch for "data1[7][0]" at OLED_FontData.v(25) File: E:/FPGA/SIM/example11/Quartus11/src/oled/OLED_FontData.v Line: 25
+Info (10041): Inferred latch for "data1[7][1]" at OLED_FontData.v(25) File: E:/FPGA/SIM/example11/Quartus11/src/oled/OLED_FontData.v Line: 25
+Info (10041): Inferred latch for "data1[7][2]" at OLED_FontData.v(25) File: E:/FPGA/SIM/example11/Quartus11/src/oled/OLED_FontData.v Line: 25
+Info (10041): Inferred latch for "data1[7][3]" at OLED_FontData.v(25) File: E:/FPGA/SIM/example11/Quartus11/src/oled/OLED_FontData.v Line: 25
+Info (10041): Inferred latch for "data1[7][4]" at OLED_FontData.v(25) File: E:/FPGA/SIM/example11/Quartus11/src/oled/OLED_FontData.v Line: 25
+Info (10041): Inferred latch for "data1[7][5]" at OLED_FontData.v(25) File: E:/FPGA/SIM/example11/Quartus11/src/oled/OLED_FontData.v Line: 25
+Info (10041): Inferred latch for "data1[7][6]" at OLED_FontData.v(25) File: E:/FPGA/SIM/example11/Quartus11/src/oled/OLED_FontData.v Line: 25
+Info (10041): Inferred latch for "data1[7][7]" at OLED_FontData.v(25) File: E:/FPGA/SIM/example11/Quartus11/src/oled/OLED_FontData.v Line: 25
+Info (10041): Inferred latch for "data1[8][0]" at OLED_FontData.v(25) File: E:/FPGA/SIM/example11/Quartus11/src/oled/OLED_FontData.v Line: 25
+Info (10041): Inferred latch for "data1[8][1]" at OLED_FontData.v(25) File: E:/FPGA/SIM/example11/Quartus11/src/oled/OLED_FontData.v Line: 25
+Info (10041): Inferred latch for "data1[8][2]" at OLED_FontData.v(25) File: E:/FPGA/SIM/example11/Quartus11/src/oled/OLED_FontData.v Line: 25
+Info (10041): Inferred latch for "data1[8][3]" at OLED_FontData.v(25) File: E:/FPGA/SIM/example11/Quartus11/src/oled/OLED_FontData.v Line: 25
+Info (10041): Inferred latch for "data1[8][4]" at OLED_FontData.v(25) File: E:/FPGA/SIM/example11/Quartus11/src/oled/OLED_FontData.v Line: 25
+Info (10041): Inferred latch for "data1[8][5]" at OLED_FontData.v(25) File: E:/FPGA/SIM/example11/Quartus11/src/oled/OLED_FontData.v Line: 25
+Info (10041): Inferred latch for "data1[8][6]" at OLED_FontData.v(25) File: E:/FPGA/SIM/example11/Quartus11/src/oled/OLED_FontData.v Line: 25
+Info (10041): Inferred latch for "data1[8][7]" at OLED_FontData.v(25) File: E:/FPGA/SIM/example11/Quartus11/src/oled/OLED_FontData.v Line: 25
+Info (10041): Inferred latch for "data1[9][0]" at OLED_FontData.v(25) File: E:/FPGA/SIM/example11/Quartus11/src/oled/OLED_FontData.v Line: 25
+Info (10041): Inferred latch for "data1[9][1]" at OLED_FontData.v(25) File: E:/FPGA/SIM/example11/Quartus11/src/oled/OLED_FontData.v Line: 25
+Info (10041): Inferred latch for "data1[9][2]" at OLED_FontData.v(25) File: E:/FPGA/SIM/example11/Quartus11/src/oled/OLED_FontData.v Line: 25
+Info (10041): Inferred latch for "data1[9][3]" at OLED_FontData.v(25) File: E:/FPGA/SIM/example11/Quartus11/src/oled/OLED_FontData.v Line: 25
+Info (10041): Inferred latch for "data1[9][4]" at OLED_FontData.v(25) File: E:/FPGA/SIM/example11/Quartus11/src/oled/OLED_FontData.v Line: 25
+Info (10041): Inferred latch for "data1[9][5]" at OLED_FontData.v(25) File: E:/FPGA/SIM/example11/Quartus11/src/oled/OLED_FontData.v Line: 25
+Info (10041): Inferred latch for "data1[9][6]" at OLED_FontData.v(25) File: E:/FPGA/SIM/example11/Quartus11/src/oled/OLED_FontData.v Line: 25
+Info (10041): Inferred latch for "data1[9][7]" at OLED_FontData.v(25) File: E:/FPGA/SIM/example11/Quartus11/src/oled/OLED_FontData.v Line: 25
+Info (10041): Inferred latch for "data1[10][0]" at OLED_FontData.v(25) File: E:/FPGA/SIM/example11/Quartus11/src/oled/OLED_FontData.v Line: 25
+Info (10041): Inferred latch for "data1[10][1]" at OLED_FontData.v(25) File: E:/FPGA/SIM/example11/Quartus11/src/oled/OLED_FontData.v Line: 25
+Info (10041): Inferred latch for "data1[10][2]" at OLED_FontData.v(25) File: E:/FPGA/SIM/example11/Quartus11/src/oled/OLED_FontData.v Line: 25
+Info (10041): Inferred latch for "data1[10][3]" at OLED_FontData.v(25) File: E:/FPGA/SIM/example11/Quartus11/src/oled/OLED_FontData.v Line: 25
+Info (10041): Inferred latch for "data1[10][4]" at OLED_FontData.v(25) File: E:/FPGA/SIM/example11/Quartus11/src/oled/OLED_FontData.v Line: 25
+Info (10041): Inferred latch for "data1[10][5]" at OLED_FontData.v(25) File: E:/FPGA/SIM/example11/Quartus11/src/oled/OLED_FontData.v Line: 25
+Info (10041): Inferred latch for "data1[10][6]" at OLED_FontData.v(25) File: E:/FPGA/SIM/example11/Quartus11/src/oled/OLED_FontData.v Line: 25
+Info (10041): Inferred latch for "data1[10][7]" at OLED_FontData.v(25) File: E:/FPGA/SIM/example11/Quartus11/src/oled/OLED_FontData.v Line: 25
+Info (10041): Inferred latch for "data1[11][0]" at OLED_FontData.v(25) File: E:/FPGA/SIM/example11/Quartus11/src/oled/OLED_FontData.v Line: 25
+Info (10041): Inferred latch for "data1[11][1]" at OLED_FontData.v(25) File: E:/FPGA/SIM/example11/Quartus11/src/oled/OLED_FontData.v Line: 25
+Info (10041): Inferred latch for "data1[11][2]" at OLED_FontData.v(25) File: E:/FPGA/SIM/example11/Quartus11/src/oled/OLED_FontData.v Line: 25
+Info (10041): Inferred latch for "data1[11][3]" at OLED_FontData.v(25) File: E:/FPGA/SIM/example11/Quartus11/src/oled/OLED_FontData.v Line: 25
+Info (10041): Inferred latch for "data1[11][4]" at OLED_FontData.v(25) File: E:/FPGA/SIM/example11/Quartus11/src/oled/OLED_FontData.v Line: 25
+Info (10041): Inferred latch for "data1[11][5]" at OLED_FontData.v(25) File: E:/FPGA/SIM/example11/Quartus11/src/oled/OLED_FontData.v Line: 25
+Info (10041): Inferred latch for "data1[11][6]" at OLED_FontData.v(25) File: E:/FPGA/SIM/example11/Quartus11/src/oled/OLED_FontData.v Line: 25
+Info (10041): Inferred latch for "data1[11][7]" at OLED_FontData.v(25) File: E:/FPGA/SIM/example11/Quartus11/src/oled/OLED_FontData.v Line: 25
+Info (10041): Inferred latch for "data1[12][0]" at OLED_FontData.v(25) File: E:/FPGA/SIM/example11/Quartus11/src/oled/OLED_FontData.v Line: 25
+Info (10041): Inferred latch for "data1[12][1]" at OLED_FontData.v(25) File: E:/FPGA/SIM/example11/Quartus11/src/oled/OLED_FontData.v Line: 25
+Info (10041): Inferred latch for "data1[12][2]" at OLED_FontData.v(25) File: E:/FPGA/SIM/example11/Quartus11/src/oled/OLED_FontData.v Line: 25
+Info (10041): Inferred latch for "data1[12][3]" at OLED_FontData.v(25) File: E:/FPGA/SIM/example11/Quartus11/src/oled/OLED_FontData.v Line: 25
+Info (10041): Inferred latch for "data1[12][4]" at OLED_FontData.v(25) File: E:/FPGA/SIM/example11/Quartus11/src/oled/OLED_FontData.v Line: 25
+Info (10041): Inferred latch for "data1[12][5]" at OLED_FontData.v(25) File: E:/FPGA/SIM/example11/Quartus11/src/oled/OLED_FontData.v Line: 25
+Info (10041): Inferred latch for "data1[12][6]" at OLED_FontData.v(25) File: E:/FPGA/SIM/example11/Quartus11/src/oled/OLED_FontData.v Line: 25
+Info (10041): Inferred latch for "data1[12][7]" at OLED_FontData.v(25) File: E:/FPGA/SIM/example11/Quartus11/src/oled/OLED_FontData.v Line: 25
+Info (10041): Inferred latch for "data1[13][0]" at OLED_FontData.v(25) File: E:/FPGA/SIM/example11/Quartus11/src/oled/OLED_FontData.v Line: 25
+Info (10041): Inferred latch for "data1[13][1]" at OLED_FontData.v(25) File: E:/FPGA/SIM/example11/Quartus11/src/oled/OLED_FontData.v Line: 25
+Info (10041): Inferred latch for "data1[13][2]" at OLED_FontData.v(25) File: E:/FPGA/SIM/example11/Quartus11/src/oled/OLED_FontData.v Line: 25
+Info (10041): Inferred latch for "data1[13][3]" at OLED_FontData.v(25) File: E:/FPGA/SIM/example11/Quartus11/src/oled/OLED_FontData.v Line: 25
+Info (10041): Inferred latch for "data1[13][4]" at OLED_FontData.v(25) File: E:/FPGA/SIM/example11/Quartus11/src/oled/OLED_FontData.v Line: 25
+Info (10041): Inferred latch for "data1[13][5]" at OLED_FontData.v(25) File: E:/FPGA/SIM/example11/Quartus11/src/oled/OLED_FontData.v Line: 25
+Info (10041): Inferred latch for "data1[13][6]" at OLED_FontData.v(25) File: E:/FPGA/SIM/example11/Quartus11/src/oled/OLED_FontData.v Line: 25
+Info (10041): Inferred latch for "data1[13][7]" at OLED_FontData.v(25) File: E:/FPGA/SIM/example11/Quartus11/src/oled/OLED_FontData.v Line: 25
+Info (10041): Inferred latch for "data1[14][0]" at OLED_FontData.v(25) File: E:/FPGA/SIM/example11/Quartus11/src/oled/OLED_FontData.v Line: 25
+Info (10041): Inferred latch for "data1[14][1]" at OLED_FontData.v(25) File: E:/FPGA/SIM/example11/Quartus11/src/oled/OLED_FontData.v Line: 25
+Info (10041): Inferred latch for "data1[14][2]" at OLED_FontData.v(25) File: E:/FPGA/SIM/example11/Quartus11/src/oled/OLED_FontData.v Line: 25
+Info (10041): Inferred latch for "data1[14][3]" at OLED_FontData.v(25) File: E:/FPGA/SIM/example11/Quartus11/src/oled/OLED_FontData.v Line: 25
+Info (10041): Inferred latch for "data1[14][4]" at OLED_FontData.v(25) File: E:/FPGA/SIM/example11/Quartus11/src/oled/OLED_FontData.v Line: 25
+Info (10041): Inferred latch for "data1[14][5]" at OLED_FontData.v(25) File: E:/FPGA/SIM/example11/Quartus11/src/oled/OLED_FontData.v Line: 25
+Info (10041): Inferred latch for "data1[14][6]" at OLED_FontData.v(25) File: E:/FPGA/SIM/example11/Quartus11/src/oled/OLED_FontData.v Line: 25
+Info (10041): Inferred latch for "data1[14][7]" at OLED_FontData.v(25) File: E:/FPGA/SIM/example11/Quartus11/src/oled/OLED_FontData.v Line: 25
+Info (10041): Inferred latch for "data1[15][0]" at OLED_FontData.v(25) File: E:/FPGA/SIM/example11/Quartus11/src/oled/OLED_FontData.v Line: 25
+Info (10041): Inferred latch for "data1[15][1]" at OLED_FontData.v(25) File: E:/FPGA/SIM/example11/Quartus11/src/oled/OLED_FontData.v Line: 25
+Info (10041): Inferred latch for "data1[15][2]" at OLED_FontData.v(25) File: E:/FPGA/SIM/example11/Quartus11/src/oled/OLED_FontData.v Line: 25
+Info (10041): Inferred latch for "data1[15][3]" at OLED_FontData.v(25) File: E:/FPGA/SIM/example11/Quartus11/src/oled/OLED_FontData.v Line: 25
+Info (10041): Inferred latch for "data1[15][4]" at OLED_FontData.v(25) File: E:/FPGA/SIM/example11/Quartus11/src/oled/OLED_FontData.v Line: 25
+Info (10041): Inferred latch for "data1[15][5]" at OLED_FontData.v(25) File: E:/FPGA/SIM/example11/Quartus11/src/oled/OLED_FontData.v Line: 25
+Info (10041): Inferred latch for "data1[15][6]" at OLED_FontData.v(25) File: E:/FPGA/SIM/example11/Quartus11/src/oled/OLED_FontData.v Line: 25
+Info (10041): Inferred latch for "data1[15][7]" at OLED_FontData.v(25) File: E:/FPGA/SIM/example11/Quartus11/src/oled/OLED_FontData.v Line: 25
+Info (12128): Elaborating entity "OLED_SelData" for hierarchy "OLED_Top:OLED_TopHP|OLED_SelData:OLED_SelDataHP" File: E:/FPGA/SIM/example11/Quartus11/src/oled/OLED_Top.v Line: 127
+Info (12128): Elaborating entity "IIC_Driver" for hierarchy "OLED_Top:OLED_TopHP|IIC_Driver:IIC_DriverHP_OLED" File: E:/FPGA/SIM/example11/Quartus11/src/oled/OLED_Top.v Line: 148
+Info (276014): Found 1 instances of uninferred RAM logic
+    Info (276004): RAM logic "OLED_Top:OLED_TopHP|OLED_Init:OLED_InitHP|Ram0" is uninferred due to inappropriate RAM size File: E:/FPGA/SIM/example11/Quartus11/src/oled/OLED_Init.v Line: 46
+Warning (12241): 1 hierarchies have connectivity warnings - see the Connectivity Checks report folder
+Info (13000): Registers with preset signals will power-up high File: E:/FPGA/SIM/example11/Quartus11/src/iic/iic.v Line: 243
+Info (13003): DEV_CLRn pin will set, and not reset, register with preset signal due to NOT Gate Push-Back
+Info (286030): Timing-Driven Synthesis is running
+Info (17049): 3 registers lost all their fanouts during netlist optimizations.
+Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
+    Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
+Info (21057): Implemented 256 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 2 input pins
+    Info (21059): Implemented 1 output pins
+    Info (21060): Implemented 1 bidirectional pins
+    Info (21061): Implemented 252 logic cells
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 4 warnings
+    Info: Peak virtual memory: 4780 megabytes
+    Info: Processing ended: Mon Sep 05 14:15:39 2022
+    Info: Elapsed time: 00:00:09
+    Info: Total CPU time (on all processors): 00:00:19
+
+

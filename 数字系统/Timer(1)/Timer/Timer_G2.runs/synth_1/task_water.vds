@@ -1,0 +1,486 @@
+#-----------------------------------------------------------
+# Vivado v2017.4 (64-bit)
+# SW Build 2086221 on Fri Dec 15 20:55:39 MST 2017
+# IP Build 2085800 on Fri Dec 15 22:25:07 MST 2017
+# Start of session at: Mon May 26 00:52:46 2025
+# Process ID: 11256
+# Current directory: C:/Users/YanJiasheng/Desktop/Timer/Timer_G2.runs/synth_1
+# Command line: vivado.exe -log task_water.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source task_water.tcl
+# Log file: C:/Users/YanJiasheng/Desktop/Timer/Timer_G2.runs/synth_1/task_water.vds
+# Journal file: C:/Users/YanJiasheng/Desktop/Timer/Timer_G2.runs/synth_1\vivado.jou
+#-----------------------------------------------------------
+source task_water.tcl -notrace
+Command: synth_design -top task_water -part xc7a35tcsg324-1
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7a35t'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a35t'
+INFO: Launching helper process for spawning children vivado processes
+INFO: Helper process launched with PID 15160 
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 344.293 ; gain = 100.793
+---------------------------------------------------------------------------------
+INFO: [Synth 8-638] synthesizing module 'task_water' [C:/Users/YanJiasheng/Desktop/Timer/Timer_G2.srcs/sources_1/new/task_water.v:1]
+INFO: [Synth 8-638] synthesizing module 'pulse_on_button' [C:/Users/YanJiasheng/Desktop/Timer/Timer_G2.srcs/sources_1/new/pulse_on_button.v:1]
+INFO: [Synth 8-638] synthesizing module 'debounce' [C:/Users/YanJiasheng/Desktop/Timer/Timer_G2.srcs/sources_1/new/debounce.v:1]
+	Parameter COUNTER_WIDTH bound to: 20 - type: integer 
+	Parameter MAX_COUNT bound to: 650000 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'debounce' (1#1) [C:/Users/YanJiasheng/Desktop/Timer/Timer_G2.srcs/sources_1/new/debounce.v:1]
+INFO: [Synth 8-256] done synthesizing module 'pulse_on_button' (2#1) [C:/Users/YanJiasheng/Desktop/Timer/Timer_G2.srcs/sources_1/new/pulse_on_button.v:1]
+INFO: [Synth 8-638] synthesizing module 'clk_1Hz' [C:/Users/YanJiasheng/Desktop/Timer/Timer_G2.srcs/sources_1/new/clk_1HZ.v:24]
+	Parameter MAX bound to: 100000000 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'clk_1Hz' (3#1) [C:/Users/YanJiasheng/Desktop/Timer/Timer_G2.srcs/sources_1/new/clk_1HZ.v:24]
+INFO: [Synth 8-638] synthesizing module 'Top_Timer' [C:/Users/YanJiasheng/Desktop/Timer/Timer_G2.srcs/sources_1/new/Top_Timer.v:1]
+INFO: [Synth 8-638] synthesizing module 'FSM1' [C:/Users/YanJiasheng/Desktop/Timer/Timer_G2.srcs/sources_1/new/FSM1.v:1]
+	Parameter set bound to: 0 - type: integer 
+	Parameter start bound to: 1 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'FSM1' (4#1) [C:/Users/YanJiasheng/Desktop/Timer/Timer_G2.srcs/sources_1/new/FSM1.v:1]
+INFO: [Synth 8-638] synthesizing module 'DP1' [C:/Users/YanJiasheng/Desktop/Timer/Timer_G2.srcs/sources_1/new/DP1.v:1]
+INFO: [Synth 8-638] synthesizing module 'Set_timer' [C:/Users/YanJiasheng/Desktop/Timer/Timer_G2.srcs/sources_1/new/set_timer.v:1]
+INFO: [Synth 8-155] case statement is not full and has no default [C:/Users/YanJiasheng/Desktop/Timer/Timer_G2.srcs/sources_1/new/set_timer.v:46]
+INFO: [Synth 8-256] done synthesizing module 'Set_timer' (5#1) [C:/Users/YanJiasheng/Desktop/Timer/Timer_G2.srcs/sources_1/new/set_timer.v:1]
+WARNING: [Synth 8-350] instance 'set1' of module 'Set_timer' requires 14 connections, but only 13 given [C:/Users/YanJiasheng/Desktop/Timer/Timer_G2.srcs/sources_1/new/DP1.v:14]
+INFO: [Synth 8-638] synthesizing module 'timer' [C:/Users/YanJiasheng/Desktop/Timer/Timer_G2.srcs/sources_1/new/timer.v:1]
+INFO: [Synth 8-256] done synthesizing module 'timer' (6#1) [C:/Users/YanJiasheng/Desktop/Timer/Timer_G2.srcs/sources_1/new/timer.v:1]
+INFO: [Synth 8-638] synthesizing module 'MUX' [C:/Users/YanJiasheng/Desktop/Timer/Timer_G2.srcs/sources_1/new/MUX.v:1]
+INFO: [Synth 8-256] done synthesizing module 'MUX' (7#1) [C:/Users/YanJiasheng/Desktop/Timer/Timer_G2.srcs/sources_1/new/MUX.v:1]
+INFO: [Synth 8-256] done synthesizing module 'DP1' (8#1) [C:/Users/YanJiasheng/Desktop/Timer/Timer_G2.srcs/sources_1/new/DP1.v:1]
+WARNING: [Synth 8-350] instance 'dp1' of module 'DP1' requires 17 connections, but only 16 given [C:/Users/YanJiasheng/Desktop/Timer/Timer_G2.srcs/sources_1/new/Top_Timer.v:35]
+INFO: [Synth 8-638] synthesizing module 'str_display' [C:/Users/YanJiasheng/Desktop/Timer/Timer_G2.srcs/sources_1/new/display.v:23]
+INFO: [Synth 8-638] synthesizing module 'display' [C:/Users/YanJiasheng/Desktop/Timer/Timer_G2.srcs/sources_1/new/display.v:64]
+INFO: [Synth 8-638] synthesizing module 'clk_div_1' [C:/Users/YanJiasheng/Desktop/Timer/Timer_G2.srcs/sources_1/new/display.v:101]
+	Parameter MAXCOUNT bound to: 100000 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'clk_div_1' (9#1) [C:/Users/YanJiasheng/Desktop/Timer/Timer_G2.srcs/sources_1/new/display.v:101]
+INFO: [Synth 8-638] synthesizing module 'select' [C:/Users/YanJiasheng/Desktop/Timer/Timer_G2.srcs/sources_1/new/display.v:127]
+INFO: [Synth 8-226] default block is never used [C:/Users/YanJiasheng/Desktop/Timer/Timer_G2.srcs/sources_1/new/display.v:137]
+INFO: [Synth 8-256] done synthesizing module 'select' (10#1) [C:/Users/YanJiasheng/Desktop/Timer/Timer_G2.srcs/sources_1/new/display.v:127]
+INFO: [Synth 8-638] synthesizing module 'pin' [C:/Users/YanJiasheng/Desktop/Timer/Timer_G2.srcs/sources_1/new/display.v:153]
+INFO: [Synth 8-256] done synthesizing module 'pin' (11#1) [C:/Users/YanJiasheng/Desktop/Timer/Timer_G2.srcs/sources_1/new/display.v:153]
+INFO: [Synth 8-256] done synthesizing module 'display' (12#1) [C:/Users/YanJiasheng/Desktop/Timer/Timer_G2.srcs/sources_1/new/display.v:64]
+INFO: [Synth 8-256] done synthesizing module 'str_display' (13#1) [C:/Users/YanJiasheng/Desktop/Timer/Timer_G2.srcs/sources_1/new/display.v:23]
+INFO: [Synth 8-256] done synthesizing module 'Top_Timer' (14#1) [C:/Users/YanJiasheng/Desktop/Timer/Timer_G2.srcs/sources_1/new/Top_Timer.v:1]
+INFO: [Synth 8-638] synthesizing module 'water_reminder' [C:/Users/YanJiasheng/Desktop/Timer/Timer_G2.srcs/sources_1/new/water_reminder.v:2]
+INFO: [Synth 8-256] done synthesizing module 'water_reminder' (15#1) [C:/Users/YanJiasheng/Desktop/Timer/Timer_G2.srcs/sources_1/new/water_reminder.v:2]
+INFO: [Synth 8-638] synthesizing module 'Alarm_Controller' [C:/Users/YanJiasheng/Desktop/Timer/Timer_G2.srcs/sources_1/new/Alarm_Controller.v:1]
+	Parameter DURATION bound to: 4'b1010 
+INFO: [Synth 8-256] done synthesizing module 'Alarm_Controller' (16#1) [C:/Users/YanJiasheng/Desktop/Timer/Timer_G2.srcs/sources_1/new/Alarm_Controller.v:1]
+INFO: [Synth 8-256] done synthesizing module 'task_water' (17#1) [C:/Users/YanJiasheng/Desktop/Timer/Timer_G2.srcs/sources_1/new/task_water.v:1]
+WARNING: [Synth 8-3331] design DP1 has unconnected port sEN
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 395.922 ; gain = 152.422
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:06 ; elapsed = 00:00:08 . Memory (MB): peak = 395.922 ; gain = 152.422
+---------------------------------------------------------------------------------
+INFO: [Device 21-403] Loading part xc7a35tcsg324-1
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [C:/Users/YanJiasheng/Desktop/Timer/Timer_G2.srcs/constrs_1/new/Timer.xdc]
+WARNING: [Vivado 12-584] No ports matched 'timeout'. [C:/Users/YanJiasheng/Desktop/Timer/Timer_G2.srcs/constrs_1/new/Timer.xdc:5]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/YanJiasheng/Desktop/Timer/Timer_G2.srcs/constrs_1/new/Timer.xdc:5]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'timeout'. [C:/Users/YanJiasheng/Desktop/Timer/Timer_G2.srcs/constrs_1/new/Timer.xdc:6]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/YanJiasheng/Desktop/Timer/Timer_G2.srcs/constrs_1/new/Timer.xdc:6]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'finir'. [C:/Users/YanJiasheng/Desktop/Timer/Timer_G2.srcs/constrs_1/new/Timer.xdc:7]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/YanJiasheng/Desktop/Timer/Timer_G2.srcs/constrs_1/new/Timer.xdc:7]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'finir'. [C:/Users/YanJiasheng/Desktop/Timer/Timer_G2.srcs/constrs_1/new/Timer.xdc:8]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/YanJiasheng/Desktop/Timer/Timer_G2.srcs/constrs_1/new/Timer.xdc:8]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+Finished Parsing XDC File [C:/Users/YanJiasheng/Desktop/Timer/Timer_G2.srcs/constrs_1/new/Timer.xdc]
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [C:/Users/YanJiasheng/Desktop/Timer/Timer_G2.srcs/constrs_1/new/Timer.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/task_water_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/task_water_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+Completed Processing XDC Constraints
+
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.003 . Memory (MB): peak = 724.961 ; gain = 0.000
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:17 ; elapsed = 00:00:20 . Memory (MB): peak = 724.961 ; gain = 481.461
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7a35tcsg324-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:17 ; elapsed = 00:00:21 . Memory (MB): peak = 724.961 ; gain = 481.461
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:17 ; elapsed = 00:00:21 . Memory (MB): peak = 724.961 ; gain = 481.461
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-6014] Unused sequential element count_reg was removed.  [C:/Users/YanJiasheng/Desktop/Timer/Timer_G2.srcs/sources_1/new/debounce.v:13]
+INFO: [Synth 8-5545] ROM "clk_1s" won't be mapped to RAM because address size (27) is larger than maximum supported(25)
+INFO: [Synth 8-5544] ROM "setEN" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "displayMUX" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "h01" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:18 ; elapsed = 00:00:21 . Memory (MB): peak = 724.961 ; gain = 481.461
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     27 Bit       Adders := 2     
+	   2 Input     24 Bit       Adders := 1     
+	   2 Input     17 Bit       Adders := 2     
+	   2 Input      4 Bit       Adders := 21    
+	   2 Input      3 Bit       Adders := 2     
+	   2 Input      2 Bit       Adders := 2     
++---Registers : 
+	               27 Bit    Registers := 2     
+	               24 Bit    Registers := 1     
+	               20 Bit    Registers := 2     
+	                4 Bit    Registers := 14    
+	                3 Bit    Registers := 2     
+	                2 Bit    Registers := 2     
+	                1 Bit    Registers := 29    
++---Muxes : 
+	   2 Input     27 Bit        Muxes := 2     
+	   2 Input     24 Bit        Muxes := 1     
+	   2 Input     17 Bit        Muxes := 2     
+	   2 Input      4 Bit        Muxes := 43    
+	   3 Input      4 Bit        Muxes := 1     
+	   4 Input      4 Bit        Muxes := 2     
+	   2 Input      3 Bit        Muxes := 4     
+	   2 Input      1 Bit        Muxes := 30    
+	   5 Input      1 Bit        Muxes := 1     
+	   8 Input      1 Bit        Muxes := 7     
+	  11 Input      1 Bit        Muxes := 14    
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Hierarchical Component Statistics 
+---------------------------------------------------------------------------------
+Hierarchical RTL Component report 
+Module debounce 
+Detailed RTL Component Info : 
++---Registers : 
+	                1 Bit    Registers := 2     
++---Muxes : 
+	   2 Input      1 Bit        Muxes := 1     
+Module pulse_on_button 
+Detailed RTL Component Info : 
++---Registers : 
+	                1 Bit    Registers := 1     
+Module clk_1Hz 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     27 Bit       Adders := 1     
++---Registers : 
+	               27 Bit    Registers := 1     
+	                1 Bit    Registers := 1     
++---Muxes : 
+	   2 Input     27 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 1     
+Module FSM1 
+Detailed RTL Component Info : 
++---Registers : 
+	                3 Bit    Registers := 1     
++---Muxes : 
+	   2 Input      3 Bit        Muxes := 1     
+	   5 Input      1 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 4     
+Module Set_timer 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      4 Bit       Adders := 14    
+	   2 Input      3 Bit       Adders := 2     
++---Registers : 
+	                4 Bit    Registers := 7     
+	                3 Bit    Registers := 1     
++---Muxes : 
+	   2 Input      4 Bit        Muxes := 21    
+	   3 Input      4 Bit        Muxes := 1     
+	   2 Input      3 Bit        Muxes := 3     
+	   2 Input      1 Bit        Muxes := 3     
+	   8 Input      1 Bit        Muxes := 7     
+Module timer 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      4 Bit       Adders := 7     
++---Registers : 
+	                4 Bit    Registers := 7     
++---Muxes : 
+	   2 Input      4 Bit        Muxes := 15    
+	   2 Input      1 Bit        Muxes := 11    
+Module MUX 
+Detailed RTL Component Info : 
++---Muxes : 
+	   2 Input      4 Bit        Muxes := 1     
+Module clk_div_1 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     17 Bit       Adders := 1     
+	   2 Input      2 Bit       Adders := 1     
++---Registers : 
+	               20 Bit    Registers := 1     
+	                2 Bit    Registers := 1     
++---Muxes : 
+	   2 Input     17 Bit        Muxes := 1     
+Module select 
+Detailed RTL Component Info : 
++---Muxes : 
+	   4 Input      4 Bit        Muxes := 1     
+Module pin 
+Detailed RTL Component Info : 
++---Muxes : 
+	  11 Input      1 Bit        Muxes := 7     
+Module water_reminder 
+Detailed RTL Component Info : 
++---Registers : 
+	                1 Bit    Registers := 1     
+Module Alarm_Controller 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     24 Bit       Adders := 1     
++---Registers : 
+	               24 Bit    Registers := 1     
+	                1 Bit    Registers := 2     
++---Muxes : 
+	   2 Input     24 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 2     
+---------------------------------------------------------------------------------
+Finished RTL Hierarchical Component Statistics
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 90 (col length:60)
+BRAMs: 100 (col length: RAMB18 60 RAMB36 30)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+INFO: [Synth 8-5545] ROM "clkdiv_inst/clk_1s" won't be mapped to RAM because address size (27) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "timer_inst/clkdiv_inst/clk_1s" won't be mapped to RAM because address size (27) is larger than maximum supported(25)
+WARNING: [Synth 8-6014] Unused sequential element pb_ok/db_inst/count_reg was removed.  [C:/Users/YanJiasheng/Desktop/Timer/Timer_G2.srcs/sources_1/new/debounce.v:13]
+WARNING: [Synth 8-6014] Unused sequential element pb_oklong/db_inst/count_reg was removed.  [C:/Users/YanJiasheng/Desktop/Timer/Timer_G2.srcs/sources_1/new/debounce.v:13]
+WARNING: [Synth 8-6014] Unused sequential element pb_up/db_inst/count_reg was removed.  [C:/Users/YanJiasheng/Desktop/Timer/Timer_G2.srcs/sources_1/new/debounce.v:13]
+WARNING: [Synth 8-6014] Unused sequential element pb_down/db_inst/count_reg was removed.  [C:/Users/YanJiasheng/Desktop/Timer/Timer_G2.srcs/sources_1/new/debounce.v:13]
+WARNING: [Synth 8-6014] Unused sequential element pb_left/db_inst/count_reg was removed.  [C:/Users/YanJiasheng/Desktop/Timer/Timer_G2.srcs/sources_1/new/debounce.v:13]
+WARNING: [Synth 8-6014] Unused sequential element pb_right/db_inst/count_reg was removed.  [C:/Users/YanJiasheng/Desktop/Timer/Timer_G2.srcs/sources_1/new/debounce.v:13]
+WARNING: [Synth 8-6014] Unused sequential element pb_reset/db_inst/count_reg was removed.  [C:/Users/YanJiasheng/Desktop/Timer/Timer_G2.srcs/sources_1/new/debounce.v:13]
+WARNING: [Synth 8-6014] Unused sequential element pb_silent/db_inst/count_reg was removed.  [C:/Users/YanJiasheng/Desktop/Timer/Timer_G2.srcs/sources_1/new/debounce.v:13]
+INFO: [Synth 8-3886] merging instance 'timer_inst/display/display_low/div1/count_reg[17]' (FDC) to 'timer_inst/display/display_low/div1/count_reg[19]'
+INFO: [Synth 8-3886] merging instance 'timer_inst/display/display_low/div1/count_reg[19]' (FDC) to 'timer_inst/display/display_low/div1/count_reg[18]'
+INFO: [Synth 8-3886] merging instance 'timer_inst/display/display_low/div1/count_reg[18]' (FDC) to 'timer_inst/display/display_high/div1/count_reg[19]'
+INFO: [Synth 8-3886] merging instance 'timer_inst/display/display_high/div1/count_reg[17]' (FDC) to 'timer_inst/display/display_high/div1/count_reg[19]'
+INFO: [Synth 8-3886] merging instance 'timer_inst/display/display_high/div1/count_reg[19]' (FDC) to 'timer_inst/display/display_high/div1/count_reg[18]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\timer_inst/display/display_high/div1/count_reg[18] )
+INFO: [Synth 8-3886] merging instance 'timer_inst/fsm1/state_reg[1]' (FDR) to 'timer_inst/fsm1/state_reg[2]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\timer_inst/fsm1/state_reg[2] )
+WARNING: [Synth 8-3332] Sequential element (timer_inst/fsm1/state_reg[2]) is unused and will be removed from module task_water.
+WARNING: [Synth 8-3332] Sequential element (timer_inst/display/display_high/div1/count_reg[18]) is unused and will be removed from module task_water.
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:20 ; elapsed = 00:00:25 . Memory (MB): peak = 724.961 ; gain = 481.461
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:31 ; elapsed = 00:00:36 . Memory (MB): peak = 726.289 ; gain = 482.789
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:31 ; elapsed = 00:00:36 . Memory (MB): peak = 726.883 ; gain = 483.383
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\timer_inst/dp1/set1/week_reg[3] )
+WARNING: [Synth 8-3332] Sequential element (timer_inst/dp1/set1/week_reg[3]) is unused and will be removed from module task_water.
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:31 ; elapsed = 00:00:36 . Memory (MB): peak = 756.164 ; gain = 512.664
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:32 ; elapsed = 00:00:37 . Memory (MB): peak = 756.164 ; gain = 512.664
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:32 ; elapsed = 00:00:37 . Memory (MB): peak = 756.164 ; gain = 512.664
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:32 ; elapsed = 00:00:37 . Memory (MB): peak = 756.164 ; gain = 512.664
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:32 ; elapsed = 00:00:37 . Memory (MB): peak = 756.164 ; gain = 512.664
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:32 ; elapsed = 00:00:37 . Memory (MB): peak = 756.164 ; gain = 512.664
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:32 ; elapsed = 00:00:37 . Memory (MB): peak = 756.164 ; gain = 512.664
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+-------+------+
+|      |Cell   |Count |
++------+-------+------+
+|1     |BUFG   |     1|
+|2     |CARRY4 |    68|
+|3     |LUT1   |    38|
+|4     |LUT2   |    62|
+|5     |LUT3   |   203|
+|6     |LUT4   |   116|
+|7     |LUT5   |    50|
+|8     |LUT6   |    86|
+|9     |FDCE   |   177|
+|10    |FDPE   |     2|
+|11    |FDRE   |   185|
+|12    |IBUF   |     9|
+|13    |OBUF   |    23|
++------+-------+------+
+
+Report Instance Areas: 
++------+--------------------+------------------+------+
+|      |Instance            |Module            |Cells |
++------+--------------------+------------------+------+
+|1     |top                 |                  |  1020|
+|2     |  clkdiv_inst       |clk_1Hz           |    70|
+|3     |  pb_down           |pulse_on_button   |    58|
+|4     |    db_inst         |debounce_16       |    57|
+|5     |  pb_left           |pulse_on_button_0 |    58|
+|6     |    db_inst         |debounce_15       |    57|
+|7     |  pb_ok             |pulse_on_button_1 |    57|
+|8     |    db_inst         |debounce_14       |    56|
+|9     |  pb_oklong         |pulse_on_button_2 |    58|
+|10    |    db_inst         |debounce_13       |    57|
+|11    |  pb_reset          |pulse_on_button_3 |    58|
+|12    |    db_inst         |debounce_12       |    57|
+|13    |  pb_right          |pulse_on_button_4 |    57|
+|14    |    db_inst         |debounce_11       |    56|
+|15    |  pb_silent         |pulse_on_button_5 |    82|
+|16    |    db_inst         |debounce_10       |    81|
+|17    |  pb_up             |pulse_on_button_6 |    58|
+|18    |    db_inst         |debounce          |    57|
+|19    |  remind_ctrl       |Alarm_Controller  |    60|
+|20    |  timer_inst        |Top_Timer         |   370|
+|21    |    clkdiv_inst     |clk_1Hz_7         |    70|
+|22    |    display         |str_display       |   102|
+|23    |      display_high  |display           |    51|
+|24    |        div1        |clk_div_1_9       |    51|
+|25    |      display_low   |display_8         |    51|
+|26    |        div1        |clk_div_1         |    51|
+|27    |    dp1             |DP1               |   197|
+|28    |      set1          |Set_timer         |    84|
+|29    |      tim           |timer             |   113|
+|30    |    fsm1            |FSM1              |     1|
+|31    |  water_remind_inst |water_reminder    |     1|
++------+--------------------+------------------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:32 ; elapsed = 00:00:37 . Memory (MB): peak = 756.164 ; gain = 512.664
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 12 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:20 ; elapsed = 00:00:30 . Memory (MB): peak = 756.164 ; gain = 183.625
+Synthesis Optimization Complete : Time (s): cpu = 00:00:32 ; elapsed = 00:00:38 . Memory (MB): peak = 756.164 ; gain = 512.664
+INFO: [Project 1-571] Translating synthesized netlist
+INFO: [Netlist 29-17] Analyzing 77 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+INFO: [Common 17-83] Releasing license: Synthesis
+63 Infos, 19 Warnings, 4 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:35 ; elapsed = 00:00:41 . Memory (MB): peak = 756.164 ; gain = 525.430
+INFO: [Common 17-1381] The checkpoint 'C:/Users/YanJiasheng/Desktop/Timer/Timer_G2.runs/synth_1/task_water.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file task_water_utilization_synth.rpt -pb task_water_utilization_synth.pb
+report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.041 . Memory (MB): peak = 756.164 ; gain = 0.000
+INFO: [Common 17-206] Exiting Vivado at Mon May 26 00:53:32 2025...

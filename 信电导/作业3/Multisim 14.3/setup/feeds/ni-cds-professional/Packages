@@ -1,0 +1,2556 @@
+﻿Architecture: windows_x64
+CompatibilityVersion: 0
+Conflicts: ni-package-manager
+Description: Package for displaying the NI Software License Agreement for Released Products
+DisplayName: NI Software License Agreement for Released Products
+DisplayVersion: 21.3.1
+EulaPriority: -100
+EulaTitle: NI
+Filename: ../../pool/eula-ni-standard_21.3.1.49158-0+f6_windows_x64.nipkg
+Homepage: https://www.ni.com
+MD5Sum: 7ec4838b0f08243b191136fd7309c1d2
+MD5sum: 7ec4838b0f08243b191136fd7309c1d2
+Maintainer: National Instruments <support@ni.com>
+OsRequires: >= 10
+OsSupport: WINDOWS_10_64BIT WINDOWS_SERVER_2016_64BIT WINDOWS_SERVER_2019_64BIT
+Package: eula-ni-standard
+Plugin: eula
+Priority: standard
+Section: Infrastructure
+Size: 454276
+UserVisible: no
+Version: 21.3.1.49158-0+f6
+
+Architecture: windows_all
+CompatibilityVersion: 190006
+Conflicts: 1038a887-23e1-4289-b0bd-0c4b83c6ba21 (<<14.0.16384)
+Depends: ni-mdfsupport (>=19.0.0), ni-metauninstaller (>=19.0.0), ni-msvcrt-2015 (>=14.1.5)
+Description: NI ActiveX Container enables you to embed ActiveX objects on the front panel of a VI.
+DisplayName: NI ActiveX Container
+DisplayVersion: 17.1.2
+Eula: eula-ni-standard
+Filename: ../../pool/ni-activex-container_17.1.2.49152-0+f0_windows_all.nipkg
+Homepage: http://www.ni.com
+MD5sum: bedc377e957cddf93a3f7fab1503f396
+Maintainer: National Instruments <support@ni.com>
+OsSupport: WINDOWS_7_SP1_32BIT WINDOWS_7_SP1_64BIT WINDOWS_81_32BIT WINDOWS_81_64BIT WINDOWS_10_32BIT WINDOWS_10_64BIT WINDOWS_EMBEDDED_STANDARD_7_SP1 WINDOWS_SERVER_2008_R2_SP1_64BIT WINDOWS_SERVER_2012_R2_64BIT
+Package: ni-activex-container
+Plugin: wininst
+Priority: standard
+Provides: 1038a887-23e1-4289-b0bd-0c4b83c6ba21 (=17.12.49152), c1ef7a68-d0a5-4ef8-8ab8-f89bedf0d79b (=17.12.49152)
+Replaces: 1038a887-23e1-4289-b0bd-0c4b83c6ba21 (<<14.0.16384)
+Section: Infrastructure
+Size: 2490112
+Version: 17.1.2.49152-0+f0
+
+Architecture: windows_x64
+CompatibilityVersion: 210000
+Conflicts: 45a00bb2-279d-4935-1ebd-572db1e1e48c (<<16.99.65535)
+Depends: ni-mdfsupport (>=21.0.0), ni-metauninstaller (>=21.0.0), ni-msiproperties (>=21.0.0), ni-msvcrt-2015 (>=14.1.5)
+Description: NI Authentication
+DisplayName: NI Authentication
+DisplayVersion: 21.0.0
+Eula: eula-ni-standard, eula-ni-standard
+Filename: ../../pool/ni-auth_21.0.0.49152-0+f0_windows_x64.nipkg
+Homepage: https://www.ni.com
+MD5sum: 78e13df4bd0fdff074c3ebed0698b52c
+Maintainer: National Instruments <support@ni.com>
+OsRequires: >= 10
+OsSupport: WINDOWS_10_64BIT WINDOWS_SERVER_2016_64BIT WINDOWS_SERVER_2019_64BIT
+Package: ni-auth
+Plugin: wininst
+Priority: standard
+Provides: 45a00bb2-279d-4935-1ebd-572db1e1e48c (=21.00.49152), e250781f-9252-44b1-9482-ebbce06c9be1 (=21.00.49152)
+Replaces: 45a00bb2-279d-4935-1ebd-572db1e1e48c (<<16.99.65535)
+Section: Infrastructure
+Size: 1776476
+UserVisible: no
+Version: 21.0.0.49152-0+f0
+
+Architecture: windows_x64
+CompatibilityVersion: 210300
+Conflicts: 47d6a603-1f1f-4b46-8e73-357c11bb3375 (<<14.2.1000), ni-usi-dc-eng (<<18.5.0), ni-usi-dc-ger (<<18.5.0), ni-usi-dc-jpn (<<18.5.0)
+Depends: ni-cds-2014-database (>=14.3.0), ni-cds-labview-2021-interoperability-support-x86 (>=14.3.0), ni-cvi-runtime-engine (>=19.0.0), ni-example-finder-x86 (>=21.0.0), ni-labview-2019-runtime-engine-x86 (>=19.1.4), ni-labview-2020-runtime-engine-x86 (>=20.1.0), ni-labview-2021-runtime-engine-x86 (>=21.0.0), ni-license-manager (>=21.3.1), ni-mdfsupport (>=21.5.0), ni-metauninstaller (>=21.5.0), ni-msiproperties (>=21.5.0), ni-msvcrt-2010 (>=10.1.1), ni-update-service (>=21.0.0), ni-usi-dc-eng (>=18.5.5)
+Description: This is an infrastructure package for NI Software.
+DisplayName: NI Circuit Design Suite Core
+DisplayVersion: 14.3.0
+Eula: eula-ni-standard
+Filename: ../../pool/ni-cds-2014-core_14.3.0.49153-0+f1_windows_x64.nipkg
+Homepage: https://www.ni.com
+MD5sum: fc48937b5e9c4d4a4fa4a688d5b587c6
+Maintainer: National Instruments <support@ni.com>
+OsRequires: >= 10
+OsSupport: WINDOWS_10_64BIT WINDOWS_SERVER_2016_64BIT WINDOWS_SERVER_2019_64BIT
+Package: ni-cds-2014-core
+Plugin: wininst
+Priority: standard
+Provides: 47d6a603-1f1f-4b46-8e73-357c11bb3375 (=14.30.49153)
+Replaces: 47d6a603-1f1f-4b46-8e73-357c11bb3375 (<<14.2.1000)
+Section: Infrastructure
+Size: 63733458
+Version: 14.3.0.49153-0+f1
+
+Architecture: windows_x64
+CompatibilityVersion: 210300
+Conflicts: abee3c0c-f7c3-442a-aa4f-59f479b8258e (<<14.2.1000)
+Depends: ni-mdfsupport (>=21.5.0), ni-metauninstaller (>=21.5.0)
+Description: This is an infrastructure package for NI Software.
+DisplayName: NI Circuit Design Suite Master Database
+DisplayVersion: 14.3.0
+Eula: eula-ni-standard
+Filename: ../../pool/ni-cds-2014-database_14.3.0.49153-0+f1_windows_x64.nipkg
+Homepage: https://www.ni.com
+MD5sum: a80518f8902034151ae9319230c06782
+Maintainer: National Instruments <support@ni.com>
+OsRequires: >= 10
+OsSupport: WINDOWS_10_64BIT WINDOWS_SERVER_2016_64BIT WINDOWS_SERVER_2019_64BIT
+Package: ni-cds-2014-database
+Plugin: wininst
+Priority: standard
+Provides: abee3c0c-f7c3-442a-aa4f-59f479b8258e (=14.30.49153)
+Replaces: abee3c0c-f7c3-442a-aa4f-59f479b8258e (<<14.2.1000)
+Section: Infrastructure
+Size: 67651498
+Version: 14.3.0.49153-0+f1
+
+ActivateAfterInstallation: yes
+Architecture: windows_x64
+CompatibilityVersion: 210300
+Conflicts: 1a54bb48-7c9a-4cb9-b313-266546bc3604 (<<14.2.1000)
+Depends: ni-license-manager (>=21.3.1), ni-mdfsupport (>=21.5.0), ni-metauninstaller (>=21.5.0)
+Description: This is an infrastructure package for NI Software.
+DisplayName: NI Circuit Design Suite Professional license
+DisplayVersion: 14.3.0
+Eula: eula-ni-standard
+Filename: ../../pool/ni-cds-2014-professional-license_14.3.0.49153-0+f1_windows_x64.nipkg
+Homepage: https://www.ni.com
+MD5sum: 7ccec0550fd235ef37ae5ed1767a4b98
+Maintainer: National Instruments <support@ni.com>
+OsRequires: >= 10
+OsSupport: WINDOWS_10_64BIT WINDOWS_SERVER_2016_64BIT WINDOWS_SERVER_2019_64BIT
+Package: ni-cds-2014-professional-license
+Plugin: wininst
+Priority: standard
+Provides: 1a54bb48-7c9a-4cb9-b313-266546bc3604 (=14.30.49153)
+Replaces: 1a54bb48-7c9a-4cb9-b313-266546bc3604 (<<14.2.1000)
+Section: Infrastructure
+Size: 499580
+Version: 14.3.0.49153-0+f1
+
+ActivateAfterInstallation: yes
+AlwaysRemoves: ni-cds-cosim-plugin-labview-2017-support-x86, ni-cds-cosim-plugin-labview-2018-support-x86, ni-cds-cosim-plugin-labview-2019-support-x86, ni-cds-cosim-plugin-labview-2020-support-x86, ni-cds-cosim-plugin-labview-2021-support-x86, ni-cds-labview-2017-api-support-x86, ni-cds-labview-2018-api-support-x86, ni-cds-labview-2019-api-support-x86, ni-cds-labview-2020-api-support-x86, ni-cds-labview-2021-api-support-x86
+Architecture: windows_x64
+CompatibilityVersion: 210300
+Conflicts: 44d032cf-3ae5-425b-ab48-88454470c554 (<<14.2.1000)
+Depends: ni-cds-2014-core (>=14.3.0), ni-cds-2014-professional-license (>=14.3.0), ni-cds-2014-shared-files (>=14.3.0), ni-mdfsupport (>=21.5.0), ni-metauninstaller (>=21.5.0)
+Description: The Circuit Design Suite Professional combines Multisim and Ultiboard software for a complete set of tools for circuit design, simulation, validation, and layout.
+  The Circuit Design Suite Professional helps you design circuits using intuitive and cost-effective tools. You can perform interactive SPICE simulation and seamlessly transition to PCB layout and routing software. Built for education, research, and design, the suite provides advanced simulation capabilities to give you clear insights into how circuits perform under any situation. Advanced simulation types, including Worst Case Analysis, are included in the software, which gives you complete control over your simulation environment for improved design insights.
+Description-de: Circuit Design Suite Professional setzt sich aus Multisim und Ultiboard zusammen und enthält alle benötigten Tools für das Erstellen, Simulieren und Überprüfen von Schaltplänen bis hin zum Entwerfen des Leiterplatten-Layouts.
+  Circuit Design Suite Professional umfasst leicht zu bedienende und kostengünstige Tools für das Entwickeln von Schaltungen. Die Suite enthält Funktionen für die interaktive SPICE-Simulation, und nach Fertigstellung des Schaltplans kann nahtlos zum Leiterplatten-Layout übergegangen werden. Die Suite ist für Forschung und Lehre sowie für das Schaltungsdesign konzipiert und umfasst komplexe Simulationsfunktionen, mit denen die Arbeitsweise der Schaltung in unterschiedlichen Rahmenbedingungen ermittelt werden kann. Unter anderem kann mit der Software eine Worst-Case-Analyse durchgeführt werden, die es Ihnen ermöglicht, die Simulationsparameter uneingeschränkt festzulegen.
+Description-fr: Circuit Design Suite Professional associe les logiciels Multisim et Ultiboard en ensemble d'outils complèt de conception, de simulation, de validation et d'implantation de circuit.
+  Circuit Design Suite Professional vous aide à concevoir des circuits à l'aide d'outils intuitifs et économiques. Vous pouvez effectuer une simulation interactive SPICE et une transition transparente vers un logiciel de routage et de configuration de circuits imprimés. Conçue pour l'éducation, la recherche et la conception, cette suite offre des fonctionnalités de simulation avancées pour vous donner un aperçu clair du fonctionnement des circuits dans n'importe quelle situation. Des types de simulation avancés, y compris l'analyse des pires cas, sont inclus dans le logiciel, ce qui vous permet de contrôler totalement votre environnement de simulation pour une meilleure compréhension de la conception.
+Description-ja: Circuit Design Suiteプロフェッショナル版は、MultisimとUltiboardソフトウェアを組み合わせた、回路設計、シミュレーション、検証、およびレイアウト用のツールセットです。
+  Circuit Design Suiteプロフェッショナル版を使用すると、直感的かつコスト効果の高いツールにより回路を設計できます。対話型のSPICEシミュレーションを実行し、PCBレイアウトや回路設定ソフトウェアにシームレスに移行できます。教育、研究、および設計用に構築されたこのスイートは、あらゆる状況下における回路の機能について明確な洞察を得るための高度なシミュレーション機能を提供します。このソフトウェアには最悪ケース解析などの高度なシミュレーションタイプも含まれているため、シミュレーション環境を完全に制御して設計を向上させることができます。
+Description-ko: Circuit Design Suite Professional은 회로 설계, 시뮬레이션, 검증 및 레이아웃 플랫폼용 전체 도구 세트를 위해 Multisim 및 Ultiboard 소프트웨어를 통합합니다.
+  Circuit Design Suite Professional은 직관적이고 비용 효율적인 도구를 사용하여 회로를 설계할 수 있도록 지원합니다. 대화식 SPICE 시뮬레이션을 수행하고 PCB 레이아웃 및 라우팅 소프트웨어로 쉽게 전환할 수 있습니다. 교육, 연구 및 설계용으로 개발된 이 제품은 고급 시뮬레이션 기능을 제공하여 모든 경우의 회로 작동 방식을 분명하게 이해할 수 있도록 도와줍니다. 최악 조건 해석(Worst Case Analysis)을 포함한 고급 시뮬레이션 타입이 소프트웨어에 포함되어 있으며, 이는 시뮬레이션 환경을 완벽하게 컨트롤하여 설계에 대한 이해를 높일 수 있도록 지원합니다.
+Description-zh-CN: Circuit Design Suite专业版将Multisim和Ultiboard软件结合在一起，形成一整套用于电路设计、仿真、验证及布局的工具。
+  Circuit Design Suite专业版可帮助用户通过直观且节约成本的工具进行电路设计。用户可进行交互式SPICE仿真，且可以无缝转换至PCB布局和布线软件。此套件专用于为教学、研究及设计，可提供高级仿真功能，以便用户深刻理解电路在任意场景下的行为特性。软件中包含高级仿真类型（包括最坏情况分析），可对仿真环境进行全面控制，以加深设计理解。
+DisplayName: Circuit Design Suite
+DisplayName-de: Circuit Design Suite
+DisplayName-fr: Circuit Design Suite
+DisplayName-ja: Circuit Design Suite
+DisplayName-ko: Circuit Design Suite
+DisplayName-zh-CN: Circuit Design Suite
+DisplayVersion: 14.3.0
+Eula: eula-ni-standard
+Filename: ../../pool/ni-cds-2014-professional_14.3.0.49153-0+f1_windows_x64.nipkg
+Homepage: https://www.ni.com
+MD5sum: 91a8f6f60a7c9de1af5bdbcfe877a66e
+Maintainer: National Instruments <support@ni.com>
+OsRequires: >= 10
+OsSupport: WINDOWS_10_64BIT WINDOWS_SERVER_2016_64BIT WINDOWS_SERVER_2019_64BIT
+Package: ni-cds-2014-professional
+Plugin: wininst
+Priority: standard
+Provides: 44d032cf-3ae5-425b-ab48-88454470c554 (=14.30.49153), ni-cds-2014 (=14.3.0)
+Recommends: ni-cds-cosim-plugin-labview-2017-support-x86 (>=14.3.0), ni-cds-cosim-plugin-labview-2018-support-x86 (>=14.3.0), ni-cds-cosim-plugin-labview-2019-support-x86 (>=14.3.0), ni-cds-cosim-plugin-labview-2020-support-x86 (>=14.3.0), ni-cds-cosim-plugin-labview-2021-support-x86 (>=14.3.0), ni-cds-labview-2017-api-support-x86 (>=14.3.0), ni-cds-labview-2018-api-support-x86 (>=14.3.0), ni-cds-labview-2019-api-support-x86 (>=14.3.0), ni-cds-labview-2020-api-support-x86 (>=14.3.0), ni-cds-labview-2021-api-support-x86 (>=14.3.0)
+ReleaseNotes: 
+  Refer to the NI website at https://www.ni.com/r/cds2022rm for installation instructions, known issues, bug fixes, compatibility information, and other important notices about this product.
+ReleaseNotes-de: 
+  Wichtige Hinweise zu diesem Produkt, wie Installationsanweisungen, Informationen zu bekannten Problemen sowie zu Fehlerkorrekturen und zur Kompatibilität finden Sie auf der NI-Website unter http://www.ni.com/r/cds2019rm-de.
+ReleaseNotes-fr: 
+  Reportez-vous au site Web NI à http://www.ni.com/r/cds2019rm pour obtenir les instructions d'installation, la documentation des problèmes connus, les correctifs, les informations sur la compatibilité et d'autres informations importantes concernant ce produit.
+ReleaseNotes-ja: 
+  インストール手順、既知の問題、バグ修正、互換性情報、およびこの製品に関するその他の重要な注意事項については、NI Webサイト (http://www.ni.com/r/cds2019rm) を参照してください。
+ReleaseNotes-ko: 
+  이 제품에 대한 설치 방법, 알려진 유의사항, 버그 수정, 호환성 정보, 기타 중요한 알림사항은 NI 웹사이트(http://www.ni.com/r/cds2019rm)를 참조하십시오.
+ReleaseNotes-zh-CN: 
+  关于安装说明、已知问题、错误修正、兼容信息以及本产品的其他重要说明，请参阅NI网站上的http://www.ni.com/r/cds2019rm。
+Replaces: 44d032cf-3ae5-425b-ab48-88454470c554 (<<14.2.1000)
+Section: Application Software
+Size: 2611016
+StoreProduct: yes
+UserVisible: yes
+Version: 14.3.0.49153-0+f1
+
+Architecture: windows_x64
+CompatibilityVersion: 210300
+Conflicts: 4b05295a-d5a0-4abf-9e5c-0c68ae82fb48 (<<14.2.1000)
+Depends: ni-mdfsupport (>=21.5.0), ni-metauninstaller (>=21.5.0)
+Description: This is an infrastructure package for NI Software.
+DisplayName: NI Circuit Design Suite Shared
+DisplayVersion: 14.3.0
+Eula: eula-ni-standard
+Filename: ../../pool/ni-cds-2014-shared-files_14.3.0.49153-0+f1_windows_x64.nipkg
+Homepage: https://www.ni.com
+MD5sum: 7ecc3103338480ea55d5aec5b2c1532d
+Maintainer: National Instruments <support@ni.com>
+OsRequires: >= 10
+OsSupport: WINDOWS_10_64BIT WINDOWS_SERVER_2016_64BIT WINDOWS_SERVER_2019_64BIT
+Package: ni-cds-2014-shared-files
+Plugin: wininst
+Priority: standard
+Provides: 4b05295a-d5a0-4abf-9e5c-0c68ae82fb48 (=14.30.49153)
+Replaces: 4b05295a-d5a0-4abf-9e5c-0c68ae82fb48 (<<14.2.1000)
+Section: Infrastructure
+Size: 51291758
+Version: 14.3.0.49153-0+f1
+
+Architecture: windows_x64
+CompatibilityVersion: 210300
+Conflicts: 11674b87-e079-4636-b619-92bbfc45c6cf (<<14.2.1000)
+Depends: ni-mdfsupport (>=21.5.0), ni-metauninstaller (>=21.5.0), aa4b25c0-a1f6-472e-8f76-32e406b7e44d (>=17.0.0) | 7a80ea72-c69d-4740-afbf-326544b9462c (>=17.1.0), 41e038d9-e731-47d3-91c0-1bd8d1606153 (>=17.0.0),
+Description: Installs the NI LabVIEW Multisim Co-simulation Plug-in for LabVIEW 2017. You must already have NI LabVIEW 2017 (32-bit) and NI LabVIEW Control Design and Simulation Module 2017 installed on the machine.
+DisplayName: NI LabVIEW Multisim Co-simulation Plug-in 14.3
+DisplayVersion: 14.3.0
+Eula: eula-ni-standard
+Filename: ../../pool/ni-cds-cosim-plugin-labview-2017-support-x86_14.3.0.49153-0+f1_windows_x64.nipkg
+Homepage: https://www.ni.com
+MD5sum: 1f4542a45c9b02cbea4164477894f186
+Maintainer: National Instruments <support@ni.com>
+OsRequires: >= 10
+OsSupport: WINDOWS_10_64BIT WINDOWS_SERVER_2016_64BIT WINDOWS_SERVER_2019_64BIT
+Package: ni-cds-cosim-plugin-labview-2017-support-x86
+Plugin: wininst
+Priority: standard
+Provides: 11674b87-e079-4636-b619-92bbfc45c6cf (=14.30.49153)
+Replaces: 11674b87-e079-4636-b619-92bbfc45c6cf (<<14.2.1000)
+Section: Add-Ons
+Size: 724380
+Supplements: 41e038d9-e731-47d3-91c0-1bd8d1606153 (>=17.0.0), 7a80ea72-c69d-4740-afbf-326544b9462c (>=17.1.0), aa4b25c0-a1f6-472e-8f76-32e406b7e44d (>=17.0.0), ni-cds-2014 (>=14.3.0)
+UserVisible: yes
+Version: 14.3.0.49153-0+f1
+
+Architecture: windows_x64
+CompatibilityVersion: 210300
+Conflicts: d4fd7ea8-555c-4ae6-aaf7-2bbd3441ede5 (<<14.2.1000)
+Depends: ni-mdfsupport (>=21.5.0), ni-metauninstaller (>=21.5.0), ni-labview-2018-x86 (>=18.0.0), 3a969b9a-c738-4d4d-af08-ffd5c3e80495 (>=18.0.0),
+Description: Installs the NI LabVIEW Multisim Co-simulation Plug-in for LabVIEW 2018. You must already have NI LabVIEW 2018 (32-bit) and NI LabVIEW Control Design and Simulation Module 2018 installed on the machine.
+DisplayName: NI LabVIEW Multisim Co-simulation Plug-in 14.3
+DisplayVersion: 14.3.0
+Eula: eula-ni-standard
+Filename: ../../pool/ni-cds-cosim-plugin-labview-2018-support-x86_14.3.0.49153-0+f1_windows_x64.nipkg
+Homepage: https://www.ni.com
+MD5sum: 9e7f96e481f141f867aca49214fd62dc
+Maintainer: National Instruments <support@ni.com>
+OsRequires: >= 10
+OsSupport: WINDOWS_10_64BIT WINDOWS_SERVER_2016_64BIT WINDOWS_SERVER_2019_64BIT
+Package: ni-cds-cosim-plugin-labview-2018-support-x86
+Plugin: wininst
+Priority: standard
+Provides: d4fd7ea8-555c-4ae6-aaf7-2bbd3441ede5 (=14.30.49153)
+Replaces: d4fd7ea8-555c-4ae6-aaf7-2bbd3441ede5 (<<14.2.1000)
+Section: Add-Ons
+Size: 724220
+Supplements: 3a969b9a-c738-4d4d-af08-ffd5c3e80495 (>=18.0.0), ni-cds-2014 (>=14.3.0), ni-labview-2018-x86 (>=18.0.0)
+UserVisible: yes
+Version: 14.3.0.49153-0+f1
+
+Architecture: windows_x64
+CompatibilityVersion: 210300
+Depends: ni-mdfsupport (>=21.5.0), ni-metauninstaller (>=21.5.0), ni-labview-2019-x86 (>=19.0.0), ni-labview-2019-cdsim-module-x86 (>=19.0.0),
+Description: Installs the NI LabVIEW Multisim Co-simulation Plug-in for LabVIEW 2019. You must already have NI LabVIEW 2019 (32-bit) and NI LabVIEW Control Design and Simulation Module 2019 installed on the machine.
+DisplayName: NI LabVIEW Multisim Co-simulation Plug-in 14.3
+DisplayVersion: 14.3.0
+Eula: eula-ni-standard
+Filename: ../../pool/ni-cds-cosim-plugin-labview-2019-support-x86_14.3.0.49153-0+f1_windows_x64.nipkg
+Homepage: https://www.ni.com
+MD5sum: ed42e4e1e91aa4ca7001fc33ef9a2b99
+Maintainer: National Instruments <support@ni.com>
+OsRequires: >= 10
+OsSupport: WINDOWS_10_64BIT WINDOWS_SERVER_2016_64BIT WINDOWS_SERVER_2019_64BIT
+Package: ni-cds-cosim-plugin-labview-2019-support-x86
+Plugin: wininst
+Priority: standard
+Provides: fd77380a-8acb-4c4e-a1b8-dad81b2905f1 (=14.30.49153)
+Section: Add-Ons
+Size: 724100
+Supplements: ni-cds-2014 (>=14.3.0), ni-labview-2019-cdsim-module-x86 (>=19.0.0), ni-labview-2019-x86 (>=19.0.0)
+UserVisible: yes
+Version: 14.3.0.49153-0+f1
+
+Architecture: windows_x64
+CompatibilityVersion: 210300
+Depends: ni-mdfsupport (>=21.5.0), ni-metauninstaller (>=21.5.0), ni-labview-2020-x86 (>=20.0.0), ni-labview-2020-cdsim-module-x86 (>=20.0.0),
+Description: Installs the NI LabVIEW Multisim Co-simulation Plug-in for LabVIEW 2020. You must already have NI LabVIEW 2020 (32-bit) and NI LabVIEW Control Design and Simulation Module 2020 installed on the machine.
+DisplayName: NI LabVIEW Multisim Co-simulation Plug-in 14.3
+DisplayVersion: 14.3.0
+Eula: eula-ni-standard
+Filename: ../../pool/ni-cds-cosim-plugin-labview-2020-support-x86_14.3.0.49153-0+f1_windows_x64.nipkg
+Homepage: https://www.ni.com
+MD5sum: 983c650bbe40d2132cbf39c667862857
+Maintainer: National Instruments <support@ni.com>
+OsRequires: >= 10
+OsSupport: WINDOWS_10_64BIT WINDOWS_SERVER_2016_64BIT WINDOWS_SERVER_2019_64BIT
+Package: ni-cds-cosim-plugin-labview-2020-support-x86
+Plugin: wininst
+Priority: standard
+Provides: fd77380a-8acb-4c4e-a1b8-dad81b2905f1 (=14.30.49153)
+Section: Add-Ons
+Size: 724096
+Supplements: ni-cds-2014 (>=14.3.0), ni-labview-2020-cdsim-module-x86 (>=20.0.0), ni-labview-2020-x86 (>=20.0.0)
+UserVisible: yes
+Version: 14.3.0.49153-0+f1
+
+Architecture: windows_x64
+CompatibilityVersion: 210300
+Depends: ni-mdfsupport (>=21.5.0), ni-metauninstaller (>=21.5.0), ni-labview-2021-x86 (>=21.0.0), ni-labview-2021-cdsim-module-x86 (>=21.0.0),
+Description: Installs the NI LabVIEW Multisim Co-simulation Plug-in for LabVIEW 2021. You must already have NI LabVIEW 2021 (32-bit) and NI LabVIEW Control Design and Simulation Module 2021 installed on the machine.
+DisplayName: NI LabVIEW Multisim Co-simulation Plug-in 14.3
+DisplayVersion: 14.3.0
+Eula: eula-ni-standard
+Filename: ../../pool/ni-cds-cosim-plugin-labview-2021-support-x86_14.3.0.49153-0+f1_windows_x64.nipkg
+Homepage: https://www.ni.com
+MD5sum: 32aac1e32c7b1697efdd139a21793a40
+Maintainer: National Instruments <support@ni.com>
+OsRequires: >= 10
+OsSupport: WINDOWS_10_64BIT WINDOWS_SERVER_2016_64BIT WINDOWS_SERVER_2019_64BIT
+Package: ni-cds-cosim-plugin-labview-2021-support-x86
+Plugin: wininst
+Priority: standard
+Provides: fd77380a-8acb-4c4e-a1b8-dad81b2905f1 (=14.30.49153)
+Section: Add-Ons
+Size: 724094
+Supplements: ni-cds-2014 (>=14.3.0), ni-labview-2021-cdsim-module-x86 (>=21.0.0), ni-labview-2021-x86 (>=21.0.0)
+UserVisible: yes
+Version: 14.3.0.49153-0+f1
+
+Architecture: windows_x64
+CompatibilityVersion: 210300
+Conflicts: d4fd7ea8-555c-4ae6-aaf7-2bbd3441ede5 (<<14.2.1000)
+Depends: ni-mdfsupport (>=21.5.0), ni-metauninstaller (>=21.5.0), aa4b25c0-a1f6-472e-8f76-32e406b7e44d (>=17.0.0) | 7a80ea72-c69d-4740-afbf-326544b9462c (>=17.1.0),
+Description: The LabVIEW Multisim API Toolkit is a set of VIs you can use to automate NI Multisim. The toolkit includes VIs for connection and file management, I/O control, simulation and analysis, circuit configuration, error checking and utility functions. You must already have NI LabVIEW 2017 installed on the machine.
+DisplayName: NI Multisim API Toolkit for LabVIEW 2017
+DisplayVersion: 14.3.0
+Eula: eula-ni-standard
+Filename: ../../pool/ni-cds-labview-2017-api-support-x86_14.3.0.49153-0+f1_windows_x64.nipkg
+Homepage: https://www.ni.com
+MD5sum: 48a3bc1725b934d934ca340207c40197
+Maintainer: National Instruments <support@ni.com>
+OsRequires: >= 10
+OsSupport: WINDOWS_10_64BIT WINDOWS_SERVER_2016_64BIT WINDOWS_SERVER_2019_64BIT
+Package: ni-cds-labview-2017-api-support-x86
+Plugin: wininst
+Priority: standard
+Provides: d4fd7ea8-555c-4ae6-aaf7-2bbd3441ede5 (=14.30.49153)
+Replaces: d4fd7ea8-555c-4ae6-aaf7-2bbd3441ede5 (<<14.2.1000)
+Section: Add-Ons
+Size: 2720504
+Supplements: 7a80ea72-c69d-4740-afbf-326544b9462c (>=17.1.0), aa4b25c0-a1f6-472e-8f76-32e406b7e44d (>=17.0.0), ni-cds-2014 (>=14.3.0)
+UserVisible: yes
+Version: 14.3.0.49153-0+f1
+
+Architecture: windows_x64
+CompatibilityVersion: 210300
+Conflicts: 3a57b556-52e6-4e2c-8e9a-f9f9065af78d (<<14.2.1000)
+Depends: ni-mdfsupport (>=21.5.0), ni-metauninstaller (>=21.5.0), ni-labview-2018-x86 (>=18.0.0),
+Description: The LabVIEW Multisim API Toolkit is a set of VIs you can use to automate NI Multisim. The toolkit includes VIs for connection and file management, I/O control, simulation and analysis, circuit configuration, error checking and utility functions. You must already have NI LabVIEW 2018 installed on the machine.
+DisplayName: NI Multisim API Toolkit for LabVIEW 2018
+DisplayVersion: 14.3.0
+Eula: eula-ni-standard
+Filename: ../../pool/ni-cds-labview-2018-api-support-x86_14.3.0.49153-0+f1_windows_x64.nipkg
+Homepage: https://www.ni.com
+MD5sum: b06d6ca0f42a6f4b81c0177ad225afb0
+Maintainer: National Instruments <support@ni.com>
+OsRequires: >= 10
+OsSupport: WINDOWS_10_64BIT WINDOWS_SERVER_2016_64BIT WINDOWS_SERVER_2019_64BIT
+Package: ni-cds-labview-2018-api-support-x86
+Plugin: wininst
+Priority: standard
+Provides: 3a57b556-52e6-4e2c-8e9a-f9f9065af78d (=14.30.49153)
+Replaces: 3a57b556-52e6-4e2c-8e9a-f9f9065af78d (<<14.2.1000)
+Section: Add-Ons
+Size: 2720378
+Supplements: ni-cds-2014 (>=14.3.0), ni-labview-2018-x86 (>=18.0.0)
+UserVisible: yes
+Version: 14.3.0.49153-0+f1
+
+Architecture: windows_x64
+CompatibilityVersion: 210300
+Depends: ni-mdfsupport (>=21.5.0), ni-metauninstaller (>=21.5.0), ni-labview-2019-x86 (>=19.0.0),
+Description: The LabVIEW Multisim API Toolkit is a set of VIs you can use to automate NI Multisim. The toolkit includes VIs for connection and file management, I/O control, simulation and analysis, circuit configuration, error checking and utility functions. You must already have NI LabVIEW 2019 installed on the machine.
+DisplayName: NI Multisim API Toolkit for LabVIEW 2019
+DisplayVersion: 14.3.0
+Eula: eula-ni-standard
+Filename: ../../pool/ni-cds-labview-2019-api-support-x86_14.3.0.49153-0+f1_windows_x64.nipkg
+Homepage: https://www.ni.com
+MD5sum: 15233fd3d437413e134c9121da0f98a6
+Maintainer: National Instruments <support@ni.com>
+OsRequires: >= 10
+OsSupport: WINDOWS_10_64BIT WINDOWS_SERVER_2016_64BIT WINDOWS_SERVER_2019_64BIT
+Package: ni-cds-labview-2019-api-support-x86
+Plugin: wininst
+Priority: standard
+Provides: e7c79342-5dd3-42dc-b031-91525366a758 (=14.30.49153)
+Section: Add-Ons
+Size: 2721022
+Supplements: ni-cds-2014 (>=14.3.0), ni-labview-2019-x86 (>=19.0.0)
+UserVisible: yes
+Version: 14.3.0.49153-0+f1
+
+Architecture: windows_x64
+CompatibilityVersion: 210300
+Depends: ni-mdfsupport (>=21.5.0), ni-metauninstaller (>=21.5.0), ni-labview-2020-x86 (>=20.0.0),
+Description: The LabVIEW Multisim API Toolkit is a set of VIs you can use to automate NI Multisim. The toolkit includes VIs for connection and file management, I/O control, simulation and analysis, circuit configuration, error checking and utility functions. You must already have NI LabVIEW 2020 installed on the machine.
+DisplayName: NI Multisim API Toolkit for LabVIEW 2020
+DisplayVersion: 14.3.0
+Eula: eula-ni-standard
+Filename: ../../pool/ni-cds-labview-2020-api-support-x86_14.3.0.49153-0+f1_windows_x64.nipkg
+Homepage: https://www.ni.com
+MD5sum: 0a48a24c7f1242871ae7fb2f7dd2b566
+Maintainer: National Instruments <support@ni.com>
+OsRequires: >= 10
+OsSupport: WINDOWS_10_64BIT WINDOWS_SERVER_2016_64BIT WINDOWS_SERVER_2019_64BIT
+Package: ni-cds-labview-2020-api-support-x86
+Plugin: wininst
+Priority: standard
+Provides: e7c79342-5dd3-42dc-b031-91525366a758 (=14.30.49153)
+Section: Add-Ons
+Size: 2721588
+Supplements: ni-cds-2014 (>=14.3.0), ni-labview-2020-x86 (>=20.0.0)
+UserVisible: yes
+Version: 14.3.0.49153-0+f1
+
+Architecture: windows_x64
+CompatibilityVersion: 210300
+Depends: ni-mdfsupport (>=21.5.0), ni-metauninstaller (>=21.5.0), ni-labview-2021-x86 (>=21.0.0),
+Description: The LabVIEW Multisim API Toolkit is a set of VIs you can use to automate NI Multisim. The toolkit includes VIs for connection and file management, I/O control, simulation and analysis, circuit configuration, error checking and utility functions. You must already have NI LabVIEW 2021 installed on the machine.
+DisplayName: NI Multisim API Toolkit for LabVIEW 2021
+DisplayVersion: 14.3.0
+Eula: eula-ni-standard
+Filename: ../../pool/ni-cds-labview-2021-api-support-x86_14.3.0.49153-0+f1_windows_x64.nipkg
+Homepage: https://www.ni.com
+MD5sum: a3a6ffc3012c0ceadb8b6d767136af68
+Maintainer: National Instruments <support@ni.com>
+OsRequires: >= 10
+OsSupport: WINDOWS_10_64BIT WINDOWS_SERVER_2016_64BIT WINDOWS_SERVER_2019_64BIT
+Package: ni-cds-labview-2021-api-support-x86
+Plugin: wininst
+Priority: standard
+Provides: e7c79342-5dd3-42dc-b031-91525366a758 (=14.30.49153)
+Section: Add-Ons
+Size: 2735428
+Supplements: ni-cds-2014 (>=14.3.0), ni-labview-2021-x86 (>=21.0.0)
+UserVisible: yes
+Version: 14.3.0.49153-0+f1
+
+Architecture: windows_x64
+CompatibilityVersion: 210300
+Depends: ni-mdfsupport (>=21.5.0), ni-metauninstaller (>=21.5.0)
+Description: This is an infrastructure package for NI Software.
+DisplayName: NI Multisim LabVIEW Interoperability Support
+DisplayVersion: 14.3.0
+Eula: eula-ni-standard
+Filename: ../../pool/ni-cds-labview-2021-interoperability-support-x86_14.3.0.49153-0+f1_windows_x64.nipkg
+Homepage: https://www.ni.com
+MD5sum: 87e7d9c0c3b4f06034b7404aefc33778
+Maintainer: National Instruments <support@ni.com>
+OsRequires: >= 10
+OsSupport: WINDOWS_10_64BIT WINDOWS_SERVER_2016_64BIT WINDOWS_SERVER_2019_64BIT
+Package: ni-cds-labview-2021-interoperability-support-x86
+Plugin: wininst
+Priority: standard
+Provides: 5a385bec-1ef4-4c91-b9b7-a410a53ceaad (=14.30.49153)
+Section: Infrastructure
+Size: 17261326
+Version: 14.3.0.49153-0+f1
+
+Architecture: windows_x64
+CompatibilityVersion: 200702
+Conflicts: f8ddb933-6a5d-4518-aea1-f251411ed98a (<<16.0.16384)
+Depends: ni-mdfsupport (>=20.6.0), ni-metauninstaller (>=20.6.0), ni-msvcrt-2015 (>=14.1.5), ni-ssl-support (>=20.5.1)
+Description: NI Curl provides the build of the "C URL" library that is an open-source command line tool and library for transferring data with URL syntax.
+DisplayName: NI Curl
+DisplayVersion: 21.0.0
+Eula: eula-ni-standard
+Filename: ../../pool/ni-curl_21.0.0.49152-0+f0_windows_x64.nipkg
+Homepage: https://www.ni.com
+MD5sum: ffd937518e72257478780a6b8e03be61
+Maintainer: National Instruments <support@ni.com>
+OsRequires: >= 10
+OsSupport: WINDOWS_10_64BIT WINDOWS_SERVER_2016_64BIT WINDOWS_SERVER_2019_64BIT
+Package: ni-curl
+Plugin: wininst
+Priority: standard
+Provides: 879f6c7b-f80a-4224-80ee-a2d7d6a2a8bb (=21.00.49152), f8ddb933-6a5d-4518-aea1-f251411ed98a (=21.00.49152)
+Replaces: f8ddb933-6a5d-4518-aea1-f251411ed98a (<<16.0.16384)
+Section: Infrastructure
+Size: 2056582
+Version: 21.0.0.49152-0+f0
+
+Architecture: windows_all
+CompatibilityVersion: 190006
+Conflicts: 524804ae-89fa-4723-a6c1-392ffdf49157 (<<19.0.0)
+Depends: ni-mdfsupport (>=19.0.0), ni-metauninstaller (>=19.0.0), ni-msvcrt-2015 (>=14.1.5)
+Description: The LabWindows/CVI .NET Reflector Runtime provides functions that facilitate calling .NET assemblies
+DisplayName: LabWindows/CVI .NET Reflector Runtime
+DisplayVersion: 19.0.0
+Eula: eula-ni-standard
+Filename: ../../pool/ni-cvi-2019-reflector_19.0.0.49152-0+f0_windows_all.nipkg
+Homepage: http://www.ni.com
+MD5sum: cb7ac4e4b1556df3a5c53e34b89571af
+Maintainer: National Instruments <support@ni.com>
+OsSupport: WINDOWS_7_SP1_32BIT WINDOWS_7_SP1_64BIT WINDOWS_81_32BIT WINDOWS_81_64BIT WINDOWS_10_32BIT WINDOWS_10_64BIT WINDOWS_EMBEDDED_STANDARD_7_SP1 WINDOWS_SERVER_2008_R2_SP1_64BIT WINDOWS_SERVER_2012_R2_64BIT
+Package: ni-cvi-2019-reflector
+Plugin: wininst
+Priority: standard
+Provides: 3f682964-5190-43c8-959b-e405189ec5f8 (=19.00.49152), 524804ae-89fa-4723-a6c1-392ffdf49157 (=19.00.49152)
+Replaces: 524804ae-89fa-4723-a6c1-392ffdf49157 (<<19.0.0)
+Section: Runtime
+Size: 1020180
+Tags: National Instruments, CVI Reflector
+UserVisible: no
+Version: 19.0.0.49152-0+f0
+
+Architecture: windows_all
+CompatibilityVersion: 190006
+Conflicts: f55e654e-d5ce-4817-b43f-fc2f5313a8d8 (<<19.0.0)
+Depends: ni-activex-container (>=17.1.1), ni-mdfsupport (>=19.0.0), ni-metauninstaller (>=19.0.0), ni-msiproperties (>=19.0.0)
+Description: The LabWindows/CVI ActiveX Library Runtime provides functions for ActiveX programming. You can distribute the ActiveX Library according to your license agreement.
+DisplayName: LabWindows/CVI ActiveX Library Runtime
+DisplayVersion: 19.0.0
+Eula: eula-ni-standard
+Filename: ../../pool/ni-cvi-activex_19.0.0.49152-0+f0_windows_all.nipkg
+Homepage: http://www.ni.com
+MD5sum: 45a41ead16aa4e0030998403179c081e
+Maintainer: National Instruments <support@ni.com>
+OsSupport: WINDOWS_7_SP1_32BIT WINDOWS_7_SP1_64BIT WINDOWS_81_32BIT WINDOWS_81_64BIT WINDOWS_10_32BIT WINDOWS_10_64BIT WINDOWS_EMBEDDED_STANDARD_7_SP1 WINDOWS_SERVER_2008_R2_SP1_64BIT WINDOWS_SERVER_2012_R2_64BIT
+Package: ni-cvi-activex
+Plugin: wininst
+Priority: standard
+Provides: db230c60-d22f-4307-97be-0af60ed1e27a (=19.00.49152), f55e654e-d5ce-4817-b43f-fc2f5313a8d8 (=19.00.49152)
+Replaces: f55e654e-d5ce-4817-b43f-fc2f5313a8d8 (<<19.0.0)
+Section: Runtime
+Size: 1320510
+Tags: National Instruments, CVI ActiveX
+UserVisible: no
+Version: 19.0.0.49152-0+f0
+
+Architecture: windows_all
+CompatibilityVersion: 190006
+Conflicts: 86208b51-159e-4f6f-9c62-0d5efc9324d8 (<<15.5.0)
+Depends: ni-mdfsupport (>=19.0.0), ni-metauninstaller (>=19.0.0), ni-mkl-2018 (>=18.0.1)
+Description: The LabWindows/CVI Analysis Library Runtime provides functions for 1D and 2D array manipulation, complex operations, matrix operations, and statistics.
+Description-de: Die Analysebibliothek von LabWindows/CVI umfasst Funktionen für die Arbeit mit 1D- und 2D-Arrays, für Operationen an komplexen Zahlen und an Matrizen sowie für statistische Berechnungen.
+Description-fr: Le moteur d'exécution de la bibliothèque d'analyse LabWindows/CVI fournit des fonctions pour la manipulation de tableaux 1D et 2D, les opérations complexes, les opérations de matrices et les statistiques.
+Description-ja: LabWindows/CVI解析ライブラリは、1Dおよび2D配列操作、複素演算、行列演算、および統計関数を提供します。
+Description-ko: LabWindows/CVI Analysis Library 런타임은 1D 및 2D 배열 조작, 복합 연산, 행렬 연산, 통계를 위한 함수를 제공합니다.
+Description-zh-CN: LabWindows/CVI Analysis Library运行引擎提供用于1D/2D数组操作、复数运算、矩阵运算及统计的函数。
+DisplayName: LabWindows/CVI Analysis Library Runtime
+DisplayName-de: LabWindows/CVI - Analysebibliothek
+DisplayName-fr: LabWindows/CVI - Moteur d'exécution de la bibliothèque d'analyse
+DisplayName-ja: LabWindows/CVI解析ライブラリ
+DisplayName-ko: LabWindows/CVI Analysis Library 런타임
+DisplayName-zh-CN: LabWindows/CVI Analysis Library运行引擎
+DisplayVersion: 2019
+Eula: eula-ni-standard
+Filename: ../../pool/ni-cvi-analysis_19.0.0.49152-0+f0_windows_all.nipkg
+Homepage: http://www.ni.com
+MD5sum: 3a93a925f2487338e57270d582174dec
+Maintainer: National Instruments <support@ni.com>
+OsSupport: WINDOWS_7_SP1_32BIT WINDOWS_7_SP1_64BIT WINDOWS_81_32BIT WINDOWS_81_64BIT WINDOWS_10_32BIT WINDOWS_10_64BIT WINDOWS_EMBEDDED_STANDARD_7_SP1 WINDOWS_SERVER_2008_R2_SP1_64BIT WINDOWS_SERVER_2012_R2_64BIT
+Package: ni-cvi-analysis
+Plugin: wininst
+Priority: standard
+Provides: 6a61602b-c99a-49c8-a607-7fadd5124218 (=19.00.49152), 86208b51-159e-4f6f-9c62-0d5efc9324d8 (=19.00.49152)
+Replaces: 86208b51-159e-4f6f-9c62-0d5efc9324d8 (<<15.5.0)
+Section: Runtime
+Size: 1963096
+Tags: National Instruments, CVI Analysis
+UserVisible: yes
+Version: 19.0.0.49152-0+f0
+VisibleForRuntimeDeployment: yes
+
+Architecture: windows_all
+CompatibilityVersion: 190006
+Conflicts: d532301d-800c-4301-982f-0fc16cbff790 (<<19.0.0)
+Depends: ni-mdfsupport (>=19.0.0), ni-metauninstaller (>=19.0.0), ni-msiproperties (>=19.0.0)
+Description: The LabWindows/CVI DataSocket Library Runtime functions simplify live data exchange between applications. You can distribute the DataSocket Library according to your license agreement.
+DisplayName: LabWindows/CVI DataSocket Library Runtime
+DisplayVersion: 19.0.0
+Eula: eula-ni-standard
+Filename: ../../pool/ni-cvi-datasocket_19.0.0.49152-0+f0_windows_all.nipkg
+Homepage: http://www.ni.com
+MD5sum: 02c3b20c87d049c9d66d73ff0e14f614
+Maintainer: National Instruments <support@ni.com>
+OsSupport: WINDOWS_7_SP1_32BIT WINDOWS_7_SP1_64BIT WINDOWS_81_32BIT WINDOWS_81_64BIT WINDOWS_10_32BIT WINDOWS_10_64BIT WINDOWS_EMBEDDED_STANDARD_7_SP1 WINDOWS_SERVER_2008_R2_SP1_64BIT WINDOWS_SERVER_2012_R2_64BIT
+Package: ni-cvi-datasocket
+Plugin: wininst
+Priority: standard
+Provides: d532301d-800c-4301-982f-0fc16cbff790 (=19.00.49152)
+Replaces: d532301d-800c-4301-982f-0fc16cbff790 (<<19.0.0)
+Section: Runtime
+Size: 527914
+Tags: National Instruments, CVI DataSocket
+UserVisible: no
+Version: 19.0.0.49152-0+f0
+
+Architecture: windows_all
+CompatibilityVersion: 190006
+Conflicts: 0ddb211a-941b-4125-9518-e81e10409f2e (<<15.5.0)
+Depends: ni-cvi-2019-reflector (>=19.0.0), ni-mdfsupport (>=19.0.0), ni-metauninstaller (>=19.0.0), ni-msvcrt-2015 (>=14.1.5)
+Description: The LabWindows/CVI .NET Library Runtime provides functions that facilitate calling .NET assemblies.
+Description-de: Die .NET-Bibliothek von LabWindows/CVI umfasst Funktionen für das Aufrufen von .NET-Assemblys.
+Description-fr: Le moteur d'exécution de la bibliothèque .NET de LabWindows/CVI fournit des fonctions qui facilitent l'appel d'assemblys .NET.
+Description-ja: LabWindows/CVI .NETライブラリは、.NETアセンブリを呼び出すための関数を提供します。
+Description-ko: LabWindows/CVI .NET Library 런타임은 .NET 어셈블리를 호출할 수 있도록 지원하는 함수를 제공합니다.
+Description-zh-CN: LabWindows/CVI .NET Library运行引擎提供便于调用.NET程序集的函数。
+DisplayName: LabWindows/CVI .NET Library Runtime
+DisplayName-de: LabWindows/CVI - .NET-Bibliothek
+DisplayName-fr: LabWindows/CVI - Moteur d'exécution de la bibliothèque .NET
+DisplayName-ja: LabWindows/CVI .NETライブラリ
+DisplayName-ko: LabWindows/CVI .NET Library 런타임
+DisplayName-zh-CN: LabWindows/CVI .NET Library运行引擎
+DisplayVersion: 2019
+Eula: eula-ni-standard
+Filename: ../../pool/ni-cvi-dotnet_19.0.0.49152-0+f0_windows_all.nipkg
+Homepage: http://www.ni.com
+MD5sum: adbaeee79b9a479399b30554394c80fe
+Maintainer: National Instruments <support@ni.com>
+OsSupport: WINDOWS_7_SP1_32BIT WINDOWS_7_SP1_64BIT WINDOWS_81_32BIT WINDOWS_81_64BIT WINDOWS_10_32BIT WINDOWS_10_64BIT WINDOWS_EMBEDDED_STANDARD_7_SP1 WINDOWS_SERVER_2008_R2_SP1_64BIT WINDOWS_SERVER_2012_R2_64BIT
+Package: ni-cvi-dotnet
+Plugin: wininst
+Priority: standard
+Provides: 0ddb211a-941b-4125-9518-e81e10409f2e (=19.00.49152), dea0ff7b-e7f3-45a4-80ea-cd21aad8b94e (=19.00.49152)
+Replaces: 0ddb211a-941b-4125-9518-e81e10409f2e (<<15.5.0)
+Section: Runtime
+Size: 923198
+Tags: National Instruments, CVI DotNet
+UserVisible: yes
+Version: 19.0.0.49152-0+f0
+VisibleForRuntimeDeployment: yes
+
+Architecture: windows_all
+CompatibilityVersion: 190006
+Conflicts: 6ea7715c-f1fe-4456-9bf6-3f8f2be713d0 (<<19.0.0)
+Depends: ni-mdfsupport (>=19.0.0), ni-metauninstaller (>=19.0.0), ni-msiproperties (>=19.0.0)
+Description: Installs run-time support only for instrument drivers and a limited set of LabWindows/CVI library functions. This package allows other applications to use instrument driver DLLs without having to load the larger LabWindows/CVI Run-Time DLL.
+DisplayName: LabWindows/CVI Instrument Driver Runtime
+DisplayVersion: 19.0.0
+Eula: eula-ni-standard
+Filename: ../../pool/ni-cvi-instrsup_19.0.0.49152-0+f0_windows_all.nipkg
+Homepage: http://www.ni.com
+MD5sum: ed99285e1a27d2c7fbc35aa35077a91d
+Maintainer: National Instruments <support@ni.com>
+OsSupport: WINDOWS_7_SP1_32BIT WINDOWS_7_SP1_64BIT WINDOWS_81_32BIT WINDOWS_81_64BIT WINDOWS_10_32BIT WINDOWS_10_64BIT WINDOWS_EMBEDDED_STANDARD_7_SP1 WINDOWS_SERVER_2008_R2_SP1_64BIT WINDOWS_SERVER_2012_R2_64BIT
+Package: ni-cvi-instrsup
+Plugin: wininst
+Priority: standard
+Provides: 6ea7715c-f1fe-4456-9bf6-3f8f2be713d0 (=19.00.49152), ab59ea13-c54c-4935-afac-be8680a07eec (=19.00.49152)
+Replaces: 6ea7715c-f1fe-4456-9bf6-3f8f2be713d0 (<<19.0.0)
+Section: Runtime
+Size: 1587150
+Tags: National Instruments, CVI Instrument Driver Runtime
+UserVisible: no
+Version: 19.0.0.49152-0+f0
+
+Architecture: windows_all
+CompatibilityVersion: 190006
+Conflicts: e2052662-5e86-41ab-b6bb-0efdedd873ac (<<19.0.0)
+Depends: ni-mdfsupport (>=19.0.0), ni-metauninstaller (>=19.0.0), ni-msiproperties (>=19.0.0)
+Description: The LabWindows/CVI Internet Library Runtime provides functions for Internet protocols like FTP, POP3, Telnet, etc. You can distribute the Intenet Library according to your license agreement.
+DisplayName: LabWindows/CVI Internet Library Runtime
+DisplayVersion: 19.0.0
+Eula: eula-ni-standard
+Filename: ../../pool/ni-cvi-internet_19.0.0.49152-0+f0_windows_all.nipkg
+Homepage: http://www.ni.com
+MD5sum: fb8cd9ffde83202461eefec1326dbd56
+Maintainer: National Instruments <support@ni.com>
+OsSupport: WINDOWS_7_SP1_32BIT WINDOWS_7_SP1_64BIT WINDOWS_81_32BIT WINDOWS_81_64BIT WINDOWS_10_32BIT WINDOWS_10_64BIT WINDOWS_EMBEDDED_STANDARD_7_SP1 WINDOWS_SERVER_2008_R2_SP1_64BIT WINDOWS_SERVER_2012_R2_64BIT
+Package: ni-cvi-internet
+Plugin: wininst
+Priority: standard
+Provides: a654c23a-009f-4ebb-806b-61655e0c96b4 (=19.00.49152), e2052662-5e86-41ab-b6bb-0efdedd873ac (=19.00.49152)
+Replaces: e2052662-5e86-41ab-b6bb-0efdedd873ac (<<19.0.0)
+Section: Infrastructure
+Size: 1084922
+Tags: National Instruments, CVI Internet
+UserVisible: no
+Version: 19.0.0.49152-0+f0
+
+Architecture: windows_all
+CompatibilityVersion: 190006
+Conflicts: 15ce39fe-1354-484d-b8ca-459077449fb3 (<<15.5.0)
+Depends: ni-logos (>=19.0.0), ni-mdfsupport (>=19.0.0), ni-metauninstaller (>=19.0.0)
+Description: The LabWindows/CVI Network Variable Library Runtime provides functions for reading and writing data to network variables. You can use the functions in this library to communicate with LabVIEW shared variables and Measurement Studio network variables. You also can use the Network Variable Library functions in real-time (RT) applications.
+Description-de: Die Netzwerkvariablen-Bibliothek von LabWindows/CVI umfasst Funktionen für das Senden und Empfangen von Netzwerkvariablendaten. Die Funktionen in dieser Bibliothek dienen zur Kommunikation mit Umgebungsvariablen in LabVIEW und Netzwerkvariablen in Measurement Studio. Die Funktionen der Netzwerkvariablen-Bibliothek können auch in Real-Time-Anwendungen verwendet werden.
+Description-fr: Le moteur d'exécution de la bibliothèque de variables réseau LabWindows/CVI fournit des fonctions pour la lecture et l'écriture de données dans des variables réseau. Vous pouvez utiliser les fonctions de cette bibliothèque pour communiquer avec les variables partagées LabVIEW et les variables réseau de Measurement Studio. Vous pouvez également utiliser les fonctions de la bibliothèque de variables réseau dans des applications en temps réel (RT).
+Description-ja: LabWindows/CVIネットワーク変数ライブラリは、ネットワーク変数のデータ読み取りおよび書き込み関数を提供します。このライブラリの関数を使用すると、LabVIEWシェア変数およびMeasurement Studioネットワーク変数と通信できます。ネットワーク変数ライブラリ関数は、リアルタイム (RT) アプリケーションでも使用できます。
+Description-ko: LabWindows/CVI Network Variable Library 런타임은 네트워크 변수에서 데이터를 읽고 쓸 수 있도록 지원하는 함수를 제공합니다. 이 라이브러리의 함수를 사용하여 LabVIEW 공유 변수 및 Measurement Studio 네트워크 변수와 통신할 수 있습니다. 또한 Real-Time (RT) 어플리케이션에서 Network Variable Library 함수를 사용할 수 있습니다.
+Description-zh-CN: LabWindows/CVI Network Variable Library运行引擎提供从网络变量读取和写入数据的函数。可使用此库中的函数与LabVIEW共享变量和Measurement Studio网络变量进行通信。也可以在实时(RT)应用程序中使用Network Variable Library函数。
+DisplayName: LabWindows/CVI Network Variable Library Runtime
+DisplayName-de: LabWindows/CVI - Netzwerkvariablen-Bibliothek
+DisplayName-fr: LabWindows/CVI - Moteur d'exécution de la bibliothèque de variables réseau
+DisplayName-ja: LabWindows/CVIネットワーク変数ライブラリ
+DisplayName-ko: LabWindows/CVI Network Variable Library 런타임
+DisplayName-zh-CN: LabWindows/CVI Network Variable Library运行引擎
+DisplayVersion: 2019
+Eula: eula-ni-standard
+Filename: ../../pool/ni-cvi-network-variable_19.0.0.49152-0+f0_windows_all.nipkg
+Homepage: http://www.ni.com
+MD5sum: f0a95cd6325f638b76b8dc4b496dac4f
+Maintainer: National Instruments <support@ni.com>
+OsSupport: WINDOWS_7_SP1_32BIT WINDOWS_7_SP1_64BIT WINDOWS_81_32BIT WINDOWS_81_64BIT WINDOWS_10_32BIT WINDOWS_10_64BIT WINDOWS_EMBEDDED_STANDARD_7_SP1 WINDOWS_SERVER_2008_R2_SP1_64BIT WINDOWS_SERVER_2012_R2_64BIT
+Package: ni-cvi-network-variable
+Plugin: wininst
+Priority: standard
+Provides: 15ce39fe-1354-484d-b8ca-459077449fb3 (=19.00.49152), f31a3240-633d-4040-ac85-0168d0f48b5f (=19.00.49152)
+Replaces: 15ce39fe-1354-484d-b8ca-459077449fb3 (<<15.5.0)
+Section: Runtime
+Size: 1334296
+Tags: National Instruments, CVI Network Variable
+UserVisible: yes
+Version: 19.0.0.49152-0+f0
+VisibleForRuntimeDeployment: yes
+
+Architecture: windows_all
+CompatibilityVersion: 190006
+Conflicts: 40a5ad7f-4baf-4a5c-8b56-426b84f75c05 (<<15.5.0)
+Depends: ni-logos (>=19.0.0), ni-mdfsupport (>=19.0.0), ni-metauninstaller (>=19.0.0), ni-msvcrt-2015 (>=14.1.5)
+Description: The LabWindows/CVI Network Streams Library Runtime provides functions for reading and writing data to network streams. You also can use the Network Streams Library functions in real-time (RT) applications.
+Description-de: Die Netzwerk-Stream-Bibliothek von LabWindows/CVI umfasst Funktionen für die Arbeit mit Netzwerk-Streams. Die Funktionen der Netzwerk-Stream-Bibliothek können auch in Real-Time-Anwendungen verwendet werden.
+Description-fr: Le moteur d'exécution de la bibliothèque de flux réseau LabWindows/CVI fournit des fonctions pour la lecture et l'écriture de données dans des flux réseau. Vous pouvez également utiliser les fonctions de la bibliothèque de flux réseau dans des applications en temps réel (RT).
+Description-ja: LabWindows/CVIネットワークストリームライブラリは、ネットワークストリームのデータ読み取りおよび書き込み関数を提供します。ネットワークストリームライブラリ関数は、リアルタイム (RT) アプリケーションでも使用できます。
+Description-ko: LabWindows/CVI Network Streams Library 런타임은 네트워크 스트림에서 데이터를 읽고 쓸 수 있도록 지원하는 함수를 제공합니다. 또한 Real-Time (RT) 어플리케이션에서 Network Streams Library 함수를 사용할 수 있습니다.
+Description-zh-CN: LabWindows/CVI Network Streams Library运行引擎提供从网络流读取和写入数据的函数。也可以在实时(RT)应用程序中使用Network Streams Library函数。
+DisplayName: LabWindows/CVI Network Streams Library Runtime
+DisplayName-de: LabWindows/CVI - Netzwerk-Stream-Bibliothek
+DisplayName-fr: LabWindows/CVI - Moteur d'exécution de la bibliothèque de flux réseau
+DisplayName-ja: LabWindows/CVIネットワークストリームライブラリ
+DisplayName-ko: LabWindows/CVI Network Streams Library 런타임
+DisplayName-zh-CN: LabWindows/CVI Network Streams Library运行引擎
+DisplayVersion: 2019
+Eula: eula-ni-standard
+Filename: ../../pool/ni-cvi-networkstreams_19.0.0.49152-0+f0_windows_all.nipkg
+Homepage: http://www.ni.com
+MD5sum: 2c6d07bdd13d1cb59013b0c2418828f5
+Maintainer: National Instruments <support@ni.com>
+OsSupport: WINDOWS_7_SP1_32BIT WINDOWS_7_SP1_64BIT WINDOWS_81_32BIT WINDOWS_81_64BIT WINDOWS_10_32BIT WINDOWS_10_64BIT WINDOWS_EMBEDDED_STANDARD_7_SP1 WINDOWS_SERVER_2008_R2_SP1_64BIT WINDOWS_SERVER_2012_R2_64BIT
+Package: ni-cvi-networkstreams
+Plugin: wininst
+Priority: standard
+Provides: 1ab6d8ff-2c26-4bc0-b35b-afc94d6b0f0b (=19.00.49152), 40a5ad7f-4baf-4a5c-8b56-426b84f75c05 (=19.00.49152)
+Replaces: 40a5ad7f-4baf-4a5c-8b56-426b84f75c05 (<<15.5.0)
+Section: Runtime
+Size: 1370896
+Tags: National Instruments, CVI Network Streams
+UserVisible: yes
+Version: 19.0.0.49152-0+f0
+VisibleForRuntimeDeployment: yes
+
+Architecture: windows_all
+CompatibilityVersion: 190006
+Conflicts: 4ab8b513-bb21-48d8-acbb-6540e184825d (<<19.0.0)
+Depends: ni-mdfsupport (>=19.0.0), ni-metauninstaller (>=19.0.0), ni-msiproperties (>=19.0.0)
+Description: Installs the LabWindows/CVI OpenGL Library Runtime.
+DisplayName: LabWindows/CVI OpenGL Library Runtime
+DisplayVersion: 19.0.0
+Eula: eula-ni-standard
+Filename: ../../pool/ni-cvi-opengl_19.0.0.49152-0+f0_windows_all.nipkg
+Homepage: http://www.ni.com
+MD5sum: 70baba75985701c4f58ebe337be63cca
+Maintainer: National Instruments <support@ni.com>
+OsSupport: WINDOWS_7_SP1_32BIT WINDOWS_7_SP1_64BIT WINDOWS_81_32BIT WINDOWS_81_64BIT WINDOWS_10_32BIT WINDOWS_10_64BIT WINDOWS_EMBEDDED_STANDARD_7_SP1 WINDOWS_SERVER_2008_R2_SP1_64BIT WINDOWS_SERVER_2012_R2_64BIT
+Package: ni-cvi-opengl
+Plugin: wininst
+Priority: standard
+Provides: 4ab8b513-bb21-48d8-acbb-6540e184825d (=19.00.49152)
+Replaces: 4ab8b513-bb21-48d8-acbb-6540e184825d (<<19.0.0)
+Section: Runtime
+Size: 600354
+Tags: National Instruments, CVI OpenGL Library
+UserVisible: no
+Version: 19.0.0.49152-0+f0
+
+Architecture: windows_all
+CompatibilityVersion: 190006
+Conflicts: bd824007-27a3-4c23-be1b-19aac71fb973 (<<19.0.0)
+Depends: ni-mdfsupport (>=19.0.0), ni-metauninstaller (>=19.0.0)
+Description: Installs the LabWindows/CVI OpenMP Library Runtime.
+DisplayName: LabWindows/CVI OpenMP Library Runtime
+DisplayVersion: 19.0.0
+Eula: eula-ni-standard
+Filename: ../../pool/ni-cvi-openmp_19.0.0.49152-0+f0_windows_all.nipkg
+Homepage: http://www.ni.com
+MD5sum: c4e19303f93e097413b28712596b8b05
+Maintainer: National Instruments <support@ni.com>
+OsSupport: WINDOWS_7_SP1_32BIT WINDOWS_7_SP1_64BIT WINDOWS_81_32BIT WINDOWS_81_64BIT WINDOWS_10_32BIT WINDOWS_10_64BIT WINDOWS_EMBEDDED_STANDARD_7_SP1 WINDOWS_SERVER_2008_R2_SP1_64BIT WINDOWS_SERVER_2012_R2_64BIT
+Package: ni-cvi-openmp
+Plugin: wininst
+Priority: standard
+Provides: 77c6f319-8b2e-4189-8303-adb6b29f916a (=19.00.49152), bd824007-27a3-4c23-be1b-19aac71fb973 (=19.00.49152)
+Replaces: bd824007-27a3-4c23-be1b-19aac71fb973 (<<19.0.0)
+Section: Runtime
+Size: 1143518
+Tags: National Instruments, CVI Runtime
+UserVisible: no
+Version: 19.0.0.49152-0+f0
+
+Architecture: windows_all
+CompatibilityVersion: 190006
+Conflicts: 80d3d303-75b9-4607-9312-e5fc68e5bfd2 (<<15.5.0)
+Depends: ni-cvi-activex (>=19.0.0), ni-cvi-datasocket (>=19.0.0), ni-cvi-instrsup (>=19.0.0), ni-cvi-internet (>=19.0.0), ni-cvi-opengl (>=19.0.0), ni-cvi-openmp (>=19.0.0), ni-cvi-runtime-core (>=19.0.0), ni-cvi-runtime-realtime (>=19.0.0), ni-cvi-usi (>=19.0.0), ni-mdfsupport (>=19.0.0), ni-metauninstaller (>=19.0.0), ni-msiproperties (>=19.0.0)
+Description: The LabWindows/CVI Shared Runtime Base enables you to run most executables or use most DLLs created with LabWindows/CVI on a machine without the development environment installed.
+  The LabWindows/CVI Shared Runtime Base enables you to run executables or use DLLs created with LabWindows/CVI that do not use separate LabWindows/CVI Shared Runtime libraries, and it must be present on any target computer on which you want to run your executable program. You can distribute the Runtime according to your license agreement.
+ .
+  The mark LabWindows is used under a license from Microsoft Corporation. Windows is a registered trademark of Microsoft Corporation in the United States and other countries.
+Description-de: Mit der Basisversion der gemeinsamen Runtime von LabWindows/CVI können die meisten in LabWindows/CVI erzeugten EXE- und DLL-Dateien ohne die installierte Entwicklungsumgebung aufgerufen werden.
+  Die Basisversion der gemeinsamen LabWindows/CVI-Runtime ermöglicht es, mit LabWindows/CVI erzeugte EXE- oder DLL-Dateien auszuführen, die keine separaten gemeinsamen Runtime-Bibliotheken von LabWindows/CVI verwenden. Diese Komponente muss sich auf allen Systemen befinden, auf denen die EXE oder DLL ausgeführt werden soll. Die Weitergabe der Runtime ist in Ihrer Lizenzvereinbarung geregelt.
+ .
+  The mark LabWindows is used under a license from Microsoft Corporation. Windows is a registered trademark of Microsoft Corporation in the United States and other countries.
+Description-fr: Le moteur d'exécution partagé de base de LabWindows/CVI vous permet d'exécuter la plupart des exécutables ou d'utiliser des DLL construits avec LabWindows/CVI sur un ordinateur sur lequel l'environnement de développement n'est pas installé.
+  Le moteur d'exécution partagé de base de LabWindows/CVI vous permet d'exécuter des exécutables ou d'utiliser des DLL construits avec LabWindows/CVI qui n'utilise pas de bibliothèques partagées, et doit être présent sur tout ordinateur cible sur lequel vous voulez exécuter votre programme. Vous pouvez distribuer le moteur d'exécution conformément à votre contrat de licence.
+ .
+  The mark LabWindows is used under a license from Microsoft Corporation. Windows is a registered trademark of Microsoft Corporation in the United States and other countries.
+Description-ja: LabWindows/CVI共有ランタイムベースを使用すると、開発環境がインストールされていないマシンで、LabWindows/CVIで作成したほとんどの実行ファイルを実行したり、ほとんどのDLLを使用したりできます。
+  LabWindows/CVI共有ランタイムベースは、別のLabWindows/CVI共有ランタイムライブラリを使用しないLabWindows/CVIで作成した実行ファイルを実行したり、DLLを使用したりするために使用します。これは、実行プログラムを実行するターゲットコンピュータに必要です。ランタイムは、ライセンス契約書に従って配布できます。
+ .
+  The mark LabWindows is used under a license from Microsoft Corporation.Windows is a registered trademark of Microsoft Corporation in the United States and other countries.
+Description-ko: LabWindows/CVI 공유 런타임 Base를 사용하면 개발 환경이 설치되지 않은 컴퓨터에서 LabWindows/CVI로 생성한 대부분의 실행 파일을 실행하거나 대부분의 DLL을 사용할 수 있습니다.
+  LabWindows/CVI 공유 런타임 Base를 사용하면 개별 LabWindows/CVI 공유 런타임 라이브러리를 사용하지 않는 LabWindows/CVI로 생성한 실행 파일을 실행하거나 DLL을 사용할 수 있으며, 이는 실행 프로그램을 실행할 타겟 컴퓨터에 설치되어 있어야 합니다. 라이센스 협약에 따라 런타임을 배포할 수 있습니다.
+ .
+  LabWindows 상표는 Microsoft Corporation의 라이센스 하에 사용되고 있습니다. Windows is a registered trademark of Microsoft Corporation in the United States and other countries.
+Description-zh-CN: LabWindows/CVI基础版共享运行引擎允许用户在未安装开发环境的机器上运行通过LabWindows/CVI创建的大多数可执行程序或DLL。
+  LabWindows/CVI基础版共享运行引擎允许用户运行通过LabWindows/CVI创建且不使用单独的LabWindows/CVI共享运行引擎库的可执行程序或DLL。要运行可执行程序的终端计算机上必须安装此运行引擎。可根据许可证协议对运行引擎进行分发。
+ .
+  LabWindows标记的使用得到了Microsoft公司的授权。Windows是Microsoft公司在美国和其他国家/地区的注册商标。
+DisplayName: LabWindows/CVI Shared Runtime Base
+DisplayName-de: LabWindows/CVI - Basisversion der gemeinsamen Runtime
+DisplayName-fr: LabWindows/CVI - Moteur d'exécution partagé de base
+DisplayName-ja: LabWindows/CVI共有ランタイムベース
+DisplayName-ko: LabWindows/CVI 공유 런타임 Base
+DisplayName-zh-CN: LabWindows/CVI基础版共享运行引擎
+DisplayVersion: 2019
+Eula: eula-ni-standard
+Filename: ../../pool/ni-cvi-rte_19.0.0.49152-0+f0_windows_all.nipkg
+Homepage: http://www.ni.com
+MD5sum: 26674899bba1022d48b29ae5aea44f13
+Maintainer: National Instruments <support@ni.com>
+OsSupport: WINDOWS_7_SP1_32BIT WINDOWS_7_SP1_64BIT WINDOWS_81_32BIT WINDOWS_81_64BIT WINDOWS_10_32BIT WINDOWS_10_64BIT WINDOWS_EMBEDDED_STANDARD_7_SP1 WINDOWS_SERVER_2008_R2_SP1_64BIT WINDOWS_SERVER_2012_R2_64BIT
+Package: ni-cvi-rte
+Plugin: wininst
+Priority: standard
+Provides: 5cf04e1e-f5d2-43ab-b9f1-5dcfb0df6cb6 (=19.00.49152), 80d3d303-75b9-4607-9312-e5fc68e5bfd2 (=19.00.49152)
+Recommends: ni-cvi-analysis (>=19.0.0), ni-cvi-dotnet (>=19.0.0), ni-cvi-network-variable (>=19.0.0), ni-cvi-networkstreams (>=19.0.0), ni-cvi-tdms (>=19.0.0), ni-datasocket (>=19.0.0)
+Replaces: 80d3d303-75b9-4607-9312-e5fc68e5bfd2 (<<15.5.0)
+Section: Runtime
+Size: 863994
+Tags: National Instruments, CVI Runtime
+UserVisible: yes
+Version: 19.0.0.49152-0+f0
+VisibleForRuntimeDeployment: yes
+
+Architecture: windows_all
+CompatibilityVersion: 190006
+Conflicts: 1b8e0300-dbca-4a21-a7cc-bf77c0604b50 (<<19.0.0)
+Depends: ni-activex-container (>=17.1.1), ni-mdfsupport (>=19.0.0), ni-mesa (>=17.1.1), ni-metauninstaller (>=19.0.0), ni-msiproperties (>=19.0.0), ni-remote-configuration (>=19.0.0)
+Description: Installs run-time support for projects built with full run-time support. This package provides support for most, but not all, of the provided libraries. You will also need to select additional library support if your application calls the corresponding library functions.
+DisplayName: LabWindows/CVI Standard Runtime
+DisplayVersion: 19.0.0
+Eula: eula-ni-standard
+Filename: ../../pool/ni-cvi-runtime-core_19.0.0.49152-0+f0_windows_all.nipkg
+Homepage: http://www.ni.com
+MD5sum: 93b57bb0f3b7f27b42936597dad85e61
+Maintainer: National Instruments <support@ni.com>
+OsSupport: WINDOWS_7_SP1_32BIT WINDOWS_7_SP1_64BIT WINDOWS_81_32BIT WINDOWS_81_64BIT WINDOWS_10_32BIT WINDOWS_10_64BIT WINDOWS_EMBEDDED_STANDARD_7_SP1 WINDOWS_SERVER_2008_R2_SP1_64BIT WINDOWS_SERVER_2012_R2_64BIT
+Package: ni-cvi-runtime-core
+Plugin: wininst
+Priority: standard
+Provides: 1b8e0300-dbca-4a21-a7cc-bf77c0604b50 (=19.00.49152), fde92d95-c687-4a7a-ae2a-182e61258afc (=19.00.49152)
+Replaces: 1b8e0300-dbca-4a21-a7cc-bf77c0604b50 (<<19.0.0)
+Section: Runtime
+Size: 6225758
+Tags: National Instruments, CVI Runtime
+UserVisible: no
+Version: 19.0.0.49152-0+f0
+
+AlwaysRemoves: ni-cvi-rte, ni-cvi-analysis, ni-cvi-dotnet, ni-cvi-network-variable, ni-cvi-networkstreams, ni-cvi-tdms
+Architecture: windows_all
+CompatibilityVersion: 190006
+Conflicts: 8c766eca-a110-4317-a767-5027278427ae (<<19.0.0)
+Depends: ni-cvi-analysis (>=19.0.0), ni-cvi-dotnet (>=19.0.0), ni-cvi-network-variable (>=19.0.0), ni-cvi-networkstreams (>=19.0.0), ni-cvi-rte (>=19.0.0), ni-cvi-tdms (>=19.0.0), ni-datasocket (>=19.0.0), ni-metauninstaller (>=19.0.0)
+Description: The LabWindows/CVI Shared Runtime enables you to run executables or use DLLs created with LabWindows/CVI on a machine without the development environment installed.
+  The LabWindows/CVI Shared Runtime enables you to run executables or use DLLs created with LabWindows/CVI on a machine without the development environment installed. It is backwards compatible and may be used with applications that were created with previous versions of LabWindows/CVI. You can distribute the Runtime according to your license agreement.
+ .
+  The mark LabWindows is used under a license from Microsoft Corporation. Windows is a registered trademark of Microsoft Corporation in the United States and other countries.
+Description-de: Mit der gemeinsamen Runtime von LabWindows/CVI können in LabWindows/CVI erzeugte EXE- und DLL-Dateien ohne die installierte Entwicklungsumgebung aufgerufen werden.
+  Mit der gemeinsamen Runtime von LabWindows/CVI können in LabWindows/CVI erzeugte EXE- und DLL-Dateien ohne die installierte Entwicklungsumgebung aufgerufen werden. Die Runtime ist abwärtskompatibel und kann mit Anwendungen verwendet werden, die mit älteren Versionen von LabWindows/CVI erstellt wurden. Die Weitergabe der Runtime ist in Ihrer Lizenzvereinbarung geregelt.
+ .
+  The mark LabWindows is used under a license from Microsoft Corporation. Windows is a registered trademark of Microsoft Corporation in the United States and other countries.
+Description-fr: Le moteur d'exécution partagé de LabWindows/CVI vous permet d'exécuter des exécutables ou d'utiliser des DLL construits avec LabWindows/CVI sur un ordinateur sur lequel l'environnement de développement n'est pas installé.
+  Le moteur d'exécution partagé de LabWindows/CVI vous permet d'exécuter des exécutables ou d'utiliser des DLL construits avec LabWindows/CVI sur un ordinateur sur lequel l'environnement de développement n'est pas installé. Il est rétrocompatible et peut être utilisé avec des applications créées avec des versions précédentes de LabWindows/CVI. Vous pouvez distribuer le moteur d'exécution conformément à votre contrat de licence.
+ .
+  The mark LabWindows is used under a license from Microsoft Corporation. Windows is a registered trademark of Microsoft Corporation in the United States and other countries.
+Description-ja: LabWindows/CVI共有ランタイムを使用すると、開発環境がインストールされていないマシンで、LabWindows/CVIで作成した実行ファイルを実行したり、DLLを使用したりできます。
+  LabWindows/CVI共有ランタイムを使用すると、開発環境がインストールされていないマシンで、LabWindows/CVIで作成した実行ファイルを実行したり、DLLを使用したりできます。これは、下位互換性を備えているため、以前のバージョンのLabWindows/CVIで作成されたアプリケーションでも使用できます。ランタイムは、ライセンス契約書に従って配布できます。
+ .
+  The mark LabWindows is used under a license from Microsoft Corporation.Windows is a registered trademark of Microsoft Corporation in the United States and other countries.
+Description-ko: LabWindows/CVI 공유 런타임을 사용하면 개발 환경이 설치되지 않은 컴퓨터에서 LabWindows/CVI로 생성한 실행 파일을 실행하거나 DLL을 사용할 수 있습니다.
+  LabWindows/CVI 공유 런타임을 사용하면 개발 환경이 설치되지 않은 컴퓨터에서 LabWindows/CVI로 생성한 실행 파일을 실행하거나 DLL을 사용할 수 있습니다. 이는 하위 호환되며 이전 버전의 LabWindows/CVI로 생성된 어플리케이션과 함께 사용할 수 있습니다. 라이센스 협약에 따라 런타임을 배포할 수 있습니다.
+ .
+  LabWindows 상표는 Microsoft Corporation의 라이센스 하에 사용되고 있습니다. Windows is a registered trademark of Microsoft Corporation in the United States and other countries.
+Description-zh-CN: LabWindows/CVI共享运行引擎允许用户在未安装开发环境的机器上运行通过LabWindows/CVI创建的可执行程序或DLL。
+  LabWindows/CVI共享运行引擎允许用户在未安装开发环境的机器上运行通过LabWindows/CVI创建的可执行程序或DLL。此运行引擎向后兼容，可与较早版本的LabWindows/CVI所创建的应用程序配合使用。可根据许可证协议对运行引擎进行分发。
+ .
+  LabWindows标记的使用得到了Microsoft公司的授权。Windows是Microsoft公司在美国和其他国家/地区的注册商标。
+DisplayName: LabWindows/CVI Shared Runtime
+DisplayName-de: LabWindows/CVI - Gemeinsame Runtime
+DisplayName-fr: LabWindows/CVI - Moteur d'exécution partagé
+DisplayName-ja: LabWindows/CVI共有ランタイム
+DisplayName-ko: LabWindows/CVI 공유 런타임
+DisplayName-zh-CN: LabWindows/CVI共享运行引擎
+DisplayVersion: 2019
+Eula: eula-ni-standard
+Filename: ../../pool/ni-cvi-runtime-engine_19.0.0.49152-0+f0_windows_all.nipkg
+Homepage: http://www.ni.com
+MD5sum: dc018793786d226e5dedccf0fafcf79f
+Maintainer: National Instruments <support@ni.com>
+OsSupport: WINDOWS_7_SP1_32BIT WINDOWS_7_SP1_64BIT WINDOWS_81_32BIT WINDOWS_81_64BIT WINDOWS_10_32BIT WINDOWS_10_64BIT WINDOWS_EMBEDDED_STANDARD_7_SP1 WINDOWS_SERVER_2008_R2_SP1_64BIT WINDOWS_SERVER_2012_R2_64BIT
+Package: ni-cvi-runtime-engine
+Plugin: wininst
+Priority: standard
+Provides: 8c766eca-a110-4317-a767-5027278427ae (=19.00.49152)
+ReleaseNotes: 
+  Refer to the NI website at http://www.ni.com/r/cvi2019readme for installation instructions, known issues, bug fixes, compatibility information, and other important notices about this product.
+ .
+  You must have at least 200 MB of free space available to install this product.
+ReleaseNotes-de: 
+  Wichtige Hinweise zu diesem Produkt, wie Installationsanweisungen, Informationen zu bekannten Problemen sowie zu Fehlerkorrekturen und zur Kompatibilität finden Sie auf der NI-Website unter http://www.ni.com/r/cvi2019readme.
+ .
+  Sie benötigen mindestens 200 MB freien Speicherplatz, um dieses Produkt zu installieren.
+ReleaseNotes-fr: 
+  Reportez-vous au site Web NI à http://www.ni.com/r/cvi2019readme pour obtenir les instructions d'installation, la documentation des problèmes connus, les correctifs, les informations sur la compatibilité et d'autres informations importantes concernant ce produit.
+ .
+  Vous devez disposer d'au moins 200 Mo d'espace libre pour installer ce produit.
+ReleaseNotes-ja: 
+  インストール手順、既知の問題、バグ修正、互換性情報、およびこの製品に関するその他の重要な注意事項については、NI Webサイト (http://www.ni.com/r/cvi2019readme) を参照してください。
+ .
+  この製品をインストールするには、少なくとも200 MBの空き容量が必要です。
+ReleaseNotes-ko: 
+  이 제품에 대한 설치 방법, 알려진 유의사항, 버그 수정, 호환성 정보, 기타 중요한 알림사항은 NI 웹사이트(http://www.ni.com/r/cvi2019readme)를 참조하십시오.
+ .
+  이 제품을 설치하려면 최소한 200 MB의 여유 공간이 있어야 합니다.
+ReleaseNotes-zh-CN: 
+  关于安装说明、已知问题、错误修正、兼容信息以及本产品的其他重要说明，请参阅NI网站上的http://www.ni.com/r/cvi2019readme。
+ .
+  必须具有至少200 MB的可用空间才能安装本产品。
+Replaces: 8c766eca-a110-4317-a767-5027278427ae (<<19.0.0)
+Section: Runtime
+Size: 436214
+StoreProduct: yes
+Tags: National Instruments, CVI Runtime
+UserVisible: yes
+Version: 19.0.0.49152-0+f0
+VisibleForRuntimeDeployment: yes
+
+Architecture: windows_all
+CompatibilityVersion: 190006
+Conflicts: ed9ba060-edcd-4d21-bab1-10d2856737db (<<19.0.0)
+Depends: ni-mdfsupport (>=19.0.0), ni-metauninstaller (>=19.0.0), ni-msiproperties (>=19.0.0)
+Description: Installs run-time support for DLLs targeted for a real-time system.
+DisplayName: LabWindows/CVI RealTime Runtime
+DisplayVersion: 19.0.0
+Eula: eula-ni-standard
+Filename: ../../pool/ni-cvi-runtime-realtime_19.0.0.49152-0+f0_windows_all.nipkg
+Homepage: http://www.ni.com
+MD5sum: 8b41b7c000473b7fe4eb8591d3ac94a0
+Maintainer: National Instruments <support@ni.com>
+OsSupport: WINDOWS_7_SP1_32BIT WINDOWS_7_SP1_64BIT WINDOWS_81_32BIT WINDOWS_81_64BIT WINDOWS_10_32BIT WINDOWS_10_64BIT WINDOWS_EMBEDDED_STANDARD_7_SP1 WINDOWS_SERVER_2008_R2_SP1_64BIT WINDOWS_SERVER_2012_R2_64BIT
+Package: ni-cvi-runtime-realtime
+Plugin: wininst
+Priority: standard
+Provides: ed9ba060-edcd-4d21-bab1-10d2856737db (=19.00.49152)
+Replaces: ed9ba060-edcd-4d21-bab1-10d2856737db (<<19.0.0)
+Section: Runtime
+Size: 720558
+Tags: National Instruments, CVI Real-Time Runtime
+UserVisible: no
+Version: 19.0.0.49152-0+f0
+
+Architecture: windows_all
+CompatibilityVersion: 190006
+Conflicts: 5a8af88d-486d-4e30-a7a5-8d8a039bbebf (<<15.5.0)
+Depends: ni-mdfsupport (>=19.0.0), ni-metauninstaller (>=19.0.0), ni-tdms (>=19.0.0)
+Description: The LabWindows/CVI TDM Streaming Library Runtime contains functions that you can use to log large amounts of test data quickly.
+Description-de: Die TDM-Streaming-Bibliothek von LabWindows/CVI umfasst Funktionen, mit denen große Mengen von Testdaten schnell protokolliert werden können.
+Description-fr: Le moteur d'exécution de la bibliothèque TDM Streaming de LabWindows/CVI contient des fonctions que vous pouvez utiliser pour enregistrer rapidement un nombre important de données de test.
+Description-ja: LabWindows/CVI TDMストリーミングには、大容量のテストデータを迅速に記録するための関数が含まれます。
+Description-ko: LabWindows/CVI TDM Streaming Library 런타임은 대량의 테스트 데이터를 신속하게 로그할 때 사용할 수 있는 함수를 포함합니다.
+Description-zh-CN: LabWindows/CVI TDM Streaming Library运行引擎包含用于快速记录大量测试数据的函数。
+DisplayName: LabWindows/CVI TDM Streaming Library Runtime
+DisplayName-de: LabWindows/CVI - TDM-Streaming-Bibliothek
+DisplayName-fr: LabWindows/CVI - Moteur d'exécution de la bibliothèque TDM Streaming
+DisplayName-ja: LabWindows/CVI TDMストリーミングライブラリ
+DisplayName-ko: LabWindows/CVI TDM Streaming Library 런타임
+DisplayName-zh-CN: LabWindows/CVI TDM Streaming Library运行引擎
+DisplayVersion: 2019
+Eula: eula-ni-standard
+Filename: ../../pool/ni-cvi-tdms_19.0.0.49152-0+f0_windows_all.nipkg
+Homepage: http://www.ni.com
+MD5sum: b9043b3625eb224ea6ac4c8a55f2f805
+Maintainer: National Instruments <support@ni.com>
+OsSupport: WINDOWS_7_SP1_32BIT WINDOWS_7_SP1_64BIT WINDOWS_81_32BIT WINDOWS_81_64BIT WINDOWS_10_32BIT WINDOWS_10_64BIT WINDOWS_EMBEDDED_STANDARD_7_SP1 WINDOWS_SERVER_2008_R2_SP1_64BIT WINDOWS_SERVER_2012_R2_64BIT
+Package: ni-cvi-tdms
+Plugin: wininst
+Priority: standard
+Provides: 5a8af88d-486d-4e30-a7a5-8d8a039bbebf (=19.00.49152), d14439a1-ce0e-49de-9bed-1d89c532f9e4 (=19.00.49152)
+Replaces: 5a8af88d-486d-4e30-a7a5-8d8a039bbebf (<<15.5.0)
+Section: Runtime
+Size: 1058992
+Tags: National Instruments, CVI TDM Streaming
+UserVisible: yes
+Version: 19.0.0.49152-0+f0
+VisibleForRuntimeDeployment: yes
+
+Architecture: windows_all
+CompatibilityVersion: 190006
+Conflicts: ac759ad6-6c2b-49c4-a29a-28b8555ef8a0 (<<19.0.0)
+Depends: ni-mdfsupport (>=19.0.0), ni-metauninstaller (>=19.0.0), ni-msiproperties (>=19.0.0)
+Description: Installs the LabWindows/CVI Diadem Connectivity Support. It contains the deprecated cviusi.dll.
+DisplayName: LabWindows/CVI Diadem Connectivity Legacy
+DisplayVersion: 19.0.0
+Eula: eula-ni-standard
+Filename: ../../pool/ni-cvi-usi_19.0.0.49152-0+f0_windows_all.nipkg
+Homepage: http://www.ni.com
+MD5sum: 4100d7529798c84f3a261e2833a05703
+Maintainer: National Instruments <support@ni.com>
+OsSupport: WINDOWS_7_SP1_32BIT WINDOWS_7_SP1_64BIT WINDOWS_81_32BIT WINDOWS_81_64BIT WINDOWS_10_32BIT WINDOWS_10_64BIT WINDOWS_EMBEDDED_STANDARD_7_SP1 WINDOWS_SERVER_2008_R2_SP1_64BIT WINDOWS_SERVER_2012_R2_64BIT
+Package: ni-cvi-usi
+Plugin: wininst
+Priority: standard
+Provides: ac759ad6-6c2b-49c4-a29a-28b8555ef8a0 (=19.00.49152), ad7021d3-8d92-46da-a024-2abfd34f8ef8 (=19.00.49152)
+Replaces: ac759ad6-6c2b-49c4-a29a-28b8555ef8a0 (<<19.0.0)
+Section: Runtime
+Size: 1525652
+Tags: National Instruments, CVI Diadem Connectivity, CVI USI
+UserVisible: no
+Version: 19.0.0.49152-0+f0
+
+Architecture: windows_all
+CompatibilityVersion: 190006
+Conflicts: bd97f0eb-6653-45d8-8b81-6520149dff66 (<<17.04.0)
+Depends: ni-mdfsupport (>=19.0.0), ni-metauninstaller (>=19.0.0), ni-msiproperties (>=19.0.0), ni-msvcrt-2015 (>=14.1.5)
+Description: Quit of DataFinder Desktop
+DisplayName: NI DataFinder Desktop Quit
+DisplayVersion: 18.5.5
+Eula: eula-ni-standard
+Filename: ../../pool/ni-datafinder-desktop-quit-dc_18.5.5.49152-0+f0_windows_all.nipkg
+Homepage: http://www.ni.com
+MD5sum: 3a69f489001af7dfb472ef1e6a1040be
+Maintainer: National Instruments <support@ni.com>
+OsSupport: WINDOWS_7_SP1_32BIT WINDOWS_7_SP1_64BIT WINDOWS_81_32BIT WINDOWS_81_64BIT WINDOWS_10_32BIT WINDOWS_10_64BIT WINDOWS_EMBEDDED_STANDARD_7_SP1 WINDOWS_SERVER_2008_R2_SP1_64BIT WINDOWS_SERVER_2012_R2_64BIT
+Package: ni-datafinder-desktop-quit-dc
+Plugin: wininst
+Priority: standard
+Provides: bd97f0eb-6653-45d8-8b81-6520149dff66 (=18.55.49152)
+Replaces: bd97f0eb-6653-45d8-8b81-6520149dff66 (<<17.04.0)
+Section: Infrastructure
+Size: 453900
+Tags: National Instruments, DataFinder DE Quit Msi Dc, BinaryVersionString 18.5.5f7372
+UserVisible: no
+Version: 18.5.5.49152-0+f0
+
+Architecture: windows_all
+CompatibilityVersion: 190006
+Conflicts: 81a7e53e-9524-41ce-90d3-7dd3d90b6c58 (<<5.50.0)
+Depends: ni-launcher (>=19.0.0), ni-logos (>=19.0.0), ni-mdfsupport (>=19.0.0), ni-metauninstaller (>=19.0.0), ni-opcenum (>=5.6.3)
+Description: Support for built applications or shared libraries that use DataSocket. This installer includes the DataSocket Server, DataSocket Server Manager, and OPC Demo Server.
+Description-de: Komponenten zur Unterstützung von Anwendungen und DLLs, die mit DataSocket arbeiten. Dieses Installationsprogramm umfasst den DataSocket-Server, den DataSocket-Server-Manager und den OPC-Demo-Server.
+Description-fr: Support des applications ou bibliothèques partagées construites qui utilisent DataSocket. Cet installeur inclut DataSocket Server, DataSocket Server Manager et OPC Demo Server.
+Description-ja: DataSocketを使用するアプリケーションまたは共有ライブラリのサポートです。このインストーラには、DataSocketサーバ、DataSocketサーバマネージャ、OPCデモサーバが含まれています。
+Description-ko: DataSocket을 사용하는 빌드 어플리케이션 또는 공유 라이브러리에 대한 지원. 이 설치 프로그램은 DataSocket Server, DataSocket Server Manager 및 OPC Demo Server를 포함합니다.
+Description-zh-CN: 用于使用DataSocket的已生成应用程序/共享库的支持。此安装程序包含DataSocket Server、DataSocket Server Manager和OPC Demo Server。
+DisplayName: DataSocket
+DisplayName-de: DataSocket
+DisplayName-fr: DataSocket
+DisplayName-ja: DataSocket
+DisplayName-ko: DataSocket
+DisplayName-zh-CN: DataSocket
+DisplayVersion: 19.0.0
+Eula: eula-ni-standard
+Filename: ../../pool/ni-datasocket_19.0.0.49152-0+f0_windows_all.nipkg
+Homepage: http://www.ni.com
+MD5sum: 64b4e7fae67ff727df29490a5f044cc3
+Maintainer: National Instruments <support@ni.com>
+OsSupport: WINDOWS_7_SP1_32BIT WINDOWS_7_SP1_64BIT WINDOWS_81_32BIT WINDOWS_81_64BIT WINDOWS_10_32BIT WINDOWS_10_64BIT WINDOWS_EMBEDDED_STANDARD_7_SP1 WINDOWS_SERVER_2008_R2_SP1_64BIT WINDOWS_SERVER_2012_R2_64BIT
+Package: ni-datasocket
+Plugin: wininst
+Priority: standard
+Provides: 6d47a181-7ce8-4db2-92bc-521ff4bb5567 (=19.00.49152), 81a7e53e-9524-41ce-90d3-7dd3d90b6c58 (=19.00.49152)
+Replaces: 81a7e53e-9524-41ce-90d3-7dd3d90b6c58 (<<5.50.0)
+Section: Runtime
+Size: 4900474
+UserVisible: yes
+Version: 19.0.0.49152-0+f0
+
+Architecture: windows_x64
+CompatibilityVersion: 210000
+Conflicts: 838942e4-b73c-492e-81a3-aa1e291fd0dc (<<16.0.16384)
+Depends: ni-logos (>=21.0.0), ni-mdfsupport (>=21.0.0), ni-metauninstaller (>=21.0.0)
+Description: Provides a framework to support RT or assembly deployment.
+DisplayName: NI Deployment Framework
+DisplayVersion: 21.0.0
+Eula: eula-ni-standard
+Filename: ../../pool/ni-deployment-framework-x86_21.0.0.49487-0+f335_windows_x64.nipkg
+Homepage: https://www.ni.com
+MD5sum: eefa242d535cc30dfe7f0d942e2424c4
+Maintainer: National Instruments <support@ni.com>
+OsRequires: >= 10
+OsSupport: WINDOWS_10_64BIT WINDOWS_SERVER_2016_64BIT WINDOWS_SERVER_2019_64BIT
+Package: ni-deployment-framework-x86
+Plugin: wininst
+Priority: standard
+Provides: 838942e4-b73c-492e-81a3-aa1e291fd0dc (=21.00.49487)
+Replaces: 838942e4-b73c-492e-81a3-aa1e291fd0dc (<<16.0.16384)
+Section: Infrastructure
+Size: 815622
+Version: 21.0.0.49487-0+f335
+
+Architecture: windows_all
+CompatibilityVersion: 200601
+Conflicts: 42e818c6-2b08-4de7-bd91-b0fd704c119a (<<17.0.0)
+Depends: ni-mdfsupport (>=20.6.0), ni-metauninstaller (>=20.6.0), ni-msdotnet4x (>=4.6.3), ni-msiproperties (>=20.6.0), ni-msvcrt-2015 (>=14.1.5)
+Description: NI Error Reporting (32-bit) enables you to send NI a crash or internal warning report.
+DisplayName: NI Error Reporting (32-bit)
+DisplayVersion: 20.1.0
+Eula: eula-ni-standard
+Filename: ../../pool/ni-error-report-x86_20.1.0.49152-0+f0_windows_all.nipkg
+Homepage: https://www.ni.com
+MD5sum: f3b30b13ef0b9023ad66309c3173b04b
+Maintainer: National Instruments <support@ni.com>
+OsSupport: WINDOWS_7_SP1_32BIT WINDOWS_7_SP1_64BIT WINDOWS_81_32BIT WINDOWS_81_64BIT WINDOWS_10_32BIT WINDOWS_10_64BIT WINDOWS_EMBEDDED_STANDARD_7_SP1 WINDOWS_SERVER_2008_R2_SP1_64BIT WINDOWS_SERVER_2012_R2_64BIT WINDOWS_SERVER_2016_64BIT
+Package: ni-error-report-x86
+Plugin: wininst
+Priority: standard
+Provides: 42e818c6-2b08-4de7-bd91-b0fd704c119a (=20.10.49152)
+Replaces: 42e818c6-2b08-4de7-bd91-b0fd704c119a (<<17.0.0)
+Section: Infrastructure
+Size: 2673060
+Version: 20.1.0.49152-0+f0
+
+Architecture: windows_all
+CompatibilityVersion: 200601
+Conflicts: 393b07f1-f53f-4411-ab84-8ef109c5b5d7 (<<16.0.16384)
+Depends: ni-mdfsupport (>=20.6.0), ni-metauninstaller (>=20.6.0)
+Description: NI Error Reporting Interface provides the error reporting interface for Windows.
+DisplayName: NI Error Reporting Interface
+DisplayVersion: 20.1.0
+Eula: eula-ni-standard
+Filename: ../../pool/ni-error-reporting-interface_20.1.0.49152-0+f0_windows_all.nipkg
+Homepage: https://www.ni.com
+MD5sum: 6e04acfb27a805ab07b2a3c9de11a2fe
+Maintainer: National Instruments <support@ni.com>
+OsSupport: WINDOWS_7_SP1_32BIT WINDOWS_7_SP1_64BIT WINDOWS_81_32BIT WINDOWS_81_64BIT WINDOWS_10_32BIT WINDOWS_10_64BIT WINDOWS_EMBEDDED_STANDARD_7_SP1 WINDOWS_SERVER_2008_R2_SP1_64BIT WINDOWS_SERVER_2012_R2_64BIT WINDOWS_SERVER_2016_64BIT
+Package: ni-error-reporting-interface
+Plugin: wininst
+Priority: standard
+Provides: 393b07f1-f53f-4411-ab84-8ef109c5b5d7 (=20.10.49152), f43eac0a-56bd-4c51-86e5-2aa91dd7ec78 (=20.10.49152)
+Replaces: 393b07f1-f53f-4411-ab84-8ef109c5b5d7 (<<16.0.16384)
+Section: Infrastructure
+Size: 1310024
+Version: 20.1.0.49152-0+f0
+
+Architecture: windows_x64
+CompatibilityVersion: 210300
+Conflicts: 1bebed5e-7f4f-4c30-8c65-b2184919759a (<<16.0.999)
+Depends: ni-metauninstaller (>=21.3.0)
+Description: Installs license and notice files.
+DisplayName: NI EULADepot
+DisplayVersion: 21.5.0
+Filename: ../../pool/ni-euladepot_21.5.0.49152-0+f0_windows_x64.nipkg
+Homepage: https://www.ni.com
+MD5sum: 93f98b9614a62fca5f788e257b2618b1
+Maintainer: National Instruments <support@ni.com>
+OsRequires: >= 10
+OsSupport: WINDOWS_10_64BIT WINDOWS_SERVER_2016_64BIT WINDOWS_SERVER_2019_64BIT
+Package: ni-euladepot
+Plugin: wininst
+Priority: standard
+Provides: 1bebed5e-7f4f-4c30-8c65-b2184919759a (=21.50.49152)
+Replaces: 1bebed5e-7f4f-4c30-8c65-b2184919759a (<<16.0.999)
+Section: Infrastructure
+Size: 17066170
+Version: 21.5.0.49152-0+f0
+
+Architecture: windows_x64
+CompatibilityVersion: 210000
+Conflicts: 36d12883-82a6-4be5-82dd-7fcbc50d2aef (<<18.0.0)
+Depends: ni-labview-2021-runtime-engine-x86 (>=21.0.0), ni-mdfsupport (>=21.0.0), ni-metauninstaller (>=21.0.0), ni-syscfg-runtime (>=21.0.0)
+Description: NI Example Finder is a utility that you can browse and search LabVIEW example VIs.
+DisplayName: NI Example Finder (32-bit)
+DisplayVersion: 21.0.0
+Eula: eula-ni-standard
+Filename: ../../pool/ni-example-finder-x86_21.0.0.49488-0+f336_windows_x64.nipkg
+Homepage: https://www.ni.com
+MD5sum: 2f3bd01fd83dfa4b1d040a8ce4ff2a8d
+Maintainer: National Instruments <support@ni.com>
+OsRequires: >= 10
+OsSupport: WINDOWS_10_64BIT WINDOWS_SERVER_2016_64BIT WINDOWS_SERVER_2019_64BIT
+Package: ni-example-finder-x86
+Plugin: wininst
+Priority: standard
+Provides: 36d12883-82a6-4be5-82dd-7fcbc50d2aef (=21.00.49488)
+Replaces: 36d12883-82a6-4be5-82dd-7fcbc50d2aef (<<18.0.0)
+Section: Infrastructure
+Size: 3733782
+Version: 21.0.0.49488-0+f336
+
+Architecture: windows_all
+CompatibilityVersion: 190006
+Conflicts: b16efd90-0a78-4c21-b8ac-c8d77a650d05 (<<2.0.900)
+Depends: ni-mdfsupport (>=19.0.0), ni-metauninstaller (>=19.0.0), ni-msvcrt-2015 (>=14.1.5)
+Description: Provides support for displaying NI HTML help files.
+DisplayName: NI HTML Help Assistant
+DisplayVersion: 2.2.0
+Eula: eula-ni-standard
+Filename: ../../pool/ni-help-assistant_2.2.0.49152-0+f0_windows_all.nipkg
+Homepage: http://www.ni.com
+MD5sum: aa5224b4a7e0355a865c4479e846b072
+Maintainer: National Instruments <support@ni.com>
+OsSupport: WINDOWS_7_SP1_32BIT WINDOWS_7_SP1_64BIT WINDOWS_81_32BIT WINDOWS_81_64BIT WINDOWS_10_32BIT WINDOWS_10_64BIT WINDOWS_EMBEDDED_STANDARD_7_SP1 WINDOWS_SERVER_2008_R2_SP1_64BIT WINDOWS_SERVER_2012_R2_64BIT
+Package: ni-help-assistant
+Plugin: wininst
+Priority: standard
+Provides: 0058f63b-2bd1-4bef-89bc-daa74c726870 (=2.20.49152), b16efd90-0a78-4c21-b8ac-c8d77a650d05 (=2.20.49152)
+Replaces: b16efd90-0a78-4c21-b8ac-c8d77a650d05 (<<2.0.900)
+Section: Infrastructure
+Size: 968144
+Version: 2.2.0.49152-0+f0
+
+Architecture: windows_all
+CompatibilityVersion: 190006
+Depends: ni-mdfsupport (>=19.0.0), ni-metauninstaller (>=19.0.0)
+Description: This is an infrastructure package for NI Software.
+DisplayName: LabVIEW Real-Time Module Real-Time NBFifo
+DisplayVersion: 19.0.0
+Eula: eula-ni-standard
+Filename: ../../pool/ni-labview-2019-realtime-nbfifo-x86_19.0.0.49152-0+f0_windows_all.nipkg
+Homepage: http://www.ni.com
+MD5sum: f24d9d7d817444f11a74ca379a08361c
+Maintainer: National Instruments <support@ni.com>
+OsSupport: WINDOWS_7_SP1_32BIT WINDOWS_7_SP1_64BIT WINDOWS_81_32BIT WINDOWS_81_64BIT WINDOWS_10_32BIT WINDOWS_10_64BIT WINDOWS_EMBEDDED_STANDARD_7_SP1 WINDOWS_SERVER_2008_R2_SP1_64BIT WINDOWS_SERVER_2012_R2_64BIT
+Package: ni-labview-2019-realtime-nbfifo-x86
+Plugin: wininst
+Priority: standard
+Provides: 8386b074-c90c-43a8-99f2-203baab4111c (=19.00.49152)
+Section: Infrastructure
+Size: 703036
+Version: 19.0.0.49152-0+f0
+
+Architecture: windows_all
+CompatibilityVersion: 190506
+Depends: ni-mdfsupport (>=19.0.0), ni-metauninstaller (>=19.0.0)
+Description: LabVIEW 32-bit Runtime Resource contains support for non-English languages to display in dialog boxes, menus, and error messages that are part of the LabVIEW Runtime.
+DisplayName: LabVIEW 32-bit Runtime Resource
+DisplayVersion: 2019 SP1
+Eula: eula-ni-standard
+Filename: ../../pool/ni-labview-2019-runtime-engine-resource_19.1.0.49152-0+f0_windows_all.nipkg
+Homepage: http://www.ni.com
+MD5sum: 8c649bb2f2f91ef7bc83d2bc4331e519
+Maintainer: National Instruments <support@ni.com>
+OsSupport: WINDOWS_7_SP1_32BIT WINDOWS_7_SP1_64BIT WINDOWS_81_32BIT WINDOWS_81_64BIT WINDOWS_10_32BIT WINDOWS_10_64BIT WINDOWS_EMBEDDED_STANDARD_7_SP1 WINDOWS_SERVER_2008_R2_SP1_64BIT WINDOWS_SERVER_2012_R2_64BIT
+Package: ni-labview-2019-runtime-engine-resource
+Plugin: wininst
+Priority: standard
+Provides: 446d49a5-f830-4adf-8c78-f03284d6882d (=19.10.49152)
+Section: Infrastructure
+Size: 15910042
+Version: 19.1.0.49152-0+f0
+
+Architecture: windows_all
+CompatibilityVersion: 200501
+Depends: ni-activex-container (>=17.1.1), ni-curl (>=20.5.0), ni-deployment-framework-x86 (>=19.0.0), ni-error-report-x86 (>=19.0.0), ni-error-reporting-interface (>=19.0.0), ni-labview-2019-realtime-nbfifo-x86 (>=19.0.0), ni-labview-2019-runtime-engine-resource (>=19.1.0), ni-logos (>=19.0.0), ni-lv-web-server-labview-2019-runtime-engine-x86-support (>=19.0.0), ni-mdfsupport (>=19.0.0), ni-mdnsresponder (>=19.0.0), ni-metauninstaller (>=19.0.0), ni-mkl-2017 (>=17.0.1), ni-mkl-2018 (>=18.0.1), ni-msiproperties (>=19.0.0), ni-mstudio-cw3dgraph (>=8.7.5), ni-msvcrt-2015 (>=14.1.5), ni-python-interface (>=19.0.0), ni-svcloc (>=19.0.0), ni-systemlogging-utils (>=19.0.0), ni-tdms (>=19.0.0), ni-traceengine (>=19.0.0)
+Description: The LabVIEW Runtime is a software add-on that enables engineers to run executables on a nondevelopment machine.
+  The LabVIEW Runtime enables you to run executables created with the LabVIEW Application Builder on machines that do not have LabVIEW installed. The LabVIEW Runtime includes the libraries and other files necessary to run basic application types built in LabVIEW.
+Description-de: Die LabVIEW-Runtime stellt die Laufzeitumgebung für die Arbeit mit ausführbaren LabVIEW-Dateien bereit.
+  Mit dem LabVIEW Application Builder erzeugte ausführbare Dateien können somit auf Computern ausgeführt wurden, auf denen LabVIEW nicht installiert ist. Die LabVIEW-Runtime umfasst alle Bibliotheken und sonstigen Dateien, die zur Ausführung von mit LabVIEW erstellten Anwendungstypen erforderlich sind.
+Description-fr: Le moteur d'exécution LabVIEW est un complément logiciel qui permet aux ingénieurs d'exécuter des exécutables sur une machine de non développement.
+  Le moteur d'exécution LabVIEW vous permet d'exécuter des exécutables créés avec LabVIEW Application Builder sur des machines sur lesquelles LabVIEW n'est pas installé. Le moteur d'exécution de LabVIEW comprend les bibliothèques et autres fichiers nécessaires à l'exécution des types d'applications de base construits dans LabVIEW.
+Description-ja: LabVIEWランタイムは、開発マシン以外のマシンで実行ファイルを実行するためのソフトウェアアドオンです。
+  LabVIEWランタイムを使用すると、LabVIEWがインストールされていないマシンで、LabVIEWアプリケーションビルダを使用して作成された実行ファイルを実行できます。LabVIEWランタイムには、ライブラリ、およびLabVIEWで作成した基本的なアプリケーションタイプを実行するために必要なその他のファイルが含まれています。
+Description-ko: LabVIEW 런타임은 엔지니어가 비개발용 컴퓨터에서 실행 파일을 실행할 수 있도록 하는 소프트웨어 애드온입니다.
+  LabVIEW 런타임을 사용하면 LabVIEW가 설치되지 않은 컴퓨터에서 LabVIEW 어플리케이션 빌더를 사용하여 생성된 실행 파일을 실행할 수 있습니다. LabVIEW 런타임에는 LabVIEW로 만든 기본 어플리케이션 타입의 실행에 필요한 라이브러리 및 기타 파일이 포함되어 있습니다.
+Description-zh-CN: LabVIEW运行引擎是一款附加软件，可允许工程师在非开发计算机上运行可执行文件。
+  LabVIEW运行引擎允许用户在未安装LabVIEW的机器上运行通过LabVIEW应用程序生成器创建的可执行文件。LabVIEW运行引擎包含运行LabVIEW所创建的基本应用程序类型所需的库和其他文件。
+DisplayName: LabVIEW Runtime (32-bit)
+DisplayName-de: LabVIEW-Runtime (32 Bit)
+DisplayName-fr: LabVIEW (32 bits) - Moteur d'exécution
+DisplayName-ja: LabVIEWランタイム (32ビット)
+DisplayName-ko: LabVIEW 런타임 (32비트)
+DisplayName-zh-CN: LabVIEW运行引擎（32位）
+DisplayVersion: 2019 SP1 f4
+Eula: eula-ni-standard
+Filename: ../../pool/ni-labview-2019-runtime-engine-x86_19.1.4.49152-0+f0_windows_all.nipkg
+Homepage: http://www.ni.com
+MD5sum: 994758535cf138aa6f309522dc71e118
+Maintainer: National Instruments <support@ni.com>
+OsSupport: WINDOWS_7_SP1_32BIT WINDOWS_7_SP1_64BIT WINDOWS_81_32BIT WINDOWS_81_64BIT WINDOWS_10_32BIT WINDOWS_10_64BIT WINDOWS_EMBEDDED_STANDARD_7_SP1 WINDOWS_SERVER_2008_R2_SP1_64BIT WINDOWS_SERVER_2012_R2_64BIT WINDOWS_SERVER_2016_64BIT
+Package: ni-labview-2019-runtime-engine-x86
+Plugin: wininst
+Priority: standard
+Provides: 76adfbe4-105e-4341-a6fb-36b5aefea0c7 (=19.14.49152), 7d6295e5-8fb8-4bce-b1cd-b5b396fa1d3f (=19.14.49152)
+ReleaseNotes: 
+  Refer to the NI website at http://www.ni.com/r/lv2019sp1rm for installation instructions, known issues, bug fixes, compatibility information, and other important notices about this product.
+ReleaseNotes-de: 
+  Auf der NI-Website http://www.ni.com/r/lv2019sp1rm-de finden Sie wichtige Hinweise zu diesem Produkt, darunter Informationen zur Installation, zu bekannten Problemen, zu Fehlerkorrekturen und zur Kompatibilität.
+ReleaseNotes-fr: 
+  Reportez-vous au site Web NI à http://www.ni.com/r/lv2019sp1rm-fr pour obtenir les instructions d'installation, la documentation des problèmes connus, les correctifs, les informations sur la compatibilité et d'autres informations importantes concernant ce produit.
+ReleaseNotes-ja: 
+  インストール手順、既知の問題、バグ修正、互換性情報、およびこの製品に関するその他の重要な注意事項については、NI Webサイト (http://www.ni.com/r/lv2019sp1rm-ja) を参照してください。
+ReleaseNotes-ko: 
+  이 제품에 대한 설치 방법, 알려진 유의사항, 버그 수정, 호환성 정보, 기타 중요한 알림사항은 NI 웹사이트(http://www.ni.com/r/lv2019sp1rm-ko)를 참조하십시오.
+ReleaseNotes-zh-CN: 
+  关于安装说明、已知问题、错误修正、兼容信息以及本产品的其他重要说明，请参阅NI网站上的http://www.ni.com/r/lv2019sp1rm-zh-cn。
+Section: Programming Environments
+Size: 27547534
+StoreProduct: yes
+UserVisible: yes
+Version: 19.1.4.49152-0+f0
+VisibleForRuntimeDeployment: yes
+
+Architecture: windows_all
+CompatibilityVersion: 200003
+Depends: ni-mdfsupport (>=20.0.0), ni-metauninstaller (>=20.0.0)
+Description: This is an infrastructure package for NI Software.
+DisplayName: LabVIEW Real-Time Module Real-Time NBFifo
+DisplayVersion: 20.0.0
+Eula: eula-ni-standard
+Filename: ../../pool/ni-labview-2020-realtime-nbfifo-x86_20.0.0.49152-0+f0_windows_all.nipkg
+Homepage: http://www.ni.com
+MD5sum: dae0ecd253cd39c54d2925fad5384508
+Maintainer: National Instruments <support@ni.com>
+OsSupport: WINDOWS_7_SP1_32BIT WINDOWS_7_SP1_64BIT WINDOWS_81_32BIT WINDOWS_81_64BIT WINDOWS_10_32BIT WINDOWS_10_64BIT WINDOWS_EMBEDDED_STANDARD_7_SP1 WINDOWS_SERVER_2008_R2_SP1_64BIT WINDOWS_SERVER_2012_R2_64BIT
+Package: ni-labview-2020-realtime-nbfifo-x86
+Plugin: wininst
+Priority: standard
+Provides: 00d0b680-f876-4e42-a25f-52b65418c2a6 (=20.00.49152)
+Section: Infrastructure
+Size: 710794
+Version: 20.0.0.49152-0+f0
+
+Architecture: windows_all
+CompatibilityVersion: 200601
+Depends: ni-mdfsupport (>=20.6.0), ni-metauninstaller (>=20.6.0)
+Description: LabVIEW 32-bit Runtime Resource contains support for non-English languages to display in dialog boxes, menus, and error messages that are part of the LabVIEW Runtime.
+DisplayName: LabVIEW 32-bit Runtime Resource
+DisplayVersion: 2020 SP1
+Eula: eula-ni-standard
+Filename: ../../pool/ni-labview-2020-runtime-engine-resource_20.1.0.49152-0+f0_windows_all.nipkg
+Homepage: https://www.ni.com
+MD5sum: 01d060bedd464d3918c1adac3c7fbf1b
+Maintainer: National Instruments <support@ni.com>
+OsSupport: WINDOWS_7_SP1_32BIT WINDOWS_7_SP1_64BIT WINDOWS_81_32BIT WINDOWS_81_64BIT WINDOWS_10_32BIT WINDOWS_10_64BIT WINDOWS_EMBEDDED_STANDARD_7_SP1 WINDOWS_SERVER_2008_R2_SP1_64BIT WINDOWS_SERVER_2012_R2_64BIT WINDOWS_SERVER_2016_64BIT
+Package: ni-labview-2020-runtime-engine-resource
+Plugin: wininst
+Priority: standard
+Provides: 61fcc73d-8092-457d-8905-27c0060d88e1 (=20.10.49152)
+Section: Infrastructure
+Size: 15261660
+Version: 20.1.0.49152-0+f0
+
+Architecture: windows_all
+CompatibilityVersion: 200601
+Depends: ni-activex-container (>=17.1.2), ni-curl (>=20.5.0), ni-deployment-framework-x86 (>=20.0.0), ni-error-report-x86 (>=20.1.0), ni-error-reporting-interface (>=20.1.0), ni-labview-2020-realtime-nbfifo-x86 (>=20.0.0), ni-labview-2020-runtime-engine-resource (>=20.1.0), ni-logos (>=20.0.0), ni-lv-web-server-labview-2020-runtime-engine-x86-support (>=20.5.1), ni-mdfsupport (>=20.6.0), ni-mdnsresponder (>=19.0.0), ni-metauninstaller (>=20.6.0), ni-mkl-2017 (>=17.0.1), ni-mkl-2020 (>=20.0.0), ni-msiproperties (>=20.6.0), ni-mstudio-cw3dgraph (>=8.7.5), ni-msvcrt-2015 (>=14.1.5), ni-python-interface (>=20.0.0), ni-svcloc (>=20.0.0), ni-systemlogging-utils (>=20.0.0), ni-tdms (>=19.0.0), ni-traceengine (>=20.0.0)
+Description: The LabVIEW Runtime is a software add-on that enables engineers to run executables on a nondevelopment machine.
+  The LabVIEW Runtime enables you to run executables created with the LabVIEW Application Builder on machines that do not have LabVIEW installed. The LabVIEW Runtime includes the libraries and other files necessary to run basic application types built in LabVIEW.
+Description-de: Die LabVIEW-Runtime stellt die Laufzeitumgebung für die Arbeit mit ausführbaren LabVIEW-Dateien bereit.
+  Mit dem LabVIEW Application Builder erzeugte ausführbare Dateien können somit auf Computern ausgeführt wurden, auf denen LabVIEW nicht installiert ist. Die LabVIEW-Runtime umfasst alle Bibliotheken und sonstigen Dateien, die zur Ausführung von mit LabVIEW erstellten Anwendungstypen erforderlich sind.
+Description-fr: Le moteur d'exécution LabVIEW est un complément logiciel qui permet aux ingénieurs d'exécuter des exécutables sur une machine de non développement.
+  Le moteur d'exécution LabVIEW vous permet d'exécuter des exécutables créés avec LabVIEW Application Builder sur des machines sur lesquelles LabVIEW n'est pas installé. Le moteur d'exécution de LabVIEW comprend les bibliothèques et autres fichiers nécessaires à l'exécution des types d'applications de base construits dans LabVIEW.
+Description-ja: LabVIEWランタイムは、開発マシン以外のマシンで実行ファイルを実行するためのソフトウェアアドオンです。
+  LabVIEWランタイムを使用すると、LabVIEWがインストールされていないマシンで、LabVIEWアプリケーションビルダを使用して作成された実行ファイルを実行できます。LabVIEWランタイムには、ライブラリ、およびLabVIEWで作成した基本的なアプリケーションタイプを実行するために必要なその他のファイルが含まれています。
+Description-ko: LabVIEW 런타임은 엔지니어가 비개발용 컴퓨터에서 실행 파일을 실행할 수 있도록 하는 소프트웨어 애드온입니다.
+  LabVIEW 런타임을 사용하면 LabVIEW가 설치되지 않은 컴퓨터에서 LabVIEW 어플리케이션 빌더를 사용하여 생성된 실행 파일을 실행할 수 있습니다. LabVIEW 런타임에는 LabVIEW로 만든 기본 어플리케이션 타입의 실행에 필요한 라이브러리 및 기타 파일이 포함되어 있습니다.
+Description-zh-CN: LabVIEW运行引擎是一款附加软件，可允许工程师在非开发计算机上运行可执行文件。
+  LabVIEW运行引擎允许用户在未安装LabVIEW的机器上运行通过LabVIEW应用程序生成器创建的可执行文件。LabVIEW运行引擎包含运行LabVIEW所创建的基本应用程序类型所需的库和其他文件。
+DisplayName: LabVIEW Runtime (32-bit)
+DisplayName-de: LabVIEW-Runtime (32 Bit)
+DisplayName-fr: LabVIEW (32 bits) - Moteur d'exécution
+DisplayName-ja: LabVIEWランタイム (32ビット)
+DisplayName-ko: LabVIEW 런타임 (32비트)
+DisplayName-zh-CN: LabVIEW运行引擎（32位）
+DisplayVersion: 2020 SP1
+Eula: eula-ni-standard
+Filename: ../../pool/ni-labview-2020-runtime-engine-x86_20.1.0.49152-0+f0_windows_all.nipkg
+Homepage: https://www.ni.com
+MD5sum: 277ccce7d95e1cd0a819770c9a9f604d
+Maintainer: National Instruments <support@ni.com>
+OsSupport: WINDOWS_7_SP1_32BIT WINDOWS_7_SP1_64BIT WINDOWS_81_32BIT WINDOWS_81_64BIT WINDOWS_10_32BIT WINDOWS_10_64BIT WINDOWS_EMBEDDED_STANDARD_7_SP1 WINDOWS_SERVER_2008_R2_SP1_64BIT WINDOWS_SERVER_2012_R2_64BIT WINDOWS_SERVER_2016_64BIT
+Package: ni-labview-2020-runtime-engine-x86
+Plugin: wininst
+Priority: standard
+Provides: 6394b505-4b86-41e5-affb-f6f12e05046c (=20.10.49152), d84fc73f-d1e0-4c05-a30c-db882cd1abd8 (=20.10.49152)
+ReleaseNotes: 
+  Refer to the NI website at https://www.ni.com/r/lv2020x1rm for installation instructions, known issues, bug fixes, compatibility information, and other important notices about this product.
+ReleaseNotes-de: 
+  Auf der NI-Website https://www.ni.com/r/lv2020x1rm finden Sie wichtige Hinweise zu diesem Produkt, darunter Informationen zur Installation, zu bekannten Problemen, zu Fehlerkorrekturen und zur Kompatibilität.
+ReleaseNotes-fr: 
+  Reportez-vous au site Web NI à l'adresse https://www.ni.com/r/lv2020x1rm pour obtenir les instructions d'installation, des informations sur les problèmes connus, les corrections de bugs, la compatibilité ainsi que d'autres informations importantes concernant ce produit.
+ReleaseNotes-ja: 
+  インストール手順、既知の問題、バグ修正、互換性情報、およびこの製品に関するその他の重要な注意事項については、NI Webサイト (https://www.ni.com/r/lv2020x1rm) を参照してください。
+ReleaseNotes-ko: 
+  이 제품에 대한 설치 방법, 알려진 유의사항, 버그 수정, 호환성 정보, 기타 중요한 알림사항은 NI 웹사이트(https://www.ni.com/r/lv2020x1rm)를 참조하십시오.
+ReleaseNotes-zh-CN: 
+  关于安装说明、已知问题、错误修正、兼容信息以及本产品的其他重要说明，请参阅NI网站上的https://www.ni.com/r/lv2020x1rm。
+Section: Programming Environments
+Size: 27713636
+StoreProduct: yes
+UserVisible: yes
+Version: 20.1.0.49152-0+f0
+VisibleForRuntimeDeployment: yes
+
+Architecture: windows_x64
+CompatibilityVersion: 210000
+Depends: ni-mdfsupport (>=21.0.0), ni-metauninstaller (>=21.0.0)
+Description: This is an infrastructure package for NI Software.
+DisplayName: LabVIEW Real-Time Module Real-Time NBFifo
+DisplayVersion: 21.0.0
+Eula: eula-ni-standard
+Filename: ../../pool/ni-labview-2021-realtime-nbfifo-x86_21.0.0.49443-0+f291_windows_x64.nipkg
+Homepage: https://www.ni.com
+MD5sum: d6b1a23bdb3088f4dce31ce2806e94ec
+Maintainer: National Instruments <support@ni.com>
+OsRequires: >= 10
+OsSupport: WINDOWS_10_64BIT WINDOWS_SERVER_2016_64BIT WINDOWS_SERVER_2019_64BIT
+Package: ni-labview-2021-realtime-nbfifo-x86
+Plugin: wininst
+Priority: standard
+Provides: 764cb77e-f1c0-34ff-b1b9-3af23d162d6b (=21.00.49443)
+Section: Infrastructure
+Size: 697628
+Version: 21.0.0.49443-0+f291
+
+Architecture: windows_x64
+CompatibilityVersion: 210000
+Depends: ni-mdfsupport (>=21.0.0), ni-metauninstaller (>=21.0.0)
+Description: LabVIEW 32-bit Runtime Resource contains support for non-English languages to display in dialog boxes, menus, and error messages that are part of the LabVIEW Runtime.
+DisplayName: LabVIEW 32-bit Runtime Resource
+DisplayVersion: 2021
+Eula: eula-ni-standard
+Filename: ../../pool/ni-labview-2021-runtime-engine-resource_21.0.0.49488-0+f336_windows_x64.nipkg
+Homepage: https://www.ni.com
+MD5sum: 608a04700f1de06407c83f6b23817d21
+Maintainer: National Instruments <support@ni.com>
+OsRequires: >= 10
+OsSupport: WINDOWS_10_64BIT WINDOWS_SERVER_2016_64BIT WINDOWS_SERVER_2019_64BIT
+Package: ni-labview-2021-runtime-engine-resource
+Plugin: wininst
+Priority: standard
+Provides: 61b01dde-3406-339d-9abc-358c2d13cc73 (=21.00.49488)
+Section: Infrastructure
+Size: 15402204
+Version: 21.0.0.49488-0+f336
+
+Architecture: windows_x64
+CompatibilityVersion: 210000
+Depends: ni-activex-container (>=17.1.2), ni-curl (>=21.0.0), ni-deployment-framework-x86 (>=21.0.0), ni-error-report-x86 (>=20.1.0), ni-error-reporting-interface (>=20.1.0), ni-labview-2021-realtime-nbfifo-x86 (>=21.0.0), ni-labview-2021-runtime-engine-resource (>=21.0.0), ni-logos (>=21.0.0), ni-lv-web-server-labview-2021-runtime-engine-x86-support (>=21.0.0), ni-matlab-interface (>=21.0.0), ni-mdfsupport (>=21.0.0), ni-mdnsresponder (>=21.0.0), ni-metauninstaller (>=21.0.0), ni-mkl-2017 (>=17.0.1), ni-mkl-2020 (>=20.0.0), ni-msiproperties (>=21.0.0), ni-mstudio-cw3dgraph (>=8.7.5), ni-msvcrt-2015 (>=14.1.5), ni-python-interface (>=21.0.0), ni-svcloc (>=21.0.0), ni-systemlogging-utils (>=20.0.0), ni-tdms (>=21.0.0), ni-traceengine (>=20.0.0)
+Description: The LabVIEW Runtime is a software add-on that enables engineers to run executables on a nondevelopment machine.
+  The LabVIEW Runtime enables you to run executables created with the LabVIEW Application Builder on machines that do not have LabVIEW installed. The LabVIEW Runtime includes the libraries and other files necessary to run basic application types built in LabVIEW.
+Description-de: Die LabVIEW-Runtime stellt die Laufzeitumgebung für die Arbeit mit ausführbaren LabVIEW-Dateien bereit.
+  Mit dem LabVIEW Application Builder erzeugte ausführbare Dateien können somit auf Computern ausgeführt wurden, auf denen LabVIEW nicht installiert ist. Die LabVIEW-Runtime umfasst alle Bibliotheken und sonstigen Dateien, die zur Ausführung von mit LabVIEW erstellten Anwendungstypen erforderlich sind.
+Description-fr: Le moteur d'exécution LabVIEW est un complément logiciel qui permet aux ingénieurs d'exécuter des exécutables sur une machine de non développement.
+  Le moteur d'exécution LabVIEW vous permet d'exécuter des exécutables créés avec LabVIEW Application Builder sur des machines sur lesquelles LabVIEW n'est pas installé. Le moteur d'exécution de LabVIEW comprend les bibliothèques et autres fichiers nécessaires à l'exécution des types d'applications de base construits dans LabVIEW.
+Description-ja: LabVIEWランタイムは、開発マシン以外のマシンで実行ファイルを実行するためのソフトウェアアドオンです。
+  LabVIEWランタイムを使用すると、LabVIEWがインストールされていないマシンで、LabVIEWアプリケーションビルダを使用して作成された実行ファイルを実行できます。LabVIEWランタイムには、ライブラリ、およびLabVIEWで作成した基本的なアプリケーションタイプを実行するために必要なその他のファイルが含まれています。
+Description-ko: LabVIEW 런타임은 엔지니어가 비개발용 컴퓨터에서 실행 파일을 실행할 수 있도록 하는 소프트웨어 애드온입니다.
+  LabVIEW 런타임을 사용하면 LabVIEW가 설치되지 않은 컴퓨터에서 LabVIEW 어플리케이션 빌더를 사용하여 생성된 실행 파일을 실행할 수 있습니다. LabVIEW 런타임에는 LabVIEW로 만든 기본 어플리케이션 타입의 실행에 필요한 라이브러리 및 기타 파일이 포함되어 있습니다.
+Description-zh-CN: LabVIEW运行引擎是一款附加软件，可允许工程师在非开发计算机上运行可执行文件。
+  LabVIEW运行引擎允许用户在未安装LabVIEW的机器上运行通过LabVIEW应用程序生成器创建的可执行文件。LabVIEW运行引擎包含运行LabVIEW所创建的基本应用程序类型所需的库和其他文件。
+DisplayName: LabVIEW Runtime (32-bit)
+DisplayName-de: LabVIEW-Runtime (32 Bit)
+DisplayName-fr: LabVIEW (32 bits) - Moteur d'exécution
+DisplayName-ja: LabVIEWランタイム (32ビット)
+DisplayName-ko: LabVIEW 런타임 (32비트)
+DisplayName-zh-CN: LabVIEW运行引擎（32位）
+DisplayVersion: 2021
+Eula: eula-ni-standard
+Filename: ../../pool/ni-labview-2021-runtime-engine-x86_21.0.0.49488-0+f336_windows_x64.nipkg
+Homepage: https://www.ni.com
+MD5sum: f30b3d03d15a7960c822aa91e163684d
+Maintainer: National Instruments <support@ni.com>
+OsRequires: >= 10
+OsSupport: WINDOWS_10_64BIT WINDOWS_SERVER_2016_64BIT WINDOWS_SERVER_2019_64BIT
+Package: ni-labview-2021-runtime-engine-x86
+Plugin: wininst
+Priority: standard
+Provides: 0f5c3d28-ccea-37fa-af9e-554c677a3f03 (=21.00.49488), 251e8668-4013-3671-857c-61d46b2ac827 (=21.00.49488)
+ReleaseNotes: 
+  Refer to the NI website at https://www.ni.com/r/lv2021rm for installation instructions, known issues, bug fixes, compatibility information, and other important notices about this product.
+ReleaseNotes-de: 
+  Auf der NI-Website https://www.ni.com/r/lv2021rm finden Sie wichtige Hinweise zu diesem Produkt, darunter Informationen zur Installation, zu bekannten Problemen, zu Fehlerkorrekturen und zur Kompatibilität.
+ReleaseNotes-fr: 
+  Reportez-vous au site Web de NI à l'adresse https://www.ni.com/r/lv2021rm pour obtenir les instructions d'installation, des informations sur les problèmes connus, les corrections de bugs, la compatibilité ainsi que d'autres informations importantes concernant ce produit.
+ReleaseNotes-ja: 
+  インストール手順、既知の問題、バグ修正、互換性情報、およびこの製品に関するその他の重要な注意事項については、NI Webサイト (https://www.ni.com/r/lv2021rm) を参照してください。
+ReleaseNotes-ko: 
+  이 제품에 대한 설치 방법, 알려진 유의사항, 버그 수정, 호환성 정보, 기타 중요한 알림사항은 NI 웹사이트(https://www.ni.com/r/lv2021rm)를 참조하십시오.
+ReleaseNotes-zh-CN: 
+  关于安装说明、已知问题、错误修正、兼容信息以及本产品的其他重要说明，请参阅NI网站上的https://www.ni.com/r/lv2021rm-zh-cn。
+Section: Programming Environments
+Size: 27665042
+StoreProduct: yes
+UserVisible: yes
+Version: 21.0.0.49488-0+f336
+VisibleForRuntimeDeployment: yes
+
+Architecture: windows_x64
+CompatibilityVersion: 210000
+Conflicts: fdc8fe32-3bf5-4005-a21c-cc9a9e4b3b58 (<<16.0.16384)
+Depends: ni-logos (>=21.0.0), ni-mdfsupport (>=21.0.0), ni-metauninstaller (>=21.0.0)
+Description: NI System State Publisher provides System State Publisher support for LabVIEW.
+DisplayName: NI System State Publisher
+DisplayVersion: 21.0.0
+Eula: eula-ni-standard
+Filename: ../../pool/ni-labview-system-state-publisher_21.0.0.49487-0+f335_windows_x64.nipkg
+Homepage: https://www.ni.com
+MD5sum: 6bfc67d64d01708b27ed5188eae9422c
+Maintainer: National Instruments <support@ni.com>
+OsRequires: >= 10
+OsSupport: WINDOWS_10_64BIT WINDOWS_SERVER_2016_64BIT WINDOWS_SERVER_2019_64BIT
+Package: ni-labview-system-state-publisher
+Plugin: wininst
+Priority: standard
+Provides: 9bc48afe-b8cc-4c96-b90f-c6c08ed52465 (=21.00.49487), fdc8fe32-3bf5-4005-a21c-cc9a9e4b3b58 (=21.00.49487)
+Replaces: fdc8fe32-3bf5-4005-a21c-cc9a9e4b3b58 (<<16.0.16384)
+Section: Infrastructure
+Size: 1064418
+Version: 21.0.0.49487-0+f335
+
+Architecture: windows_all
+CompatibilityVersion: 190006
+Conflicts: 7fb990c5-1a51-4c1d-99c4-c6e50368e105 (<<16.2.0)
+Depends: ni-mdfsupport (>= 19.0.0), ni-metauninstaller (>= 19.0.0), ni-msdotnet4x (>=4.6.3)
+Description: NILauncher is for browsing and launching National Instruments software installed on your computer. Installs on Windows 8.x and newer.
+DisplayName: NI Launcher
+DisplayVersion: 19.0.0
+Eula: eula-ni-standard
+Filename: ../../pool/ni-launcher_19.0.0.49156-0+f4_windows_all.nipkg
+Homepage: http://www.ni.com
+MD5sum: aecdedf71078b145bdc3a224eb4fa4ec
+Maintainer: National Instruments <support@ni.com>
+OsSupport: WINDOWS_7_SP1_32BIT WINDOWS_7_SP1_64BIT WINDOWS_81_32BIT WINDOWS_81_64BIT WINDOWS_10_32BIT WINDOWS_10_64BIT WINDOWS_EMBEDDED_STANDARD_7_SP1 WINDOWS_SERVER_2008_R2_SP1_64BIT WINDOWS_SERVER_2012_R2_64BIT
+Package: ni-launcher
+Plugin: wininst
+Priority: standard
+Provides: 7fb990c5-1a51-4c1d-99c4-c6e50368e105 (=19.00.49156)
+Replaces: 7fb990c5-1a51-4c1d-99c4-c6e50368e105 (<<16.2.0)
+Section: Infrastructure
+Size: 5061320
+Version: 19.0.0.49156-0+f4
+
+Architecture: windows_x64
+CompatibilityVersion: 210300
+Conflicts: cba7edb3-a142-43b6-b68b-a723624f1375 (<<4.0.0)
+Depends: ni-mdfsupport (>=21.3.0), ni-metauninstaller (>=21.3.0), ni-msdotnet4x (>=4.6.3), ni-msiproperties (>=21.3.0), ni-msvcrt-2015 (>=14.1.5)
+Description: NI License Manager is an application that helps you manage licensed NI software assets.
+  NI License Manager is a tool designed to help you activate, deactivate, and transfer software products using license activation codes or license files. License administrators can use NI License Manager to automate product activation and add volume license servers.
+Description-de: Der NI-Lizenzmanager ist ein Programm zum Verwalten lizenzierter Software von NI.
+  Mit dem NI-Lizenzmanager können Sie Softwareprodukte mit Hilfe von Lizenzaktivierungscodes und Lizenzdateien aktivieren, deaktivieren und übertragen. Lizenzadministratoren können mit dem NI-Lizenzmanager die Produktaktivierung automatisieren und Volumenlizenzserver hinzufügen.
+Description-fr: Le Gestionnaire de licences NI est une application qui vous aide à gérer les ressources logicielles sous licence NI.
+  Le Gestionnaire de licences NI est un outil qui vous aide à activer, désactiver et transférer des produits logiciels en utilisant des codes d'activation de licence ou des fichiers de licence. Les administrateurs de licence peuvent utiliser le Gestionnaire de licences NI pour automatiser l'activation du produit et ajouter des serveurs de licences en volume.
+Description-ja: NI License Managerは、ライセンスされたNIソフトウェア資産を管理するためのアプリケーションです。
+  NI License Managerは、ライセンスアクティブ化コードまたはライセンスファイルを使用してソフトウェアをアクティブ化、アクティブ化解除、および移行するために設計されたツールです。ライセンス管理者は、NI License Managerを使用して製品のアクティブ化を自動化したり、ボリュームライセンスサーバを追加したりできます。
+Description-ko: NI 라이센스 관리자는 라이센스가 부여된 NI 소프트웨어 자산의 관리를 지원하는 어플리케이션입니다.
+  NI 라이센스 관리자는 라이센스 정품인증 코드나 라이센스 파일을 사용한 소프트웨어 제품의 정품인증, 정품인증 해제, 이전을 지원하는 도구입니다. 라이센스 관리자는 NI 라이센스 관리자를 사용하여 제품 정품인증을 자동화하고 볼륨 라이센스 서버를 추가할 수 있습니다.
+Description-zh-CN: NI许可证管理器是一款帮助用户管理已授权NI软件资产的应用程序。
+  NI许可证管理器是一款专门帮助用户通过许可证激活代码或许可证文件激活、停用及转移软件产品的工具。许可证管理员可通过NI许可证管理器实现产品激活自动化并添加批量许可证服务器。
+DisplayName: NI License Manager
+DisplayName-de: NI-Lizenzmanager
+DisplayName-fr: Gestionnaire de licences NI
+DisplayName-ja: NI License Manager
+DisplayName-ko: NI 라이센스 관리자
+DisplayName-zh-CN: NI许可证管理器
+DisplayVersion: 21.3.1
+Eula: eula-ni-standard
+Filename: ../../pool/ni-license-manager_21.3.1.49163-0+f11_windows_x64.nipkg
+Homepage: https://www.ni.com
+MD5sum: 94dc33712052b9df79c77c4a496aca6e
+Maintainer: National Instruments <support@ni.com>
+OsRequires: >= 10
+OsSupport: WINDOWS_10_64BIT WINDOWS_SERVER_2016_64BIT WINDOWS_SERVER_2019_64BIT
+Package: ni-license-manager
+Plugin: wininst
+Priority: standard
+Provides: 322ef433-71d5-4ca5-be56-ba7d280ac11c (=21.31.49163), cba7edb3-a142-43b6-b68b-a723624f1375 (=21.31.49163)
+ReleaseNotes: 
+  NI License Manager 21.3 will not be able to activate some NI products starting in mid-2022. Update to NI License Manager 21.3.1 to ensure continued access to activation and licensing.
+ .
+  Refer to the NI website at https://www.ni.com/r/nilm21.3.1rm for installation instructions, known issues, bug fixes, compatibility information, and other important notices about this product.
+ .
+  You must have at least 150 MB of free space available to install this product.
+ReleaseNotes-de: 
+  Der NI-Lizenzmanager 21.3 kann ab Mitte 2022 einige NI-Produkte nicht mehr aktivieren. Aktualisieren Sie auf NI-Lizenzmanager 21.3.1, um den Zugriff auf Aktivierung und Lizenzierung weiterhin zu gewährleisten.
+ .
+  Auf der NI-Website https://www.ni.com/r/nilm21.3.1rm_de finden Sie wichtige Hinweise zu diesem Produkt, darunter Informationen zur Installation, zu bekannten Problemen, zu Fehlerkorrekturen und zur Kompatibilität.
+ .
+  Sie benötigen mindestens 150 MB freien Speicherplatz, um dieses Produkt zu installieren.
+ReleaseNotes-fr: 
+  NI License Manager 21.3 ne sera pas en mesure d'activer certains produits NI à partir de mi-2022. Effectuez une mise à jour vers NI License Manager 21.3.1 pour assurer un accès continu à l'activation et à l'octroi de licences.
+ .
+  Reportez-vous au site Web de NI à l'adresse https://www.ni.com/r/nilm21.3.1rm-fr pour obtenir les instructions d'installation, des informations sur les problèmes connus, les corrections de bugs, la compatibilité ainsi que d'autres informations importantes concernant ce produit.
+ .
+  Vous devez disposer d'au moins 150 Mo d'espace libre pour installer ce produit.
+ReleaseNotes-ja: 
+  NI License Manager 21.3では、2022年の半ばから、一部のNI製品をアクティブ化できなくなります。NI License Manager 21.3.1に更新して、アクティブ化とライセンスへのアクセスを継続して実行できるようにしてください。
+ .
+  インストール手順、既知の問題、バグ修正、互換性情報、およびこの製品に関するその他の重要な注意事項については、NI Webサイト (https://www.ni.com/r/nilm21.3.1rm-ja) を参照してください。
+ .
+  この製品をインストールするには、少なくとも150 MBの空き容量が必要です。
+ReleaseNotes-ko: 
+  NI 라이센스 관리자 21.3은 2022년 중반부터 일부 NI 제품을 정품인증할 수 없게 됩니다. 정품인증 및 라이센스에 계속 접근할 수 있도록 하려면 NI 라이센스 관리자 21.3.1로 업데이트하십시오.
+ .
+  이 제품에 대한 설치 방법, 알려진 유의사항, 버그 수정, 호환성 정보, 기타 중요한 알림사항은 NI 웹사이트(https://www.ni.com/r/nilm21.3.1rm-ko)를 참조하십시오.
+ .
+  이 제품을 설치하려면 최소한 150 MB의 여유 공간이 있어야 합니다.
+ReleaseNotes-zh-CN: 
+  2022年年中之后NI许可证管理器21.3将无法激活部分NI产品。请升级至NI许可证管理器21.3.1以确保继续使用激活与许可功能。
+ .
+  关于安装说明、已知问题、错误修正、兼容信息以及本产品的其他重要说明，请参阅NI网站上的https://www.ni.com/r/nilm21.3.1rm-zh-cn。
+ .
+  必须具有至少150 MB的可用空间才能安装本产品。
+Replaces: cba7edb3-a142-43b6-b68b-a723624f1375 (<<4.0.0)
+Section: Utilities
+Size: 37872494
+StoreProduct: yes
+UserVisible: yes
+Version: 21.3.1.49163-0+f11
+VisibleForDeployment: no
+VisibleForRuntimeDeployment: no
+
+Architecture: windows_x64
+CompatibilityVersion: 210000
+Conflicts: 177ed463-0e03-4f4a-a725-5f5df2c78e47 (<<5.80.0)
+Depends: ni-mdfsupport (>=21.0.0), ni-metauninstaller (>=21.0.0)
+Description: NI Logos XT provides a thin layer on top of TCP/IP to simplify some common network tasks.
+DisplayName: NI Logos XT
+DisplayVersion: 21.0.0
+Eula: eula-ni-standard
+Filename: ../../pool/ni-logos-xt_21.0.0.49350-0+f198_windows_x64.nipkg
+Homepage: https://www.ni.com
+MD5sum: 19931cd996a491c84e5e13a22418b3cd
+Maintainer: National Instruments <support@ni.com>
+OsRequires: >= 10
+OsSupport: WINDOWS_10_64BIT WINDOWS_SERVER_2016_64BIT WINDOWS_SERVER_2019_64BIT
+Package: ni-logos-xt
+Plugin: wininst
+Priority: standard
+Provides: 177ed463-0e03-4f4a-a725-5f5df2c78e47 (=21.00.49350), dbf9ae3a-a372-4a5a-b473-cc37a0f607f4 (=21.00.49350)
+Replaces: 177ed463-0e03-4f4a-a725-5f5df2c78e47 (<<5.80.0)
+Section: Infrastructure
+Size: 2417998
+Version: 21.0.0.49350-0+f198
+
+Architecture: windows_x64
+CompatibilityVersion: 210000
+Conflicts: 5e4a4ce3-4d06-11d4-8b22-006008c16337 (<<5.80.0)
+Depends: ni-logos-xt (>=21.0.0), ni-mdfsupport (>=21.0.0), ni-metauninstaller (>=21.0.0), ni-msvcrt-2015 (>=14.1.5)
+Description: NI Logos provides support for the network protocol that uses network-published shared variables.
+DisplayName: NI Logos
+DisplayVersion: 21.0.0
+Eula: eula-ni-standard
+Filename: ../../pool/ni-logos_21.0.0.49350-0+f198_windows_x64.nipkg
+Homepage: https://www.ni.com
+MD5sum: e08b18c5f5f6f15c25c24460fa76c2a6
+Maintainer: National Instruments <support@ni.com>
+OsRequires: >= 10
+OsSupport: WINDOWS_10_64BIT WINDOWS_SERVER_2016_64BIT WINDOWS_SERVER_2019_64BIT
+Package: ni-logos
+Plugin: wininst
+Priority: standard
+Provides: 5e4a4ce3-4d06-11d4-8b22-006008c16337 (=21.00.49350), ba8875a0-3767-46e7-b3de-09275f2716a0 (=21.00.49350)
+Replaces: 5e4a4ce3-4d06-11d4-8b22-006008c16337 (<<5.80.0)
+Section: Infrastructure
+Size: 11640578
+Version: 21.0.0.49350-0+f198
+
+Architecture: windows_all
+CompatibilityVersion: 190006
+Depends: ni-auth (>=19.0.0), ni-labview-system-state-publisher (>=19.0.0), ni-mdfsupport (>=19.0.0), ni-metauninstaller (>=19.0.0), ni-msiproperties (>=19.0.0), ni-msvcrt-2015 (>=14.1.5), ni-ssl-labview-2019-runtime-engine-x86-support (>=19.0.0)
+Description: Include this component when using the Web Server for stand-alone applications and shared libraries.
+DisplayName: NI LabVIEW 2019 Run-Time Engine Web Server
+DisplayVersion: 19.0.0
+Eula: eula-ni-standard
+Filename: ../../pool/ni-lv-web-server-labview-2019-runtime-engine-x86-support_19.0.0.49152-0+f0_windows_all.nipkg
+Homepage: http://www.ni.com
+MD5sum: bd1defe778d9211fed3fc3129027c941
+Maintainer: National Instruments <support@ni.com>
+OsSupport: WINDOWS_7_SP1_32BIT WINDOWS_7_SP1_64BIT WINDOWS_81_32BIT WINDOWS_81_64BIT WINDOWS_10_32BIT WINDOWS_10_64BIT WINDOWS_EMBEDDED_STANDARD_7_SP1 WINDOWS_SERVER_2008_R2_SP1_64BIT WINDOWS_SERVER_2012_R2_64BIT
+Package: ni-lv-web-server-labview-2019-runtime-engine-x86-support
+Plugin: wininst
+Priority: standard
+Provides: 0960380b-ea86-4e0c-8b57-14cd8ccf2c15 (=19.00.49152), ni-labview-web-server (=19.00.49152)
+Section: Infrastructure
+Size: 2072984
+UserVisible: no
+Version: 19.0.0.49152-0+f0
+
+Architecture: windows_all
+CompatibilityVersion: 200003
+Depends: ni-auth (>=20.5.1), ni-labview-system-state-publisher (>=20.0.0), ni-mdfsupport (>=19.5.0), ni-metauninstaller (>=19.5.0), ni-msiproperties (>=19.5.0), ni-msvcrt-2015 (>=14.1.5), ni-ssl-labview-2020-runtime-engine-x86-support (>=20.5.0)
+Description: Include this component when using the Web Server for stand-alone applications and shared libraries.
+DisplayName: NI LabVIEW 2020 SP1 Run-Time Engine Web Server
+DisplayVersion: 20.5.1
+Eula: eula-ni-standard
+Filename: ../../pool/ni-lv-web-server-labview-2020-runtime-engine-x86-support_20.5.1.49152-0+f0_windows_all.nipkg
+Homepage: http://www.ni.com
+MD5sum: a810f1a509900b4fa06293186e070849
+Maintainer: National Instruments <support@ni.com>
+OsSupport: WINDOWS_7_SP1_32BIT WINDOWS_7_SP1_64BIT WINDOWS_81_32BIT WINDOWS_81_64BIT WINDOWS_10_32BIT WINDOWS_10_64BIT WINDOWS_EMBEDDED_STANDARD_7_SP1 WINDOWS_SERVER_2008_R2_SP1_64BIT WINDOWS_SERVER_2012_R2_64BIT
+Package: ni-lv-web-server-labview-2020-runtime-engine-x86-support
+Plugin: wininst
+Priority: standard
+Provides: 0960380b-ea86-4e0c-8b57-14cd8ccf2c15 (=20.51.49152), ni-labview-web-server (=20.51.49152)
+Section: Infrastructure
+Size: 2482186
+UserVisible: no
+Version: 20.5.1.49152-0+f0
+
+Architecture: windows_x64
+CompatibilityVersion: 210000
+Depends: ni-auth (>=21.0.0), ni-labview-system-state-publisher (>=21.0.0), ni-labview-system-state-publisher (>=21.0.0), ni-mdfsupport (>=21.0.0), ni-metauninstaller (>=21.0.0), ni-msiproperties (>=21.0.0), ni-msvcrt-2015 (>=14.1.5), ni-ssl-labview-2021-runtime-engine-x86-support (>=21.0.0)
+Description: Include this component when using the Web Server for stand-alone applications and shared libraries.
+DisplayName: NI LabVIEW 2021 Run-Time Engine Web Server
+DisplayVersion: 21.0.0
+Eula: eula-ni-standard, eula-ni-standard
+Filename: ../../pool/ni-lv-web-server-labview-2021-runtime-engine-x86-support_21.0.0.49152-0+f0_windows_x64.nipkg
+Homepage: https://www.ni.com
+MD5sum: 873f08ac763382deffacbd5c9dbcee8c
+Maintainer: National Instruments <support@ni.com>
+OsRequires: >= 10
+OsSupport: WINDOWS_10_64BIT WINDOWS_SERVER_2016_64BIT WINDOWS_SERVER_2019_64BIT
+Package: ni-lv-web-server-labview-2021-runtime-engine-x86-support
+Plugin: wininst
+Priority: standard
+Provides: 0960380b-ea86-4e0c-8b57-14cd8ccf2c15 (=21.00.49152), ni-labview-web-server (=21.00.49152)
+Section: Infrastructure
+Size: 2451042
+UserVisible: no
+Version: 21.0.0.49152-0+f0
+
+Architecture: windows_x64
+CompatibilityVersion: 210000
+Conflicts: 3b17a55f-8dbb-42bf-a8bd-bdcb23f71460 (<<21.0.0)
+Depends: ni-mdfsupport (>=21.0.0), ni-metauninstaller (>=21.0.0), ni-msvcrt-2015 (>=14.1.5), ni-msvcrt-2015 (>=14.1.5)
+Description: Interface that allows interoperability between NI Software and MATLAB.
+DisplayName: NI MATLAB Interface
+DisplayVersion: 21.0.0
+Eula: eula-ni-standard
+Filename: ../../pool/ni-matlab-interface_21.0.0.49152-0+f0_windows_x64.nipkg
+Homepage: https://www.ni.com
+MD5sum: cd6d0c7550569a5fc3730282994c8ab4
+Maintainer: National Instruments <support@ni.com>
+OsRequires: >= 10
+OsSupport: WINDOWS_10_64BIT WINDOWS_SERVER_2016_64BIT WINDOWS_SERVER_2019_64BIT
+Package: ni-matlab-interface
+Plugin: wininst
+Priority: standard
+Provides: 3b17a55f-8dbb-42bf-a8bd-bdcb23f71460 (=21.00.49152), 57e141c5-9918-48f0-9c2b-f09c68b1bd82 (=21.00.49152)
+Replaces: 3b17a55f-8dbb-42bf-a8bd-bdcb23f71460 (<<21.0.0)
+Section: Infrastructure
+Size: 987648
+Version: 21.0.0.49152-0+f0
+
+Architecture: windows_x64
+CompatibilityVersion: 210300
+Conflicts: be400a3d-e9d6-48d9-af14-337722a11d40 (<<16.2.0)
+Depends: ni-euladepot (>=21.5.0), ni-metauninstaller (>=21.5.0)
+Description: This package installs the files necessary to support building deployments from NI's ADEs.
+DisplayName: NI ADE Deployment Support
+DisplayVersion: 21.5.0
+Filename: ../../pool/ni-mdfsupport_21.5.0.49152-0+f0_windows_x64.nipkg
+Homepage: https://www.ni.com
+MD5sum: dc4db88c118a31a936e5f5f80856de2b
+Maintainer: National Instruments <support@ni.com>
+OsRequires: >= 10
+OsSupport: WINDOWS_10_64BIT WINDOWS_SERVER_2016_64BIT WINDOWS_SERVER_2019_64BIT
+Package: ni-mdfsupport
+Plugin: wininst
+Priority: standard
+Provides: be400a3d-e9d6-48d9-af14-337722a11d40 (=21.50.49152)
+Replaces: be400a3d-e9d6-48d9-af14-337722a11d40 (<<16.2.0)
+Section: Infrastructure
+Size: 12474988
+Version: 21.5.0.49152-0+f0
+
+Architecture: windows_x64
+CompatibilityVersion: 210000
+Conflicts: 9607874b-4bb3-42cb-b450-a2f5ef60ba3b (<<17.0.0)
+Depends: ni-mdfsupport (>= 21.0.0), ni-metauninstaller (>= 21.0.0), ni-msiproperties (>= 21.0.0), ni-msvcrt-2015 (>= 14.1.5), ni-svcloc (>= 19.0.0)
+Description: Used by National Instruments components to advertise and discover Zeroconf devices and services.
+  NI mDNS Responder Service advertises and discovers Zeroconf devices and services. If this service is stopped, advertisement and discovery of devices and services will no longer function. If this service is disabled, any services that explicitly depend on it will fail to start.
+DisplayName: NI mDNS Responder Service
+DisplayVersion: 21.0.0
+Filename: ../../pool/ni-mdnsresponder_21.0.0.49727-0+f575_windows_x64.nipkg
+Homepage: https://www.ni.com
+MD5sum: 4184fc776f07fb9e187bedee2310d165
+Maintainer: National Instruments <support@ni.com>
+OsRequires: >= 10
+OsSupport: WINDOWS_10_64BIT WINDOWS_SERVER_2016_64BIT WINDOWS_SERVER_2019_64BIT
+Package: ni-mdnsresponder
+Plugin: wininst
+Priority: standard
+Provides: 62a55332-6b77-48c2-ba40-ad1e9694b2b3 (=21.00.49727), 9607874b-4bb3-42cb-b450-a2f5ef60ba3b (=21.00.49727)
+Replaces: 9607874b-4bb3-42cb-b450-a2f5ef60ba3b (<<17.0.0)
+Section: Infrastructure
+Size: 1114266
+Version: 21.0.0.49727-0+f575
+
+Architecture: windows_all
+CompatibilityVersion: 190006
+Conflicts: 5d6378b2-b24d-4ad6-5da2-faefdb81a250 (<<13.0.16384)
+Depends: ni-mdfsupport (>=19.0.0), ni-metauninstaller (>=19.0.0), ni-msvcrt-2015 (>=14.1.5)
+Description: Mesa is an open-source implementation of the OpenGL specification that is a system for rendering interactive 3D graphics.
+DisplayName: NI Mesa
+DisplayVersion: 17.1.1
+Eula: eula-ni-standard
+Filename: ../../pool/ni-mesa_17.1.1.49152-0+f0_windows_all.nipkg
+Homepage: http://www.ni.com
+MD5sum: c01035f7ecbca9719de6411970ae307a
+Maintainer: National Instruments <support@ni.com>
+OsSupport: WINDOWS_7_SP1_32BIT WINDOWS_7_SP1_64BIT WINDOWS_81_32BIT WINDOWS_81_64BIT WINDOWS_10_32BIT WINDOWS_10_64BIT WINDOWS_EMBEDDED_STANDARD_7_SP1 WINDOWS_SERVER_2008_R2_SP1_64BIT WINDOWS_SERVER_2012_R2_64BIT
+Package: ni-mesa
+Plugin: wininst
+Priority: standard
+Provides: 5d6378b2-b24d-4ad6-5da2-faefdb81a250 (=17.11.49152), ead464c4-8204-47d3-96e9-b7f2c42bca6a (=17.11.49152)
+Replaces: 5d6378b2-b24d-4ad6-5da2-faefdb81a250 (<<13.0.16384)
+Section: Infrastructure
+Size: 2429496
+Version: 17.1.1.49152-0+f0
+
+Architecture: windows_x64
+CompatibilityVersion: 200702
+Conflicts: bf53d0a8-30a2-4a7d-acb7-698fcb601295 (<<16.2.0)
+Depends: ni-mdfsupport (>=21.0.0), ni-metauninstaller (>=21.0.0), ni-msdotnet4x (>=4.6.3), ni-msvcrt-2015 (>=14.1.5)
+Description: This package provides support for creating Suited installers.
+DisplayName: NI Suite Installer Support
+DisplayVersion: 21.0.0
+Filename: ../../pool/ni-metasuite_21.0.0.49152-0+f0_windows_x64.nipkg
+Homepage: https://www.ni.com
+MD5sum: e5ef0b4947bfb06112738332a4320647
+Maintainer: National Instruments <support@ni.com>
+OsRequires: >= 10
+OsSupport: WINDOWS_10_64BIT WINDOWS_SERVER_2016_64BIT WINDOWS_SERVER_2019_64BIT
+Package: ni-metasuite
+Plugin: wininst
+Priority: standard
+Provides: bf53d0a8-30a2-4a7d-acb7-698fcb601295 (=21.00.49152)
+Replaces: bf53d0a8-30a2-4a7d-acb7-698fcb601295 (<<16.2.0)
+Section: Infrastructure
+Size: 9669460
+Version: 21.0.0.49152-0+f0
+
+Architecture: windows_x64
+CompatibilityVersion: 210300
+Conflicts: 5b0cb826-e499-4e6b-94f0-75b6327ed934 (<<16.2.0)
+Depends: ni-securityupdate-kb67l8lcqw-killbits (>=2.1.0)
+Description: This package provides support for uninstallation of NI products.
+DisplayName: NI Uninstaller
+DisplayVersion: 21.5.0
+Filename: ../../pool/ni-metauninstaller_21.5.0.49152-0+f0_windows_x64.nipkg
+Homepage: https://www.ni.com
+MD5sum: c80c51250f84b7298acec411bbf58c98
+Maintainer: National Instruments <support@ni.com>
+OsRequires: >= 10
+OsSupport: WINDOWS_10_64BIT WINDOWS_SERVER_2016_64BIT WINDOWS_SERVER_2019_64BIT
+Package: ni-metauninstaller
+Plugin: wininst
+Priority: standard
+Provides: 5b0cb826-e499-4e6b-94f0-75b6327ed934 (=21.50.49152)
+Replaces: 5b0cb826-e499-4e6b-94f0-75b6327ed934 (<<16.2.0)
+Section: Infrastructure
+Size: 2906408
+Version: 21.5.0.49152-0+f0
+
+Architecture: windows_all
+CompatibilityVersion: 190006
+Depends: ni-mdfsupport (>=19.0.0), ni-metauninstaller (>=19.0.0)
+Description: Math Kernel Library (MKL) is an Intel software package that provides optimized linear algebra routines.
+DisplayName: Math Kernel Libraries
+DisplayVersion: 17.0.1
+Eula: eula-ni-standard
+Filename: ../../pool/ni-mkl-2017_17.0.1.49152-0+f0_windows_all.nipkg
+Homepage: http://www.ni.com
+MD5sum: d41a831edd27f342e8e5552eed8f3465
+Maintainer: National Instruments <support@ni.com>
+OsSupport: WINDOWS_7_SP1_32BIT WINDOWS_7_SP1_64BIT WINDOWS_81_32BIT WINDOWS_81_64BIT WINDOWS_10_32BIT WINDOWS_10_64BIT WINDOWS_EMBEDDED_STANDARD_7_SP1 WINDOWS_SERVER_2008_R2_SP1_64BIT WINDOWS_SERVER_2012_R2_64BIT
+Package: ni-mkl-2017
+Plugin: wininst
+Priority: standard
+Provides: 699c1ac5-2cf2-4745-9674-b19536eba8a3 (=17.01.49152), bc96e807-edd4-4cf4-a79c-f62b6f690a44 (=17.01.49152)
+Section: Infrastructure
+Size: 11094588
+Version: 17.0.1.49152-0+f0
+
+Architecture: windows_all
+CompatibilityVersion: 190006
+Depends: ni-mdfsupport (>=19.0.0), ni-metauninstaller (>=19.0.0)
+Description: Math Kernel Library (MKL) is an Intel software package that provides optimized linear algebra routines.
+DisplayName: Math Kernel Libraries
+DisplayVersion: 18.0.1
+Eula: eula-ni-standard
+Filename: ../../pool/ni-mkl-2018_18.0.1.49152-0+f0_windows_all.nipkg
+Homepage: http://www.ni.com
+MD5sum: 7cc8444ca49f0ddb7100ba344028c3b1
+Maintainer: National Instruments <support@ni.com>
+OsSupport: WINDOWS_7_SP1_32BIT WINDOWS_7_SP1_64BIT WINDOWS_81_32BIT WINDOWS_81_64BIT WINDOWS_10_32BIT WINDOWS_10_64BIT WINDOWS_EMBEDDED_STANDARD_7_SP1 WINDOWS_SERVER_2008_R2_SP1_64BIT WINDOWS_SERVER_2012_R2_64BIT
+Package: ni-mkl-2018
+Plugin: wininst
+Priority: standard
+Provides: 33a780b9-8bde-4a3a-9672-24778efbefc4 (=18.01.49152), c8224d48-4ece-4cc5-b0a4-365e776ea5ca (=18.01.49152)
+Section: Infrastructure
+Size: 11094578
+Version: 18.0.1.49152-0+f0
+
+Architecture: windows_all
+CompatibilityVersion: 200003
+Depends: ni-mdfsupport (>=20.0.0), ni-metauninstaller (>=20.0.0)
+Description: Math Kernel Library (MKL) is an Intel software package that provides optimized linear algebra routines.
+DisplayName: Math Kernel Libraries
+DisplayVersion: 20.0.0
+Eula: eula-ni-standard
+Filename: ../../pool/ni-mkl-2020_20.0.0.49152-0+f0_windows_all.nipkg
+Homepage: http://www.ni.com
+MD5sum: 60efb9d2a91a22320ce582b5c2778e99
+Maintainer: National Instruments <support@ni.com>
+OsSupport: WINDOWS_7_SP1_32BIT WINDOWS_7_SP1_64BIT WINDOWS_81_32BIT WINDOWS_81_64BIT WINDOWS_10_32BIT WINDOWS_10_64BIT WINDOWS_EMBEDDED_STANDARD_7_SP1 WINDOWS_SERVER_2008_R2_SP1_64BIT WINDOWS_SERVER_2012_R2_64BIT
+Package: ni-mkl-2020
+Plugin: wininst
+Priority: standard
+Provides: 55f801dd-3c93-455b-a25d-3b4d23bfc8f5 (=20.00.49152), 9872bbba-fb96-42a4-80a2-9605ac5cbcf1 (=20.00.49152)
+Section: Infrastructure
+Size: 14319046
+Version: 20.0.0.49152-0+f0
+
+Architecture: windows_all
+CompatibilityVersion: 190006
+Conflicts: ba13bc17-0a77-40fb-8066-58b4266b153c (<<4.61.50000)
+Depends: ni-mdfsupport (>=19.0.0), ni-metauninstaller (>=19.0.0), ni-msiproperties (>=19.0.0)
+Description: NI installer for Microsoft's .NET Framework 4.6.2
+DisplayName: Microsoft .NET Framework 4.6.2
+DisplayVersion: 4.6.2
+Filename: ../../pool/ni-msdotnet4x_4.6.3.49152-0+f0_windows_all.nipkg
+Homepage: http://www.ni.com
+MD5sum: 8d9e04bdcdc5ff7a0e0f92db5653aa98
+Maintainer: National Instruments <support@ni.com>
+OsSupport: WINDOWS_7_SP1_32BIT WINDOWS_7_SP1_64BIT WINDOWS_81_32BIT WINDOWS_81_64BIT WINDOWS_10_32BIT WINDOWS_10_64BIT WINDOWS_EMBEDDED_STANDARD_7_SP1 WINDOWS_SERVER_2008_R2_SP1_64BIT WINDOWS_SERVER_2012_R2_64BIT
+Package: ni-msdotnet4x
+Plugin: wininst
+Priority: standard
+Provides: ba13bc17-0a77-40fb-8066-58b4266b153c (=4.63.49152)
+Replaces: ba13bc17-0a77-40fb-8066-58b4266b153c (<<4.61.50000)
+Section: Infrastructure
+Size: 62617016
+Version: 4.6.3.49152-0+f0
+
+Architecture: windows_x64
+CompatibilityVersion: 210300
+Conflicts: 96948150-f652-44e0-8f93-2376cb68e00f (<<16.9.9)
+Depends: ni-mdfsupport (>=21.5.0), ni-metauninstaller (>=21.5.0)
+Description: Installs the files necessary for Package Manager to resolve NI properties (e.g. the NI Program Files installation directory) and evaluate MSI conditions.
+DisplayName: NI MSI Properties
+DisplayVersion: 21.5.0
+Filename: ../../pool/ni-msiproperties_21.5.0.49152-0+f0_windows_x64.nipkg
+Homepage: https://www.ni.com
+MD5sum: 4dc65086a89dad3441206aa7008aff7d
+Maintainer: National Instruments <support@ni.com>
+OsRequires: >= 10
+OsSupport: WINDOWS_10_64BIT WINDOWS_SERVER_2016_64BIT WINDOWS_SERVER_2019_64BIT
+Package: ni-msiproperties
+Plugin: wininst
+Priority: standard
+Provides: 96948150-f652-44e0-8f93-2376cb68e00f (=21.50.49152), f17f2f80-5b15-499d-aa54-9c80fe178acb (=21.50.49152)
+Replaces: 96948150-f652-44e0-8f93-2376cb68e00f (<<16.9.9)
+Section: Infrastructure
+Size: 1650140
+Version: 21.5.0.49152-0+f0
+
+Architecture: windows_all
+CompatibilityVersion: 190006
+Conflicts: 578b3422-eae6-428c-a17a-7549578fe2c1 (<<8.60.0)
+Depends: ni-mdfsupport (>=19.0.0), ni-metauninstaller (>=19.0.0), ni-msiproperties (>=19.0.0), ni-msvcrt-2015 (>=14.1.5)
+Description: The National Instruments Measurement Studio 3DGraph ActiveX control.
+DisplayName: NI Measurement Studio ComponentWorks 3D Graph
+DisplayVersion: 8.7.5
+Eula: eula-ni-standard
+Filename: ../../pool/ni-mstudio-cw3dgraph_8.7.5.49152-0+f0_windows_all.nipkg
+Homepage: http://www.ni.com
+MD5sum: 64f808b7b65c633ded39d77ff2516b69
+Maintainer: National Instruments <support@ni.com>
+OsSupport: WINDOWS_7_SP1_32BIT WINDOWS_7_SP1_64BIT WINDOWS_81_32BIT WINDOWS_81_64BIT WINDOWS_10_32BIT WINDOWS_10_64BIT WINDOWS_EMBEDDED_STANDARD_7_SP1 WINDOWS_SERVER_2008_R2_SP1_64BIT WINDOWS_SERVER_2012_R2_64BIT
+Package: ni-mstudio-cw3dgraph
+Plugin: wininst
+Priority: standard
+Provides: 578b3422-eae6-428c-a17a-7549578fe2c1
+Replaces: 578b3422-eae6-428c-a17a-7549578fe2c1 (<<8.60.0)
+Section: Infrastructure
+Size: 2873970
+Tags: National Instruments, Component Works, 3D Graph
+Version: 8.7.5.49152-0+f0
+
+Architecture: windows_all
+CompatibilityVersion: 190006
+Conflicts: efba6f9e-f934-4bd7-ac51-60cca480489c (<<10.0.900)
+Depends: ni-mdfsupport (>=19.0.0), ni-metauninstaller (>=19.0.0)
+Description: NI installer for Microsoft's Visual C++ 2010 Runtime support (SP1)
+DisplayName: Microsoft Visual C++ 2010 Run-Time
+DisplayVersion: 10.0.40219.1
+Filename: ../../pool/ni-msvcrt-2010_10.1.1.49152-0+f0_windows_all.nipkg
+Homepage: http://www.ni.com
+MD5sum: 4b257cea2d9aeca0b727baae3d4d2ca4
+Maintainer: National Instruments <support@ni.com>
+OsSupport: WINDOWS_7_SP1_32BIT WINDOWS_7_SP1_64BIT WINDOWS_81_32BIT WINDOWS_81_64BIT WINDOWS_10_32BIT WINDOWS_10_64BIT WINDOWS_EMBEDDED_STANDARD_7_SP1 WINDOWS_SERVER_2008_R2_SP1_64BIT WINDOWS_SERVER_2012_R2_64BIT
+Package: ni-msvcrt-2010
+Plugin: wininst
+Priority: standard
+Provides: ce498322-c378-4658-ba31-2e893787de28 (=10.11.49152), efba6f9e-f934-4bd7-ac51-60cca480489c (=10.11.49152)
+Replaces: efba6f9e-f934-4bd7-ac51-60cca480489c (<<10.0.900)
+Section: Infrastructure
+Size: 12437016
+Version: 10.1.1.49152-0+f0
+
+Architecture: windows_all
+CompatibilityVersion: 190006
+Conflicts: d42e7bae-6589-4570-b6a3-3e28889392e7 (<<14.0.40000)
+Depends: ni-mdfsupport (>=19.0.0), ni-metauninstaller (>=19.0.0), ni-msiproperties (>=19.0.0)
+Description: NI installer for Microsoft Visual C++ 2015 Run-Time Update 3 (includes KB3118401)
+DisplayName: Microsoft Visual C++ 2015 Run-Time
+DisplayVersion: 14.1.4
+Filename: ../../pool/ni-msvcrt-2015_14.1.5.49152-0+f0_windows_all.nipkg
+Homepage: http://www.ni.com
+MD5sum: 8e4b745a05fb8915820ca2c63fca0030
+Maintainer: National Instruments <support@ni.com>
+OsSupport: WINDOWS_7_SP1_32BIT WINDOWS_7_SP1_64BIT WINDOWS_81_32BIT WINDOWS_81_64BIT WINDOWS_10_32BIT WINDOWS_10_64BIT WINDOWS_EMBEDDED_STANDARD_7_SP1 WINDOWS_SERVER_2008_R2_SP1_64BIT WINDOWS_SERVER_2012_R2_64BIT
+Package: ni-msvcrt-2015
+Plugin: wininst
+Priority: standard
+Provides: ca17c748-8b26-41c5-8e58-bcab06909bfc (=14.15.49152), d42e7bae-6589-4570-b6a3-3e28889392e7 (=14.15.49152), ed7e4769-125a-49ec-8865-16560163b673 (=14.15.49152)
+Replaces: d42e7bae-6589-4570-b6a3-3e28889392e7 (<<14.0.40000)
+Section: Infrastructure
+Size: 32770284
+Version: 14.1.5.49152-0+f0
+
+Architecture: windows_x64
+CompatibilityVersion: 210000
+Conflicts: 93d293ae-0aa2-4b2c-bdc6-5999dc7a50e6 (<<17.0.0)
+Depends: ni-mdfsupport (>= 21.0.0), ni-mdnsresponder (>= 21.0.0), ni-metauninstaller (>= 21.0.0), ni-msvcrt-2015 (>= 14.1.5), ni-sysapi (>=21.0.0)
+Description: Provides network device and service discovery for NI services and applications.
+  NI Network Discovery Service discovers NI Zeroconf devices and services. If this service is stopped components that rely on discovering NI Zeroconf devices and services will no longer function. If this service is disabled any services that explicitly depend on it will fail to start.
+DisplayName: NI Network Discovery Service
+DisplayVersion: 21.0.0
+Eula: eula-ni-standard
+Filename: ../../pool/ni-networkdiscoverysvc_21.0.0.49152-0+f0_windows_x64.nipkg
+Homepage: https://www.ni.com
+MD5sum: 94ba694ec6a3c351fb15823477e79f91
+Maintainer: National Instruments <support@ni.com>
+OsRequires: >= 10
+OsSupport: WINDOWS_10_64BIT WINDOWS_SERVER_2016_64BIT WINDOWS_SERVER_2019_64BIT
+Package: ni-networkdiscoverysvc
+Plugin: wininst
+Priority: standard
+Provides: 91f4bf2f-37ea-4861-8b46-4327ad8f7565 (=21.00.49152), 93d293ae-0aa2-4b2c-bdc6-5999dc7a50e6 (=21.00.49152)
+Replaces: 93d293ae-0aa2-4b2c-bdc6-5999dc7a50e6 (<<17.0.0)
+Section: Infrastructure
+Size: 1095542
+Version: 21.0.0.49152-0+f0
+
+Architecture: windows_all
+CompatibilityVersion: 190006
+Conflicts: 7a1377ca-3a2c-4126-9703-0dc509d50c5b (<<5.61.0)
+Depends: ni-mdfsupport (>=19.0.0), ni-metauninstaller (>=19.0.0)
+Description: OPCEnum application runs locally on the serving computer and exposes available OPC servers to the remotely connecting clients.
+DisplayName: OPCEnum
+DisplayVersion: 5.6.3
+Eula: eula-ni-standard
+Filename: ../../pool/ni-opcenum_5.6.3.49152-0+f0_windows_all.nipkg
+Homepage: http://www.ni.com
+MD5sum: 5afd3b0932b142d9caa508df4dc4d142
+Maintainer: National Instruments <support@ni.com>
+OsSupport: WINDOWS_7_SP1_32BIT WINDOWS_7_SP1_64BIT WINDOWS_81_32BIT WINDOWS_81_64BIT WINDOWS_10_32BIT WINDOWS_10_64BIT WINDOWS_EMBEDDED_STANDARD_7_SP1 WINDOWS_SERVER_2008_R2_SP1_64BIT WINDOWS_SERVER_2012_R2_64BIT
+Package: ni-opcenum
+Plugin: wininst
+Priority: standard
+Provides: 54e60028-6cdc-3cb1-381f-4e51dd8ccd4e (=5.63.49152), 7a1377ca-3a2c-4126-9703-0dc509d50c5b (=5.63.49152)
+Replaces: 7a1377ca-3a2c-4126-9703-0dc509d50c5b (<<5.61.0)
+Section: Infrastructure
+Size: 1575630
+Version: 5.6.3.49152-0+f0
+
+Architecture: windows_x64
+CompatibilityVersion: 210000
+Conflicts: 8368f4a0-c37a-4787-bb7b-754fd92719a7 (<<17.0.0)
+Depends: ni-error-reporting-interface (>= 20.1.0), ni-mdfsupport (>= 21.0.0), ni-metauninstaller (>= 21.0.0), ni-msvcrt-2015 (>= 14.1.5)
+Description: Used by National Instruments components to archive and deploy configuration settings.
+DisplayName: NI Portable Configuration
+DisplayVersion: 21.0.0
+Eula: eula-ni-standard
+Filename: ../../pool/ni-portable-configuration_21.0.0.49152-0+f0_windows_x64.nipkg
+Homepage: https://www.ni.com
+MD5sum: 82ca86276386f00a035ab059a58dda79
+Maintainer: National Instruments <support@ni.com>
+OsRequires: >= 10
+OsSupport: WINDOWS_10_64BIT WINDOWS_SERVER_2016_64BIT WINDOWS_SERVER_2019_64BIT
+Package: ni-portable-configuration
+Plugin: wininst
+Priority: standard
+Provides: 8368f4a0-c37a-4787-bb7b-754fd92719a7 (=21.00.49152), 9e6f8810-2b42-4be7-b2a9-ff923f67d93a (=21.00.49152)
+Replaces: 8368f4a0-c37a-4787-bb7b-754fd92719a7 (<<17.0.0)
+Section: Infrastructure
+Size: 2221906
+Version: 21.0.0.49152-0+f0
+
+Architecture: windows_all
+CompatibilityVersion: 200601
+Conflicts: 6e4476b9-287f-477a-9124-871bb6eec511 (<<18.0.0)
+Depends: ni-mdfsupport (>=20.6.0), ni-metauninstaller (>=20.6.0)
+Description: NI Python Interface is a common Python interface for all NI products.
+DisplayName: NI Python Interface
+DisplayVersion: 21.0.0
+Eula: eula-ni-standard
+Filename: ../../pool/ni-python-interface_21.0.0.49152-0+f0_windows_all.nipkg
+Homepage: https://www.ni.com
+MD5sum: 124d22540213107941c35b021d45bfea
+Maintainer: National Instruments <support@ni.com>
+OsSupport: WINDOWS_7_SP1_32BIT WINDOWS_7_SP1_64BIT WINDOWS_81_32BIT WINDOWS_81_64BIT WINDOWS_10_32BIT WINDOWS_10_64BIT WINDOWS_EMBEDDED_STANDARD_7_SP1 WINDOWS_SERVER_2008_R2_SP1_64BIT WINDOWS_SERVER_2012_R2_64BIT WINDOWS_SERVER_2016_64BIT
+Package: ni-python-interface
+Plugin: wininst
+Priority: standard
+Provides: 2b0755d6-25ef-48be-9747-79173fbd8a27 (=21.00.49152), 6e4476b9-287f-477a-9124-871bb6eec511 (=21.00.49152)
+Replaces: 6e4476b9-287f-477a-9124-871bb6eec511 (<<18.0.0)
+Section: Infrastructure
+Size: 1060760
+Version: 21.0.0.49152-0+f0
+
+Architecture: windows_x64
+CompatibilityVersion: 210000
+Conflicts: da6bbf6f-0910-4860-ad46-f14dadf645e9 (<<17.0.0)
+Depends: ni-curl (>= 21.0.0), ni-error-reporting-interface (>= 20.1.0), ni-mdfsupport (>= 21.0.0), ni-metauninstaller (>= 21.0.0), ni-msiproperties (>= 21.0.0), ni-msvcrt-2015 (>= 14.1.5), ni-sysapi (>= 21.0.0), ni-wsrepl (>= 20.0.0)
+Description: Provides remote configuration of NI Real-Time targets.
+DisplayName: NI Remote Configuration
+DisplayVersion: 21.0.0
+Eula: eula-ni-standard
+Filename: ../../pool/ni-remote-configuration_21.0.0.49152-0+f0_windows_x64.nipkg
+Homepage: https://www.ni.com
+MD5sum: c5d0df1b5f51e9c41784e87b863d970f
+Maintainer: National Instruments <support@ni.com>
+OsRequires: >= 10
+OsSupport: WINDOWS_10_64BIT WINDOWS_SERVER_2016_64BIT WINDOWS_SERVER_2019_64BIT
+Package: ni-remote-configuration
+Plugin: wininst
+Priority: standard
+Provides: 7f1ad3c9-7c3f-4f28-9361-f009c4708b20 (=21.00.49152), da6bbf6f-0910-4860-ad46-f14dadf645e9 (=21.00.49152)
+Replaces: da6bbf6f-0910-4860-ad46-f14dadf645e9 (<<17.0.0)
+Section: Infrastructure
+Size: 2549228
+Version: 21.0.0.49152-0+f0
+
+Architecture: windows_x64
+CompatibilityVersion: 210000
+Conflicts: af18ea03-b657-11d4-ab19-00104b6ce75a (<<17.0.0)
+Depends: ni-mdfsupport (>= 21.0.0), ni-metauninstaller (>= 21.0.0), ni-msvcrt-2015 (>= 14.1.4)
+Description: NI Remote Procedure Call library (infrastructure)
+  Provides rpc services to NI software.
+DisplayName: NI-RPC (infrastructure)
+DisplayVersion: 21.0.0
+Eula: eula-ni-standard
+Filename: ../../pool/ni-rpc_21.0.0.49440-0+f288_windows_x64.nipkg
+Homepage: https://www.ni.com
+MD5sum: 3644f5de6cc8d1d114abfe6c92727f9a
+Maintainer: National Instruments <support@ni.com>
+OsRequires: >= 10
+OsSupport: WINDOWS_10_64BIT WINDOWS_SERVER_2016_64BIT WINDOWS_SERVER_2019_64BIT
+Package: ni-rpc
+Plugin: wininst
+Priority: standard
+Provides: aba7d958-8704-4395-9f06-a6f3ac59e948 (=21.00.49440), af18ea03-b657-11d4-ab19-00104b6ce75a (=21.00.49440)
+Replaces: af18ea03-b657-11d4-ab19-00104b6ce75a (<<17.0.0)
+Section: Infrastructure
+Size: 894464
+Version: 21.0.0.49440-0+f288
+
+Architecture: windows_all
+CompatibilityVersion: 190006
+Conflicts: c91aa89d-93fd-4194-a4d3-0c2f44196890 (<<2.0.0)
+Description: This is an infrastructure package for NI Software.
+DisplayName: NI Security Update (KB 67L8LCQW)
+DisplayVersion: 2.1.0
+Eula: eula-ni-standard
+Filename: ../../pool/ni-securityupdate-kb67l8lcqw-killbits_2.1.0.49152-0+f0_windows_all.nipkg
+Homepage: http://www.ni.com
+MD5sum: c443aead28ded98fc0dac8c11fd903ea
+Maintainer: National Instruments <support@ni.com>
+OsSupport: WINDOWS_7_SP1_32BIT WINDOWS_7_SP1_64BIT WINDOWS_81_32BIT WINDOWS_81_64BIT WINDOWS_10_32BIT WINDOWS_10_64BIT WINDOWS_EMBEDDED_STANDARD_7_SP1 WINDOWS_SERVER_2008_R2_SP1_64BIT WINDOWS_SERVER_2012_R2_64BIT
+Package: ni-securityupdate-kb67l8lcqw-killbits
+Plugin: wininst
+Priority: standard
+Provides: 1d29f576-dd70-4519-9e7d-08e895f409a4 (=2.10.49152), c91aa89d-93fd-4194-a4d3-0c2f44196890 (=2.10.49152)
+Replaces: c91aa89d-93fd-4194-a4d3-0c2f44196890 (<<2.0.0)
+Section: Infrastructure
+Size: 874922
+Tags: KillBits, Security Update 2013
+Version: 2.1.0.49152-0+f0
+
+Architecture: windows_all
+CompatibilityVersion: 190006
+Depends: ni-mdfsupport (>=19.0.0), ni-metauninstaller (>=19.0.0), ni-msiproperties (>=19.0.0), ni-msvcrt-2015 (>=14.1.5), ni-ssl-support (>=19.0.0)
+Description: Installs LabVIEW 2019 runtime support files for SSL technologies.
+DisplayName: NI SSL LabVIEW RTE 2019 Support
+DisplayVersion: 19.0.0
+Eula: eula-ni-standard
+Filename: ../../pool/ni-ssl-labview-2019-runtime-engine-x86-support_19.0.0.49152-0+f0_windows_all.nipkg
+Homepage: http://www.ni.com
+MD5sum: 2417bf09357d8acb7691f3aa5e2a66c6
+Maintainer: National Instruments <support@ni.com>
+OsSupport: WINDOWS_7_SP1_32BIT WINDOWS_7_SP1_64BIT WINDOWS_81_32BIT WINDOWS_81_64BIT WINDOWS_10_32BIT WINDOWS_10_64BIT WINDOWS_EMBEDDED_STANDARD_7_SP1 WINDOWS_SERVER_2008_R2_SP1_64BIT WINDOWS_SERVER_2012_R2_64BIT
+Package: ni-ssl-labview-2019-runtime-engine-x86-support
+Plugin: wininst
+Priority: standard
+Provides: 1e1b28fb-53b7-448a-9104-0b9e4f0113f7 (=19.00.49152)
+Section: Infrastructure
+Size: 475762
+UserVisible: no
+Version: 19.0.0.49152-0+f0
+
+Architecture: windows_all
+CompatibilityVersion: 200003
+Depends: ni-mdfsupport (>=19.5.0), ni-metauninstaller (>=19.5.0), ni-msiproperties (>=19.5.0), ni-msvcrt-2015 (>=14.1.5), ni-ssl-support (>=20.0.0)
+Description: Installs LabVIEW 2020 SP1 runtime support files for SSL technologies.
+DisplayName: NI SSL LabVIEW RTE 2020 SP1 Support
+DisplayVersion: 20.5.0
+Eula: eula-ni-standard
+Filename: ../../pool/ni-ssl-labview-2020-runtime-engine-x86-support_20.5.0.49152-0+f0_windows_all.nipkg
+Homepage: http://www.ni.com
+MD5sum: a0168787ab3d969dbce6670cf3844ed2
+Maintainer: National Instruments <support@ni.com>
+OsSupport: WINDOWS_7_SP1_32BIT WINDOWS_7_SP1_64BIT WINDOWS_81_32BIT WINDOWS_81_64BIT WINDOWS_10_32BIT WINDOWS_10_64BIT WINDOWS_EMBEDDED_STANDARD_7_SP1 WINDOWS_SERVER_2008_R2_SP1_64BIT WINDOWS_SERVER_2012_R2_64BIT
+Package: ni-ssl-labview-2020-runtime-engine-x86-support
+Plugin: wininst
+Priority: standard
+Provides: 09d7a7d4-088b-4e1f-b10d-0ef6bf95d757 (=20.50.49152)
+Section: Infrastructure
+Size: 466958
+UserVisible: no
+Version: 20.5.0.49152-0+f0
+
+Architecture: windows_x64
+CompatibilityVersion: 210000
+Depends: ni-mdfsupport (>=21.0.0), ni-metauninstaller (>=21.0.0), ni-msiproperties (>=21.0.0), ni-msvcrt-2015 (>=14.1.5), ni-ssl-support (>=20.5.1)
+Description: Installs LabVIEW 2021 runtime support files for SSL technologies.
+DisplayName: NI SSL LabVIEW RTE 2021 Support
+DisplayVersion: 21.0.0
+Eula: eula-ni-standard, eula-ni-standard
+Filename: ../../pool/ni-ssl-labview-2021-runtime-engine-x86-support_21.0.0.49152-0+f0_windows_x64.nipkg
+Homepage: https://www.ni.com
+MD5sum: 50196bbdd799997b36091b3e2dbe72a5
+Maintainer: National Instruments <support@ni.com>
+OsRequires: >= 10
+OsSupport: WINDOWS_10_64BIT WINDOWS_SERVER_2016_64BIT WINDOWS_SERVER_2019_64BIT
+Package: ni-ssl-labview-2021-runtime-engine-x86-support
+Plugin: wininst
+Priority: standard
+Provides: 69aaa42a-1f24-37b2-8deb-89b96d8d5c30 (=21.00.49152)
+Section: Infrastructure
+Size: 467632
+UserVisible: no
+Version: 21.0.0.49152-0+f0
+
+Architecture: windows_all
+CompatibilityVersion: 200501
+Conflicts: 65409fda-16de-4703-96d1-d7def33b60ed (<<16.0.16384)
+Depends: ni-mdfsupport (>=20.5.0), ni-metauninstaller (>=20.5.0), ni-msvcrt-2015 (>=14.1.5)
+Description: NI SSL Support helps you enable Secure Sockets Layer (SSL) encryption on the Web Server.
+DisplayName: NI SSL Support
+DisplayVersion: 20.5.1
+Eula: eula-ni-standard
+Filename: ../../pool/ni-ssl-support_20.5.1.49152-0+f0_windows_all.nipkg
+Homepage: http://www.ni.com
+MD5sum: 651c1f78352b46e953e9a08ed5a06ec0
+Maintainer: National Instruments <support@ni.com>
+OsSupport: WINDOWS_7_SP1_32BIT WINDOWS_7_SP1_64BIT WINDOWS_81_32BIT WINDOWS_81_64BIT WINDOWS_10_32BIT WINDOWS_10_64BIT WINDOWS_EMBEDDED_STANDARD_7_SP1 WINDOWS_SERVER_2008_R2_SP1_64BIT WINDOWS_SERVER_2012_R2_64BIT WINDOWS_SERVER_2016_64BIT
+Package: ni-ssl-support
+Plugin: wininst
+Priority: standard
+Provides: 65409fda-16de-4703-96d1-d7def33b60ed (=20.51.49152), e8a4850c-5fda-4c58-be1d-68dca120d0bb (=20.51.49152)
+Replaces: 65409fda-16de-4703-96d1-d7def33b60ed (<<16.0.16384)
+Section: Infrastructure
+Size: 3390928
+Version: 20.5.1.49152-0+f0
+
+Architecture: windows_x64
+CompatibilityVersion: 210000
+Conflicts: b235b862-6a92-4a04-a8b2-6d71f777de67 (<<16.99.65535)
+Depends: ni-mdfsupport (>=21.0.0), ni-metauninstaller (>=21.0.0), ni-msiproperties (>=21.0.0), ni-msvcrt-2015 (>=14.1.5)
+Description: NI Service Locator 2021
+  The NI Service Locator facilitates communication between National Instruments support programs and services that use local, dynamic TCP ports to communicate with each other.
+DisplayName: NI Service Locator
+DisplayVersion: 21.0.0
+Eula: eula-ni-standard, eula-ni-standard
+Filename: ../../pool/ni-svcloc_21.0.0.49152-0+f0_windows_x64.nipkg
+Homepage: https://www.ni.com
+MD5sum: 13dc7592428d60e5999f490d98850025
+Maintainer: National Instruments <support@ni.com>
+OsRequires: >= 10
+OsSupport: WINDOWS_10_64BIT WINDOWS_SERVER_2016_64BIT WINDOWS_SERVER_2019_64BIT
+Package: ni-svcloc
+Plugin: wininst
+Priority: standard
+Provides: b235b862-6a92-4a04-a8b2-6d71f777de67 (=21.00.49152)
+Replaces: b235b862-6a92-4a04-a8b2-6d71f777de67 (<<16.99.65535)
+Section: Infrastructure
+Size: 1081654
+UserVisible: no
+Version: 21.0.0.49152-0+f0
+
+Architecture: windows_x64
+CompatibilityVersion: 210000
+Conflicts: 98ae360d-a9e4-48e2-9ab0-c1e1a7200cad (<<17.0.0)
+Depends: ni-curl (>= 21.0.0), ni-error-reporting-interface (>= 20.1.0), ni-mdfsupport (>= 21.0.0), ni-metauninstaller (>= 21.0.0), ni-msvcrt-2015 (>= 14.1.5), ni-rpc (>= 21.0.0)
+Description: Provides an internal interface for enumerating and configuring devices.
+DisplayName: NI System API Framework
+DisplayVersion: 21.0.0
+Eula: eula-ni-standard
+Filename: ../../pool/ni-sysapi_21.0.0.49153-0+f1_windows_x64.nipkg
+Homepage: https://www.ni.com
+MD5sum: 12fbc53ba8f2e2d1198aeaf3057e1342
+Maintainer: National Instruments <support@ni.com>
+OsRequires: >= 10
+OsSupport: WINDOWS_10_64BIT WINDOWS_SERVER_2016_64BIT WINDOWS_SERVER_2019_64BIT
+Package: ni-sysapi
+Plugin: wininst
+Priority: standard
+Provides: 80521318-1367-47b5-b3ac-bde66cdf9a2c (=21.00.49153), 98ae360d-a9e4-48e2-9ab0-c1e1a7200cad (=21.00.49153)
+Replaces: 98ae360d-a9e4-48e2-9ab0-c1e1a7200cad (<<17.0.0)
+Section: Infrastructure
+Size: 2303148
+Version: 21.0.0.49153-0+f1
+
+Architecture: windows_x64
+CompatibilityVersion: 210000
+Conflicts: 0e192465-cc28-4c84-be81-710b71c595a3 (<<17.0.0)
+Depends: ni-error-reporting-interface (>= 20.1.0), ni-mdfsupport (>= 21.0.0), ni-metauninstaller (>= 21.0.0), ni-msdotnet4x (>= 4.6.3), ni-msvcrt-2015 (>= 14.1.5), ni-networkdiscoverysvc (>= 21.0.0), ni-portable-configuration (>= 21.0.0), ni-remote-configuration (>= 21.0.0), ni-sysapi (>= 21.0.0)
+Description: Run-time components required to deploy applications that use the NI System Configuration API.
+Description-de: Stellt die Laufzeitkomponenten für das Verwenden von Anwendungen, die mit der NI-Systemkonfigurator-API arbeiten, auf Zielsystemen bereit.
+Description-fr: Composants d'exécution requis pour déployer les applications qui utilisent l'API de Configuration système NI.
+Description-ja: NI システム構成APIを使用するアプリケーションをデプロイするために必要なランタイムコンポーネントです。
+Description-ko: NI 시스템 설정  API를 사용하는 어플리케이션의 배포에 필요한 런타임 구성요소.
+Description-zh-CN: 部署使用NI系统配置API的应用程序所需的运行引擎组件。
+DisplayName: NI System Configuration Runtime
+DisplayName-de: NI-Systemkonfigurator - Runtime
+DisplayName-fr: Configuration système NI - Moteur d'exécution
+DisplayName-ja: NI システム構成ランタイム
+DisplayName-ko: NI 시스템 설정 런타임
+DisplayName-zh-CN: NI系统配置运行引擎
+DisplayVersion: 21.0.0
+Eula: eula-ni-standard
+Filename: ../../pool/ni-syscfg-runtime_21.0.0.49154-0+f2_windows_x64.nipkg
+Homepage: https://www.ni.com
+MD5sum: e4b7cfb79c822fa0bc7c516738112a9a
+Maintainer: National Instruments <support@ni.com>
+OsRequires: >= 10
+OsSupport: WINDOWS_10_64BIT WINDOWS_SERVER_2016_64BIT WINDOWS_SERVER_2019_64BIT
+Package: ni-syscfg-runtime
+Plugin: wininst
+Priority: standard
+Provides: 0e192465-cc28-4c84-be81-710b71c595a3 (=21.00.49154), ccd7729f-4b50-4e91-9a67-a3b1f932f350 (=21.00.49154)
+Replaces: 0e192465-cc28-4c84-be81-710b71c595a3 (<<17.0.0)
+Section: Runtime
+Size: 3014830
+UserVisible: yes
+Version: 21.0.0.49154-0+f2
+VisibleForRuntimeDeployment: yes
+
+Architecture: windows_all
+CompatibilityVersion: 200003
+Conflicts: fda19990-a725-4c6a-826c-a4f248917c7a (<<16.99.65535)
+Depends: ni-mdfsupport (>=19.5.0), ni-metauninstaller (>=19.5.0), ni-msiproperties (>=19.5.0), ni-msvcrt-2015 (>=14.1.5)
+Description: NI System Logging Utilities
+DisplayName: NI System Logging Utilities
+DisplayVersion: 20.0.0
+Eula: eula-ni-standard
+Filename: ../../pool/ni-systemlogging-utils_20.0.0.49152-0+f0_windows_all.nipkg
+Homepage: http://www.ni.com
+MD5sum: eb4c707b090877ab9a8f5bff6dbbab18
+Maintainer: National Instruments <support@ni.com>
+OsSupport: WINDOWS_7_SP1_32BIT WINDOWS_7_SP1_64BIT WINDOWS_81_32BIT WINDOWS_81_64BIT WINDOWS_10_32BIT WINDOWS_10_64BIT WINDOWS_EMBEDDED_STANDARD_7_SP1 WINDOWS_SERVER_2008_R2_SP1_64BIT WINDOWS_SERVER_2012_R2_64BIT
+Package: ni-systemlogging-utils
+Plugin: wininst
+Priority: standard
+Provides: fda19990-a725-4c6a-826c-a4f248917c7a (=20.00.49152)
+Replaces: fda19990-a725-4c6a-826c-a4f248917c7a (<<16.99.65535)
+Section: Infrastructure
+Size: 444788
+UserVisible: no
+Version: 20.0.0.49152-0+f0
+
+Architecture: windows_all
+CompatibilityVersion: 200601
+Conflicts: 4cd11be6-6bb7-4082-8a27-c13771bc309b (<<16.0.16384)
+Depends: ni-mdfsupport (>=20.6.0), ni-metauninstaller (>=20.6.0)
+Description: NI TDM Streaming provides functions to read and write waveforms and waveform properties to binary measurement files (.tdms).
+DisplayName: NI TDM Streaming
+DisplayVersion: 21.0.0
+Eula: eula-ni-standard
+Filename: ../../pool/ni-tdms_21.0.0.49152-0+f0_windows_all.nipkg
+Homepage: https://www.ni.com
+MD5sum: 4e50e8eb1cf9a9b4fd3f252cd7308fca
+Maintainer: National Instruments <support@ni.com>
+OsSupport: WINDOWS_7_SP1_32BIT WINDOWS_7_SP1_64BIT WINDOWS_81_32BIT WINDOWS_81_64BIT WINDOWS_10_32BIT WINDOWS_10_64BIT WINDOWS_EMBEDDED_STANDARD_7_SP1 WINDOWS_SERVER_2008_R2_SP1_64BIT WINDOWS_SERVER_2012_R2_64BIT WINDOWS_SERVER_2016_64BIT
+Package: ni-tdms
+Plugin: wininst
+Priority: standard
+Provides: 4cd11be6-6bb7-4082-8a27-c13771bc309b (=21.00.49152), 69dc1832-0e76-4a9e-ae7f-825a202f6784 (=21.00.49152)
+Replaces: 4cd11be6-6bb7-4082-8a27-c13771bc309b (<<16.0.16384)
+Section: Infrastructure
+Size: 2982320
+Version: 21.0.0.49152-0+f0
+
+Architecture: windows_all
+CompatibilityVersion: 200003
+Conflicts: fb99b180-68f3-4d20-a3b7-cabfedab7f59 (<<16.99.65535)
+Depends: ni-mdfsupport (>=19.5.0), ni-metauninstaller (>=19.5.0), ni-msiproperties (>=19.5.0), ni-msvcrt-2015 (>=14.1.5)
+Description: NI Trace Engine
+DisplayName: NI Trace Engine
+DisplayVersion: 20.0.0
+Eula: eula-ni-standard
+Filename: ../../pool/ni-traceengine_20.0.0.49152-0+f0_windows_all.nipkg
+Homepage: http://www.ni.com
+MD5sum: 9c9e4b0f309596315f15d138311035fe
+Maintainer: National Instruments <support@ni.com>
+OsSupport: WINDOWS_7_SP1_32BIT WINDOWS_7_SP1_64BIT WINDOWS_81_32BIT WINDOWS_81_64BIT WINDOWS_10_32BIT WINDOWS_10_64BIT WINDOWS_EMBEDDED_STANDARD_7_SP1 WINDOWS_SERVER_2008_R2_SP1_64BIT WINDOWS_SERVER_2012_R2_64BIT
+Package: ni-traceengine
+Plugin: wininst
+Priority: standard
+Provides: 9f41dec8-7bc2-46bc-bb86-bd76fa24ab3a (=20.00.49152), fb99b180-68f3-4d20-a3b7-cabfedab7f59 (=20.00.49152)
+Replaces: fb99b180-68f3-4d20-a3b7-cabfedab7f59 (<<16.99.65535)
+Section: Infrastructure
+Size: 978982
+UserVisible: no
+Version: 20.0.0.49152-0+f0
+
+Architecture: windows_x64
+CompatibilityVersion: 210000
+Conflicts: 11d580a9-caa9-4fae-acce-008751a7ae9f (<<16.1)
+Depends: ni-euladepot (>= 21.0.0), ni-help-assistant (>= 2.2.0), ni-mdfsupport (>= 21.0.0), ni-metasuite (>= 21.0.0), ni-metauninstaller (>= 21.0.0), ni-msdotnet4x (>= 4.6.3), ni-msiproperties (>= 21.0.0), ni-msvcrt-2015 (>= 14.1.5)
+Description: NI Update Service checks for and electronically delivers software updates for NI software and drivers.
+Description-de: Mit dem NI-Update-Dienst können Updates für Software und Treiber von National Instruments gesucht und installiert werden.
+Description-fr: Le Service de mise à jour NI vérifie s'il existe des mises à jour pour les logiciels et drivers NI et les installe électroniquement.
+Description-ja: NI 更新サービスは、NIソフトウェアおよびドライバの更新をチェックし、それをオンライン形式で配布します。
+Description-ko: NI 업데이트 서비스는 NI 소프트웨어 및 드라이버에 대한 업데이트가 있는지 확인하고 업데이트를 설치합니다.
+Description-zh-CN: NI更新服务检查NI软件和驱动程序是否有更新，并通过电子方式向用户发送软件更新。
+DisplayName: NI Update Service
+DisplayName-de: NI-Update-Dienst
+DisplayName-fr: Service de mise à jour NI
+DisplayName-ja: NI 更新サービス
+DisplayName-ko: NI 업데이트 서비스
+DisplayName-zh-CN: NI更新服务
+DisplayVersion: 21.0.0
+Eula: eula-ni-standard
+Filename: ../../pool/ni-update-service_21.0.0.49243-0+f91_windows_x64.nipkg
+Homepage: https://www.ni.com
+LanguageSupport: en, de, fr, ja, ko, zh
+MD5sum: 6f2a493b1840b363364fd36ccd1e1a79
+Maintainer: National Instruments <support@ni.com>
+OsRequires: >= 10
+OsSupport: WINDOWS_10_64BIT WINDOWS_SERVER_2016_64BIT WINDOWS_SERVER_2019_64BIT
+Package: ni-update-service
+Plugin: wininst
+Priority: standard
+Provides: 11d580a9-caa9-4fae-acce-008751a7ae9f (=21.00.49243), a3b0165f-4500-4a92-b134-27f1a7dd5732 (=21.00.49243), e14c752c-9307-4a71-b65e-e7b9ce0d063c (=21.00.49243)
+ReleaseNotes: 
+  IMPROVEMENTS - Added support for NI Package Manager and package updates on 32-bit Windows OSes. - No longer holds installation mutex when UI is showing so that now you can install packages from NI Package Manager while Update Service is open. - When an update is selected, included package updates are automatically selected.
+ .
+  Refer to the NI website at https://www.ni.com/r/zr1xoo for more information regarding known issues, compatibility, and important notices for Update Service.
+ReleaseNotes-de: 
+  VERBESSERUNGEN - Neu: Unterstützung für den NI-Paketmanager und das Aktualisieren von Paketen auf 32-Bit-Windows-Betriebssystemen - Installations-Mutex wird jetzt bei angezeigter Benutzeroberfläche ausgeblendet, so dass Pakete mit dem NI-Paketmanager installiert werden können, während der NI-Update-Dienst geöffnet ist. - Wenn ein Update ausgewählt wird, werden die darin enthaltenen Pakete automatisch zur Aktualisierung ausgewählt.
+ .
+  Unter https://www.ni.com/r/zr1xoo-de finden Sie weitere Informationen zu bekannten Problemen und zur Kompatibilität sowie sonstige wichtige Hinweise zum NI-Update-Dienst.
+ReleaseNotes-fr: 
+  AMÉLIORATIONS - Ajout de support pour le Gestionnaire de paquets NI et des mises à jour de paquets sur les systèmes d'exploitation Windows 32 bits. - Ne contient plus l'installation mutex lorsque l'interface utilisateur est affichée, de sorte que vous pouvez désormais installer des paquets à partir du Gestionnaire de paquets NI pendant que le Service de mise à jour est ouvert. - Lorsqu'une mise à jour est sélectionnée, les mises à jour de paquets incluses sont automatiquement sélectionnées.
+ .
+  Reportez-vous à https://www.ni.com/r/zr1xoo-fr pour plus d'informations sur les problèmes connus, la compatibilité et les avertissements importants concernant le Service de mise à jour.
+ReleaseNotes-ja: 
+  改善点 - 32ビットのWindows OSでのNI パッケージマネージャとパッケージ更新が追加されました。 - UIが表示されているときにインストールミューテックスが保持されなくなったため、更新サービスが開いている間に、NI パッケージマネージャからパッケージをインストールできるようになりました。 - 更新を選択すると、含まれているパッケージの更新が自動的に選択されるようになりました。
+ .
+  既知の問題、互換性、および更新サービスに関する重要な通知については、NI Webサイト (https://www.ni.com/r/zr1xoo-ja) を参照してください。
+ReleaseNotes-ko: 
+  개선사항 - 32비트 Windows OS에서 NI 패키지 관리자 및 패키지 업데이트에 대한 지원이 추가되었습니다. - UI가 표시될 때 설치 뮤텍스가 더이상 작동하지 않으므로, 업데이트 서비스가 열려 있는 동안 NI 패키지 관리자에서 패키지를 설치할 수 있습니다. - 업데이트를 선택하면, 포함된 패키지 업데이트가 자동으로 선택됩니다.
+ .
+  업데이트 서비스에 대한 알려진 유의사항, 호환성, 중요한 알림사항은 NI 웹사이트(https://www.ni.com/r/zr1xoo-ko)를 참조하십시오.
+ReleaseNotes-zh-CN: 
+  功能改进 - 新增了在32位Windows操作系统上对NI Package Manager以及程序包更新的支持。 - 不再保留显示UI时的安装进程互斥功能，用户现在可以在更新服务打开的情况下从NI Package Manager中安装程序包。 - 选择更新后，包含的程序包更新将自动被选中。
+ .
+  关于更新服务的已知问题、兼容信息以及重要说明，见NI网站上的https://www.ni.com/r/zr1xoo-zh-cn。
+Replaces: 11d580a9-caa9-4fae-acce-008751a7ae9f (<<16.1)
+Section: Utilities
+Size: 28661130
+StoreProduct: yes
+UserVisible: yes
+Version: 21.0.0.49243-0+f91
+
+Architecture: windows_all
+CompatibilityVersion: 190006
+Conflicts: d1edc484-7b17-11d7-83ce-00c0f03ebebe (<<17.04.0), ni-usi-dc-ger (<=18.5.5.49152), ni-usi-dc-jpn (<=18.5.5.49152)
+Depends: ni-datafinder-desktop-quit-dc (>=18.5.5), ni-logos (>=19.0.0), ni-mdfsupport (>=19.0.0), ni-metauninstaller (>=19.0.0), ni-msdotnet4x (>=4.6.3), ni-msiproperties (>=19.0.0), ni-msvcrt-2015 (>=14.1.5), ni-tdms (>=19.0.0)
+Description: NI USI provides components for NI TDM software
+  NI USI provides components for NI TDM software (LabVIEW Storage VIs, DIAdem, DataFinder, CVI) and allows access to any file format (TDM, CSV, Excel, ...) using DataPlugins.
+DisplayName: NI USI English
+DisplayVersion: 18.5.5
+Eula: eula-ni-standard
+Filename: ../../pool/ni-usi-dc-eng_18.5.5.49152-0+f0_windows_all.nipkg
+Homepage: http://www.ni.com
+MD5sum: 5cc4dfe95f7746db601e869e8b574cce
+Maintainer: National Instruments <support@ni.com>
+OsSupport: WINDOWS_7_SP1_32BIT WINDOWS_7_SP1_64BIT WINDOWS_81_32BIT WINDOWS_81_64BIT WINDOWS_10_32BIT WINDOWS_10_64BIT WINDOWS_EMBEDDED_STANDARD_7_SP1 WINDOWS_SERVER_2008_R2_SP1_64BIT WINDOWS_SERVER_2012_R2_64BIT
+Package: ni-usi-dc-eng
+Plugin: wininst
+Priority: standard
+Provides: d1edc484-7b17-11d7-83ce-00c0f03ebebe (=18.55.49152), ef495a29-3f84-4e8b-a0ed-b9de58b80033 (=18.55.49152), ni-usi-dc-ger (=18.5.5.49152), ni-usi-dc-jpn (=18.5.5.49152)
+Replaces: d1edc484-7b17-11d7-83ce-00c0f03ebebe (<<17.04.0), ni-usi-dc-ger (<<18.5.5.49152), ni-usi-dc-jpn (<<18.5.5.49152)
+Section: Infrastructure
+Size: 48306214
+Tags: National Instruments, USI Msi Dc, BinaryVersionString 18.5.5f7372
+UserVisible: no
+Version: 18.5.5.49152-0+f0
+
+Architecture: windows_all
+CompatibilityVersion: 200003
+Conflicts: fcad56f6-9aa6-4171-946f-ce3d0e20fa79 (<<16.99.65535)
+Depends: ni-mdfsupport (>=19.5.0), ni-metauninstaller (>=19.5.0), ni-msiproperties (>=19.5.0), ni-msvcrt-2015 (>=14.1.3)
+Description: NI WS Repl Library 2020
+DisplayName: NI WS Repl Library
+DisplayVersion: 20.0.0
+Eula: eula-ni-standard
+Filename: ../../pool/ni-wsrepl_20.0.0.49152-0+f0_windows_all.nipkg
+Homepage: http://www.ni.com
+MD5sum: d1c9e586f08feb6ca32bf8ad917763dd
+Maintainer: National Instruments <support@ni.com>
+OsSupport: WINDOWS_7_SP1_32BIT WINDOWS_7_SP1_64BIT WINDOWS_81_32BIT WINDOWS_81_64BIT WINDOWS_10_32BIT WINDOWS_10_64BIT WINDOWS_EMBEDDED_STANDARD_7_SP1 WINDOWS_SERVER_2008_R2_SP1_64BIT WINDOWS_SERVER_2012_R2_64BIT
+Package: ni-wsrepl
+Plugin: wininst
+Priority: standard
+Provides: aa14ff2b-a68e-46ff-8e13-cec408eaf638 (=20.00.49152), fcad56f6-9aa6-4171-946f-ce3d0e20fa79 (=20.00.49152)
+Replaces: fcad56f6-9aa6-4171-946f-ce3d0e20fa79 (<<16.99.65535)
+Section: Infrastructure
+Size: 1113272
+UserVisible: no
+Version: 20.0.0.49152-0+f0
+

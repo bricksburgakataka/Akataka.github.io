@@ -1,0 +1,122 @@
+{
+     "names": [
+          {
+               "language": "en",
+               "value": "Circuit Design Suite"
+          },
+          {
+               "language": "fr",
+               "value": "Circuit Design Suite"
+          },
+          {
+               "language": "de",
+               "value": "Circuit Design Suite"
+          },
+          {
+               "language": "ja",
+               "value": "Circuit Design Suite"
+          },
+          {
+               "language": "ko",
+               "value": "Circuit Design Suite"
+          },
+          {
+               "language": "zh-CN",
+               "value": "Circuit Design Suite"
+          }
+     ],
+     "shortDescriptions": [
+          {
+               "language": "en",
+               "value": null
+          },
+          {
+               "language": "fr",
+               "value": null
+          },
+          {
+               "language": "de",
+               "value": null
+          },
+          {
+               "language": "ja",
+               "value": null
+          },
+          {
+               "language": "ko",
+               "value": null
+          },
+          {
+               "language": "zh-CN",
+               "value": null
+          }
+     ],
+     "suiteContents": [
+          {
+               "repositories": [
+                    {
+                         "repositoryName": "ni-cds-professional",
+                         "repositoryPath": "../feeds/ni-cds-professional"
+                    }
+               ],
+               "names": [
+                    {
+                         "language": "en",
+                         "value": "Circuit Design Suite"
+                    },
+                    {
+                         "language": "fr",
+                         "value": "Circuit Design Suite"
+                    },
+                    {
+                         "language": "de",
+                         "value": "Circuit Design Suite"
+                    },
+                    {
+                         "language": "ja",
+                         "value": "Circuit Design Suite"
+                    },
+                    {
+                         "language": "ko",
+                         "value": "Circuit Design Suite"
+                    },
+                    {
+                         "language": "zh-CN",
+                         "value": "Circuit Design Suite"
+                    }
+               ],
+               "shortDescriptions": [
+                    {
+                         "language": "en",
+                         "value": "The Circuit Design Suite Professional combines Multisim and Ultiboard software for a complete set of tools for circuit design, simulation, validation, and layout."
+                    },
+                    {
+                         "language": "fr",
+                         "value": "Circuit Design Suite Professional associe les logiciels Multisim et Ultiboard en ensemble d'outils complèt de conception, de simulation, de validation et d'implantation de circuit."
+                    },
+                    {
+                         "language": "de",
+                         "value": "Circuit Design Suite Professional setzt sich aus Multisim und Ultiboard zusammen und enthält alle benötigten Tools für das Erstellen, Simulieren und Überprüfen von Schaltplänen bis hin zum Entwerfen des Leiterplatten-Layouts."
+                    },
+                    {
+                         "language": "ja",
+                         "value": "Circuit Design Suiteプロフェッショナル版は、MultisimとUltiboardソフトウェアを組み合わせた、回路設計、シミュレーション、検証、およびレイアウト用のツールセットです。"
+                    },
+                    {
+                         "language": "ko",
+                         "value": "Circuit Design Suite Professional은 회로 설계, 시뮬레이션, 검증 및 레이아웃 플랫폼용 전체 도구 세트를 위해 Multisim 및 Ultiboard 소프트웨어를 통합합니다."
+                    },
+                    {
+                         "language": "zh-CN",
+                         "value": "Circuit Design Suite专业版将Multisim和Ultiboard软件结合在一起，形成一整套用于电路设计、仿真、验证及布局的工具。"
+                    }
+               ],
+               "majorVersion": "14.3.0",
+               "packageName": "ni-cds-2014-professional",
+               "packageVersion": "14.3.0.49153-0+f1",
+               "architecture": "windows_x64",
+               "section": "Application Software",
+               "preselect": "true"
+          }
+     ]
+}

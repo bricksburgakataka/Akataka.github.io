@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Vivado v2017.4 (64-bit)
+# SW Build 2086221 on Fri Dec 15 20:55:39 MST 2017
+# IP Build 2085800 on Fri Dec 15 22:25:07 MST 2017
+# Start of session at: Mon May 26 00:52:46 2025
+# Process ID: 11256
+# Current directory: C:/Users/YanJiasheng/Desktop/Timer/Timer_G2.runs/synth_1
+# Command line: vivado.exe -log task_water.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source task_water.tcl
+# Log file: C:/Users/YanJiasheng/Desktop/Timer/Timer_G2.runs/synth_1/task_water.vds
+# Journal file: C:/Users/YanJiasheng/Desktop/Timer/Timer_G2.runs/synth_1\vivado.jou
+#-----------------------------------------------------------
+source task_water.tcl -notrace

@@ -1,0 +1,70 @@
+#-----------------------------------------------------------
+# Vivado v2017.4 (64-bit)
+# SW Build 2086221 on Fri Dec 15 20:55:39 MST 2017
+# IP Build 2085800 on Fri Dec 15 22:25:07 MST 2017
+# Start of session at: Sat May 31 22:38:53 2025
+# Process ID: 36952
+# Current directory: C:/Users/Bricksburg-Akataka/Desktop/浙江大学/课程文件/数字系统/clothes_system/clothes_system/clothes_system.runs/synth_1
+# Command line: vivado.exe -log clothes_system.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source clothes_system.tcl
+# Log file: C:/Users/Bricksburg-Akataka/Desktop/浙江大学/课程文件/数字系统/clothes_system/clothes_system/clothes_system.runs/synth_1/clothes_system.vds
+# Journal file: C:/Users/Bricksburg-Akataka/Desktop/浙江大学/课程文件/数字系统/clothes_system/clothes_system/clothes_system.runs/synth_1\vivado.jou
+#-----------------------------------------------------------
+source clothes_system.tcl -notrace
+Command: synth_design -top clothes_system -part xc7a35tcsg324-1
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7a35t'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a35t'
+INFO: Launching helper process for spawning children vivado processes
+INFO: Helper process launched with PID 51744 
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 347.711 ; gain = 103.918
+---------------------------------------------------------------------------------
+INFO: [Synth 8-638] synthesizing module 'clothes_system' [C:/Users/Bricksburg-Akataka/Desktop/浙江大学/课程文件/数字系统/clothes_system/clothes_system/clothes_system.srcs/sources_1/new/clothes_system.v:2]
+INFO: [Synth 8-638] synthesizing module 'main' [C:/Users/Bricksburg-Akataka/Desktop/浙江大学/课程文件/数字系统/clothes_system/clothes_system/clothes_system.srcs/sources_1/new/main.v:1]
+INFO: [Synth 8-638] synthesizing module 'DHT11' [C:/Users/Bricksburg-Akataka/Desktop/浙江大学/课程文件/数字系统/clothes_system/clothes_system/clothes_system.srcs/sources_1/new/DHT11.v:2]
+	Parameter TIME18ms bound to: 23'b00110110111011110100011 
+	Parameter TIME35us bound to: 16'b0000110110101100 
+	Parameter S_IDLE bound to: 0 - type: integer 
+	Parameter S_START_FPGA bound to: 1 - type: integer 
+	Parameter S_START_DHT11 bound to: 2 - type: integer 
+	Parameter S_DATA bound to: 3 - type: integer 
+	Parameter S_STOP bound to: 4 - type: integer 
+	Parameter S_DOEN bound to: 5 - type: integer 
+WARNING: [Synth 8-3848] Net dht11_error in module/entity DHT11 does not have driver. [C:/Users/Bricksburg-Akataka/Desktop/浙江大学/课程文件/数字系统/clothes_system/clothes_system/clothes_system.srcs/sources_1/new/DHT11.v:7]
+INFO: [Synth 8-256] done synthesizing module 'DHT11' (1#1) [C:/Users/Bricksburg-Akataka/Desktop/浙江大学/课程文件/数字系统/clothes_system/clothes_system/clothes_system.srcs/sources_1/new/DHT11.v:2]
+INFO: [Synth 8-256] done synthesizing module 'main' (2#1) [C:/Users/Bricksburg-Akataka/Desktop/浙江大学/课程文件/数字系统/clothes_system/clothes_system/clothes_system.srcs/sources_1/new/main.v:1]
+WARNING: [Synth 8-350] instance 'main1' of module 'main' requires 7 connections, but only 5 given [C:/Users/Bricksburg-Akataka/Desktop/浙江大学/课程文件/数字系统/clothes_system/clothes_system/clothes_system.srcs/sources_1/new/clothes_system.v:18]
+INFO: [Synth 8-638] synthesizing module 'clothing_advice' [C:/Users/Bricksburg-Akataka/Desktop/浙江大学/课程文件/数字系统/clothes_system/clothes_system/clothes_system.srcs/sources_1/new/clothing_advice.v:2]
+INFO: [Synth 8-256] done synthesizing module 'clothing_advice' (3#1) [C:/Users/Bricksburg-Akataka/Desktop/浙江大学/课程文件/数字系统/clothes_system/clothes_system/clothes_system.srcs/sources_1/new/clothing_advice.v:2]
+INFO: [Synth 8-638] synthesizing module 'temp_to_digits' [C:/Users/Bricksburg-Akataka/Desktop/浙江大学/课程文件/数字系统/clothes_system/clothes_system/clothes_system.srcs/sources_1/new/temp_to_digits.v:2]
+INFO: [Synth 8-256] done synthesizing module 'temp_to_digits' (4#1) [C:/Users/Bricksburg-Akataka/Desktop/浙江大学/课程文件/数字系统/clothes_system/clothes_system/clothes_system.srcs/sources_1/new/temp_to_digits.v:2]
+INFO: [Synth 8-638] synthesizing module 'str_display' [C:/Users/Bricksburg-Akataka/Desktop/浙江大学/课程文件/数字系统/clothes_system/clothes_system/clothes_system.srcs/sources_1/new/str_display.v:3]
+INFO: [Synth 8-638] synthesizing module 'display' [C:/Users/Bricksburg-Akataka/Desktop/浙江大学/课程文件/数字系统/clothes_system/clothes_system/clothes_system.srcs/sources_1/new/display.v:1]
+INFO: [Synth 8-638] synthesizing module 'clk_div_1' [C:/Users/Bricksburg-Akataka/Desktop/浙江大学/课程文件/数字系统/clothes_system/clothes_system/clothes_system.srcs/sources_1/new/clk_div_1.v:1]
+	Parameter MAXCOUNT bound to: 100000 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'clk_div_1' (5#1) [C:/Users/Bricksburg-Akataka/Desktop/浙江大学/课程文件/数字系统/clothes_system/clothes_system/clothes_system.srcs/sources_1/new/clk_div_1.v:1]
+INFO: [Synth 8-638] synthesizing module 'select' [C:/Users/Bricksburg-Akataka/Desktop/浙江大学/课程文件/数字系统/clothes_system/clothes_system/clothes_system.srcs/sources_1/new/select.v:1]
+INFO: [Synth 8-226] default block is never used [C:/Users/Bricksburg-Akataka/Desktop/浙江大学/课程文件/数字系统/clothes_system/clothes_system/clothes_system.srcs/sources_1/new/select.v:11]
+INFO: [Synth 8-256] done synthesizing module 'select' (6#1) [C:/Users/Bricksburg-Akataka/Desktop/浙江大学/课程文件/数字系统/clothes_system/clothes_system/clothes_system.srcs/sources_1/new/select.v:1]
+INFO: [Synth 8-638] synthesizing module 'pin' [C:/Users/Bricksburg-Akataka/Desktop/浙江大学/课程文件/数字系统/clothes_system/clothes_system/clothes_system.srcs/sources_1/new/pin.v:1]
+INFO: [Synth 8-256] done synthesizing module 'pin' (7#1) [C:/Users/Bricksburg-Akataka/Desktop/浙江大学/课程文件/数字系统/clothes_system/clothes_system/clothes_system.srcs/sources_1/new/pin.v:1]
+INFO: [Synth 8-256] done synthesizing module 'display' (8#1) [C:/Users/Bricksburg-Akataka/Desktop/浙江大学/课程文件/数字系统/clothes_system/clothes_system/clothes_system.srcs/sources_1/new/display.v:1]
+INFO: [Synth 8-256] done synthesizing module 'str_display' (9#1) [C:/Users/Bricksburg-Akataka/Desktop/浙江大学/课程文件/数字系统/clothes_system/clothes_system/clothes_system.srcs/sources_1/new/str_display.v:3]
+INFO: [Synth 8-256] done synthesizing module 'clothes_system' (10#1) [C:/Users/Bricksburg-Akataka/Desktop/浙江大学/课程文件/数字系统/clothes_system/clothes_system/clothes_system.srcs/sources_1/new/clothes_system.v:2]
+WARNING: [Synth 8-3331] design DHT11 has unconnected port dht11_error
+WARNING: [Synth 8-3331] design clothes_system has unconnected port temperature[7]
+WARNING: [Synth 8-3331] design clothes_system has unconnected port temperature[6]
+WARNING: [Synth 8-3331] design clothes_system has unconnected port temperature[5]
+WARNING: [Synth 8-3331] design clothes_system has unconnected port temperature[4]
+WARNING: [Synth 8-3331] design clothes_system has unconnected port temperature[3]
+WARNING: [Synth 8-3331] design clothes_system has unconnected port temperature[2]
+WARNING: [Synth 8-3331] design clothes_system has unconnected port temperature[1]
+WARNING: [Synth 8-3331] design clothes_system has unconnected port temperature[0]
+WARNING: [Synth 8-3331] design clothes_system has unconnected port humidity[7]
+WARNING: [Synth 8-3331] design clothes_system has unconnected port humidity[6]
+WARNING: [Synth 8-3331] design clothes_system has unconnected port humidity[5]
+WARNING: [Synth 8-3331] design clothes_system has unconnected port humidity[4]
+WARNING: [Synth 8-3331] design clothes_system has unconnected port humidity[3]
+WARNING: [Synth 8-3331] design clothes_system has unconnected port humidity[2]
+WARNING: [Synth 8-3331] design clothes_system has unconnected port humidity[1]
+WARNING: [Synth 8-3331] design clothes_system has unconnected port humidity[0]

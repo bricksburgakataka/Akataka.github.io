@@ -1,0 +1,159 @@
+﻿Architecture: windows_x64
+CompatibilityVersion: 0
+Conflicts: ni-package-manager
+Description: Package for displaying the NI Software License Agreement for Released Products
+DisplayName: NI Software License Agreement for Released Products
+DisplayVersion: 21.3.0
+EulaPriority: -100
+EulaTitle: NI
+Filename: eula-ni-standard.nipkg
+Homepage: https://www.ni.com
+MD5Sum: 6c0647d2cb2475c075c8a5dbdc90cd73
+MD5sum: 6c0647d2cb2475c075c8a5dbdc90cd73
+Maintainer: National Instruments <support@ni.com>
+OsRequires: >= 10
+OsSupport: WINDOWS_10_64BIT WINDOWS_SERVER_2016_64BIT WINDOWS_SERVER_2019_64BIT
+Package: eula-ni-standard
+Plugin: eula
+Priority: standard
+Section: Infrastructure
+Size: 258096
+UserVisible: no
+Version: 21.3.0.49256-0+f104
+
+Architecture: windows_x64
+CompatibilityVersion: 0
+Depends: system-windows-x64 (>= 21.3.0)
+Description: Deployment support for NI Package Manager.
+DisplayName: NI Package Manager Deployment Support
+DisplayVersion: 21.3.0
+Essential: yes
+Eula: eula-ni-standard
+Filename: ni-package-manager-deployment-support.nipkg
+Homepage: https://www.ni.com
+MD5Sum: 7f4762ca249d4e375cc9257335e2622d
+MD5sum: 7f4762ca249d4e375cc9257335e2622d
+Maintainer: National Instruments <support@ni.com>
+OsRequires: >= 10
+OsSupport: WINDOWS_10_64BIT WINDOWS_SERVER_2016_64BIT WINDOWS_SERVER_2019_64BIT
+Package: ni-package-manager-deployment-support
+Plugin: wininst
+Priority: standard
+Section: Infrastructure
+Size: 83861042
+Version: 21.3.0.49256-0+f104
+
+Architecture: windows_x64
+CompatibilityVersion: 0
+Conflicts: ni-package-manager-16.0-repository
+Description: Provides NI Package Manager released packages.
+DisplayName: NI Package Manager Released Feed
+DisplayVersion: 21.3.0
+Essential: yes
+Filename: ni-package-manager-released-feed.nipkg
+Homepage: https://www.ni.com
+MD5Sum: a94db1a8f34489fe263865b70d093958
+MD5sum: a94db1a8f34489fe263865b70d093958
+Maintainer: National Instruments <support@ni.com>
+OsRequires: >= 10
+OsSupport: WINDOWS_10_64BIT WINDOWS_SERVER_2016_64BIT WINDOWS_SERVER_2019_64BIT
+Package: ni-package-manager-released-feed
+Plugin: file
+Priority: standard
+Provides: ni-package-manager-16.0-repository
+Replaces: ni-package-manager-16.0-repository
+RepositoryNames: ni-package-manager-released
+Section: Feed
+Size: 882
+Version: 21.3.0.49256-0+f104
+
+Architecture: windows_x64
+CompatibilityVersion: 185000
+Conflicts: ni-package-manager (<< 18.5.0)
+Description: Application used to upgrade the package manager.
+DisplayName: NI Package Manager Upgrader
+DisplayVersion: 21.3.0
+Essential: yes
+Eula: eula-ni-standard
+Filename: ni-package-manager-upgrader.nipkg
+Homepage: https://www.ni.com
+MD5Sum: 37eb4c1b3ba1b206c4b13d97a237d8e3
+MD5sum: 37eb4c1b3ba1b206c4b13d97a237d8e3
+Maintainer: National Instruments <support@ni.com>
+OsRequires: >= 10
+OsSupport: WINDOWS_10_64BIT WINDOWS_SERVER_2016_64BIT WINDOWS_SERVER_2019_64BIT
+Package: ni-package-manager-upgrader
+Plugin: file
+Priority: required
+Section: Infrastructure
+Size: 4106772
+Version: 21.3.0.49256-0+f104
+
+AlwaysRemoves: ni-package-manager-released-feed
+Architecture: windows_x64
+CompatibilityVersion: 0
+Depends: ni-package-manager-upgrader, ni-package-manager-deployment-support (>= 21.3.0.49256-0+f104),
+Description: NI Package Manager facilitates the installation, removal, and management of NI software.
+Description-de: Der NI-Paketmanager erleichtert das Installieren, Deinstallieren und Verwalten von NI-Software.
+Description-fr: Le Gestionnaire de paquets NI facilite l'installation, la suppression et la gestion des logiciels NI.
+Description-ja: NI パッケージマネージャは、NIソフトウェアのインストール、削除、および管理を行うツールです。
+Description-ko: NI 패키지 관리자는 NI 소프트웨어의 설치, 제거 및 관리를 용이하게 합니다.
+Description-zh-CN: NI Package Manager可帮助用户安装、删除及管理NI软件。
+DisplayName: NI Package Manager
+DisplayName-de: NI-Paketmanager
+DisplayName-fr: Gestionnaire de paquets NI
+DisplayName-ja: NI パッケージマネージャ
+DisplayName-ko: NI 패키지 관리자
+DisplayName-zh-CN: NI Package Manager
+DisplayVersion: 21.3.0
+Essential: yes
+Eula: eula-ni-standard
+Filename: ni-package-manager.nipkg
+Homepage: https://www.ni.com
+Locked: yes
+MD5Sum: 7a3378a22d5b245ff9778e13fdf8c64f
+MD5sum: 7a3378a22d5b245ff9778e13fdf8c64f
+Maintainer: National Instruments <support@ni.com>
+OsRequires: >= 10
+OsSupport: WINDOWS_10_64BIT WINDOWS_SERVER_2016_64BIT WINDOWS_SERVER_2019_64BIT
+Package: ni-package-manager
+Plugin: wininst
+Priority: required
+ReleaseNotes: 
+  Refer to the NI website at https://www.ni.com/r/nipm21.3rm for installation instructions, known issues, bug fixes, compatibility information, and other important notices about this product.
+ReleaseNotes-de: 
+  Auf der NI-Website https://www.ni.com/r/nipm21.3rm-de finden Sie wichtige Hinweise zu diesem Produkt, darunter Informationen zur Installation, zu bekannten Problemen, zu Fehlerkorrekturen und zur Kompatibilität.
+ReleaseNotes-fr: 
+  Reportez-vous au site Web de NI à l'adresse https://www.ni.com/r/nipm21.3rm-fr pour obtenir les instructions d'installation, des informations sur les problèmes connus, les corrections de bugs, la compatibilité ainsi que d'autres informations importantes concernant ce produit.
+ReleaseNotes-ja: 
+  インストール手順、既知の問題、バグ修正、互換性情報、およびこの製品に関するその他の重要な注意事項については、NI Webサイト (https://www.ni.com/r/nipm21.3rm-ja) を参照してください。
+ReleaseNotes-ko: 
+  이 제품에 대한 설치 방법, 알려진 유의사항, 버그 수정, 호환성 정보, 기타 중요한 알림사항은 NI 웹사이트(https://www.ni.com/r/nipm21.3rm-ko)를 참조하십시오.
+ReleaseNotes-zh-CN: 
+  关于安装说明、已知问题、错误修正、兼容信息以及本产品的其他重要说明，请参阅NI网站上的https://www.ni.com/r/nipm21.3rm-zh-cn。
+Section: Utilities
+Size: 11683470
+StoreProduct: yes
+UserVisible: yes
+Version: 21.3.0.49256-0+f104
+
+Architecture: windows_x64
+CompatibilityVersion: 0
+Description: Package that indicates the current system is running a 64-bit Windows operating system.
+DisplayName: System Package for 64-Bit Windows OS
+DisplayVersion: 21.3.0
+Essential: yes
+Filename: system-windows-x64.nipkg
+Homepage: https://www.ni.com
+MD5Sum: 7e58790a892e2c0cc927703f184fd7c3
+MD5sum: 7e58790a892e2c0cc927703f184fd7c3
+Maintainer: National Instruments <support@ni.com>
+OsRequires: >= 10
+OsSupport: WINDOWS_10_64BIT WINDOWS_SERVER_2016_64BIT WINDOWS_SERVER_2019_64BIT
+Package: system-windows-x64
+Plugin: file
+Priority: standard
+Section: Infrastructure
+Size: 672
+Version: 21.3.0.49256-0+f104
+

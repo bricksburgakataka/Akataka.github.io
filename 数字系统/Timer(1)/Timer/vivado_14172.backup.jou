@@ -1,0 +1,43 @@
+#-----------------------------------------------------------
+# Vivado v2017.4 (64-bit)
+# SW Build 2086221 on Fri Dec 15 20:55:39 MST 2017
+# IP Build 2085800 on Fri Dec 15 22:25:07 MST 2017
+# Start of session at: Sat May 24 20:11:47 2025
+# Process ID: 14172
+# Current directory: C:/Users/YanJiasheng/Desktop/Timer
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent3092 C:\Users\YanJiasheng\Desktop\Timer\Timer_G2.xpr
+# Log file: C:/Users/YanJiasheng/Desktop/Timer/vivado.log
+# Journal file: C:/Users/YanJiasheng/Desktop/Timer\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project C:/Users/YanJiasheng/Desktop/Timer/Timer_G2.xpr
+update_compile_order -fileset sources_1
+open_run synth_1 -name synth_1
+# Disabling source management mode.  This is to allow the top design properties to be set without GUI intervention.
+set_property source_mgmt_mode None [current_project]
+set_property top tb_water_reminder [get_filesets sim_1]
+set_property top_lib xil_defaultlib [get_filesets sim_1]
+# Re-enabling previously disabled source management mode.
+set_property source_mgmt_mode All [current_project]
+update_compile_order -fileset sim_1
+launch_simulation
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+update_compile_order -fileset sim_1
+update_compile_order -fileset sim_1
+export_ip_user_files -of_objects  [get_files C:/Users/YanJiasheng/Desktop/Timer/Timer_G2.srcs/sim_1/new/button.v] -no_script -reset -force -quiet
+remove_files  -fileset sim_1 C:/Users/YanJiasheng/Desktop/Timer/Timer_G2.srcs/sim_1/new/button.v
+update_compile_order -fileset sim_1
+update_compile_order -fileset sim_1
+set_property package_pin "" [get_ports [list  ok_long]]
+place_ports ok R15
+place_ports ok_long R1
+place_ports remind F6
+set_property package_pin "" [get_ports [list  silent_mode]]
+place_ports ok_long N4
+place_ports silent_mode R1
+place_ports up U4
+place_ports right R11
+place_ports left V1
+place_ports down R17
+save_constraints
