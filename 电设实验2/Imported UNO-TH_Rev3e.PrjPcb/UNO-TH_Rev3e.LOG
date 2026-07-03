@@ -1,0 +1,35 @@
+Importer Log Report
+Project : UNO-TH_Rev3e.PrjPcb
+
+Section : Analyze Document - D:\Users\Bricksburg-Akataka\Desktop\UNO-TH_Rev3e.brd
+    Analyzing data of D:\Users\Bricksburg-Akataka\Desktop\UNO-TH_Rev3e.brd
+    Load settings
+    Load layers 174
+    Load board
+    Load Library "rcl"
+    Load Packages 2
+    Load Library "diode"
+    Load Packages 2
+    Load Library "led"
+    Load Packages 1
+    Load Library "linear"
+    Load Packages 2
+    Load Library "SmartPrj"
+    Load Packages 17
+    Load Library "zetex"
+    Load Packages 1
+    Load Library "jumper"
+    Load Packages 1
+    Load Library "varistor"
+    Load Packages 1
+    Load Library "wuerth-elektronik"
+    Load Packages 1
+    Load Library "resistor-dil"
+    Load Packages 1
+    Load Library "Induttanze"
+    Load Packages 1
+    Load Library "Arduino-utility"
+    Load Packages 1
+    ERROR: Unhandled typemfgpreviewcolors
+    ERROR: Unhandled typeerrors
+EndSection

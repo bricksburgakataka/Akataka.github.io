@@ -1,0 +1,190 @@
+<!-- pages/Huawei_IOT.wxml -->
+<view class="container">
+    <!-- 顶部状态栏 -->
+    <view class="header">
+        <view class="header-content">
+            <view class="header-title">
+                <text class="title">智能视觉系统</text>
+                <text class="subtitle">ESP32-S3 CAM AI视觉平台</text>
+            </view>
+            <view class="header-status">
+                <view class="status-indicator {{deviceSwitch ? 'online' : 'offline'}}">
+                    <text class="status-dot"></text>
+                    {{deviceSwitch ? '系统在线' : '系统离线'}}
+                </view>
+                <text class="time">{{currentTime}}</text>
+            </view>
+        </view>
+        <view class="header-glow"></view>
+    </view>
+
+    <!-- 选项卡导航 -->
+    <view class="tab-nav">
+        <view class="tab-item {{activeTab === 'ai' ? 'active' : ''}}" bindtap="switchTab" data-tab="ai">
+            <text class="tab-icon">🧠</text>
+            <text class="tab-text">AI识别</text>
+        </view>
+        <view class="tab-item {{activeTab === 'weather' ? 'active' : ''}}" bindtap="switchTab" data-tab="weather">
+            <text class="tab-icon">🌤️</text>
+            <text class="tab-text">天气信息</text>
+        </view>
+        <view class="tab-item {{activeTab === 'schedule' ? 'active' : ''}}" bindtap="switchTab" data-tab="schedule">
+            <text class="tab-icon">⏰</text>
+            <text class="tab-text">日程信息</text>
+        </view>
+    </view>
+
+    <!-- 主要内容区域 -->
+    <scroll-view class="main-content" scroll-y>
+        <!-- AI识别选项卡 -->
+        <view class="tab-content {{activeTab === 'ai' ? 'active' : ''}}">
+            <!-- 拍照控制卡片 -->
+            <view class="card photo-control">
+                <view class="card-glow"></view>
+                <view class="card-header">
+                    <text class="card-title">📸 图像采集控制</text>
+                    <view class="card-status">
+                        <text class="status-dot {{isImageLoading ? 'loading' : 'ready'}}"></text>
+                        {{isImageLoading ? '采集中...' : '准备就绪'}}
+                    </view>
+                </view>
+                <view class="photo-actions">
+                    <button class="btn btn-primary btn-large" bindtap="touchBtn_takePhoto" disabled="{{isImageLoading || !deviceSwitch}}">
+                        <text class="btn-icon">🚀</text>
+                        {{isImageLoading ? '采集中...' : '启动图像采集'}}
+                    </button>
+                    <button class="btn btn-secondary" bindtap="touchBtn_getshadow">
+                        <text class="btn-icon">🔄</text>
+                        刷新状态
+                    </button>
+                </view>
+                <view class="device-status-hint" wx:if="{{!deviceSwitch}}">
+                    <text class="hint-text">⚠️ 设备开关已关闭，无法拍照</text>
+                </view>
+            </view>
+
+            <!-- AI识别结果卡片 -->
+            <view class="card ai-result">
+                <view class="card-glow"></view>
+                <view class="card-header">
+                    <text class="card-title">🧠 AI视觉分析</text>
+                    <view class="ai-badge {{hasAIResult ? 'has-result' : 'no-result'}}">
+                        {{hasAIResult ? '分析完成' : '等待分析'}}
+                    </view>
+                </view>
+                <view class="ai-content">
+                    <text class="ai-text">{{aiResult || '暂无分析结果，请先进行图像采集'}}</text>
+                    <view class="ai-actions">
+                        <button class="btn btn-small" bindtap="copyAIResult">📋 复制分析</button>
+                        <text class="ai-time">类型: {{aiResultType || '未知'}}</text>
+                    </view>
+                </view>
+            </view>
+
+            
+            
+        </view>
+
+        <!-- 天气信息选项卡 -->
+        <view class="tab-content {{activeTab === 'weather' ? 'active' : ''}}">
+            <view class="card weather-info">
+                <view class="card-glow"></view>
+                <view class="card-header">
+                    <text class="card-title">🌤️ 天气信息</text>
+                    <view class="weather-badge {{temperature ? 'has-data' : 'no-data'}}">
+                        {{temperature ? '数据正常' : '无数据'}}
+                    </view>
+                </view>
+                <view class="weather-content">
+                    <view class="weather-main-info">
+                        <text class="weather-temp-large">{{temperature || '--'}}</text>
+                        <view class="weather-condition-main">
+                            <text class="weather-condition-text">{{condition || '未知'}}</text>
+                            <text class="weather-city">{{city || '未知地区'}}</text>
+                        </view>
+                    </view>
+                    <view class="weather-details-grid">
+                        <view class="weather-detail-item">
+                            <text class="detail-label">💧 湿度</text>
+                            <text class="detail-value-large">{{humidity || '--'}}</text>
+                        </view>
+                        <view class="weather-detail-item">
+                            <text class="detail-label">🌪️ 风力</text>
+                            <text class="detail-value-large">{{windScale || '--'}}</text>
+                        </view>
+                        <view class="weather-detail-item">
+                            <text class="detail-label">🎐 风速</text>
+                            <text class="detail-value-large">{{windSpeed || '--'}}</text>
+                        </view>
+                        <view class="weather-detail-item">
+                            <text class="detail-label">🧭 风向</text>
+                            <text class="detail-value-large">{{windDir || '--'}}</text>
+                        </view>
+                        <view class="weather-detail-item">
+                            <text class="detail-label">👁️ 能见度</text>
+                            <text class="detail-value-large">{{visibility || '--'}}</text>
+                        </view>
+                        <view class="weather-detail-item">
+                            <text class="detail-label">🌡️ 体感温度</text>
+                            <text class="detail-value-large">{{feelLike || '--'}}</text>
+                        </view>
+                    </view>
+                </view>
+            </view>
+        </view>
+
+        <!-- 日程信息选项卡 -->
+        <view class="tab-content {{activeTab === 'schedule' ? 'active' : ''}}">
+            <view class="card schedule-info">
+                <view class="card-glow"></view>
+                <view class="card-header">
+                    <text class="card-title">⏰ 日程信息</text>
+                    <view class="schedule-badge {{hasScheduleReminder ? 'has-reminder' : 'no-reminder'}}">
+                        {{hasScheduleReminder ? '有待办' : '无安排'}}
+                    </view>
+                </view>
+                <view class="schedule-content">
+                    <view class="schedule-main-info">
+                        <text class="schedule-time-large">{{countdownString || '无日程'}}</text>
+                        <view class="schedule-detail-main">
+                            <text class="schedule-next-text">下一个日程</text>
+                            <text class="schedule-next-time">{{scheduleTime || '暂无安排'}}</text>
+                        </view>
+                    </view>
+                    <view class="schedule-details-content">
+                        <text class="schedule-desc-large">{{scheduleTitle || '今日暂无日程安排'}}</text>
+                    </view>
+                </view>
+            </view>
+        </view>
+    </scroll-view>
+
+    <!-- 底部操作栏 -->
+    <view class="bottom-actions">
+        <view class="bottom-glow"></view>
+        <button class="btn-bottom {{activeTab === 'ai' ? 'active' : ''}}" bindtap="switchTab" data-tab="ai">
+            <text class="btn-bottom-icon">🧠</text>
+            <text class="btn-bottom-text">AI识别</text>
+        </button>
+        <button class="btn-bottom {{activeTab === 'weather' ? 'active' : ''}}" bindtap="switchTab" data-tab="weather">
+            <text class="btn-bottom-icon">🌤️</text>
+            <text class="btn-bottom-text">天气</text>
+        </button>
+        <button class="btn-bottom {{activeTab === 'schedule' ? 'active' : ''}}" bindtap="switchTab" data-tab="schedule">
+            <text class="btn-bottom-icon">⏰</text>
+            <text class="btn-bottom-text">日程</text>
+        </button>
+    </view>
+
+    <!-- 科技感背景元素 -->
+    <view class="tech-bg">
+        <view class="grid-lines"></view>
+        <view class="floating-particles">
+            <view class="particle p1"></view>
+            <view class="particle p2"></view>
+            <view class="particle p3"></view>
+            <view class="particle p4"></view>
+            <view class="particle p5"></view>
+        </view>
+    </view>
+</view>

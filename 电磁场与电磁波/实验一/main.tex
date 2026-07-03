@@ -1,0 +1,439 @@
+\documentclass[12pt,a4paper]{article}
+\usepackage[UTF8]{ctex}
+\usepackage{graphicx}
+\usepackage{geometry}
+\usepackage{ulem}
+\usepackage{enumitem}
+\usepackage{titlesec}
+\usepackage{multicol}
+\usepackage[export]{adjustbox}
+\usepackage{amsmath}  % 推荐用于更好的数学排版
+\usepackage[utf8]{inputenc}
+\usepackage{CJKutf8}
+\usepackage{fancyhdr}
+\usepackage{lastpage}
+\usepackage{ulem}
+\usepackage{tabularx}
+\usepackage{float}
+\usepackage{siunitx}
+\usepackage{multirow} 
+
+% 页眉页脚设置
+\pagestyle{fancy}
+\fancyhf{} % 清除所有页眉页脚
+% 设置页眉内容
+%-==========1. 填写从第二页开始 每页第一行的信息==========-
+\fancyhead[C]{\small
+    \makebox[4.5em][c]{实验名称：} \uline{\makebox[17em][c]{微带传输线负载特性矢网测量}} 
+    \makebox[2.5em][c]{姓名：} \uline{\makebox[4em][c]{张赫}} 
+    \makebox[2.5em][c]{学号：} \uline{\makebox[5em][c]{3240101459}}
+}%--------------------------------------------------------
+\fancyfoot[C]{\small 第 \thepage\ 页，共 \pageref{LastPage} 页}
+
+
+% 取消页眉和页脚的下划线
+\renewcommand{\headrulewidth}{0pt} % 页眉横线粗细设为0
+\renewcommand{\footrulewidth}{0pt} % 页脚横线粗细设为0
+
+% 调整页眉高度
+\setlength{\headheight}{50pt}
+
+% 设置plain样式（用于第一页）
+\fancypagestyle{plain}{
+    \fancyhf{} % 清除所有页眉页脚
+    \renewcommand{\headrulewidth}{0pt} % 隐藏页眉横线
+    \fancyfoot[C]{第 \thepage\ 页，共 \pageref{LastPage} 页} % 保留页脚
+}
+% 设置页面边距
+\geometry{left=2.54cm,right=1.5cm,top=2.54cm,bottom=2.54cm}
+
+% 设置正文字体大小为小四
+\renewcommand{\normalsize}{\fontsize{12pt}{16pt}\selectfont}
+% 设置章节格式
+\titleformat{\section}{\fontsize{16pt}{22pt}\selectfont\bfseries}{\thesection}{1em}{} % 一级标题：三号
+\titleformat{\subsection}{\fontsize{15pt}{20pt}\selectfont\bfseries}{\thesubsection}{1em}{} % 二级标题：小三
+
+\begin{document}
+\thispagestyle{plain}%第一页使用 plain 样式，而不是默认的 fancy 样式，第一页不再显示页眉
+% 标题部分 - 两栏布局
+\begin{multicols}{2}
+    % 左栏：图片和实验报告标题
+    % 左栏：使用空行创建前三行
+    \noindent
+    ~\\ % 第一行
+    ~\\ % 第二行
+    ~\\ % 第三行
+    \hphantom{占位}% 使用空占位符
+    \raisebox{-0.5\baselineskip}% 图片向下移动半行
+    {\includegraphics[width=1.85in,height=0.58in]{ZJU.jpg}}
+    \hspace{.5em}% 图片和标题之间的间距
+    \raisebox{0pt}[\height][0pt]% 标题底部对齐
+    {\textbf{\fontsize{26pt}{30pt}\selectfont 实验报告}}
+    
+    \columnbreak % 换到右栏
+    
+    % 右栏：个人信息
+    % 右栏：个人信息 - 靠右对齐 
+%-==========2. 填写个人信息==========-
+    \begin{flushright}
+        \small
+        \makebox[3em][l]{专业：} \uline{\makebox[9em][c]{法语-电子科学与技术}} \\
+        \makebox[3em][l]{姓名：} \uline{\makebox[9em][c]{张赫}} \\
+        \makebox[3em][l]{学号：} \uline{\makebox[9em][c]{3240101459}} \\
+        \makebox[3em][l]{日期：} \uline{\makebox[9em][c]{2026年4月8日}} \\
+        \makebox[3em][l]{地点：} \uline{\makebox[9em][c]{紫金港东四224}} \\
+    \end{flushright}   
+\end{multicols}
+% 课程名称等信息（单栏）
+%-==========3. 填写课程信息==========-
+
+{\small
+\noindent
+课程名称： \uline{电磁场与电磁波} \hfill 指导老师： \uline{李凯、王子立} \hfill 成绩： \uline{\hspace{3cm}} \\
+实验名称：\uline{微带传输线负载特性矢网测量}\hfill 实验类型：\uline{验证实验}\hfill 同组学生姓名：\uline{李雨泽}
+}
+%-==========4. 正文开始==========-
+\section*{一、实验数据与曲线记录}
+\subsection*{1 微带传输线}
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.8\textwidth]{1.jpg}
+    \caption{微带传输线史密斯圆图——开路}
+    \label{fig1}
+    \end{figure}
+    传输线开路时，理论计算的$\Gamma$值：
+    \[\Gamma = \frac{Z_L - Z_0}{Z_L + Z_0} = \frac{\infty}{\infty}=1\]
+    通过测量数据计算的$\Gamma$值：
+    \[\Gamma = \frac{Z_L - Z_0}{Z_L + Z_0} = \frac{(R + jX) - 50}{(R + jX) + 50}\]
+ \begin{table}[H]
+\centering
+\renewcommand{\arraystretch}{1.2}
+\small
+\begin{tabular}{|p{2.2cm}|p{2cm}|p{2cm}|p{2.5cm}|}
+\hline
+频率$f$/GHz& 电阻$R/\Omega$ & 电抗$X/\Omega$ & $\varGamma $（测量） \\
+\hline
+2.3 & 7.62 & 57.43 & 0.129+j0.870 \\
+\hline
+2.4 & 15.27 & 96.98 & 0.521 + j0.711 \\
+\hline
+2.5 & 59.68 & 201.46 & 0.791 + j0.383 \\
+\hline
+2.6 & 730.87 & -114.28 & 0.875 - j0.018 \\
+\hline
+2.7 & 56.02 & -186.52 & 0.770 - j0.406 \\
+\hline
+\end{tabular}
+
+\end{table}   
+
+传输线开路时，圆图曲线靠近最右侧的开路点。由于传输线末端可能存在一定的容性阻抗，所以$f$较大时曲线呈现容性。另外，实验值计算出的反射系数$|\varGamma|\approx 0.87 \neq 1$ ，说明传输线存在损耗。
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.8\textwidth]{2.jpg}
+    \caption{微带传输线史密斯圆图——短路}
+    \label{fig2}
+    \end{figure}
+    传输线短路时，理论计算的$\Gamma$值：
+    \[\Gamma = \frac{Z_L - Z_0}{Z_L + Z_0} = \frac{-Z_0}{Z_0}=-1\]
+    通过测量数据计算的$\Gamma$值：
+    \[\Gamma = \frac{Z_L - Z_0}{Z_L + Z_0} = \frac{(R + jX) - 50}{(R + jX) + 50}\]
+ \begin{table}[H]
+\centering
+\renewcommand{\arraystretch}{1.2}
+\small
+\begin{tabular}{|p{2.2cm}|p{2cm}|p{2cm}|p{2.5cm}|}
+\hline
+频率$f$/GHz& 电阻$R/\Omega$ & 电抗$X/\Omega$ & $\varGamma $（测量） \\
+\hline
+2.3 & 4.32 & -16.36 & −0.874−j0.313 \\
+\hline
+2.4 & 4.44 & -2.28 & −0.926−j0.045 \\
+\hline
+2.5 & 5.15 & 11.44 & −0.894+j0.228 \\
+\hline
+2.6 & 6.84 & 27.05 & −0.777+j0.488 \\
+\hline
+2.7 & 10.84 & 47.83 & −0.579+j0.707 \\
+\hline
+\end{tabular}
+
+\end{table}   
+
+传输线短路时，圆图曲线靠近左侧的短路点。另外，实验值计算出的反射系数$|\varGamma|\approx 0.92 \neq 1$ ，说明传输线存在损耗。
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.8\textwidth]{3.jpg}
+    \caption{微带传输线史密斯圆图——负载匹配}
+    \label{fig3}
+    \end{figure}
+    传输线负载匹配时，理论计算的$\Gamma$值：
+    \[\Gamma = \frac{Z_L - Z_0}{Z_L + Z_0} = 0\]
+    通过测量数据计算的$\Gamma$值：
+    \[\Gamma = \frac{Z_L - Z_0}{Z_L + Z_0} = \frac{(R + jX) - 50}{(R + jX) + 50}\]
+ \begin{table}[H]
+\centering
+\renewcommand{\arraystretch}{1.2}
+\small
+\begin{tabular}{|p{2.2cm}|p{2cm}|p{2cm}|p{2.5cm}|}
+\hline
+频率$f$/GHz& 电阻$R/\Omega$ & 电抗$X/\Omega$ & $\varGamma $（测量） \\
+\hline
+2.3 & 40.40 & 8.7 & −0.105+j0.096 \\
+\hline
+2.4 & 45.18 & 14.39 & −0.051+j0.152 \\
+\hline
+2.5 & 53.26 & 17.80 & 0.032+j0.173 \\
+\hline
+2.6 & 63.86 & 17.24 & 0.119+j0.148 \\
+\hline
+2.7 & 74.76 & 9.80 & 0.194+j0.077 \\
+\hline
+\end{tabular}
+
+\end{table}   
+
+传输线阻抗匹配时，圆图曲线趋近于阻抗匹配点，反射系数约等于0。
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.8\textwidth]{4.jpg}
+    \caption{微带传输线史密斯圆图——电容负载}
+    \label{fig4}
+    \end{figure}
+    传输线接电容负载时，理论计算的$\Gamma$值：
+    \[\Gamma = \frac{Z_L - Z_0}{Z_L + Z_0} = \frac{\frac{1}{j2\pi fC} - Z_0}{\frac{1}{j2\pi fC} + Z_0}\]
+    通过测量数据计算的$\Gamma$值：
+    \[\Gamma = \frac{Z_L - Z_0}{Z_L + Z_0} = \frac{(R + jX) - 50}{(R + jX) + 50}\]
+ \begin{table}[H]
+\centering
+\renewcommand{\arraystretch}{1.2}
+\small
+\begin{tabular}{|p{2.2cm}|p{2cm}|p{2cm}|p{2.5cm}|}
+\hline
+频率$f$/GHz& 电阻$R/\Omega$ & 电抗$X/\Omega$ & $\varGamma $（测量） \\
+\hline
+2.3 & 520.6 & 195.08 & 0.843+j0.053 \\
+\hline
+2.4 & 69.53 & -185.85 & 0.756−j0.379 \\
+\hline
+2.5 & 17.89 & -87.86 & 0.450−j0.712 \\
+\hline
+2.6 & 9.24& -49.91 & 0.011−j0.832 \\
+\hline
+2.7 & 6.68 & -27.69 & −0.425−j0.696 \\
+\hline
+\end{tabular}
+
+\end{table}   
+
+传输线接电容负载时，圆图曲线整体在容性阻抗区域。随着频率升高，电容的容抗减小，导致总阻抗逐渐趋近于短路（圆图左侧），反射系数的相位也从 0° 附近向 -180° 方向旋转。反射系数$\varGamma$接近1。
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.8\textwidth]{5.jpg}
+    \caption{微带传输线史密斯圆图——电感负载}
+    \label{fig5}
+    \end{figure}
+    传输线接电感负载时，理论计算的$\Gamma$值：
+    \[\Gamma = \frac{Z_L - Z_0}{Z_L + Z_0} = \frac{j2\pi fL - Z_0}{j2\pi fL + Z_0}\]
+    通过测量数据计算的$\Gamma$值：
+    \[\Gamma = \frac{Z_L - Z_0}{Z_L + Z_0} = \frac{(R + jX) - 50}{(R + jX) + 50}\]
+ \begin{table}[H]
+\centering
+\renewcommand{\arraystretch}{1.2}
+\small
+\begin{tabular}{|p{2.2cm}|p{2cm}|p{2cm}|p{2.5cm}|}
+\hline
+频率$f$/GHz& 电阻$R/\Omega$ & 电抗$X/\Omega$ & $\varGamma $（测量） \\
+\hline
+2.3 & 4.63 & 8.22 & −0.790+j0.272 \\
+\hline
+2.4 & 8.84 & 43.45 & −0.100+j0.812 \\
+\hline
+2.5 & 5.86 & 23.70 & −0.517+j0.644 \\
+\hline
+2.6 & 16.93& 74.12 & 0.329+j0.744 \\
+\hline
+2.7 & 48.92 & 136.86 & 0.652+j0.481 \\
+\hline
+\end{tabular}
+
+\end{table}   
+
+传输线接电感负载时，圆图曲线整体在感性阻抗区域。随着频率升高，电感的感抗增加，导致总阻抗逐渐趋近于开路（圆图右侧），反射系数的相位从 180° 附近向 0° 方向旋转。反射系数$\varGamma$接近1。
+
+\subsection*{2 天线测量}
+
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.8\textwidth]{6.jpg}
+    \caption{天线驻波比特性曲线（对数）}
+    \label{fig6}
+    \end{figure}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.8\textwidth]{7.jpg}
+    \caption{天线驻波系数测量}
+    \label{fig7}
+    \end{figure}
+
+从对数图中可以看出，天线共有 5 个吸收峰，峰值在0到-17dB 之间。在 $f=2.1\mathrm{GHz}$ 时，具有最小的驻波系数为 1.31，小于 1.5，此时反射功率较低，接近匹配，天线工作效果好。
+
+在 2.3 GHz ~ 2.7 GHz 频段内，天线的最小驻波系数出现在 2.1 GHz（VSWR = 1.31），已接近完美匹配。
+但在 2.3 GHz 以上，驻波比逐渐增大，进入该频段后半部分（接近 2.7 GHz）时，驻波系数超过 2.0，反射功率显著增加。
+\subsection*{3 微带滤波器网络参量测量}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.8\textwidth]{8.jpg}
+    \caption{S参数的频率关系}
+    \label{fig8}
+    \end{figure}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.8\textwidth]{9.jpg}
+    \caption{相位的的频率关系}
+    \label{fig9}
+    \end{figure}
+
+    \begin{itemize}
+\item 中心频率： \( f_0 = 2.410\mathrm{GHz}\)
+\item 3dB 带宽： \( \Delta f = f_2 - f_1 = 2.455\mathrm{GHz} - 2.355\mathrm{GHz} = 0.1\mathrm{GHz}\)
+\item 插入损耗：\(-9.93\)dB
+\item 带内纹波：几乎为0
+\item 阻带衰减：\(-51.44\)dB , \(-52.06\)dB
+\end{itemize}
+
+根据测量数据，该微带滤波器中心频率为 2.41 GHz，3dB 带宽 100 MHz，阻带衰减优于 50 dB，带内纹波几乎为零，说明其频率选择性和通带平坦度良好；但插入损耗高达 -9.93 dB，信号衰减严重。总体而言，滤波器在抑制带外干扰方面表现出色，但过大的插入损耗会显著降低系统增益，设计上需重点优化损耗问题。
+
+
+\section*{二、实验结果分析}
+
+\section*{三、思考题解答}
+\subsection*{1. 简述 S 参数的定义及物理意义，说明 S11、S21 的含义}
+
+\textbf{S参数（散射参数）}：描述微波网络中入射波和反射波之间关系的参数，用于表征网络的传输和反射特性，适用于高频信号分析。
+
+\begin{itemize}
+    \item \textbf{S\(_{11}\)}（输入反射系数）：端口2匹配时，端口1的反射波与入射波之比。物理意义为端口的\textbf{回波损耗}，反映端口匹配程度，S\(_{11}\)越小（越负）表示匹配越好。
+    \item \textbf{S\(_{21}\)}（正向传输系数）：端口2匹配时，端口2输出波与端口1输入波之比。物理意义为\textbf{插入损耗}或\textbf{增益}，反映信号从端口1传输到端口2的能力。
+\end{itemize}
+
+\subsection*{2. 若不进行校准，直接接入射频电缆和电路模块测量，会对结果产生什么影响？请分析原因}
+
+\textbf{影响}：
+\begin{itemize}
+    \item 测量结果包含系统误差（电缆损耗、转接头反射、端口失配等），无法得到DUT的真实参数
+    \item S\(_{11}\) 读数偏大（匹配变差），S\(_{21}\) 读数偏小（损耗虚高）
+    \item 相位测量不准确，影响阻抗、时域分析等
+\end{itemize}
+
+\textbf{原因}：
+\begin{itemize}
+    \item 矢量网络分析仪通过校准消除系统误差项（方向性、源匹配、负载匹配、隔离、跟踪等）
+    \item 不校准时，电缆的损耗、驻波、长度延时等会叠加到DUT特性中，导致测量结果失真
+\end{itemize}
+
+\subsection*{3. 设计实验方案，测量 N-SMA 转接头对测试曲线的影响}
+
+\textbf{实验方案}：
+\begin{enumerate}
+    \item \textbf{校准}：使用N型校准件对VNA进行双端口SOLT校准，校准面设在N型端口。
+    \item \textbf{直通测量}：两根N型电缆直接相连，测量S\(_{11}\)、S\(_{21}\)作为参考基线。
+    \item \textbf{接入转接头}：在一条通路中串入N-SMA转接头 + SMA电缆 + SMA-N转接头。
+    \item \textbf{对比分析}：
+        \begin{itemize}
+            \item 对比两次测量的S\(_{11}\)（反射）变化，评估转接头引入的驻波
+            \item 对比S\(_{21}\)幅度和相位变化，评估插入损耗和相位偏移
+        \end{itemize}
+    \item \textbf{时域分析}（可选）：通过VNA的低通时域模式，观察转接头位置产生的反射脉冲。
+\end{enumerate}
+
+\subsection*{4. 根据实验给出的微带线设计参数，计算 50 Ω 半波长微带线的宽度和长度}
+
+\subsubsection*{已知条件}
+\begin{itemize}
+    \item 工作频率：\( f_0 = 2.5 \, \text{GHz} \)
+    \item 特性阻抗：\( Z_0 = 50 \, \Omega \)
+    \item 相对介电常数：\( \varepsilon_r = 4.6 \)
+    \item 介质厚度：\( h = 0.765 \, \text{mm} \)
+\end{itemize}
+
+\subsubsection*{宽度 \( W \) 计算}
+
+中间量 \( A \)：
+\[
+A = \frac{Z_0}{60}\sqrt{\frac{\varepsilon_r+1}{2}} + \frac{\varepsilon_r-1}{\varepsilon_r+1}\left(0.23+\frac{0.11}{\varepsilon_r}\right) \approx 1.558
+\]
+
+\[
+\frac{W}{h} = \frac{8e^A}{e^{2A}-2} \approx 1.85
+\]
+
+\[
+W = 1.85 \times 0.765 \approx \boxed{1.41 \, \text{mm}}
+\]
+
+\subsubsection*{有效介电常数 \( \varepsilon_{re} \) 计算}
+
+\[
+\varepsilon_{re} = \frac{\varepsilon_r+1}{2} + \frac{\varepsilon_r-1}{2} \cdot \frac{1}{\sqrt{1+12h/W}} \approx \boxed{3.458}
+\]
+
+\subsubsection*{半波长长度 \( L \) 计算}
+
+真空中波长：
+\[
+\lambda_0 = \frac{c}{f_0} = \frac{3\times10^8}{2.5\times10^9} = 120 \, \text{mm}
+\]
+
+导波波长：
+\[
+\lambda_g = \frac{\lambda_0}{\sqrt{\varepsilon_{re}}} \approx \frac{120}{\sqrt{3.458}} \approx 64.53 \, \text{mm}
+\]
+
+半波长长度：
+\[
+L = \frac{\lambda_g}{2} \approx \boxed{32.26 \, \text{mm}}
+\]
+
+
+\section*{四、实验收获与体会}
+
+通过本次微波测量实验，我掌握了以下知识与技能：
+
+\subsubsection*{知识点}
+\begin{itemize}
+    \item 理解了微带线、滤波器和天线的基本参数（S参数、VSWR、插入损耗、带宽）的物理意义
+    \item 学会了S参数与阻抗、反射系数之间的转换关系
+    \item 掌握了滤波器性能的评价方法（选择性、带内平坦度、阻带抑制）
+\end{itemize}
+
+\subsubsection*{仪器操作}
+\begin{itemize}
+    \item 熟练使用矢量网络分析仪进行校准（SOLT）
+    \item 能够正确设置扫频范围、显示格式（对数幅度、Smith圆图、VSWR）
+    \item 学会了保存轨迹、标记测量点、读取关键参数
+\end{itemize}
+
+\subsubsection*{对微波测量的理解}
+\begin{itemize}
+    \item 校准是准确测量的前提，系统误差必须通过校准消除
+    \item 传输线特性（特性阻抗、传播常数）直接影响匹配和传输质量
+    \item 实际器件与理论设计存在差异，误差来源包括材料参数、加工精度、焊接寄生等
+\end{itemize}
+
+\subsubsection*{问题与反思}
+\begin{itemize}
+    \item 实验中滤波器插入损耗偏大，分析为FR4基板损耗高和端口匹配不佳所致，后续可改用低损耗基板或优化匹配结构
+    \item 天线驻波比在2.45 GHz以上恶化，说明设计带宽不足，可通过调整辐射贴片尺寸或增加匹配网络来改善
+\end{itemize}
+
+\section*{五、实验建议与意见}
+
+建议增加新设备的操作介绍，这一部分操作与讲义有出入。
+
+
+\end{document}

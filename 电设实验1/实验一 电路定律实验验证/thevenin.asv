@@ -1,0 +1,55 @@
+% 戴维南等效电路参数
+Vth = 10.08;    % 戴维南电压 (V)
+Rth = 510;      % 戴维南电阻 (Ω)
+
+% 计算不同负载电流时的端口电压
+I_load = linspace(0, 0.025, 100);  % 负载电流从0到30mA
+V_port = Vth - I_load * Rth;      % 端口电压计算
+
+% 绘制外特性曲线
+figure;
+plot(I_load * 1000, V_port, 'b-', 'LineWidth', 2);
+grid on;
+xlabel('电流I(mA)');
+ylabel('电压V(V)');
+
+legend(['V_{th} = ' num2str(Vth) 'V, R_{th} = ' num2str(Rth) 'Ω'], 'Location', 'best');
+
+% 标记关键点
+hold on;
+
+% 用户指定的数据点
+data_points = [
+    2.41, 14.26;   % [电压, 电流(mA)]
+    5.83,  7.96;
+    7.40,  5.03
+];
+
+% 标记用户指定的点
+for i = 1:size(data_points, 1)
+    V_point = data_points(i, 1);
+    I_point = data_points(i, 2);
+    
+    % 绘制数据点
+    plot(I_point, V_point, 's', 'MarkerSize', 10, 'MarkerFaceColor', 'red', 'MarkerEdgeColor', 'black');
+    
+    % 添加文本标注
+    text(I_point + 0.5, V_point + 1, ...
+        sprintf('(%.2fV, %.2fmA)', V_point, I_point), ...
+        'FontSize', 9, 'BackgroundColor', 'white');
+end
+
+% 标记理论关键点
+% 开路电压点 (I=0)
+plot(0, Vth, 'ro', 'MarkerSize', 8, 'MarkerFaceColor', 'blue');
+text(0.5, Vth+0.3, ['V_{oc} = ' num2str(Vth) 'V'], 'FontSize', 10);
+
+% 短路电流点 (V=0)
+I_sc = Vth / Rth;
+plot(I_sc * 1000, 0, 'go', 'MarkerSize', 8, 'MarkerFaceColor', 'green');
+text(I_sc * 1000 + 0.5, 0.5, ['I_{sc} = ' num2str(I_sc*1000, '%.1f') 'mA'], 'FontSize', 10);
+
+hold off;
+
+% 添加网格和美化
+set(gca, 'GridAlpha', 0.3);

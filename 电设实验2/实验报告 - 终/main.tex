@@ -1,0 +1,912 @@
+\documentclass[12pt,a4paper]{article}
+\usepackage[UTF8]{ctex}
+\usepackage{graphicx}
+\usepackage{geometry}
+\usepackage{ulem}
+\usepackage{enumitem}
+\usepackage{titlesec}
+\usepackage{multicol}
+\usepackage[export]{adjustbox}
+\usepackage{amsmath}  % 推荐用于更好的数学排版
+\usepackage[utf8]{inputenc}
+\usepackage{CJKutf8}
+\usepackage{fancyhdr}
+\usepackage{lastpage}
+\usepackage{ulem}
+\usepackage{tabularx}
+\usepackage{float}
+\usepackage{siunitx}
+\usepackage{multirow} 
+\usepackage{tikz}
+\usepackage{listings}
+\usepackage{xcolor}
+\usepackage{circuitikz} 
+\usetikzlibrary{shapes,arrows,positioning}
+
+
+\lstset{
+    language=C++,
+    basicstyle=\small\ttfamily,
+    keywordstyle=\color{blue},
+    commentstyle=\color{green!60!black},
+    stringstyle=\color{red},
+    numbers=left,
+    numberstyle=\tiny\color{gray},
+    frame=single,
+    breaklines=true,
+    tabsize=2
+}
+
+
+% 页眉页脚设置
+\pagestyle{fancy}
+\fancyhf{} % 清除所有页眉页脚
+% 设置页眉内容
+%-==========1. 填写从第二页开始 每页第一行的信息==========-
+\fancyhead[C]{\small
+    \makebox[4.5em][c]{实验名称：} \uline{\makebox[17em][c]{Arduino多功能数字时钟}} 
+    \makebox[2.5em][c]{姓名：} \uline{\makebox[4em][c]{张赫}} 
+    \makebox[2.5em][c]{学号：} \uline{\makebox[5em][c]{3240101459}}
+}%--------------------------------------------------------
+\fancyfoot[C]{\small 第 \thepage\ 页，共 \pageref{LastPage} 页}
+
+
+% 取消页眉和页脚的下划线
+\renewcommand{\headrulewidth}{0pt} % 页眉横线粗细设为0
+\renewcommand{\footrulewidth}{0pt} % 页脚横线粗细设为0
+
+% 调整页眉高度
+\setlength{\headheight}{50pt}
+
+% 设置plain样式（用于第一页）
+\fancypagestyle{plain}{
+    \fancyhf{} % 清除所有页眉页脚
+    \renewcommand{\headrulewidth}{0pt} % 隐藏页眉横线
+    \fancyfoot[C]{第 \thepage\ 页，共 \pageref{LastPage} 页} % 保留页脚
+}
+% 设置页面边距
+\geometry{left=2.54cm,right=1.5cm,top=2.54cm,bottom=2.54cm}
+
+% 设置正文字体大小为小四
+\renewcommand{\normalsize}{\fontsize{12pt}{16pt}\selectfont}
+% 设置章节格式
+\titleformat{\section}{\fontsize{16pt}{22pt}\selectfont\bfseries}{\thesection}{1em}{} % 一级标题：三号
+\titleformat{\subsection}{\fontsize{15pt}{20pt}\selectfont\bfseries}{\thesubsection}{1em}{} % 二级标题：小三
+
+\begin{document}
+\thispagestyle{plain}%第一页使用 plain 样式，而不是默认的 fancy 样式，第一页不再显示页眉
+% 标题部分 - 两栏布局
+\begin{multicols}{2}
+    % 左栏：图片和实验报告标题
+    % 左栏：使用空行创建前三行
+    \noindent
+    ~\\ % 第一行
+    ~\\ % 第二行
+    ~\\ % 第三行
+    \hphantom{占位}% 使用空占位符
+    \raisebox{-0.5\baselineskip}% 图片向下移动半行
+    {\includegraphics[width=1.85in,height=0.58in]{ZJU.jpg}}
+    \hspace{.5em}% 图片和标题之间的间距
+    \raisebox{0pt}[\height][0pt]% 标题底部对齐
+    {\textbf{\fontsize{26pt}{30pt}\selectfont 实验报告}}
+    
+    \columnbreak % 换到右栏
+    
+    % 右栏：个人信息
+    % 右栏：个人信息 - 靠右对齐 
+%-==========2. 填写个人信息==========-
+    \begin{flushright}
+        \small
+
+        \makebox[3em][l]{专业：} \uline{\makebox[9em][c]{法语-电子科学与技术}} \\
+        \makebox[3em][l]{姓名：} \uline{\makebox[9em][c]{张赫}} \\
+        \makebox[3em][l]{学号：} \uline{\makebox[9em][c]{3240101459}} \\
+        \makebox[3em][l]{日期：} \uline{\makebox[9em][c]{2026年5月31日}} \\
+        \makebox[3em][l]{地点：} \uline{\makebox[9em][c]{紫金港东四216}} \\
+    \end{flushright}   
+\end{multicols}
+% 课程名称等信息（单栏）
+%-==========3. 填写课程信息==========-
+
+{\small
+\noindent
+课程名称： \uline{电子电路设计实验II} \hfill 指导老师： \uline{施红军、叶险峰、邓靖靖} \hfill 成绩： \uline{\hspace{3cm}} \\
+实验名称：\uline{Arduino多功能数字时钟}\hfill 实验类型：\uline{设计实验}\hfill 同组学生姓名：\uline{虞悦}
+}
+%-==========4. 正文开始==========-
+
+\section*{一、实验目的}
+
+1、掌握 Arduino 平台的基本使用方法，包括硬件连接、编程环境配置及代码编写。
+
+2、了解数字时钟的基本原理，学会如何设计并制作一个多功能数字时钟。
+
+3、能够独立完成一个基于 Arduino 的多功能数字时钟项目的设计、制作与调试。
+
+
+\section*{二、实验任务与要求}
+1、用 Arduino UNO 设计多功能数字时钟，要求实现功能：
+
+（1）显示时间、日期和星期 
+
+（2）断电保存时间 
+
+（3）通过按钮设置时间、日期 
+
+（4）整点响铃 
+
+（5）自定义闹钟 
+
+（6）显示温度 
+
+（7）自定义报警温度 
+
+（8）按键功能：按选择键进入设置时间功能；同时按 + - 键进入闹钟和报警温度设置功能； 
+
+（9）再按选择键光标跳动，光标跳到哪，当前的参数即可通过加减键修改。
+
+2、设计的电路，完成相应器件的选择和参数计算，制作 Arduino UNO 扩展板。
+
+3、编制与调试多功能数字时钟程序。
+
+4、将制作的 Arduino UNO 扩展板与 Arduino UNO 板组装后，进行系统联调。
+
+\section*{三、实验原理}
+
+本节将详细介绍实验中各个核心模块的工作原理，包括实时时钟模块、显示模块、编码器输入模块、音频播放模块以及各类传感器模块。
+
+\subsection*{3.1 DS3231实时时钟模块}
+
+DS3231是一款高精度I2C实时时钟芯片，内置温度补偿晶体振荡器（TCXO）和晶体谐振器。其核心工作原理如下：
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.6\textwidth]{1.png}
+    \caption{DS3231实时时钟模块}
+
+    
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.6\textwidth]{2.png}
+    \caption{DS3231时钟芯片原理图}
+    \end{figure}
+
+
+
+\subsubsection*{时钟计时}
+
+DS3231内部包含一个秒、分、时、日、月、年寄存器，采用BCD码格式存储时间数据。芯片上电后自动从备用电池取电，保持计时连续性。计时精度主要依赖于内部32.768kHz石英晶体的振动频率。
+\begin{equation}
+f_{osc} = 32768 \text{ Hz} = 2^{15} \text{ Hz}
+\end{equation}
+
+通过15级二分频电路，将32.768kHz的频率精确分频为1Hz的秒脉冲，驱动计时器递增。
+
+\subsubsection*{温度补偿机制}
+
+DS3231内部集成温度传感器，每64秒进行一次温度测量，根据实测温度动态调整晶体振荡器的负载电容，从而补偿温度变化引起的频率漂移。补偿后的精度为
+$2\text{ppm} \quad (-40^\circ\text{C} \text{ 至 } +85^\circ\text{C})$，每月误差不超过$\pm 5.2$秒。
+
+
+\subsection*{3.2 1.8寸TFT显示屏（ST7735）}
+
+本次实验使用一块1.8寸的TFT显示屏作为显示模块，驱动芯片为ST7735。此芯片在Arduino IDE上有现成的库可以驱动。
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.4\textwidth]{3.jpg}
+    \caption{1.8寸TFT显示屏}
+
+\end{figure}
+
+ST7735是一款支持SPI接口的TFT-LCD驱动芯片，分辨率可达128×160像素，支持262K色显示。
+
+\subsubsection*{显示原理}
+
+TFT（Thin Film Transistor）液晶显示屏每个像素点对应一个薄膜晶体管，通过控制液晶分子的偏转角度来调节背光的透过率，从而实现不同灰阶和颜色的显示。ST7735内部集成GRAM（图形RAM），存储待显示的图像数据。
+
+\subsubsection*{SPI通信协议}
+
+显示屏通过SPI总线与主控通信，引脚功能如下：
+
+\begin{table}[H]
+\centering
+\begin{tabular}{|c|c|c|}
+\hline
+\textbf{引脚} & \textbf{方向} & \textbf{功能说明} \\
+\hline
+SCL & 输入 & SPI时钟信号 \\
+\hline
+SDA & 输入 & SPI数据信号 \\
+\hline
+CS & 输入 & 片选信号（低电平有效） \\
+\hline
+DC & 输入 & 数据/命令选择（高电平：数据，低电平：命令） \\
+\hline
+RES & 输入 & 复位信号（低电平有效） \\
+\hline
+\end{tabular}
+\caption{ST7735 SPI引脚功能}
+\end{table}
+
+
+\subsection*{3.3 EC11旋转编码器}
+
+EC11编码器是一种增量式光电/机械编码器，通过检测A、B两相输出的相位差来判断旋转方向和步数。
+
+\subsubsection*{工作原理}
+
+编码器内部有两个光耦或机械触点，旋转时输出两路相位差$90^\circ$的方波信号：
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.6\textwidth]{4.png}
+\caption{编码器输出波形}
+\end{figure}
+
+当顺时针旋转时，A相领先B相$90^\circ$；逆时针旋转时，B相领先A相$90^\circ$。通过检测A相下降沿时的B相电平即可判断方向：
+
+\begin{equation}
+\text{方向} = 
+\begin{cases}
+\text{顺时针} & \text{if } (A\downarrow \text{ 且 } B = \text{HIGH}) \\
+\text{逆时针} & \text{if } (A\downarrow \text{ 且 } B = \text{LOW})
+\end{cases}
+\end{equation}
+
+
+
+\subsection*{3.4 DFPlayer Mini音频模块}
+
+DFPlayer Mini是一款支持MP3/WAV格式解码的串口控制音频模块，集成了MicroSD卡槽和3W功放。
+
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.2\textwidth]{5.jpg}
+    \caption{DFPlayer Mini音频模块}
+
+    
+\end{figure}
+\subsubsection*{解码原理}
+
+模块内部采用专用音频解码芯片，读取SD卡中的MP3文件后，经过以下处理流程：
+
+\begin{enumerate}
+    \item 位流解复用：解析MP3帧头信息
+    \item 霍夫曼解码：还原量化后的频域系数
+    \item 逆量化：恢复真实的频域幅度值
+    \item IMDCT变换：将频域信号转换回时域PCM信号
+    \item 合成滤波：输出连续音频波形
+\end{enumerate}
+
+\subsubsection*{串口控制协议}
+
+通过软串口发送指令控制播放功能，指令格式为：
+
+\begin{table}[H]
+\centering
+\begin{tabular}{|c|c|c|c|c|c|c|}
+\hline
+起始字节 & 版本号 & 数据长度 & 指令码 & 反馈标志 & 参数高字节 & 参数低字节 \\
+\hline
+0x7E & 0xFF & 0x06 & CMD & 0x00 & DataH & DataL \\
+\hline
+\end{tabular}
+\caption{DFPlayer指令帧格式}
+\end{table}
+
+常用指令示例：
+\begin{itemize}
+    \item 播放指定曲目：0x03 + 曲目号
+    \item 调节音量：0x06 + 音量值(0-30)
+    \item 停止播放：0x16
+\end{itemize}
+
+\subsection*{3.5 DHT11温湿度传感器}
+
+DHT11采用单总线通信协议，内部包含一个电阻式湿度传感器和NTC温度传感器。
+
+
+\subsubsection*{单总线通信协议}
+
+通信时序如图\ref{fig:dht11}所示：
+
+\begin{figure}[H]
+\centering
+
+\includegraphics[width=1\textwidth]{6.png}
+\caption{DHT11通信时序图}
+\label{fig:dht11}
+\end{figure}
+
+数据传输长度为40位，格式为：
+\begin{equation}
+\text{8位湿度整数} + \text{8位湿度小数} + \text{8位温度整数} + \text{8位温度小数} + \text{8位校验和}
+\end{equation}
+
+
+\section*{四、实验设计}
+
+\subsection*{4.1 功能设计}
+
+\subsubsection*{时钟显示功能}
+\begin{itemize}
+    \item 数字时钟显示（时:分:秒）
+    \item 日期显示（年/月/日+星期）
+    \item 实时温湿度显示（温度精度0.1℃）
+    \item 温度报警阈值显示（可调0-50℃）
+\end{itemize}
+
+\subsubsection*{闹钟管理功能}
+\begin{itemize}
+    \item 支持4组独立闹钟
+    \item 每组独立设置时、分、开关
+    \item 闹钟触发一次后当日不再响，次日重置
+    \item 闹钟列表显示所有状态（ON/OFF）
+\end{itemize}
+
+\subsubsection*{交互控制功能（单编码器）}
+\begin{table}[H]
+\centering
+\begin{tabular}{|c|l|}
+\hline
+\textbf{操作} & \textbf{功能} \\
+\hline
+旋转 & 调节数值/切换选项 \\
+\hline
+短按 & 确认/切换字段 \\
+\hline
+长按0.5s & 退出闹钟设置 \\
+\hline
+长按1.2s & 进入RTC设置 \\
+\hline
+\end{tabular}
+\end{table}
+
+\subsubsection*{闹钟触发响应}
+\begin{itemize}
+    \item DFPlayer播放MP3（音量25）
+    \item 屏幕闪烁“ALARM!”提示
+    \item 显示闹钟编号和时间
+    \item 响铃60秒自动停止，或按键停止
+\end{itemize}
+
+\subsubsection*{RTC设置功能}
+\begin{itemize}
+    \item 长按1.2s进入
+    \item 依次设置：年$\rightarrow$月$\rightarrow$日$\rightarrow$时$\rightarrow$分$\rightarrow$秒
+    \item 长按保存退出
+\end{itemize}
+
+\subsubsection*{温度报警}
+\begin{itemize}
+    \item 可设置报警温度阈值
+    \item 超温时LED闪烁（5号脚，低电平点亮）
+\end{itemize}
+
+\subsubsection*{功能优先级}
+\begin{table}[H]
+\centering
+\begin{tabular}{|c|l|}
+\hline
+\textbf{优先级} & \textbf{功能} \\
+\hline
+高 & 时钟显示、闹钟触发 \\
+\hline
+中 & 闹钟设置、RTC校准 \\
+\hline
+低 & 温湿度监测、温度报警 \\
+\hline
+\end{tabular}
+\end{table}
+
+\subsection*{4.2 模块选择}
+
+\subsubsection*{显示模块}
+显示模块可以选择LCD1602、OLED或者TFT-LCD。
+
+LCD1602只能显示数字、英文、且输出的容量有限，不能显示复杂图形。
+
+OLED模块使用I2C通讯，常见的0.96寸/1.3寸分辨率为128x64，可显示复杂图形。但是只能单色显示，虽然也有双色模块但是固定第一行黄色，第二至四行蓝色的模式。
+
+TFT-LCD模块使用SPI通讯，常见的1.8寸分辨率为128x160，支持全彩显示。
+
+为了让时钟有良好的观感，本次实验我们选用TFT-LCD显示屏作为显示模块。
+
+\subsubsection*{用户输入}
+
+用户输入可以选择开关、按键或编码器等。
+
+开关可以方便地实现简单功能，如开关闹钟、开关显示模式。
+
+按键可以方便地实现复杂功能，如按键切换闹钟、按键设置闹钟。
+
+编码器可以实现全部人机交互，包括旋转操作、短按操作、长按操作。
+
+为了实现全部人机交互，本次实验我们选用编码器作为用户输入模块。
+
+\subsubsection*{传感器模块}
+
+为了快速开发，本次实验的传感器（光敏电阻、温湿度传感器等）接入均采用模块与扩展板排母相连的方式。
+
+
+\subsubsection*{音频模块}
+
+为了快速开发，本次实验我们选用了DFPlayer Mini作为音频模块，可以简单通过串口进行控制，同时只需要外接喇叭便可播放音乐。
+
+\subsubsection*{模块清单}
+
+最终所需模块如下：
+
+\begin{table}[H]
+\centering
+\begin{tabular}{|c|c|c|}
+\hline
+\textbf{器件名称} & \textbf{型号/规格} & \textbf{数量} \\
+\hline
+Arduino开发板 & UNO R3 & 1 \\
+\hline
+RTC模块 & DS3231 & 1 \\
+\hline
+TFT显示屏 & ST7735 (1.8寸 128x160) & 1 \\
+\hline
+旋转编码器 & EC11 (带按键) & 1 \\
+\hline
+MP3播放模块 & DFPlayer Mini & 1 \\
+\hline
+扬声器 & 3W/4$\Omega$ & 1 \\
+\hline
+温湿度传感器 & DHT11 & 1 \\
+\hline
+
+
+\end{tabular}
+\caption{模块清单}
+\end{table}
+
+\subsection*{4.3 PCB设计}
+
+本次实验需要针对Arduino Uno设计一块扩展版，在扩展板上实现电子时钟的各项功能。为此需要导入Arduino Uno的元件。除了EC11需要外接电阻电容进行硬件消抖外，其余各模块均只需要放置对应数目的排母与Arduino Uno的对应端口相连。绘制原理图是可以善用网络标签，并按模块进行元件放置，使得原理图美观和易读。
+
+
+\begin{figure}[H]
+    \centering
+
+    \includegraphics[width=0.8\textwidth]{8.png}
+    \caption{原理图}
+    \end{figure}
+
+PCB设计要尝试在板框范围下通过合理布局减少过孔，并将元件按功能模块排列紧凑且整齐。
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.8\textwidth]{9.png}
+    \caption{PCB布局}
+
+\end{figure}
+
+\subsection*{4.4 程序设计}
+
+
+
+\subsubsection*{系统模式定义}
+系统通过枚举类型定义四种工作模式，实现状态机管理：
+\begin{lstlisting}[language=C++, caption=系统模式枚举]
+enum SystemMode {
+  MODE_CLOCK,        // 时钟显示模式
+  MODE_ALARM_SET,    // 闹钟设置模式
+  MODE_ALARM_RINGING,// 闹钟响铃模式
+  MODE_RTC_SET       // RTC时间设置模式
+};
+\end{lstlisting}
+
+\subsubsection*{闹钟数据结构}
+定义闹钟结构体，包含小时、分钟、启用标志及触发标志：
+\begin{lstlisting}[language=C++, caption=闹钟结构体]
+struct Alarm {
+  uint8_t hour;
+  uint8_t minute;
+  bool enabled;      // 启用状态
+  bool triggered;    // 当日是否已触发
+};
+\end{lstlisting}
+系统支持4组独立闹钟，触发后triggered标志置位，次日重置。
+
+\subsubsection*{编码器读取模块}
+采用正交编码器实现旋转检测，通过A相下降沿触发判断B相电平确定旋转方向：
+\begin{lstlisting}[language=C++, caption=编码器读取函数]
+void readEnc() {
+  encPinA = digitalRead(ENC_CLK);
+  encPinB = digitalRead(ENC_DT);
+  if (encPinA != lastEncA) {
+    if (encPinA == LOW) {
+      encCnt += (encPinB == HIGH) ? 1 : -1;
+      if (abs(encCnt) >= encThr) {
+        encVal += (encCnt > 0) ? 1 : -1;
+        encCnt = 0;
+      }
+    }
+    lastEncA = encPinA;
+  }
+}
+\end{lstlisting}
+采用计数累加方式，设置阈值\texttt{encThr=2}进行软件消抖。
+
+\subsubsection*{按键处理模块}
+支持短按、长按（0.5s）、超级长按（1.2s）三种操作识别：
+\begin{lstlisting}[language=C++, caption=按键处理逻辑]
+void handleBtn() {
+  if (digitalRead(ENC_SW) == LOW) {
+    if (!btnPressed) { btnTime = millis(); btnPressed = true; }
+  } else if (btnPressed) {
+    unsigned long dur = millis() - btnTime;
+    if (dur > debounceTime) {
+      if (currentMode == MODE_CLOCK) {
+        if (dur >= superLongTime) enterRTC();  // 1.2s
+        else switchMode();                      // 短按或普通长按
+      }
+      // ... 其他模式处理
+    }
+    btnPressed = false;
+  }
+}
+\end{lstlisting}
+
+\subsubsection*{闹钟检测与触发}
+每秒检查当前时间是否匹配任一已启用且未触发的闹钟：
+\begin{lstlisting}[language=C++, caption=闹钟检测函数]
+void checkAlarm() {
+  DateTime n = rtc.now();
+  // 日期变更时重置所有闹钟triggered标志
+  if (n.day() != lastDay) {
+    for (byte i=0; i<4; i++) alarms[i].triggered = false;
+    lastDay = n.day();
+  }
+  for (byte i=0; i<4; i++) {
+    if (alarms[i].enabled && !alarms[i].triggered && 
+        n.hour() == alarms[i].hour && n.minute() == alarms[i].minute && n.second() == 0) {
+      trigger(i);
+      break;
+    }
+  }
+}
+\end{lstlisting}
+
+\subsubsection*{闹钟响铃模块}
+响铃持续60秒，屏幕以500ms周期闪烁提示：
+\begin{lstlisting}[language=C++, caption=响铃处理函数]
+void ring() {
+  unsigned long now = millis();
+  if (now - startTime >= dur) { stopRing(); return; }
+  if (now - lastToggle >= blinkInt) {
+    lastToggle = now;
+    blink = !blink;
+    showRing();  // 刷新显示，实现闪烁效果
+  }
+}
+\end{lstlisting}
+
+\subsubsection*{DHT11温湿度读取}
+采用非阻塞方式，每2秒读取一次传感器数据：
+\begin{lstlisting}[language=C++, caption=温湿度读取函数]
+void readDHT() {
+  if (millis() - lastDHT >= dhtInt) {
+    lastDHT = millis();
+    float h = dht.readHumidity();
+    float t = dht.readTemperature();
+    if (!isnan(h) && !isnan(t)) { 
+      lastHum = h; 
+      lastTemp = t; 
+    }
+  }
+}
+\end{lstlisting}
+
+\subsubsection*{温度报警模块}
+当温度超过阈值时，LED以500ms周期闪烁：
+\begin{lstlisting}[language=C++, caption=温度报警函数]
+void checkTempAlert() {
+  if (currentMode != MODE_CLOCK) {
+    digitalWrite(TEMP_ALERT_PIN, HIGH);
+    return;
+  }
+  if (lastTemp >= alertTemp) {
+    if (now - lastTempBlink >= tempBlinkInt) {
+      tempAlertBlink = !tempAlertBlink;
+      digitalWrite(TEMP_ALERT_PIN, tempAlertBlink ? LOW : HIGH);
+    }
+  } else {
+    digitalWrite(TEMP_ALERT_PIN, HIGH);
+  }
+}
+\end{lstlisting}
+
+\subsubsection*{RTC时间设置}
+支持年月日时分秒逐项设置，自动处理月份天数及闰年：
+\begin{lstlisting}[language=C++, caption=月份天数计算]
+int daysInMonth(int m, int y) {
+  if (m == 2) 
+    return (y%4==0 && (y%100!=0 || y%400==0)) ? 29 : 28;
+  const int days[] = {31,28,31,30,31,30,31,31,30,31,30,31};
+  return days[m-1];
+}
+\end{lstlisting}
+
+\subsubsection*{屏幕显示模块}
+使用ST7735驱动，采用深色主题配色，支持数字时钟及闹钟设置界面绘制。
+
+
+\textbf{初始化与配色}
+\begin{lstlisting}[language=C++, caption=屏幕初始化及颜色定义]
+// 引脚定义
+#define TFT_CS   -1
+#define TFT_DC   8
+#define TFT_RES  10
+
+Adafruit_ST7735 tft = Adafruit_ST7735(TFT_CS, TFT_DC, TFT_RES);
+
+// 配色方案（深色主题）
+const uint16_t BG_COLOR        = ST7735_BLACK;   // 背景
+const uint16_t TEXT_COLOR      = ST7735_WHITE;   // 普通文字
+const uint16_t HIGHLIGHT_COLOR = ST7735_YELLOW;  // 高亮
+const uint16_t ON_COLOR        = ST7735_GREEN;   // 开启状态
+const uint16_t OFF_COLOR       = ST7735_RED;     // 关闭状态
+
+void setup() {
+  tft.initR(INITR_GREENTAB);
+  tft.setRotation(1);
+  tft.fillScreen(BG_COLOR);
+}
+\end{lstlisting}
+
+\textbf{时钟界面显示}
+\begin{lstlisting}[language=C++, caption=时钟显示（局部刷新）]
+void updateClock() {
+  DateTime n = rtc.now();
+  sprintf(CurrentTime, "%02d:%02d:%02d", n.hour(), n.minute(), n.second());
+  
+  if (strcmp(CurrentTime, lastTime) != 0) {
+    tft.setTextSize(3);
+    tft.setTextColor(ACCENT2_COLOR, BG_COLOR);
+    tft.setCursor(10, 30);
+    tft.print(CurrentTime);
+    
+    // 显示温湿度及报警阈值
+    tft.setTextSize(1);
+    tft.setCursor(10, 70);
+    tft.print(F("T:")); tft.print(lastTemp, 1); tft.print(F("C"));
+    tft.setCursor(10, 82);
+    tft.print(F("Alert:")); tft.print(alertTemp, 1); tft.print(F("C"));
+    
+    strcpy(lastTime, CurrentTime);
+  }
+}
+\end{lstlisting}
+
+\textbf{闹钟列表与编辑}
+\begin{lstlisting}[language=C++, caption=闹钟列表及编辑界面]
+// 列表显示：带箭头指示器
+void showList() {
+  for(byte i=0; i<4; i++) {
+    int y = 16 + i * 18;
+    tft.setCursor(70, y);
+    if (alarms[i].hour < 10) tft.print(F("0"));
+    tft.print(alarms[i].hour); tft.print(F(":"));
+    if (alarms[i].minute < 10) tft.print(F("0"));
+    tft.print(alarms[i].minute);
+    
+    tft.setTextColor(alarms[i].enabled ? ON_COLOR : OFF_COLOR, BG_COLOR);
+    tft.print(alarms[i].enabled ? F("ON") : F("OFF"));
+  }
+  drawArrow(curAlarm);  // 绘制三角形箭头
+}
+
+// 编辑界面：字段闪烁提示
+void blinkHour() {
+  if (blink) {
+    tft.fillRect(20, 30, 36, 24, BG_COLOR);  // 擦除实现闪烁
+  } else {
+    tft.setCursor(20, 30);
+    tft.setTextColor(HIGHLIGHT_COLOR, BG_COLOR);
+    if (a.hour < 10) tft.print(F("0"));
+    tft.print(a.hour);
+  }
+}
+\end{lstlisting}
+
+\textbf{响铃界面}
+\begin{lstlisting}[language=C++, caption=闹钟触发闪烁提示]
+void showRing() {
+  tft.setTextSize(2);
+  tft.setCursor(20, 30);
+  if (blink) {
+    tft.setTextColor(ACCENT3_COLOR, BG_COLOR);
+    tft.print(F("ALARM!"));
+  } else {
+    tft.fillRect(20, 30, 120, 20, BG_COLOR);  // 擦除实现闪烁
+  }
+}
+\end{lstlisting}
+
+\textbf{核心绘制函数}
+\begin{itemize}
+    \item \texttt{setCursor(x, y)}：设置文本起始坐标
+    \item \texttt{setTextColor(fg, bg)}：设置前景色和背景色
+    \item \texttt{fillRect(x, y, w, h, color)}：填充矩形区域（用于擦除和闪烁）
+    \item \texttt{fillTriangle(x1,y1,x2,y2,x3,y3,color)}：绘制三角形箭头
+    \item \texttt{drawLine(x1,y1,x2,y2,color)}：绘制分隔线
+\end{itemize}
+
+\section*{五、实验结果展示}
+
+\subsection*{5.1 系统实物展示}
+
+系统硬件包括Arduino主控板、DS3231 RTC模块、DFPlayer Mini MP3模块、DHT11温湿度传感器、ST7735彩屏及旋转编码器，整体布局紧凑，接线可靠。
+
+\subsection*{5.2 时钟界面}
+
+时钟显示内容包括日期、时间、温湿度及报警阈值。
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.6\textwidth]{27.jpg}
+\caption{时钟主界面}
+\end{figure}
+
+\subsection*{5.3 闹钟设置界面}
+
+\subsubsection*{闹钟列表}
+闹钟列表显示4组闹钟的设定时间和开关状态，箭头指示当前选中项。
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.6\textwidth]{22.jpg}
+\caption{闹钟列表界面}
+\end{figure}
+
+\subsubsection*{闹钟编辑}
+进入编辑模式后，可分别调整小时、分钟及开关状态，当前编辑字段闪烁提示。
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.6\textwidth]{23.jpg}
+\caption{闹钟编辑界面}
+\end{figure}
+
+\subsection*{5.4 RTC时间设置界面}
+
+长按编码器1.2秒进入RTC设置模式，依次设置年、月、日、时、分、秒，当前字段闪烁，长按保存退出。
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.6\textwidth]{26.jpg}
+\caption{RTC设置界面}
+\end{figure}
+
+
+\subsection*{5.5 闹钟触发响应}
+
+闹钟触发时，屏幕显示闪烁的“ALARM!”提示，同时DFPlayer播放MP3音乐，持续60秒。
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.6\textwidth]{24.jpg}
+\caption{闹钟响铃界面}
+\end{figure}
+
+
+\subsection*{5.6 温度报警功能}
+
+当环境温度超过设定阈值时，连接于5号引脚的LED指示灯闪烁报警。
+
+\begin{table}[H]
+\centering
+\includegraphics[width=0.6\textwidth]{25.jpg}
+\caption{温度报警测试结果}
+\end{table}
+
+\subsection*{5.7 功能测试汇总}
+
+\begin{table}[H]
+\centering
+\begin{tabular}{|c|c|c|}
+\hline
+\textbf{测试项目} & \textbf{预期结果} & \textbf{实测结果} \\
+\hline
+时间显示 & 实时刷新，精度秒级 & 通过 \\
+\hline
+闹钟触发 & 整点/定时响铃 & 通过 \\
+\hline
+闹钟编辑 & 可调时/分/开关 & 通过 \\
+\hline
+RTC校准 & 可设年月日时分秒 & 通过 \\
+\hline
+温湿度显示 & 实时采集显示 & 通过 \\
+\hline
+温度报警 & 超温LED闪烁 & 通过 \\
+\hline
+MP3播放 & 闹钟响铃播放 & 通过 \\
+\hline
+编码器操作 & 旋转/短按/长按 & 通过 \\
+\hline
+\end{tabular}
+\caption{功能测试汇总表}
+\end{table}
+
+\subsection*{5.8 实验结果分析}
+
+经实际测试，系统各项功能运行稳定：
+
+\begin{itemize}
+    \item 时钟走时准确，与RTC模块同步良好
+    \item 4组闹钟均可独立触发，响应及时
+    \item 编码器交互逻辑清晰，长短按区分可靠
+    \item 温湿度数据采集正常，温度报警功能有效
+    \item 屏幕显示清晰，字段闪烁效果直观
+    \item 闹钟触发后60秒自动停止，按键停止响应灵敏
+\end{itemize}
+
+实验结果表明，本智能闹钟系统成功实现了预定功能，满足日常使用需求。
+
+\section*{六、实验总结}
+
+本次实验设计并实现了一款基于Arduino的智能闹钟系统，集成了DS3231高精度RTC模块、DFPlayer Mini MP3播放模块、DHT11温湿度传感器、ST7735彩色显示屏及旋转编码器，实现了时间显示、闹钟管理、环境监测及温度报警等功能。
+
+\subsection*{实验成果}
+
+通过软硬件的协同设计，系统成功实现了以下功能：
+\begin{itemize}
+    \item 实时时钟显示，支持RTC时间校准
+    \item 4组独立闹钟，可独立设置时、分及开关状态
+    \item 闹钟触发时播放MP3提示音并显示闪烁警报
+    \item 温湿度实时采集与显示
+    \item 可调阈值的温度报警LED指示
+    \item 单编码器完成全部人机交互（旋转/短按/长按）
+\end{itemize}
+
+经实际测试，系统运行稳定，各项功能均达到预期设计目标。
+
+\subsection*{遇到的问题与反思}
+
+在硬件调试过程中遇到的主要问题如下：
+
+\begin{itemize}
+    \item \textbf{屏幕连线错误}：在PCB焊接阶段，为追求连线美观和便捷，未严格遵循Arduino硬件SPI引脚的固定分配，将ST7735屏幕的MOSI、SCK等信号线随意连接至其他数字引脚。实际调试时发现屏幕无法驱动，经查阅资料才意识到Arduino的硬件SPI引脚是固定的（例如UNO/Nano的D11-MOSI、D13-SCK），软件模拟SPI虽可行但影响显示性能。最终不得不通过飞线方式调整连线至正确的硬件SPI引脚，增加了调试工作量并影响了电路板的整洁性。
+    
+    \item \textbf{经验教训}：硬件设计阶段必须提前查阅主控芯片的数据手册，明确各功能引脚的固定分配（如SPI、I2C、串口等），在布线时优先将外设连接至对应的硬件接口，避免类似飞线问题的发生。
+    
+    \item \textbf{其他调试问题}：编码器按键消抖处理不当导致触发不稳定，通过软件延时和状态机优化后解决；DFPlayer Mini播放时出现杂音，通过独立供电和改善接地得以改善。
+\end{itemize}
+
+\subsection*{改进方向}
+
+若后续进行版本迭代，可考虑以下改进：
+\begin{itemize}
+    \item 增加模拟时钟表盘显示模式，丰富界面样式
+    \item 加入光线传感器，实现屏幕亮度自动调节
+    \item 增加Wi-Fi模块，实现网络校时及手机APP控制
+    \item 优化编码器响应算法，提升操作手感
+\end{itemize}
+
+\subsection*{总结}
+
+本实验完成了从功能设计、硬件选型、电路焊接、软件编程到系统调试的完整开发流程。尽管在硬件连线阶段因对SPI引脚理解不足走了弯路，但通过飞线调试最终解决了问题，加深了对Arduino硬件资源和通信协议的理解。系统最终实现了预定功能，具有良好的实用价值和扩展性。
+
+\subsection*{课程总结}
+
+本学期通过本课程的实践学习，先后完成了电压电流转换器与智能闹钟两个项目，涵盖了模拟电路与数字嵌入式系统两个重要方向。
+
+在电路设计与调试方面，掌握了运算放大器构成电压电流转换电路的方法，理解了4-20mA工业标准信号的原理；同时学会了多种数字通信协议（SPI、I2C、UART）的综合应用，能够独立完成从硬件选型、电路焊接、软件编程到系统联调的完整开发流程。
+
+在问题解决方面，智能闹钟项目中遇到的屏幕SPI引脚连线错误令我印象深刻——因未提前查阅Arduino硬件SPI固定引脚分配而不得不飞线调整，这一教训让我深刻认识到硬件设计前查阅资料的重要性。此外，编码器按键抖动、DFPlayer播放杂音等问题的成功解决，也锻炼了软硬件联合调试的能力。
+
+通过两个项目的锻炼，我的电路设计、焊接调试、单片机编程及问题分析解决能力均得到了全面提升，为后续更复杂的嵌入式系统开发奠定了坚实基础。
+
+\end{document}
+
+
+
+\end{document}

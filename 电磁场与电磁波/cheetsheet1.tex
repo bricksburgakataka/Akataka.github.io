@@ -1,0 +1,482 @@
+\documentclass[10pt,a4paper,landscape]{article}
+\usepackage[utf8]{inputenc}
+\usepackage{ctex} % 支持中文
+\usepackage{amsmath,amsfonts,amssymb}
+\usepackage{geometry}
+\usepackage{booktabs}
+\usepackage{multicol}
+\usepackage{titlesec}
+\usepackage{enumitem}
+\usepackage{graphicx}
+
+% 设置横向页边距
+\geometry{top=1.2cm, bottom=1.2cm, left=1.2cm, right=1.2cm}
+
+% 紧凑标题设置
+\titleformat{\section}{\large\bfseries}{}{0em}{}
+\titlespacing*{\section}{0pt}{6pt}{3pt}
+\titleformat{\subsection}{\normalsize\bfseries}{}{0em}{}
+\titlespacing*{\subsection}{0pt}{3pt}{2pt}
+
+% 紧凑列表设置
+\setlist[enumerate]{nosep, topsep=0pt, parsep=0pt, partopsep=0pt, leftmargin=1.2em}
+\setlist[itemize]{nosep, topsep=0pt, parsep=0pt, partopsep=0pt, leftmargin=1.2em}
+
+% 设置两列之间的分隔线
+\setlength{\columnseprule}{0.4pt}
+\setlength{\columnsep}{1.2cm}
+
+
+\begin{document}
+
+
+\vspace{-1.2cm}
+
+\begin{multicols}{2}
+
+\section{Chapter 0 一些零散的小知识点}
+\begin{enumerate}
+    \item 几何尺寸 $\ll$ 工作波长时，可以忽略传输线影响。
+    \item 微波传输线是一种分布参数电路。
+    \item 各向异性介质中，$\vec{k}, \vec{D}, \vec{B}$ 三者垂直。
+    \item $\vec{E}, \vec{H}, \vec{S}$ 三者永远互相垂直，且成右手螺旋关系。
+    \item 一平面波以垂直光轴的方向入射单轴电各向异性介质，电磁波的极化方向与光轴成 $45^\circ$。当介质厚度 $d = \lambda / (4\Delta n)$ 的奇数倍时，出射波旋转 $\pi/2$，为圆极化波；偶数倍时，出射波旋转 $\pi$，为线极化波。$\Delta n = |n_o - n_e|$。
+    \item 同轴线能传输 TEM 模电磁波，且电场与磁场相位差为 $\pi/2$，相速与群速相等。
+    \item 圆波导中 $\text{TE}_{0n}$ 模与 $\text{TM}_{1n}$ 模可简并。
+    \item 两个金属空腔谐振器，形状尺寸完全相同，铜腔比铝腔品质因数大。
+    \item 标准微带传输线的传播模式为准 TEM 波。
+    \item 理想介质中的均匀平面波是非色散波，导电媒质中是色散波。
+    \item 满足波动方程的场不一定满足 Maxwell 方程。如 $\vec{B} = x\vec{x} + y\vec{y}$，$\nabla\cdot\vec{B} \neq 0$。
+    \item 所有任意、直接等词语一般都是错的。
+    \item 光纤中，$\text{LP}_{01}$ 模截止频率为 0，即单模工作在 $\text{LP}_{01}$ 模时任何频率的波都可以传播。且单模光纤不存在模式色散。
+    \item 平面波由复数形式向时谐量进行转化时，记住先乘 $e^{j\omega t}$ 再取实部。即虚部变成对应的 $-\sin(\cdot)$。
+    \item 入射角与折射角：$n_1 \sin\theta_1 = n_2 \sin\theta_2$。
+    \item 时变场中，矢量位 $\vec{A}$ 和标量位 $\Phi$ 两者是由洛伦兹条件相互联系的。
+    \item 微波阻抗匹配器中不可以使用电阻。
+    \item 用铁锤敲打矩形空腔谐振器的顶部，使之略有凹陷，其谐振频率变大。
+    \item 理想介质可视为短路，反射系数为 $-1$。
+\end{enumerate}
+
+\section{Chapter 1 波与矢量分析}
+\subsection{波动特征（时谐连续波）}
+\[
+A(z,t) = A_0 \cos(\omega t - kz + \varphi_0) \longleftrightarrow A_0 e^{-j(kz - \varphi_0)}
+\]
+\begin{itemize}
+    \item 周期：$T = 2\pi / \omega$
+    \item 波长：$\lambda = 2\pi / k$
+    \item 相速：$v_p = \omega / k = 1 / \sqrt{\mu\epsilon}$
+\end{itemize}
+
+\subsection{矢量分析与场论}
+\begin{itemize}
+    \item 拉普拉斯算符：
+    \[
+    \nabla = \frac{\partial}{\partial x}\vec{x} + \frac{\partial}{\partial y}\vec{y} + \frac{\partial}{\partial z}\vec{z}
+    \]
+    \item 梯度（矢量）：
+    \[
+    \text{grad}\,\Phi = \nabla\Phi = \frac{\partial\Phi}{\partial x}\vec{x} + \frac{\partial\Phi}{\partial y}\vec{y} + \frac{\partial\Phi}{\partial z}\vec{z}
+    \]
+    \item 散度（标量）：
+    \[
+    \text{div}\,\vec{\Phi} = \nabla\cdot\vec{\Phi} = \frac{\partial\Phi_x}{\partial x} + \frac{\partial\Phi_y}{\partial y} + \frac{\partial\Phi_z}{\partial z}
+    \]
+    \item 散度定理：$\oint_S \vec{\Phi}\cdot d\vec{S} = \int_V (\nabla\cdot\vec{\Phi})dV$（通量体密度）
+    \item 旋度（矢量）：
+    \[
+    \text{Curl}\,\vec{\Phi} = \nabla\times\vec{\Phi} =
+    \begin{vmatrix}
+    \vec{x}_0 & \vec{y}_0 & \vec{z}_0 \\
+    \frac{\partial}{\partial x} & \frac{\partial}{\partial y} & \frac{\partial}{\partial z} \\
+    \Phi_x & \Phi_y & \Phi_z
+    \end{vmatrix}
+    \]
+    \item 旋度定理：$\oint_l \vec{\Phi}\cdot d\vec{l} = \int_S (\nabla\times\vec{\Phi})d\vec{S}$（环量面密度）
+\end{itemize}
+
+\section{Chapter 2 传输线基本理论与圆图}
+\subsection{传输线方程}
+\[
+V = V^i e^{-jkz} + V^r e^{jkz}
+\]
+\[
+I = I^i e^{-jkz} - I^r e^{jkz}
+\]
+电压反射系数：
+\[
+\Gamma_V(z) = \frac{V^r e^{jkz}}{V^i e^{-jkz}} = \Gamma(0)e^{j2kz}
+\]
+得到：
+\[
+V(z) = [1 + \Gamma_V(z)]V^i e^{-jkz} \qquad I(z) = [1 - \Gamma_V(z)]V^i e^{-jkz} / Z_c
+\]
+
+\subsection{阻抗与反射系数关系}
+\[
+Z(z) = Z_c \frac{1 + \Gamma_V(z)}{1 - \Gamma_V(z)} \qquad \Gamma_V(z) = \frac{Z(z) - Z_c}{Z(z) + Z_c}
+\]
+输入阻抗：
+\[
+Z_{\text{in}} = Z_c \frac{Z_L + jZ_c \tan kl}{Z_c + jZ_L \tan kl}
+\]
+负载开路：$Z_{\text{in}} = Z_c / (j\tan kl) = -jZ_c \cot kl$ \\
+负载短路：$Z_{\text{in}} = jZ_c \tan kl$
+
+\subsection{变换与特征量图示}
+\begin{itemize}
+    \item $\Gamma_V(z=-l) = |\Gamma(0)|e^{j[\varphi(0)-2kl]}$（负载向源移动，顺时针旋转）
+    \item $|\Gamma_V| = 1$：纯驻波；$|\Gamma_V| = 0$：行波（只有入射波），$V_{\max} = V_{\min}$
+    \item $V_{\max} = 1 + |\Gamma_V|$（圆图右端点）
+    \item $V_{\min} = 1 - |\Gamma_V|$（圆图左端点）
+    \item 第一个电压腹点位置：$d_{\max} = \frac{\varphi(0)}{2k} = \frac{\varphi(0)\lambda}{4\pi}$
+    \item 第一个电压节点位置：$d_{\min} = \frac{\varphi(0)}{2k} \pm \frac{\lambda}{4} = \frac{\varphi(0)\lambda}{4\pi} \pm \frac{\lambda}{4}$
+    \item 驻波系数：
+    \[
+    \rho = \frac{1+|\Gamma_V|}{1-|\Gamma_V|} \quad \text{或} \quad |\Gamma_V| = \frac{\rho-1}{\rho+1}
+    \]
+    \item 传输功率：$|\Gamma_V|^2 = P^r / P^i$
+    \item 取电压腹点：$P = \frac{1}{2}\cdot\frac{|V_{\max}|^2}{Z_c\rho}$；取电压节点：$P = \frac{1}{2}\cdot\frac{Z_c|I_{\max}|^2}{\rho}$
+\end{itemize}
+
+\subsection{传输线圆图（阻抗圆图特点）}
+\begin{enumerate}
+    \item 上半圆 $x>0$ 是感抗，下半圆 $x<0$ 是容抗。
+    \item 实轴 $x=0$ 为纯电阻线，$|\Gamma|=1$ 圆为纯电抗圆。
+    \item 左端点为短路点，右端点为开路点，圆心 $|\Gamma|=0, \rho=1$ 为阻抗匹配点。
+    \item 实轴左半径代表电压波节点/电流波腹点 ($\rho = 1/r_{\min}$)；右半径代表电压波腹点/电流波节点 ($\rho = r_{\max}$)。
+    \item 沿着圆图旋转一周为 $\lambda/2$，负载向源移动顺时针转。
+    \item 阻抗圆图旋转 $180^\circ$ 为导纳圆图：左端点开路，右端点短路，左半径 $\rho = 1/g_{\min}$，右半径 $\rho = g_{\max}$。
+    \item 沿等 $|\Gamma|$ 圆转到左半轴的电长度即 $d_{\min}/\lambda$，转到右半轴即 $d_{\max}/\lambda$。计算前先归一化。
+\end{enumerate}
+
+\subsection{阻抗匹配器}
+\begin{itemize}
+    \item \textbf{$\lambda/4$ 变换器}：长 $\lambda/4$ 的线，特征阻抗 $Z_{c1} = \sqrt{R_L Z_c}$。
+    \item \textbf{单可变电纳匹配器}：
+    ① 归一化导纳 $Y = Z_c / Z_L$。
+    ② 负载反射系数 $|\Gamma_t| = \frac{Y-1}{Y+1}$。
+    ③ 沿等 $|\Gamma|$ 圆旋转 $l_A/\lambda$ 落到等 $g=1$ 圆上（记为点A），$x=|\Gamma|^2, y=|\Gamma|\sqrt{1-|\Gamma|^2}$，$\varphi_A = \arctan\frac{y}{x}$，$l_A = (\varphi_0 - \varphi_A)\frac{\lambda}{2}/360^\circ$。
+    ④ 设输入导纳 $Y_{\text{in}} = 1+jb$，则匹配支路对应输入导纳应为 $-jb$。
+    ⑤ 终端短路支路：$jY_c\tan kl_A' = -jb \Rightarrow l_A' = \arctan(-b)/k$；终端开路支路：$Y_c / (j\tan kl_A') = -jb \Rightarrow l_A' = \arctan(1/b)/k$。
+    ⑥ 负载阻抗实部为 0 时无法匹配。
+    \item \textbf{双可变电纳匹配器}：调节第一段支路使与 $g=1$ 圆中心对称的圆相交，经 $\lambda/4$ 变换到 $g=1$ 圆上，后续同单匹配器。（$l_1$ 的调节不可使其进入 $g=1$ 圆内）
+\end{itemize}
+
+\section{Chapter 3 麦克斯韦方程组}
+\begin{center}
+\small
+\begin{tabular}{ll}
+\toprule
+\textbf{积分形式} & \textbf{微分形式} \\ \midrule
+$\oint_l E\cdot dl = -\int_S \frac{\partial B}{\partial t}\cdot dS$ & $\nabla\times E = -\frac{\partial B}{\partial t}$ \\
+$\oint_l H\cdot dl = \int_S (J + \frac{\partial D}{\partial t})\cdot dS$ & $\nabla\times H = J + \frac{\partial D}{\partial t}$ \\
+$\oint_S D\cdot dS = \int_V \rho_v dV$ & $\nabla\cdot D = \rho_v$ \\
+$\oint_S B\cdot dS = 0$ & $\nabla\cdot B = 0$ \\ \midrule
+场在局部区域的平均性质 & 场在空间每一点的性质 \\ \bottomrule
+\end{tabular}
+\end{center}
+
+\begin{itemize}
+    \item \textbf{本构关系}：$\vec{D} = \epsilon\vec{E}$, $\vec{B} = \mu\vec{H}$, $\vec{J}_c = \sigma\vec{E}$
+    \item \textbf{坡印廷矢量}：瞬时 $\vec{S}(\vec{r},t) = \vec{E}\times\vec{H}$；时间平均 $\langle\vec{S}(\vec{r})\rangle = \frac{1}{2}\text{Re}[\vec{E}\times\vec{H}^*]$
+\end{itemize}
+
+\section{Chapter 4 平面波}
+\subsection{无源空间波方程与电磁波特征}
+\[
+(\nabla^2 + k^2)\vec{E}=0, \quad (\nabla^2 + k^2)\vec{H}=0 \qquad (k^2 = \omega^2\mu\epsilon)
+\]
+$\vec{E}, \vec{H}, \vec{k}$ 三者相互垂直且构成右手螺旋关系：
+\[
+\vec{E} = -\eta \vec{k}_0 \times \vec{H}, \qquad \vec{H} = \frac{1}{\eta}\vec{k}_0 \times \vec{E}
+\]
+波阻抗：
+\[
+\eta = \frac{\omega\mu}{k} = \frac{k}{\omega\epsilon} = \sqrt{\mu/\epsilon} \qquad \eta_0 \approx 377\Omega
+\]
+
+\subsection{极化（设传播方向为 $+z$）}
+\[
+\vec{E} = (\vec{x}_0 E_x + \vec{y}_0 E_y)e^{-jkz}, \qquad E_y / E_x = A e^{j\varphi}
+\]
+\begin{itemize}
+    \item \textbf{线极化}：$\varphi = 0, \pm\pi$
+    \item \textbf{圆极化}：$A = 1, \varphi = \pm\pi/2$（上半圆左旋，下半圆右旋）
+    \item \textbf{椭圆极化}：除线极化、圆极化之外的情况。
+\end{itemize}
+
+\subsection{有耗介质中的平面波}
+复介电常数 $\tilde{\epsilon} = \epsilon - j\sigma/\omega$（实部无损耗，虚部能量耗散）。
+\[
+k = \omega\sqrt{\mu\epsilon}(1-j\sigma/\omega\epsilon)^{1/2} = k_r - jk_i
+\]
+（$k_r$ 相位常数，$k_i$ 衰减常数，损耗正切 $\sigma/\omega\epsilon$）
+\[
+\eta = \sqrt{\mu/\tilde{\epsilon}} = \sqrt{\omega\mu/2\sigma}(1+j) = \sqrt{\omega\mu/\sigma}\cdot e^{j\pi/4}, \qquad |\eta| = \sqrt{\omega\mu/\sigma}
+\]
+相速 $v_p = \omega/k_r$，波长 $\lambda = 2\pi/k_r$。
+\begin{itemize}
+    \item \textbf{低损耗介质 ($\sigma/\omega\epsilon \ll 1$)}：$k \approx \omega\sqrt{\mu\epsilon}(1 - j\frac{\sigma}{2\omega\epsilon})$；穿透深度 $d_p = 1/k_i = \frac{2}{\sigma}\sqrt{\frac{\epsilon}{\mu}}$。
+    \item \textbf{高损耗介质 ($\sigma/\omega\epsilon \gg 1$)}：$k \approx \sqrt{\frac{\omega\mu\sigma}{2}}(1-j)$；穿透深度 $d_p = 1/k_i = \sqrt{\frac{2}{\omega\mu\sigma}} = \delta$。
+    \item \textbf{完纯导体 ($\sigma\rightarrow\infty$)}：$\delta\rightarrow 0, E\rightarrow 0$，导体内无电磁场。
+\end{itemize}
+
+\subsection{色散与群速}
+有耗介质具色散性。群速（能量传播速度）：
+\[
+v_g = \frac{d\omega}{dk_z} = v_p / \left(1 - \frac{\omega}{v_p}\cdot\frac{dv_p}{d\omega}\right)
+\]
+
+\subsection{平面波传播的传输线模型}
+波矢在 $x-z$ 平面（$k_y=0$）：
+\begin{itemize}
+    \item \textbf{TE模}（电场在 $y$ 方向）：无纵向电场，$\eta_{TE} = \omega\mu / k_z'$
+    \item \textbf{TM模}（磁场在 $y$ 方向）：无纵向磁场，$\eta_{TM} = k_z' / \omega\epsilon$
+\end{itemize}
+
+\section{Chapter 5 波的反射与折射}
+\subsection{边界条件}
+\[
+\vec{n}_1 \times (\vec{E}_1 - \vec{E}_2) = 0, \qquad \vec{n}_1 \times (\vec{H}_1 - \vec{H}_2) = \vec{J}_s
+\]
+\[
+\vec{n}_1 \cdot (\vec{D}_1 - \vec{D}_2) = \rho_s, \qquad \vec{n}_1 \cdot (\vec{B}_1 - \vec{B}_2) = 0
+\]
+介质-导体表面：切向 $E$ 和法向 $B$ 均为 0。
+
+\subsection{交界面反射与折射（从介质 1 到介质 2）}
+$k_{x1} = k_{x2} = k_x \Rightarrow n_1 \sin\theta_1 = n_2 \sin\theta_2$。$k = \omega\sqrt{\mu\epsilon}$ 恒适用。
+\begin{itemize}
+    \item \textbf{TE模}：
+    \[
+    \Gamma = \frac{Z_2 - Z_1}{Z_2 + Z_1}, \qquad T = \frac{2Z_2}{Z_2 + Z_1} = 1 + \Gamma
+    \]
+    ($Z_i = \omega\mu_i / k_{zi}$)
+    \item \textbf{TM模}：
+    \[
+    \Gamma = \frac{Z_2 - Z_1}{Z_2 + Z_1}, \qquad T = \frac{2Z_1}{Z_2 + Z_1} = 1 - \Gamma
+    \]
+    ($Z_i = k_{zi} / \omega\epsilon_i$，此时定义 $\Gamma = E_x^r/E_x^i$)
+    \item \textbf{Brewster 角（布儒斯特角）}：仅TM模存在无反射 ($\Gamma=0$)，$\theta_B = \arctan\sqrt{\epsilon_{r2}/\epsilon_{r1}}$。
+    \item \textbf{临界角}：仅 $n_1 > n_2$ 时存在表面波，$\theta_C = \arcsin\sqrt{\epsilon_{r2}/\epsilon_{r1}}$，此时全反射 $|\Gamma|=1$。
+\end{itemize}
+
+\subsection{多层平板介质（以TE模为例）}
+① $k_x = k_i \sin\theta_i$, $k_z = \sqrt{k^2 - k_x^2} = \sqrt{k_0^2\epsilon_r - k_i^2\sin^2\theta}$。\\
+② 从最右侧开始，逐层往 $z=0$ 处分析。\\
+③ 计算交界面处 $T$ 与 $\Gamma$。④ 场量为入射+反射叠加。
+
+\section{Chapter 6 波导}
+\subsection{矩形波导（高通滤波器，$\text{TE}_{10}$ 为主模）}
+$m,n$ 为 $x,y$ 方向半波个数，$\text{TM}_{mn}$ 中 $m,n$ 不能为0。
+
+\textbf{TE模}：
+\[
+E_x = \sum_{m,n} A_{mn}\frac{n\pi}{b}\cos\left(\frac{m\pi}{a}x\right)\sin\left(\frac{n\pi}{b}y\right)e^{j(\omega t - k_z z)}
+\]
+\[
+E_y = \sum_{m,n} -A_{mn}\frac{m\pi}{a}\sin\left(\frac{m\pi}{a}x\right)\cos\left(\frac{n\pi}{b}y\right)e^{j(\omega t - k_z z)}
+\]
+\[
+E_z = 0
+\]
+\[
+H_x = \sum_{m,n} A_{mn}\frac{k_z}{\omega\mu}\frac{m\pi}{a}\sin\left(\frac{m\pi}{a}x\right)\cos\left(\frac{n\pi}{b}y\right)e^{j(\omega t - k_z z)}
+\]
+\[
+H_y = \sum_{m,n} A_{mn}\frac{k_z}{\omega\mu}\frac{n\pi}{b}\cos\left(\frac{m\pi}{a}x\right)\sin\left(\frac{n\pi}{b}y\right)e^{j(\omega t - k_z z)}
+\]
+\[
+H_z = \sum_{m,n} A_{mn}\frac{\pi^2}{j\omega\mu}\left(\frac{n^2}{b^2} + \frac{m^2}{a^2}\right)\cos\left(\frac{m\pi}{a}x\right)\cos\left(\frac{n\pi}{b}y\right)e^{j(\omega t - k_z z)}
+\]
+
+\textbf{TM模}：
+\[
+E_x = \sum_{m,n} -B_{mn}\frac{k_z}{\omega\epsilon}\frac{n\pi}{b}\cos\left(\frac{m\pi}{a}x\right)\sin\left(\frac{n\pi}{b}y\right)e^{j(\omega t - k_z z)}
+\]
+\[
+E_y = \sum_{m,n} -B_{mn}\frac{k_z}{\omega\epsilon}\frac{n\pi}{b}\sin\left(\frac{m\pi}{a}x\right)\cos\left(\frac{n\pi}{b}y\right)e^{j(\omega t - k_z z)}
+\]
+\[
+E_z = \sum_{m,n} B_{mn}\frac{\pi^2}{j\omega\epsilon}\left(\frac{n^2}{b^2} + \frac{m^2}{a^2}\right)\sin\left(\frac{m\pi}{a}x\right)\sin\left(\frac{n\pi}{b}y\right)e^{j(\omega t - k_z z)}
+\]
+\[
+H_x = \sum_{m,n} B_{mn}\frac{n\pi}{b}\sin\left(\frac{m\pi}{a}x\right)\cos\left(\frac{n\pi}{b}y\right)e^{j(\omega t - k_z z)}
+\]
+\[
+H_y = \sum_{m,n} -B_{mn}\frac{m\pi}{a}\cos\left(\frac{m\pi}{a}x\right)\sin\left(\frac{n\pi}{b}y\right)e^{j(\omega t - k_z z)}
+\]
+\[
+H_z = 0
+\]
+
+\begin{itemize}
+    \item \textbf{色散关系}：
+    \[
+    k_z = \sqrt{\omega^2\mu\epsilon - \left(\frac{m\pi}{a}\right)^2 - \left(\frac{n\pi}{b}\right)^2}
+    \]
+    （$k_z=0$ 时截止，$k_x = m\pi/a, k_y = n\pi/b$）
+    \item \textbf{截止频率}：
+    \[
+    f_c = \frac{v}{2\pi}\sqrt{\left(\frac{m\pi}{a}\right)^2 + \left(\frac{n\pi}{b}\right)^2}, \quad v = 1/\sqrt{\mu\epsilon}
+    \]
+    \item \textbf{截止波长}：
+    \[
+    \lambda_c = 2 / \sqrt{\left(\frac{m}{a}\right)^2 + \left(\frac{n}{b}\right)^2}
+    \]
+    \item \textbf{相速与群速}：
+    \[
+    v_p = v/\sqrt{1-(\lambda/\lambda_c)^2}, \quad v_g = v\sqrt{1-(\lambda/\lambda_c)^2}
+    \]
+    满足 $v_p \cdot v_g = v^2 = 1/\mu\epsilon = c^2/\mu_r\epsilon_r$。
+    \item \textbf{波导波长}：
+    \[
+    \lambda_g = v_p/f = \lambda / \sqrt{1-(\lambda/\lambda_c)^2}
+    \]
+    \item \textbf{特征阻抗}：
+    \[
+    Z_{\text{TE}} = \eta \frac{\lambda_g}{\lambda}, \qquad Z_{\text{TM}} = \eta \frac{\lambda}{\lambda_g}
+    \]
+    \item \textbf{等效阻抗}：$Z_{e10} = \frac{b}{a}Z_{10}$（以 $\text{TE}_{10}$ 模为例）
+    \item \textbf{$\text{TE}_{10}$ 模参数}：$\lambda_c = 2a$, $f_c = v/2a$。
+\end{itemize}
+
+\subsection{圆波导（$\text{TE}_{11}$ 为主模）}
+$m$ 为圆周驻波数，$n$ 为半径方向最大值个数。
+\begin{itemize}
+    \item \textbf{截止波长}：$\text{TE}$ 模 $\lambda_c = \frac{2\pi a}{u_{mn}'}$；$\text{TM}$ 模 $\lambda_c = \frac{2\pi a}{u_{mn}}$。
+\end{itemize}
+
+\subsection{平板介质波导与横向谐振原理}
+满足 $\overleftarrow{Y} + \overrightarrow{Y} = 0$（开路）或 $\overleftarrow{Z} + \overrightarrow{Z} = 0$（短路）。
+
+以 $x=a/3$ 为参考面，左侧区域 1，右侧区域 2：
+\[
+k_{x1} = \sqrt{k_1^2 - k_z^2} = \sqrt{\omega^2\epsilon\mu_0 - k_z^2}, \qquad k_{x2} = \sqrt{k_2^2 - k_z^2} = \sqrt{\omega^2\epsilon_0\mu_0 - k_z^2}
+\]
+区域1特征导纳 $Y_1 = k_{x1}/\omega\mu_0$，区域2特征导纳 $Y_2 = k_{x2}/\omega\mu_0$。
+
+将 $x=0$ 与 $x=a$ 处看成短路：
+\[
+\overleftarrow{Y} = \frac{Y_1}{j\tan(k_{x1}a/3)}, \qquad \overrightarrow{Y} = \frac{Y_2}{j\tan(k_{x2}2a/3)}
+\]
+由 $\overleftarrow{Y}+\overrightarrow{Y}=0$ 求解色散方程。截止时令 $k_z=0$，截止波长 $\lambda_c = 2\pi/k_0$，截止频率 $f_c = c/\lambda_c$。
+\begin{itemize}
+    \item \textbf{对称情况}：奇对称 $\rightarrow$ 对称面短路（用阻抗）；偶对称 $\rightarrow$ 对称面开路（用导纳）。
+\end{itemize}
+
+\subsection{光纤}
+梯度光纤模间色散比阶跃光纤小，带宽更高。
+\[
+NA = \sin\theta_0 = n_1\sin\left(\frac{\pi}{2} - \theta_c\right) \approx n_1\sqrt{2\Delta}, \qquad \Delta \approx \frac{n_1 - n_2}{n_1}
+\]
+其中 $\theta_0$ 为入射临界角，$\theta_c = \arcsin(n_2/n_1)$ 为全反射临界角。
+\begin{itemize}
+    \item $NA$ 越大 $\rightarrow$ 聚光能力越强，但模间色散越大，带宽越小。
+\end{itemize}
+
+\section{Chapter 7 谐振器}
+\subsection{空腔谐振器（谐振条件：$\overleftarrow{Z} + \overrightarrow{Z} = 0$）}
+由 $k_z = p\pi/l$ ($p=1,2,\dots$)，得：
+\[
+\omega^2\mu\epsilon = \left(\frac{p\pi}{l}\right)^2 + k_t^2 = \left(\frac{2\pi}{\lambda}\right)^2
+\]
+\begin{itemize}
+    \item \textbf{TEM模同轴线}：$k_t = 0 \Rightarrow \lambda_0 = 2l/p$
+    \item \textbf{矩形波导腔}：
+    \[
+    \lambda_0 = 2 / \sqrt{\left(\frac{m}{a}\right)^2 + \left(\frac{n}{b}\right)^2 + \left(\frac{p}{l}\right)^2}
+    \]
+    \item \textbf{圆波导腔}：
+    \[
+    k_t = \begin{cases}
+    u_{mn}'/a & \text{TE模} \\
+    u_{mn}/a & \text{TM模}
+    \end{cases}
+    \]
+    \[
+    \lambda_0 = \begin{cases}
+    2 / \sqrt{\left(\frac{u_{mn}'}{\pi a}\right)^2 + \left(\frac{p}{l}\right)^2} & \text{TE模} \\
+    2 / \sqrt{\left(\frac{u_{mn}}{\pi a}\right)^2 + \left(\frac{p}{l}\right)^2} & \text{TM模}
+    \end{cases}
+    \]
+\end{itemize}
+
+\subsection{耦合度与微扰法}
+耦合度 $\beta = Y_0/(n^2 G_0)$。若 $\beta>1$，驻波比 $\rho=\beta$；若 $\beta<1$，$\rho=1/\beta$。
+
+\textbf{微扰法判断}：腔内插小损耗，若反射功率随损耗单调增加，则 $\beta<1$；若先变小到零后增加，则 $\beta>1$。
+
+\section{Chapter 8 天线}
+\subsection{电基本振子（远区辐射场为非均匀球面波）}
+\[
+\vec{E} = \vec{\theta}_0 \sqrt{\mu/\epsilon}\cdot \frac{jkI\Delta l e^{-jkr}}{4\pi r}\sin\theta, \qquad
+\vec{H} = \vec{\phi}_0\cdot \frac{jkI\Delta l e^{-jkr}}{4\pi r}\sin\theta
+\]
+\begin{itemize}
+    \item 方向性：
+    \[
+    G_D = 4\pi r^2 \frac{\langle S\rangle}{P_{\text{out}}} = \frac{3}{2}\sin^2\theta
+    \]
+    \item 无损耗时，$G_D = 4\pi A_e/\lambda^2 = G$（$A_e$ 为有效面积，$G$ 为天线增益）
+    \item 辐射电阻：
+    \[
+    R_{\text{rad}} = \frac{8\pi}{3}\eta_0\left(\frac{kI\Delta l}{4\pi}\right)^2 = \frac{2\eta_0}{3\lambda^2}\pi\Delta l^2
+    \]
+    \item 接收功率：$P_R = A_e\cdot E^2/2\eta_0 = A_e\langle S\rangle$
+\end{itemize}
+
+\subsection{列阵天线（设电流相等，间距 $d$，相位差 $\psi$）}
+总场 = 单元场 $\times$ 阵因子 $F_a$。
+\[
+F_a = \frac{\sin(N\xi/2)}{\sin(\xi/2)}, \qquad \xi = kd\cos\gamma + \psi
+\]
+\[
+|F(\theta,\varphi)| = \left|\frac{\sin(N(\psi + kd\cos\gamma)/2)}{\sin((\psi + kd\cos\gamma)/2)}\right|
+\]
+（当 $\psi + kd\cos\gamma = 2k\pi$ 时取最大值 $N$，当 $N(\psi + kd\cos\gamma)/2 = m\pi$（$m\neq 0,2N,\dots$）时为0）
+
+\begin{itemize}
+    \item \textbf{天线组按 $x$ 轴排列}：
+    \[
+    \cos\gamma = \sin\theta\cos\varphi, \qquad F = \frac{1 - e^{jN(\psi + kd\sin\theta\cos\varphi)}}{1 - e^{j(\psi + kd\sin\theta\cos\varphi)}}
+    \]
+    二元阵归一化阵因子：$F = \cos[(\psi + kd\sin\theta\cos\varphi)/2]$
+    \item \textbf{天线组按 $z$ 轴排列}：
+    \[
+    \cos\gamma = \cos\theta, \qquad F = \frac{1 - e^{jN(\psi + kd\cos\theta)}}{1 - e^{j(\psi + kd\cos\theta)}}
+    \]
+    二元阵归一化阵因子：$F = \cos[(\psi + kd\cos\theta)/2]$
+    \item \textbf{天线子沿 $x$ 轴摆放}：
+    \[
+    V(\theta) = \frac{\cos(kl\cos\theta_x/2) - \cos(kl/2)}{\sin\theta_x}, \qquad \cos\theta_x = \sin\theta\cos\varphi
+    \]
+    \item \textbf{天线子沿 $z$ 轴摆放}：
+    \[
+    V(\theta) = \frac{\cos(kl\cos\theta/2) - \cos(kl/2)}{\sin\theta}
+    \]
+    \item 总的辐射方向函数：$f(\theta) = V(\theta)\cdot F(\theta)$
+    \item 电基本振子：$V(\theta) = \sin\theta_x$（水平放置）或 $V(\theta) = \sin\theta$（垂直放置）
+\end{itemize}
+
+\subsection{口径天线}
+单元数 $N$，间距 $d$，总宽度 $w_x = (N-1)d \approx Nd$，相邻天线相位差 $\psi = 0$。
+\begin{itemize}
+    \item \textbf{阵因子}（$\theta = \pi/2$）：
+    \[
+    |F(\phi)| = |\text{sinc}(w_x\sin\phi/\lambda)|
+    \]
+    \item \textbf{波束宽度（半功率宽度）}：取 $w_x\sin(\phi_{BW}/2)/\lambda = \pm 0.443$
+    \item \textbf{零点方位}：取 $w_x\sin(\phi_0/2)/\lambda = 1,2,\dots$
+    \item \textbf{方向性}：$G_D = 4\pi A_e/\lambda^2$
+\end{itemize}
+
+\subsection{镜像原理}
+\begin{itemize}
+    \item \textbf{垂直}于导体面的电振子：镜像为\textbf{同向}（同相）电振子。
+    \item \textbf{水平}于导体面的电振子：镜像为\textbf{反向}（反相）电振子。
+\end{itemize}
+
+\end{multicols}
+\end{document}

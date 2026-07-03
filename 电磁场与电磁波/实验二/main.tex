@@ -1,0 +1,281 @@
+\documentclass[12pt,a4paper]{article}
+\usepackage[UTF8]{ctex}
+\usepackage{graphicx}
+\usepackage{geometry}
+\usepackage{ulem}
+\usepackage{enumitem}
+\usepackage{titlesec}
+\usepackage{multicol}
+\usepackage[export]{adjustbox}
+\usepackage{amsmath}  % 推荐用于更好的数学排版
+\usepackage[utf8]{inputenc}
+\usepackage{CJKutf8}
+\usepackage{fancyhdr}
+\usepackage{lastpage}
+\usepackage{ulem}
+\usepackage{tabularx}
+\usepackage{float}
+\usepackage{siunitx}
+\usepackage{multirow} 
+\usepackage{booktabs}
+
+% 页眉页脚设置
+\pagestyle{fancy}
+\fancyhf{} % 清除所有页眉页脚
+% 设置页眉内容
+%-==========1. 填写从第二页开始 每页第一行的信息==========-
+\fancyhead[C]{\small
+    \makebox[4.5em][c]{实验名称：} \uline{\makebox[17em][c]{波导传输线负载特性测量与阻抗匹配}} 
+    \makebox[2.5em][c]{姓名：} \uline{\makebox[4em][c]{张赫}} 
+    \makebox[2.5em][c]{学号：} \uline{\makebox[5em][c]{3240101459}}
+}%--------------------------------------------------------
+\fancyfoot[C]{\small 第 \thepage\ 页，共 \pageref{LastPage} 页}
+
+
+% 取消页眉和页脚的下划线
+\renewcommand{\headrulewidth}{0pt} % 页眉横线粗细设为0
+\renewcommand{\footrulewidth}{0pt} % 页脚横线粗细设为0
+
+% 调整页眉高度
+\setlength{\headheight}{50pt}
+
+% 设置plain样式（用于第一页）
+\fancypagestyle{plain}{
+    \fancyhf{} % 清除所有页眉页脚
+    \renewcommand{\headrulewidth}{0pt} % 隐藏页眉横线
+    \fancyfoot[C]{第 \thepage\ 页，共 \pageref{LastPage} 页} % 保留页脚
+}
+% 设置页面边距
+\geometry{left=2.54cm,right=1.5cm,top=2.54cm,bottom=2.54cm}
+
+% 设置正文字体大小为小四
+\renewcommand{\normalsize}{\fontsize{12pt}{16pt}\selectfont}
+% 设置章节格式
+\titleformat{\section}{\fontsize{16pt}{22pt}\selectfont\bfseries}{\thesection}{1em}{} % 一级标题：三号
+\titleformat{\subsection}{\fontsize{15pt}{20pt}\selectfont\bfseries}{\thesubsection}{1em}{} % 二级标题：小三
+
+\begin{document}
+\thispagestyle{plain}%第一页使用 plain 样式，而不是默认的 fancy 样式，第一页不再显示页眉
+% 标题部分 - 两栏布局
+\begin{multicols}{2}
+    % 左栏：图片和实验报告标题
+    % 左栏：使用空行创建前三行
+    \noindent
+    ~\\ % 第一行
+    ~\\ % 第二行
+    ~\\ % 第三行
+    \hphantom{占位}% 使用空占位符
+    \raisebox{-0.5\baselineskip}% 图片向下移动半行
+    {\includegraphics[width=1.85in,height=0.58in]{ZJU.jpg}}
+    \hspace{.5em}% 图片和标题之间的间距
+    \raisebox{0pt}[\height][0pt]% 标题底部对齐
+    {\textbf{\fontsize{26pt}{30pt}\selectfont 实验报告}}
+    
+    \columnbreak % 换到右栏
+    
+    % 右栏：个人信息
+    % 右栏：个人信息 - 靠右对齐 
+%-==========2. 填写个人信息==========-
+    \begin{flushright}
+        \small
+        \makebox[3em][l]{专业：} \uline{\makebox[9em][c]{法语-电子科学与技术}} \\
+        \makebox[3em][l]{姓名：} \uline{\makebox[9em][c]{张赫}} \\
+        \makebox[3em][l]{学号：} \uline{\makebox[9em][c]{3240101459}} \\
+        \makebox[3em][l]{日期：} \uline{\makebox[9em][c]{2026年6月3日}} \\
+        \makebox[3em][l]{地点：} \uline{\makebox[9em][c]{紫金港东四224}} \\
+    \end{flushright}   
+\end{multicols}
+% 课程名称等信息（单栏）
+%-==========3. 填写课程信息==========-
+
+{\small
+\noindent
+课程名称： \uline{电磁场与电磁波} \hfill 指导老师： \uline{李凯、王子立} \hfill 成绩： \uline{\hspace{3cm}} \\
+实验名称：\uline{波导传输线负载特性测量与阻抗匹配}\hfill 实验类型：\uline{验证实验}\hfill 同组学生姓名：\uline{李雨泽、赵奕铭}
+}
+%-==========4. 正文开始==========-
+
+
+\section*{一、实验目的}
+1、了解波导传输线的基本特性。
+
+2、掌握容性膜片的负载特性及阻抗匹配方法。
+
+3、学习使用Smith圆图进行阻抗分析与匹配。
+
+
+\section*{二、实验原理}
+矩形波导中传输的TE$_{10}$模，其横向电场和磁场沿纵向的变化可等效为传输线上的电压和电流，满足传输线方程。定义波导的特性阻抗$Z_0$和传播常数$k_z$，则沿线任意位置的反射系数$\Gamma(z)$、电压驻波比$\rho$与归一化阻抗$z(z)$之间可以相互转换。
+
+实验中通过驻波测量线获取两个基本量：驻波系数$\rho$和第一个驻波最小点位置$d_{\min1}$。其中：
+\[
+\rho = \frac{V_{\max}}{V_{\min}} = \sqrt{\frac{P_{\max}}{P_{\min}}} \quad \text{（小信号平方律检波）}
+\]
+反射系数模值：
+\[
+|\Gamma(0)| = \frac{\rho-1}{\rho+1}
+\]
+反射系数相位与$d_{\min1}$的关系（参考短路时的最小点$d_{\min(\text{短})}$）：
+\[
+\frac{4\pi}{\lambda_g} (d_{\min1} - d_{\min(\text{短})}) = \psi(0) + \pi
+\]
+
+波导波长$\lambda_g$由相邻两个驻波最小点间距测定：
+\[
+\lambda_g = 2 \times |d_{\min2} - d_{\min1}|
+\]
+理论值由色散公式给出（$a$为波导宽边，$a=2.286\,\text{cm}$）：
+\[
+\lambda_g = \frac{\lambda}{\sqrt{1-\left(\frac{\lambda}{2a}\right)^2}}, \quad \lambda = \frac{c}{f}
+\]
+
+容性膜片（高度$b' < b$）在波导中引入并联容性电纳，使负载阻抗在Smith圆图上沿等电导圆向容性半圆移动，表现为归一化阻抗实部减小、虚部为负。单销钉调配器通过调节销钉深度（改变电纳大小）和纵向位置（改变参考面相位），可在Smith圆图上沿等驻波比圆旋转至原点，从而实现匹配。
+
+匹配后$\rho \to 1$，检波输出最小值接近零，传输线接近行波状态，功率传输效率最高。
+
+\section*{三、实验装置与仪器}
+\begin{table}[H]
+\centering
+\begin{tabular}{p{5cm}p{4cm}p{3cm}}
+\toprule
+仪器名称 & 型号 & 数量 \\
+\midrule
+固态微波信号源 & & 1 \\
+隔离器 & & 1 \\
+可调衰减器 & & 1 \\
+波长计（频率计） & & 1 \\
+驻波测量线 & & 1 \\
+单销钉调配器 & & 1 \\
+容性膜片+匹配负载 & & 1 \\
+数字万用表 & & 1 \\
+示波器 & & 1 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\section*{四、实验步骤与数据记录}
+
+\subsection*{1. 工作频率$f$测量}
+频率计读数$$f = 9.39 \text{GHz}$$
+
+\subsection*{2. 波导波长测量}
+\begin{align*}
+    d_{\text{min1}} &=3.960 \text{cm} \\
+    d_{\text{min2}} &=1.755\text{cm} \\
+    \lambda_g &= 2 \times |d_{\text{min2}} - d_{\text{min1}}| = 4.41\text{cm}
+\end{align*}
+
+\subsection*{3. 容性膜片等效负载的测量}
+\begin{align*}
+    d_{\text{min(短)}} &= 3.960\text{cm} \\
+    d_{\text{min(1)}} &= 3.445 \text{cm} \\
+    P_{\text{max}} &= 0.298 \text{mV} \\
+    P_{\text{min}} &= 0.076 \text{mV} \\
+    \rho &= \sqrt{\frac{P_{\text{max}}}{P_{\text{min}}}} = 1.980
+\end{align*}
+
+\subsection*{4. 阻抗匹配测量}
+销钉调节后
+\begin{align*}
+    P_{\text{max(1)}} &= 0.342 \text{mV} \\
+    P_{\text{min(1)}} &= 0.268 \text{mV} \\
+    \rho_{\text{匹配后}} &= \sqrt{\frac{P_{\text{max(1)}}}{P_{\text{min(1)}}}} = 1.130
+\end{align*}
+
+匹配负载单独测量
+\begin{align*}
+    P_{\text{max(1)}} &= 0.681 \text{mV} \\
+    P_{\text{min(1)}} &= 0.30 \text{mV} \\
+    \rho_{\text{匹配负载}} &= 1.507
+\end{align*}
+
+\section*{五、数据处理与分析}
+
+\subsection*{1. 波导波长理论值计算}
+已知：$a = 2.286 \, \text{cm}$，工作频率 $f = 9.39 \text{GHz}$ \\
+自由空间波长：
+\[
+\lambda = \frac{c}{f} = 3.195\text{cm}
+\]
+
+TE$_{10}$模波导波长理论值：
+\[
+\lambda_g = \frac{\lambda}{\sqrt{1 - \left(\frac{\lambda}{2a}\right)^2}} = 4.467 \text{cm}
+\]
+实验值与理论值比较：
+\[
+\text{相对误差} = \left|\frac{\lambda_g^{\text{实验}} - \lambda_g^{\text{理论}}}{\lambda_g^{\text{理论}}}\right| \times 100\% = 1.28 \%
+\]
+ 
+\subsection*{2. 容性膜片负载的阻抗分析}
+
+\[
+\rho = 1.980
+\]
+
+\[
+|\Gamma(0)| = \frac{\rho - 1}{\rho + 1} = \frac{1.980 - 1}{1.980 + 1} = 0.329\] 
+
+\[
+d_{\text{min1(短)}} - d_{\text{min1(膜片)}} = 0.515\, \text{cm} = \frac{\psi(0) \lambda_g}{4\pi} + \frac{\lambda_g}{4} \quad (\lambda_g \text{ 用 cm 作单位})
+\]
+
+可得 \(\psi(0) = -0.533\pi\)，由 Smith 圆图可得 \(z = 0.759 - 0.555j\)。
+
+\subsection*{3. 销钉归一化电抗值计算}
+\[\rho_\text{{匹配后}}= 1.130, \quad \rho_{\text{匹配负载}}= 1.507\]
+比较两者，可见直接接入匹配负载时的驻波系数大于用单销钉调节匹配后的驻波
+系数，说明用单销钉调节匹配后的驻波系数更接近1，匹配效果更好。
+
+\[|\Gamma(0)| =0.061\]
+
+同理可得\(z=0.9758+0.00124j\)，根据smith圆图可知系统阻抗匹配。
+
+
+\section*{六、问题回答}
+
+\textbf{（1）测量线开口端不接短路块，任意接一负载，能否测出波导波长？接短路块测波导波长有什么优点？}
+
+答：理论上也可以测出波导波长，因为任意负载下驻波节点间距仍为$\lambda_g/2$。但接短路块时，终端全反射形成纯驻波，节点位置更尖锐、准确，测量误差更小。同时短路块本身结构简单、反射系数已知（$\Gamma=-1$），便于快速定位节点。
+
+\textbf{（2）测负载驻波相位为什么要先测$d_{\text{min}}$（短）？}
+
+答：先测短路时的驻波最小点位置，是为了确定“等效短路面”的参考位置。负载的驻波最小点是相对于该参考面计算的，这样可以消除测量线本身带来的相位偏移，准确得到负载反射系数的相位$\psi$。
+
+\textbf{（3）在单销钉调配器调配前，测量线探针为什么不能伸入到波导里面？}
+
+答：探针伸入过多会引入附加反射和能量耦合，破坏原有场分布，影响匹配调节的准确性。此外，过深插入还可能损坏探针或波导内壁，甚至引起打火。通常只插入1mm左右，保证小信号平方率检波工作状态。
+
+\textbf{（4）本实验用容性膜片作为负载，若改用感性膜片，驻波最小点位置会向信号源方向还是负载方向移动？为什么？}
+
+答：感性膜片呈现感性电抗，其等效负载阻抗在Smith圆图上的位置与容性膜片对称（相对于实轴），反射系数相位会发生变化，导致驻波最小点向负载方向或信号源方向移动，具体取决于感性电抗的大小。一般情况下，感性膜片会使驻波节点向负载方向移动。
+
+\textbf{（5）单销钉调配器调节匹配时，为什么检波器输出指示越小，表示调配得越好？}
+
+答：匹配状态下，反射波最小，传输线上接近行波状态，驻波系数$\rho \approx 1$，此时驻波谷值（最小值）接近零，检波器输出正比于功率，因此输出越小，说明反射越弱，匹配越好。
+
+\textbf{（6）如果经销钉调配器调配后，测得驻波系数$\rho = 1$，在单销钉调配器与负载之间是否是行波？单销钉调配器至信号源方向是否是行波？为什么？}
+
+答：调配器与负载之间是行波，因为$\rho=1$表示该段无反射。但调配器至信号源方向不一定为行波，因为信号源本身可能有反射，且隔离器未使用时，源端反射会影响该段驻波比。
+
+\textbf{（7）隔离器在系统中起什么作用？去掉隔离器直接连接信号源与测量线，会对驻波测量与频率稳定度造成什么影响？}
+
+答：隔离器起单向传输作用，防止反射波返回信号源，保护源并稳定频率。去掉隔离器后，反射波会影响源的振荡状态，导致频率漂移、输出功率不稳，驻波测量结果也会不准确。
+
+
+
+\section*{七、实验总结与心得体会}
+
+本次实验系统学习了矩形波导TE$_{10}$模的传输线等效模型、驻波测量方法、容性膜片的负载特性以及单销钉调配器的阻抗匹配过程。通过实际操作和数据处理，我对微波传输线中的反射系数、驻波比、波导波长、Smith圆图等核心概念有了更直观和深入的理解。
+
+实验测得工作频率$f=9.39\,\text{GHz}$，波导波长实验值$\lambda_g=4.41\,\text{cm}$，理论值$4.467\,\text{cm}$，相对误差$1.28\%$。误差主要来源于：频率计读数时示波器幅度最小点的判断偏差、驻波测量线探针定位的机械回差以及环境温湿度对波导尺寸的微小影响。容性膜片负载下测得$\rho=1.980$，通过Smith圆图读取出归一化阻抗$z=0.759-0.555j$，明显呈现容性特性。使用单销钉调配器匹配后，驻波系数降至$\rho=1.130$，虽然未达到理想的$1.00$，但已显著改善，验证了单销钉在窄带匹配中的有效性。
+
+
+单销钉调配器的调节过程需要同时改变销钉深度和纵向位置，两者相互耦合。实际操作时先粗调找到示波器显示最小点，再逐步增大示波器灵敏度和信号功率反复逼近，这与Smith圆图上“沿等驻波比圆旋转→移动等电抗曲线→再旋转”的理论步骤完全对应。深刻体会到理论指导实践的重要性——如果没有圆图的概念，调节将非常盲目。此外，调节过程中检波器输出信号越小，说明反射越弱，这是判断匹配好坏的直观依据。
+
+隔离器在系统中起到了单向传输的关键作用，防止负载反射波影响信号源的振荡状态。实验中若去掉隔离器，反射波可能导致频率漂移和输出功率不稳，进而使驻波测量结果不可靠。波长计测量频率时利用其并联谐振吸收特性，观察到示波器幅度最小点即为频率匹配点，这一“吸收式频率测量”方法巧妙而实用。测量线探针只能插入1mm左右，既要保证足够耦合信号，又要避免引入过大反射，体现了微波测量中“弱耦合”的工程原则。
+
+本次实验将抽象的传输线理论、Smith圆图图形化方法与实际微波硬件操作紧密结合，使我对阻抗匹配、驻波测量、波导波长等概念的理解从公式层面上升到工程直觉层面。实验中遇到的数据波动、调节反复等问题也让我认识到：微波测量不仅需要准确的理论计算，更需要耐心、细心和对仪器特性的熟悉。今后在学习电磁场与微波技术相关课程时，我会更加注重理论与实验的相互印证，并尝试用编程实现Smith圆图的自动匹配计算，进一步提升分析效率。
+
+
+\end{document}

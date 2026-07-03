@@ -1,0 +1,312 @@
+\documentclass[12pt,a4paper]{article}
+\usepackage[UTF8]{ctex}
+\usepackage{graphicx}
+\usepackage{geometry}
+\usepackage{ulem}
+\usepackage{enumitem}
+\usepackage{titlesec}
+\usepackage{multicol}
+\usepackage[export]{adjustbox}
+\usepackage{amsmath}  % 推荐用于更好的数学排版
+\usepackage[utf8]{inputenc}
+\usepackage{CJKutf8}
+\usepackage{fancyhdr}
+\usepackage{lastpage}
+\usepackage{ulem}
+\usepackage{tabularx}
+\usepackage{float}
+\usepackage{siunitx}
+\usepackage{multirow} 
+
+% 页眉页脚设置
+\pagestyle{fancy}
+\fancyhf{} % 清除所有页眉页脚
+% 设置页眉内容
+%-==========1. 填写从第二页开始 每页第一行的信息==========-
+\fancyhead[C]{\small
+    \makebox[4.5em][c]{实验名称：} \uline{\makebox[17em][c]{Arduino环境搭建实验}} 
+    \makebox[2.5em][c]{姓名：} \uline{\makebox[4em][c]{}} 
+    \makebox[2.5em][c]{学号：} \uline{\makebox[5em][c]{}}
+}%--------------------------------------------------------
+\fancyfoot[C]{\small 第 \thepage\ 页，共 \pageref{LastPage} 页}
+
+
+% 取消页眉和页脚的下划线
+\renewcommand{\headrulewidth}{0pt} % 页眉横线粗细设为0
+\renewcommand{\footrulewidth}{0pt} % 页脚横线粗细设为0
+
+% 调整页眉高度
+\setlength{\headheight}{50pt}
+
+% 设置plain样式（用于第一页）
+\fancypagestyle{plain}{
+    \fancyhf{} % 清除所有页眉页脚
+    \renewcommand{\headrulewidth}{0pt} % 隐藏页眉横线
+    \fancyfoot[C]{第 \thepage\ 页，共 \pageref{LastPage} 页} % 保留页脚
+}
+% 设置页面边距
+\geometry{left=2.54cm,right=1.5cm,top=2.54cm,bottom=2.54cm}
+
+% 设置正文字体大小为小四
+\renewcommand{\normalsize}{\fontsize{12pt}{16pt}\selectfont}
+% 设置章节格式
+\titleformat{\section}{\fontsize{16pt}{22pt}\selectfont\bfseries}{\thesection}{1em}{} % 一级标题：三号
+\titleformat{\subsection}{\fontsize{15pt}{20pt}\selectfont\bfseries}{\thesubsection}{1em}{} % 二级标题：小三
+
+\begin{document}
+\thispagestyle{plain}%第一页使用 plain 样式，而不是默认的 fancy 样式，第一页不再显示页眉
+% 标题部分 - 两栏布局
+\begin{multicols}{2}
+    % 左栏：图片和实验报告标题
+    % 左栏：使用空行创建前三行
+    \noindent
+    ~\\ % 第一行
+    ~\\ % 第二行
+    ~\\ % 第三行
+    \hphantom{占位}% 使用空占位符
+    \raisebox{-0.5\baselineskip}% 图片向下移动半行
+    {\includegraphics[width=1.85in,height=0.58in]{ZJU.jpg}}
+    \hspace{.5em}% 图片和标题之间的间距
+    \raisebox{0pt}[\height][0pt]% 标题底部对齐
+    {\textbf{\fontsize{26pt}{30pt}\selectfont 实验报告}}
+    
+    \columnbreak % 换到右栏
+    
+    % 右栏：个人信息
+    % 右栏：个人信息 - 靠右对齐 
+%-==========2. 填写个人信息==========-
+    \begin{flushright}
+        \small
+        \makebox[3em][l]{专业：} \uline{\makebox[9em][c]{法语-电子科学与技术}} \\
+        \makebox[3em][l]{姓名：} \uline{\makebox[9em][c]{}} \\
+        \makebox[3em][l]{学号：} \uline{\makebox[9em][c]{}} \\
+        \makebox[3em][l]{日期：} \uline{\makebox[9em][c]{2026年3月20日}} \\
+        \makebox[3em][l]{地点：} \uline{\makebox[9em][c]{}} \\
+    \end{flushright}   
+\end{multicols}
+% 课程名称等信息（单栏）
+%-==========3. 填写课程信息==========-
+
+{\small
+\noindent
+课程名称： \uline{电子电路设计实验II} \hfill 指导老师： \uline{施红军、叶险峰、邓靖靖} \hfill 成绩： \uline{\hspace{3cm}} \\
+实验名称：\uline{Arduino环境搭建实验}\hfill 实验类型：\uline{设计实验}\hfill 同组学生姓名：\uline{}
+}
+%-==========4. 正文开始==========-
+\section*{一、实验目的}
+
+进行Arduino环境的搭建。
+
+\section*{二、实验任务与要求}
+
+
+1、介绍Arduino UNO开发板
+
+2、安装Arduino软件和连接UNO板，详细说明过程
+
+3、以具体实例说明，使Arduino软硬件运行成功
+
+实验报告应包含相应的程序代码和需要的截图。
+
+\section*{三、实验原理}
+
+Arduino是一个源于意大利的开源电子原型平台，由硬件（各种型号的开发板）和软件（Arduino IDE）两部分组成。它旨在让艺术家、设计师、爱好者和任何对交互式创意感兴趣的人，都能轻松地将创意变为现实，而无需深厚的电子工程背景。
+
+Arduino Uno 是Arduino家族中最经典、最受欢迎的型号，被公认为最适合初学者入门的开发板。“Uno”在意大利语中意为“一”，代表它是Arduino系列的第一个版本。
+
+\subsection*{3.1 硬件规格}
+
+\begin{tabularx}{\textwidth}{|l|X|}
+\hline
+\textbf{参数} & \textbf{规格} \\
+\hline
+微控制器 & ATmega328P \\
+\hline
+工作电压 & 5V \\
+\hline
+输入电压（推荐） & 7-12V \\
+\hline
+输入电压（极限） & 6-20V \\
+\hline
+数字I/O引脚 & 14个（其中6个支持PWM输出） \\
+\hline
+模拟输入引脚 & 6个（10位分辨率，0-5V） \\
+\hline
+每个I/O引脚直流电流 & 20mA \\
+\hline
+3.3V引脚输出电流 & 50mA \\
+\hline
+Flash存储器 & 32KB（其中0.5KB用于引导程序） \\
+\hline
+SRAM & 2KB \\
+\hline
+EEPROM & 1KB \\
+\hline
+时钟频率 & 16MHz \\
+\hline
+尺寸 & 68.6mm × 53.4mm \\
+\hline
+重量 & 25g \\
+\hline
+\end{tabularx}
+
+\subsection*{3.2 硬件组成}
+
+\textbf{（1）核心芯片}
+\begin{itemize}[label=--]
+    \item \textbf{ATmega328P}：主控芯片，负责执行程序代码
+    \item \textbf{ATmega16U2}：USB转串口芯片，负责与计算机通信
+\end{itemize}
+
+\textbf{（2）主要接口}
+\begin{itemize}[label=--]
+    \item \textbf{USB接口}：用于供电、上传程序、串口通信
+    \item \textbf{电源接口}：DC插座，可接入7-12V外部电源
+    \item \textbf{复位按钮}：重启开发板
+    \item \textbf{ICSP接口}：用于烧录引导程序（高级用途）
+\end{itemize}
+
+\textbf{（3）引脚说明}
+\begin{itemize}[label=--]
+    \item \textbf{数字引脚 0-13}：可作输入或输出，其中引脚3、5、6、9、10、11支持PWM（模拟输出）
+    \item \textbf{模拟引脚 A0-A5}：读取模拟传感器信号（0-1023），也可作为普通数字引脚使用
+    \item \textbf{电源引脚}：5V、3.3V、GND、Vin（输入电压）
+    \item \textbf{特殊功能引脚}：引脚0（RX）、1（TX）用于串口通信；引脚13连接板载LED
+\end{itemize}
+
+\subsection*{3.3 核心功能}
+
+\textbf{（1）编程模型}
+Arduino Uno使用简化的C/C++编程，核心结构为：
+
+\begin{verbatim}
+void setup() {
+  // 初始化代码，运行一次
+  pinMode(13, OUTPUT);  // 设置引脚13为输出
+}
+
+void loop() {
+  // 主循环，重复运行
+  digitalWrite(13, HIGH);  // 点亮LED
+  delay(1000);             // 等待1秒
+  digitalWrite(13, LOW);   // 熄灭LED
+  delay(1000);             // 等待1秒
+}
+\end{verbatim}
+
+\textbf{（2）主要特性}
+\begin{itemize}[label=--]
+    \item \textbf{即插即用}：通过USB连接电脑即可编程，无需额外编程器
+    \item \textbf{自动复位}：上传程序时自动复位，无需手动操作
+    \item \textbf{过流保护}：USB口带有自恢复保险丝，防止短路损坏电脑
+    \item \textbf{可扩展性}：兼容大量Shield扩展板（如以太网、电机驱动、继电器等）
+\end{itemize}
+
+
+
+\section*{四、实验步骤、调试过程、实验数据记录}
+
+\subsection*{4.1 安装软件}
+
+在Arduino官网下载Arduino IDE的安装包。
+
+\begin {figure}[H]
+    \centering
+    \includegraphics[width=0.8\textwidth]{1.png}
+    \caption{下载Arduino IDE}
+    \label{fig1}
+    \end{figure}
+
+下载完成后可以按照指引一步步安装。安装完成后的软件界面如下图所示。
+
+\begin {figure}[H]
+    \centering
+    \includegraphics[width=0.8\textwidth]{2.png}
+    \caption{安装完成后的软件界面}
+    \label{fig2}
+    \end{figure}
+
+\subsection*{4.2 编写程序}
+
+
+
+这里我们可以让串口每隔2s打印一次“Hello, world!”，同时让LED灯闪烁一次。                                                                                                                                                                                                                                                                                                                                                                                                       
+
+在初始化函数setup()中，我们初始化串口并设置波特率为9600，然后设置引脚13为输出模式。在主循环函数loop()中，我们打印“Hello, world!”并点亮LED，等待1s后熄灭LED，等待1s后继续循环。
+\begin{verbatim}
+    void setup() {
+        Serial.begin(9600);  // 开启串口，设置波特率为9600
+        pinMode(13, OUTPUT);  // 设置引脚13为输出
+    }
+
+    void loop() {
+        Serial.println("Hello, world!");  // 打印“Hello, world!”
+        digitalWrite(13, HIGH);  // 点亮LED
+        delay(500);             // 等待0.5秒
+        digitalWrite(13, LOW);   // 熄灭LED
+        delay(500);             // 等待0.5秒
+    }
+\end{verbatim}
+
+\subsection*{4.3 连接板子}
+
+
+将UNO板子插入电脑的USB接口，选择对应的开发板型号（Arduino UNO）和COM端口。
+
+\begin {figure}[H]
+
+    \centering
+    \includegraphics[width=0.4\textwidth]{3.png}
+    \caption{选择开发板型号和COM端口}
+    \label{fig3}
+    \end{figure}
+                
+\begin {figure}[H]
+    \centering
+    \includegraphics[width=0.6\textwidth]{4.png}
+    \caption{选择开发板型号和COM端口}
+    \label{fig4}
+    \end{figure}
+
+\subsection*{4.4 上传程序}
+
+连接成功后，点击工具栏中的“上传”按钮，将程序上传到UNO板子。
+
+\begin {figure}[H]
+\centering
+    \includegraphics[width=0.8\textwidth]{5.png}
+    \caption{上传程序}
+    \label{fig5}
+    \end{figure}
+
+
+    上传成功后，在串口监视器中可以看到打印的“Hello, world!”信息。
+
+\begin {figure}[H]
+\centering
+\includegraphics[width=0.5\textwidth]{6.png}
+    \caption{串口监视器打印信息}
+    \label{fig6}
+    \end{figure}
+
+同时板子上可以同步看到LED的闪烁。
+
+\begin {figure}[H]
+\centering
+
+
+    \includegraphics[width=0.6\textwidth]{7.jpg}
+    \caption{板子上看到的LED闪烁}
+    \label{fig7}
+    \end{figure}
+
+
+
+
+
+
+
+
+
+
+\end{document}
